@@ -1,61 +1,64 @@
 # Charging Station
 
-Repository for a multi-node Dezibot charging-station setup built around ESP32/ESP32-S3 firmware, plus project documentation.
+Multi-node charging-station project for Dezibot, including ESP32/ESP32-S3 firmware, hardware assets, and documentation.
 
-## Repository Layout
-
-- `master/` - charging-station master firmware (ESP32-S3, PlatformIO)
-- `slave/` - charging-station slave firmware (ESP32-S3, PlatformIO)
-- `motor/` - motor controller firmware (ESP32, PlatformIO)
-- `ir_meter/` - IR measurement/tracking firmware and evaluation assets
-- `dezibot/` - Dezibot library (Git submodule)
-- `docs/` - Astro Starlight documentation site
-
-## Prerequisites
-
-- [PlatformIO Core](https://platformio.org/install)
-- [Bun](https://bun.sh/) (for `docs/`)
-- Git submodules initialized (for `dezibot/`)
-
-## Setup
+## Quick Start
 
 ```bash
 git submodule update --init --recursive
 ```
 
-## Build Firmware
-
-Run from the respective directory:
+Build all firmware projects:
 
 ```bash
-# master node (ESP32-S3)
-cd master && pio run
-
-# slave node (ESP32-S3)
-cd ../slave && pio run
-
-# motor controller (ESP32)
-cd ../motor && pio run
-
-# IR meter node (ESP32-S3)
-cd ../ir_meter && pio run
+for fw in master slave motor ir_meter; do
+  (cd "$fw" && pio run)
+done
 ```
 
-## Flash Firmware
+## Repository Layout
 
-Connect the target board over USB, then run in the corresponding folder:
+- `master/` - master node firmware (ESP32-S3, PlatformIO)
+- `slave/` - slave node firmware (ESP32-S3, PlatformIO)
+- `motor/` - motor controller firmware (ESP32, PlatformIO)
+- `ir_meter/` - IR meter and beacon-tracking firmware (ESP32-S3, PlatformIO)
+- `dezibot/` - Dezibot library submodule
+- `docs/` - Astro Starlight docs site
+
+## Requirements
+
+- [PlatformIO Core](https://platformio.org/install)
+- [Bun](https://bun.sh/) for `docs/`
+- Initialized Git submodules
+
+## Firmware Workflow
+
+Run commands from one firmware directory (`master/`, `slave/`, `motor/`, or `ir_meter/`):
 
 ```bash
+# build
+pio run
+
+# upload
 pio run -t upload
-```
 
-## Serial Monitor
-
-All firmware targets use `115200` baud:
-
-```bash
+# serial monitor
 pio device monitor -b 115200
 ```
+
+### Board Targets
+
+- `master`: `esp32s3usbotg`
+- `slave`: `esp32s3usbotg`
+- `ir_meter`: `esp32s3usbotg`
+- `motor`: `esp32dev`
+
+For target-specific details, see:
+
+- `master/README.md`
+- `slave/README.md`
+- `motor/README.md`
+- `ir_meter/README.md`
 
 ## Documentation Site
 
@@ -65,7 +68,7 @@ bun install
 bun run dev
 ```
 
-Build static docs:
+Build static output:
 
 ```bash
 bun run build
