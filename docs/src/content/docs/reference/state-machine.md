@@ -45,9 +45,9 @@ Cancellation behavior from master (`cancelCharge`) is state-dependent:
 
 In current `slave/src/main.cpp`, `step_to_charge()` returns `true` only when all are true:
 
-- `detected == true`
-- `totalSignal >= SIGNAL_ARRIVE`
-- front channel is dominant (`front >= back/left/right`)
+- $\mathrm{detected} = \mathrm{true}$
+- $\mathrm{totalSignal} \ge \mathrm{SIGNAL\_ARRIVE}$
+- front channel is dominant ($\mathrm{front} \ge \max(\mathrm{back}, \mathrm{left}, \mathrm{right})$)
 
 ## Master states
 

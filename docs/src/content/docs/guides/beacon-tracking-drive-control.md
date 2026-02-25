@@ -9,53 +9,59 @@ sidebar:
 
 Implement a closed-loop pipeline:
 
-`IR beacon -> demodulated amplitudes -> bearing estimate -> drive commands -> beacon centering`
+$$
+\text{IR beacon} \rightarrow \text{demodulated amplitudes} \rightarrow \text{bearing estimate} \rightarrow \text{drive commands} \rightarrow \text{beacon centering}
+$$
 
 ## Signal assumptions
 
 Firmware assumes the receiver path already produces four slow amplitude values:
 
-- `A_F` (front)
-- `A_B` (back)
-- `A_L` (left)
-- `A_R` (right)
+- $A_F$ (front)
+- $A_B$ (back)
+- $A_L$ (left)
+- $A_R$ (right)
 
 The expected analog chain is:
 
-`Photodiode -> TIA -> band-pass (around carrier) -> envelope detector -> low-pass -> ADC`
+$$
+\text{Photodiode} \rightarrow \text{TIA} \rightarrow \text{band-pass (around carrier)} \rightarrow \text{envelope detector} \rightarrow \text{low-pass} \rightarrow \text{ADC}
+$$
 
 Carrier is continuous at **10 kHz** in this phase.
 
 ## Tracker equations
 
-For each sensor `i`, calibrated amplitude is:
+For each sensor $i$, calibrated amplitude is:
 
-`A_i = max(0, gain_i * (raw_i - offset_i))`
+$$
+A_i = \max\!\left(0, \mathrm{gain}_i \cdot (\mathrm{raw}_i - \mathrm{offset}_i)\right)
+$$
 
 Bearing vector:
 
-- `vx = A_F - A_B`
-- `vy = A_L - A_R`
+- $v_x = A_F - A_B$
+- $v_y = A_L - A_R$
 
 Angle and total signal:
 
-- `theta = atan2(vy, vx)`
-- `S = A_F + A_B + A_L + A_R`
-- `detected = (S >= S_min)`
+- $\theta = \operatorname{atan2}(v_y, v_x)$
+- $S = A_F + A_B + A_L + A_R$
+- $\mathrm{detected} = (S \ge S_{\min})$
 
-`theta` is low-pass filtered with wrapped-angle blending to reduce jitter.
+$\theta$ is low-pass filtered with wrapped-angle blending to reduce jitter.
 The runtime tracker also adds a 3-sample median prefilter and a short guard hold
-window during saturation or abrupt `S` drops to suppress one-sample bearing spikes.
+window during saturation or abrupt $S$ drops to suppress one-sample bearing spikes.
 
 ## Control law
 
 When beacon is detected:
 
-- `w = clamp(Kp * theta_f, -w_max, w_max)`
-- `u = u_max * max(0, cos(theta_f))`
-- if `|theta_f| > pi/2`, force `u = 0`
-- `mL = clamp(u + w, 0, 1)`
-- `mR = clamp(u - w, 0, 1)`
+- $w = \operatorname{clamp}(K_p \cdot \theta_f,\,-w_{\max},\,w_{\max})$
+- $u = u_{\max} \cdot \max(0, \cos(\theta_f))$
+- if $|\theta_f| > \pi/2$, force $u = 0$
+- $m_L = \operatorname{clamp}(u + w,\,0,\,1)$
+- $m_R = \operatorname{clamp}(u - w,\,0,\,1)$
 
 Motor commands include dead-zone compensation before PWM duty is applied.
 
@@ -66,7 +72,7 @@ When beacon is not detected, the slave executes a slow spin search and periodica
 The slave reports arrival when all conditions are true:
 
 - beacon detected
-- `S >= S_arrive`
+- $S \ge S_{\mathrm{arrive}}$
 - front channel is dominant
 
 This prevents side-lock while still allowing approach to converge.
@@ -74,13 +80,13 @@ This prevents side-lock while still allowing approach to converge.
 ## Validation flow
 
 1. Flash and run `ir_meter`.
-2. Verify `theta` sign and magnitude for front/left/right/back placements.
-3. Tune compile-time gains/offsets and `S_min`.
+2. Verify $\theta$ sign and magnitude for front/left/right/back placements.
+3. Tune compile-time gains/offsets and $S_{\min}$.
 4. Tune anti-spike constants:
-   `alpha`, `maxAngleStepRad`, `signalDropGuardRatio`, `guardHoldMs`,
-   `saturationRawThreshold`.
+   $\alpha$, $\mathrm{maxAngleStepRad}$, $\mathrm{signalDropGuardRatio}$,
+   $\mathrm{guardHoldMs}$, $\mathrm{saturationRawThreshold}$.
 5. Flash and run `slave`.
-6. Tune `Kp`, `u_max`, dead-zone, and `S_arrive`.
+6. Tune $K_p$, $u_{\max}$, dead-zone, and $S_{\mathrm{arrive}}$.
 7. Confirm search behavior and reacquisition after temporary signal loss.
 
 ## CSV telemetry (`ir_meter`)

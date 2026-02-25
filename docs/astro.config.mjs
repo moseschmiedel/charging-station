@@ -3,16 +3,24 @@
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeKatex from "rehype-katex";
 import rehypeMermaid from "rehype-mermaid";
+import remarkMath from "remark-math";
 
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
-		rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }], rehypeMermaid],
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [
+			[rehypeExternalLinks, { target: "_blank" }],
+			rehypeMermaid,
+			rehypeKatex,
+		],
 	},
 	integrations: [
 		starlight({
 			title: "Charging Station Documentation",
+			customCss: ["./src/styles/katex.css"],
 			social: [
 				{
 					icon: "github",

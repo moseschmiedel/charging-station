@@ -2,7 +2,7 @@
 title: Drive Control
 description: Reference for slave control law, motor mapping, and arrival/search behavior.
 sidebar:
-  order: 3
+    order: 3
 ---
 
 ## Control update
@@ -13,28 +13,28 @@ Inputs are taken from `BeaconTrackerState`.
 
 ## Controller
 
-With filtered angle `theta_f`:
+With filtered angle $\theta_f$:
 
-- `w = clamp(Kp * theta_f, -w_max, w_max)`
-- `u = u_max * max(0, cos(theta_f))`
-- if `|theta_f| > pi/2`, `u = 0`
-- `mL = clamp(u + w, 0, 1)`
-- `mR = clamp(u - w, 0, 1)`
+- $w = \operatorname{clamp}(K_p \cdot \theta_f,\,-w_{\max},\,w_{\max})$
+- $u = u_{\max} \cdot \max(0, \cos(\theta_f))$
+- if $|\theta_f| > \pi/2$, $u = 0$
+- $m_L = \operatorname{clamp}(u + w,\,0,\,1)$
+- $m_R = \operatorname{clamp}(u - w,\,0,\,1)$
 
-`mL` and `mR` are normalized motor commands in `[0, 1]`.
+$m_L$ and $m_R$ are normalized motor commands in $[0, 1]$.
 
 ## Dead-zone compensation
 
 Normalized commands are mapped to PWM duty:
 
-- `0 -> 0` (off)
-- `(0,1] -> [duty_deadzone, duty_max]`
+- $0 \rightarrow 0$ (off)
+- $(0, 1] \rightarrow [\mathrm{duty\_deadzone}, \mathrm{duty\_max}]$
 
 Duties are quantized to avoid tiny duty steps and unstable low-level drive.
 
 ## Search behavior
 
-If `detected == false`, slave enters search mode:
+If $\mathrm{detected} = \mathrm{false}$, slave enters search mode:
 
 - slow spin on one side
 - periodic direction flip to avoid deadlock
@@ -45,8 +45,8 @@ Search exits immediately when valid beacon detection returns.
 
 Navigation step returns success when all are true:
 
-- `detected == true`
-- `S >= S_arrive`
+- $\mathrm{detected} = \mathrm{true}$
+- $S \ge S_{\mathrm{arrive}}$
 - front channel is dominant
 
 This condition feeds the existing autocharge state machine without protocol changes.
@@ -55,12 +55,12 @@ This condition feeds the existing autocharge state machine without protocol chan
 
 Current firmware defaults:
 
-- `Kp = 0.70`
-- `w_max = 0.65`
-- `u_max = 0.75`
-- `S_arrive = 6000`
-- `duty_deadzone = 3300`
-- `duty_max = 4600`
-- `search_duty = 3560`
+- $K_p = 0.70$
+- $w_{\max} = 0.65$
+- $u_{\max} = 0.75$
+- $S_{\mathrm{arrive}} = 6000$
+- $\mathrm{duty\_deadzone} = 3300$
+- $\mathrm{duty\_max} = 4600$
+- $\mathrm{search\_duty} = 3560$
 
 Treat these as starting values and tune on hardware.
