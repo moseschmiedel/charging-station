@@ -1,0 +1,3 @@
+[submodule "dezibot"]
+	path = dezibot
+	url = git@github.com:moseschmiedel/dezibot
