@@ -10,6 +10,14 @@ type ConnectionState = "connecting" | "open" | "closed";
 
 const MAX_ROWS = 160;
 const MAX_TABLE_ROWS = 8;
+const MAX_SIGNAL_WINDOW = 10;
+const PWM_MIN = 0;
+const PWM_MAX = 4600;
+const SIGNAL_MIN_THRESHOLD = 900;
+const SIGNAL_MAX_THRESHOLD = 6000;
+const SIGNAL_BAR_MAX = Math.max(7000, SIGNAL_MAX_THRESHOLD);
+const GAUGE_START_DEG = -120;
+const GAUGE_SWEEP_DEG = 240;
 
 let connectionState: ConnectionState = "connecting";
 let status: TelemetryStatus | null = null;
@@ -22,6 +30,36 @@ let keepScrolledToLatest = true;
 let rawListHeightPx = 210;
 let resizeMoveHandler: ((event: PointerEvent) => void) | null = null;
 let resizeStopHandler: (() => void) | null = null;
+
+function clamp(value: number, min: number, max: number): number {
+	return Math.min(max, Math.max(min, value));
+}
+
+function pwmRatio(value: number): number {
+	return clamp((value - PWM_MIN) / (PWM_MAX - PWM_MIN), 0, 1);
+}
+
+function gaugeFillStyle(value: number): string {
+	return `--filled:${(pwmRatio(value) * GAUGE_SWEEP_DEG).toFixed(2)}deg;`;
+}
+
+function gaugeNeedleStyle(value: number): string {
+	return `--rotation:${(
+		GAUGE_START_DEG + pwmRatio(value) * GAUGE_SWEEP_DEG
+	).toFixed(2)}deg;`;
+}
+
+function signalRatio(value: number): number {
+	return clamp(value / SIGNAL_BAR_MAX, 0, 1);
+}
+
+function signalFillStyle(value: number): string {
+	return `--signal-fill:${(signalRatio(value) * 100).toFixed(2)}%;`;
+}
+
+function signalMarkerStyle(value: number): string {
+	return `left:${(signalRatio(value) * 100).toFixed(2)}%;`;
+}
 
 function ingestFrame(frame: TelemetryFrame): void {
 	frames = [...frames, frame].slice(-MAX_ROWS);
@@ -111,6 +149,11 @@ $: filteredFrames = frames.filter((frame) => {
 $: latest =
 	filteredFrames.length > 0 ? filteredFrames[filteredFrames.length - 1] : null;
 $: recentRows = filteredFrames.slice(-MAX_TABLE_ROWS).reverse();
+$: recentSignalFrames = filteredFrames.slice(-MAX_SIGNAL_WINDOW);
+$: maxSignalLastTen =
+	recentSignalFrames.length > 0
+		? Math.max(...recentSignalFrames.map((frame) => frame.signal))
+		: null;
 $: latestRaw = rawLines.length > 0 ? rawLines[rawLines.length - 1] : null;
 $: rawRows = rawLines.slice(-MAX_TABLE_ROWS);
 $: headingStyle = latest ? `transform: rotate(${latest.thetaDeg}deg)` : "";
@@ -226,10 +269,73 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
           <span>raw_r</span><progress max={4095} value={latest.rawR}
           ></progress><strong>{latest.rawR}</strong>
         </div>
-        <div class="drive-row">
-          <span>duty_l: {latest.dutyL}</span>
-          <span>duty_r: {latest.dutyR}</span>
-          <span>S: {latest.signal.toFixed(1)}</span>
+        <span class="label">beacon_strength</span>
+        <div class="signal-stats">
+          <span>current: {latest.signal.toFixed(1)}</span>
+          <span>
+            max last {MAX_SIGNAL_WINDOW}: {maxSignalLastTen?.toFixed(1) ?? "n/a"}
+          </span>
+        </div>
+        <div class="signal-meter" style={signalFillStyle(latest.signal)}>
+          <div class="signal-track">
+            <div class="signal-fill"></div>
+            <span
+              class="signal-marker signal-marker-min"
+              style={signalMarkerStyle(SIGNAL_MIN_THRESHOLD)}
+            ></span>
+            <span
+              class="signal-marker signal-marker-max"
+              style={signalMarkerStyle(SIGNAL_MAX_THRESHOLD)}
+            ></span>
+          </div>
+          <div class="signal-threshold-labels">
+            <span
+              class="signal-threshold-label signal-threshold-min"
+              style={signalMarkerStyle(SIGNAL_MIN_THRESHOLD)}
+              >s_min {SIGNAL_MIN_THRESHOLD}</span
+            >
+            <span
+              class="signal-threshold-label signal-threshold-max"
+              style={signalMarkerStyle(SIGNAL_MAX_THRESHOLD)}
+              >s_max {SIGNAL_MAX_THRESHOLD}</span
+            >
+          </div>
+          <div class="signal-range">
+            <span>0</span>
+            <span>{SIGNAL_BAR_MAX}</span>
+          </div>
+        </div>
+        <div class="gauges">
+          <div class="gauge-wrap">
+            <div class="gauge">
+              <div
+                class="gauge-ring"
+                style={gaugeFillStyle(latest.dutyL)}
+              ></div>
+              <div
+                class="gauge-needle"
+                style={gaugeNeedleStyle(latest.dutyL)}
+              ></div>
+              <div class="gauge-center"></div>
+            </div>
+            <p class="gauge-title">Left motor</p>
+            <p class="gauge-value">{latest.dutyL} PWM</p>
+          </div>
+          <div class="gauge-wrap">
+            <div class="gauge">
+              <div
+                class="gauge-ring"
+                style={gaugeFillStyle(latest.dutyR)}
+              ></div>
+              <div
+                class="gauge-needle"
+                style={gaugeNeedleStyle(latest.dutyR)}
+              ></div>
+              <div class="gauge-center"></div>
+            </div>
+            <p class="gauge-title">Right motor</p>
+            <p class="gauge-value">{latest.dutyR} PWM</p>
+          </div>
         </div>
       {:else}
         <p class="meta">No channel data yet.</p>
@@ -519,6 +625,11 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
     margin-bottom: 0.47rem;
   }
 
+  .label {
+    font-size: 0.8rem;
+    font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+  }
+
   .bar-row span,
   .bar-row strong {
     font-size: 0.8rem;
@@ -548,6 +659,174 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
     font-size: 0.82rem;
     color: #234a66;
     font-weight: 700;
+  }
+
+  .signal-meter {
+    margin-top: 0.45rem;
+  }
+
+  .signal-stats {
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: #214d73;
+    font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+    font-weight: 700;
+  }
+
+  .signal-track {
+    position: relative;
+    height: 16px;
+    border: 1px solid #c9d9ea;
+    border-radius: 999px;
+    background: #edf4fb;
+    overflow: hidden;
+  }
+
+  .signal-fill {
+    width: var(--signal-fill, 0%);
+    height: 100%;
+    background: linear-gradient(90deg, #1f93bf 0%, #2f79c4 100%);
+    border-radius: inherit;
+    transition: width 120ms linear;
+  }
+
+  .signal-marker {
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    width: 2px;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #f8fcff;
+  }
+
+  .signal-marker-min {
+    background: #d48a00;
+  }
+
+  .signal-marker-max {
+    background: #c73f4f;
+  }
+
+  .signal-threshold-labels {
+    margin-top: 0.3rem;
+    height: 1rem;
+    position: relative;
+  }
+
+  .signal-threshold-label {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .signal-threshold-min {
+    color: #7a5304;
+  }
+
+  .signal-threshold-max {
+    color: #842533;
+  }
+
+  .signal-range {
+    margin-top: 0.05rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: #47637c;
+    font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+  }
+
+  .gauges {
+    margin-top: 0.85rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .gauge-wrap {
+    border: 1px solid #d8e6f4;
+    border-radius: 12px;
+    background: #f7fbff;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .gauge {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .gauge-ring {
+    --filled: 0deg;
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+      from -120deg,
+      #1697c7 0deg var(--filled),
+      #d6e4f2 var(--filled) 240deg,
+      transparent 240deg 360deg
+    );
+    mask: radial-gradient(circle, transparent 61%, #000 62%);
+    -webkit-mask: radial-gradient(circle, transparent 61%, #000 62%);
+  }
+
+  .gauge-needle {
+    --rotation: -120deg;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 36px;
+    background: linear-gradient(180deg, #1d6fc2 0%, #24406f 100%);
+    transform-origin: 50% calc(100% - 4px);
+    transform: translate(-50%, -88%) rotate(var(--rotation));
+    border-radius: 8px;
+    transition: transform 120ms linear;
+  }
+
+  .gauge-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #1a466f;
+    box-shadow: 0 0 0 4px #e2eefb;
+  }
+
+  .gauge-title {
+    margin: 0.35rem 0 0.08rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #214d73;
+  }
+
+  .gauge-value {
+    margin: 0;
+    font-size: 0.84rem;
+    font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+    color: #1f3f5d;
+    font-weight: 700;
+  }
+
+  .gauge-scale {
+    margin-top: 0.52rem;
   }
 
   .table-card {
@@ -708,6 +987,10 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
 
   @media (max-width: 980px) {
     .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gauges {
       grid-template-columns: 1fr;
     }
   }

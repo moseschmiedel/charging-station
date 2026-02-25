@@ -114,7 +114,6 @@ function parseBeaconPayload(
 }
 
 function parseTelemetryLine(line: string): TelemetryFrame | null {
-	console.log("parseTelemetryLine", line);
 	if (line.startsWith("beacon_nav,")) {
 		return parseBeaconPayload(line, "local", null);
 	}
