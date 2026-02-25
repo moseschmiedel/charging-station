@@ -4,7 +4,7 @@
 
 namespace {
 constexpr uint16_t BEACON_CARRIER_HZ = 10000;
-constexpr uint16_t BEACON_DUTY = 32;
+constexpr uint16_t BEACON_DUTY = 128;
 } // namespace
 
 // put function declarations here:
