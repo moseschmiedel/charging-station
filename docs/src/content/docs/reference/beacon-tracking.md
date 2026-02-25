@@ -35,12 +35,18 @@ Calibrated amplitude:
 
 ## Filtering
 
-The tracker uses wrapped-angle low-pass filtering:
+The tracker applies three filtering/guard stages:
 
-- `delta = wrap(theta - theta_f_prev)`
-- `theta_f = wrap(theta_f_prev + alpha * delta)`
+1. 3-sample median prefilter on each raw channel before calibration.
+2. Wrapped-angle low-pass filtering:
+   - `delta = wrap(theta - theta_f_prev)`
+   - `delta_bounded = clamp(delta, -maxAngleStepRad, +maxAngleStepRad)`
+   - `theta_f = wrap(theta_f_prev + alpha * delta_bounded)`
+3. Spike guard hold: freeze `theta_f` updates for a short window if:
+   - any raw channel is near ADC full scale (`raw_i >= saturationRawThreshold`), or
+   - `S` drops abruptly (`(S_prev - S) / S_prev >= signalDropGuardRatio`).
 
-Filtering is only updated while `detected` is true.
+`theta_f` is only updated while `detected` is true and guard hold is inactive.
 
 ## Default constants
 
@@ -48,7 +54,11 @@ Current defaults in firmware:
 
 - `S_min = 800` (ir_meter baseline)
 - `S_min = 900` (slave baseline)
-- `alpha = 0.25`
+- `alpha = 0.18`
+- `maxAngleStepRad = 0.35`
+- `signalDropGuardRatio = 0.22`
+- `saturationRawThreshold = 4080`
+- `guardHoldMs = 120`
 - per-channel `gain = 1.0`, `offset = 0.0`
 
 These are intended as initial values for bench tuning.

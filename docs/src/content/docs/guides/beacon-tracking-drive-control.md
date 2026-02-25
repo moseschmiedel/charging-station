@@ -44,6 +44,8 @@ Angle and total signal:
 - `detected = (S >= S_min)`
 
 `theta` is low-pass filtered with wrapped-angle blending to reduce jitter.
+The runtime tracker also adds a 3-sample median prefilter and a short guard hold
+window during saturation or abrupt `S` drops to suppress one-sample bearing spikes.
 
 ## Control law
 
@@ -74,9 +76,12 @@ This prevents side-lock while still allowing approach to converge.
 1. Flash and run `ir_meter`.
 2. Verify `theta` sign and magnitude for front/left/right/back placements.
 3. Tune compile-time gains/offsets and `S_min`.
-4. Flash and run `slave`.
-5. Tune `Kp`, `u_max`, dead-zone, and `S_arrive`.
-6. Confirm search behavior and reacquisition after temporary signal loss.
+4. Tune anti-spike constants:
+   `alpha`, `maxAngleStepRad`, `signalDropGuardRatio`, `guardHoldMs`,
+   `saturationRawThreshold`.
+5. Flash and run `slave`.
+6. Tune `Kp`, `u_max`, dead-zone, and `S_arrive`.
+7. Confirm search behavior and reacquisition after temporary signal loss.
 
 ## CSV telemetry (`ir_meter`)
 
