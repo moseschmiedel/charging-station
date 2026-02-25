@@ -9,7 +9,7 @@ import type {
 type ConnectionState = "connecting" | "open" | "closed";
 
 const MAX_ROWS = 160;
-const MAX_TABLE_ROWS = 24;
+const MAX_TABLE_ROWS = 8;
 
 let connectionState: ConnectionState = "connecting";
 let status: TelemetryStatus | null = null;
@@ -143,13 +143,11 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
               ? "state-error"
               : "state-warn"
         }`}
-        >{
-          connectionState === "open"
-            ? "Live"
-            : connectionState === "closed"
-              ? "Reconnecting"
-              : "Connecting"
-        }</span
+        >{connectionState === "open"
+          ? "Live"
+          : connectionState === "closed"
+            ? "Reconnecting"
+            : "Connecting"}</span
       >
       <span class="pill soft">
         port: {status?.portPath ?? status?.configuredPath ?? "auto-detect"}
@@ -297,10 +295,7 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
         </button>
       </div>
     </div>
-    <div
-      class="raw-list"
-      bind:this={rawListEl}
-    >
+    <div class="raw-list" bind:this={rawListEl}>
       {#if rawRows.length === 0}
         <p class="meta">Waiting for UART data...</p>
       {:else}
@@ -328,10 +323,7 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
 
         resizeMoveHandler = (moveEvent: PointerEvent) => {
           const deltaY = moveEvent.clientY - startY;
-          rawListHeightPx = Math.min(
-            720,
-            Math.max(120, startHeight + deltaY),
-          );
+          rawListHeightPx = Math.min(720, Math.max(120, startHeight + deltaY));
         };
 
         resizeStopHandler = () => {
@@ -351,20 +343,7 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
     margin: 0;
     font-family: "Sora", "Segoe UI", sans-serif;
     color: #0d2030;
-    background:
-      radial-gradient(
-        circle at 10% 5%,
-        #f3fbff 0%,
-        #eef6ff 35%,
-        transparent 45%
-      ),
-      radial-gradient(
-        circle at 90% 0%,
-        #ffeecf 0%,
-        #fff5e4 28%,
-        transparent 43%
-      ),
-      linear-gradient(180deg, #f7fbff 0%, #eef3fb 100%);
+    background: #fffff8;
   }
 
   .shell {
@@ -644,6 +623,7 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
     min-height: 120px;
     overflow: auto;
     display: grid;
+    align-content: start;
     gap: 0.36rem;
     border: 1px solid #dde8f4;
     border-radius: 10px;
