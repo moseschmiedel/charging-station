@@ -197,11 +197,27 @@ bool reachedArrival(const BeaconTrackerState &state) {
          isFrontDominant(state);
 }
 
-void logNavigation(const BeaconTrackerState &state) {
-  Serial.printf("beacon_nav,%lu,%.1f,%.1f,%.4f,%.1f,%u\n",
-                static_cast<unsigned long>(state.timestampMs), state.front,
-                state.back, state.filteredTheta, state.totalSignal,
-                static_cast<unsigned>(state.detected ? 1 : 0));
+void logNavigation(Slave *slave, const MasterData &master,
+                   const BeaconTrackerState &state, bool searchMode) {
+  char payload[224];
+  snprintf(payload, sizeof(payload),
+           "beacon_nav,%lu,%s,%lu,%lu,%lu,%lu,%.1f,%.1f,%.1f,%.1f,%.2f,%.1f,%u,%u,%u",
+           static_cast<unsigned long>(state.timestampMs),
+           searchMode ? "search" : "track",
+           static_cast<unsigned long>(state.rawFront),
+           static_cast<unsigned long>(state.rawBack),
+           static_cast<unsigned long>(state.rawLeft),
+           static_cast<unsigned long>(state.rawRight), state.front, state.back,
+           state.left, state.right, state.filteredTheta * 57.29577951308232f,
+           state.totalSignal, static_cast<unsigned>(state.detected ? 1 : 0),
+           static_cast<unsigned>(lastLeftDuty), static_cast<unsigned>(lastRightDuty));
+
+  Serial.printf(
+      "%s\n", payload);
+
+  String meshMessage = "log:";
+  meshMessage += payload;
+  slave->communication.unicast(master.id, meshMessage);
 }
 
 void step_work(Slave *slave) {
@@ -234,14 +250,16 @@ bool step_to_charge(Slave *slave, MasterData &master) {
   const BeaconTrackerState &state =
       tracker.update(rawFront, rawBack, rawLeft, rawRight, now);
 
+  bool searchMode = false;
   if (state.detected) {
     driveTracking(slave, state);
   } else {
     driveSearch(slave, now);
+    searchMode = true;
   }
 
   if (now - lastLogAtMs >= NAV_LOG_PERIOD_MS) {
-    logNavigation(state);
+    logNavigation(slave, master, state, searchMode);
     lastLogAtMs = now;
   }
 
@@ -316,6 +334,9 @@ void setup() {
   trackerConfig.guardHoldMs = TRACKER_GUARD_HOLD_MS;
   tracker = BeaconTracker(trackerConfig);
 
+  Serial.println(
+      "beacon_nav,t_ms,mode,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,"
+      "theta_deg,S,detected,duty_l,duty_r");
   Serial.println("Setup complete");
   slave.multiColorLight.setTopLeds(RED);
 }

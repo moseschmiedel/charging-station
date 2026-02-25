@@ -35,6 +35,9 @@ void setup() {
   master.infraredLight.front.setDutyCycle(BEACON_DUTY);
   Serial.printf("Beacon config: front=%u Hz duty=%u/1023\n", BEACON_CARRIER_HZ,
                 BEACON_DUTY);
+  Serial.println(
+      "wireless_log,from,t_ms,mode,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,"
+      "theta_deg,S,detected,duty_l,duty_r");
 }
 
 void loop() { master.step(); }

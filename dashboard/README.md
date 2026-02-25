@@ -1,42 +1,42 @@
-# sv
+# Beacon Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Live SvelteKit dashboard for beacon tracking telemetry from UART.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Node-side UART reader using `serialport`
+- SSE stream endpoint at `/api/telemetry`
+- Browser dashboard with live bearing, channel bars, and recent frame table
+- Supports both formats:
+  - direct slave logs: `beacon_nav,...`
+  - master-forwarded logs: `wireless_log,<from>,beacon_nav,...`
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Configure UART
 
-To recreate this project with the same configuration:
+Set environment variables before `dev` or `build`:
 
-```sh
-# recreate this project
-bun x sv create --template minimal --types ts --add tailwindcss="plugins:none" mcp="ide:other+setup:local" --install bun .
-```
+- `UART_PATH` (optional, recommended): serial device path, e.g.
+  - macOS: `/dev/tty.usbmodem12345`
+  - Linux: `/dev/ttyACM0`
+  - Windows: `COM5`
+- `UART_BAUD` (optional): defaults to `115200`
 
-## Developing
+If `UART_PATH` is not set, the backend tries to auto-select a serial port.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+## Run
 
 ```sh
-npm run build
+bun install
+bun run dev
 ```
 
-You can preview the production build with `npm run preview`.
+Open `http://localhost:5173`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Build
+
+```sh
+bun run build
+bun run preview
+```
+
+This project uses the Node adapter (`@sveltejs/adapter-node`) so UART access is available in server runtime.
