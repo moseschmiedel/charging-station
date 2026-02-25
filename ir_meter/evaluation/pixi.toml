@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Mose Schmiedel <mose.schmiedel@stud.htwk-leipzig.de>"]
+channels = ["https://conda.modular.com/max-nightly", "conda-forge"]
+name = "evaluation"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+plot-test1 = "python visualize_test1.py --input data/test1.csv --output plots/test1_overview.png"
+
+[dependencies]
+python = ">=3.14.3,<3.15"
+matplotlib = ">=3.10.7,<4"
+pandas = ">=2.3.3,<3"
