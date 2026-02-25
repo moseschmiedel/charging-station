@@ -78,6 +78,11 @@ These are intended as initial values for bench tuning.
 
 ## Telemetry mapping
 
-`ir_meter` CSV output maps directly to tracker fields:
+`ir_meter` CSV output fields:
 
 `t_ms,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,vx,vy,theta_rad,theta_deg,S,detected`
+
+Notes:
+
+- `theta_rad` and `theta_deg` are emitted from `filteredTheta` (not raw `theta`).
+- Raw `theta` remains available inside `BeaconTrackerState` for internal diagnostics.

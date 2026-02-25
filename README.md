@@ -18,17 +18,18 @@ done
 
 ## Repository Layout
 
-- `master/` - master node firmware (ESP32-S3, PlatformIO)
-- `slave/` - slave node firmware (ESP32-S3, PlatformIO)
-- `motor/` - motor controller firmware (ESP32, PlatformIO)
-- `ir_meter/` - IR meter and beacon-tracking firmware (ESP32-S3, PlatformIO)
+- `master/` - Dezibot master node firmware (ESP32-S3-MINI, PlatformIO)
+- `slave/` - Dezibot slave node firmware (ESP32-S3-MINI, PlatformIO)
+- `ir_meter/` - Dezibot IR meter and beacon-tracking firmware (ESP32-S3-MINI, PlatformIO)
+- `motor/` - standalone motor controller firmware (ESP32-WROOM-32, PlatformIO)
 - `dezibot/` - Dezibot library submodule
+- `dashboard/` - live beacon telemetry dashboard (SvelteKit + UART)
 - `docs/` - Astro Starlight docs site
 
 ## Requirements
 
 - [PlatformIO Core](https://platformio.org/install)
-- [Bun](https://bun.sh/) for `docs/`
+- [Bun](https://bun.sh/) for `dashboard/` and `docs/`
 - Initialized Git submodules
 
 ## Firmware Workflow
@@ -48,10 +49,10 @@ pio device monitor -b 115200
 
 ### Board Targets
 
-- `master`: `esp32s3usbotg`
-- `slave`: `esp32s3usbotg`
-- `ir_meter`: `esp32s3usbotg`
-- `motor`: `esp32dev`
+- `master`: env `esp32dev`, board `esp32s3usbotg`, MCU `ESP32-S3-MINI`
+- `slave`: env `esp32dev`, board `esp32s3usbotg`, MCU `ESP32-S3-MINI`
+- `ir_meter`: env `esp32dev`, board `esp32s3usbotg`, MCU `ESP32-S3-MINI`
+- `motor`: env `esp32dev`, board `esp32dev`, MCU `ESP32-WROOM-32`
 
 For target-specific details, see:
 
@@ -59,6 +60,21 @@ For target-specific details, see:
 - `slave/README.md`
 - `motor/README.md`
 - `ir_meter/README.md`
+
+## Dashboard
+
+```bash
+cd dashboard
+bun install
+bun run dev
+```
+
+Open `http://localhost:5173`.
+
+Optional UART configuration before run:
+
+- `UART_PATH` (for example `/dev/tty.usbmodem12345`)
+- `UART_BAUD` (default `115200`)
 
 ## Documentation Site
 

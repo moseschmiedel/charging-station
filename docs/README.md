@@ -1,49 +1,39 @@
-# Starlight Starter Kit: Basics
+# Charging Station Docs
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Astro Starlight documentation site for the `charging-station` workspace.
 
-```
-bun create astro@latest -- --template starlight
-```
+## Scope
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This site documents:
 
-## 🚀 Project Structure
+- firmware architecture and tuning (`master/`, `slave/`, `ir_meter/`, `motor/`)
+- hardware and signal-path assumptions
+- beacon-tracking and drive-control behavior
+- developer workflow and build/flash commands
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Local development
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+cd /Volumes/Programming/htwk/charging-station/docs
+bun install
+bun run dev
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Open `http://localhost:4321`.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Production build
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```bash
+cd /Volumes/Programming/htwk/charging-station/docs
+bun run build
+bun run preview
+```
 
-## 🧞 Commands
+Static output is written to `docs/dist/`.
 
-All commands are run from the root of the project, from a terminal:
+## Structure
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- `src/content/docs/`: documentation pages (`guides/`, `reference/`, `index.mdx`)
+- `src/assets/`: local images used by docs pages
+- `public/`: static files served as-is
+- `astro.config.mjs`: Starlight site configuration/sidebar

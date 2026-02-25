@@ -3,11 +3,12 @@
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
+import rehypeMermaid from "rehype-mermaid";
 
 // https://astro.build/config
 export default defineConfig({
 	markdown: {
-		rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }]],
+		rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }], rehypeMermaid],
 	},
 	integrations: [
 		starlight({
@@ -16,7 +17,7 @@ export default defineConfig({
 				{
 					icon: "github",
 					label: "GitHub",
-					href: "https://github.com/moseschmiedel/charging_station-master",
+					href: "https://github.com/moseschmiedel/charging-station",
 				},
 			],
 			sidebar: [

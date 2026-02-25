@@ -2,14 +2,16 @@
 title: Overview
 description: Firmware architecture map for charging, beacon tracking, and drive control.
 sidebar:
-  order: 1
+    order: 1
 ---
 
 ## Repository map
 
-- `master/`: station coordinator and IR beacon transmitter.
-- `slave/`: charge-seeking state machine and closed-loop drive control.
-- `ir_meter/`: measurement and tuning firmware for beacon estimation.
+- `master/`: Dezibot master node firmware (ESP32-S3-MINI) for station coordination and IR beacon transmission.
+- `slave/`: Dezibot mobile node firmware (ESP32-S3-MINI) with charge-seeking state machine and closed-loop drive control.
+- `ir_meter/`: Dezibot instrumentation firmware (ESP32-S3-MINI) for beacon measurement and tuning.
+- `motor/`: standalone motor controller firmware (ESP32-WROOM-32) for controlling the charging station stepper motors for moving the bridge.
+- `dashboard/`: live telemetry UI (SvelteKit) for `beacon_nav` logs over UART.
 - `dezibot/`: shared device library used by firmware targets.
 
 ## Beacon tracking architecture

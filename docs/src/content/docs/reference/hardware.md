@@ -7,44 +7,37 @@ description: Hardware components and signal-path assumptions for beacon tracking
 
 ## Master
 
-- ESP32-S3 running `master/` firmware.
+- Dezibot node with **ESP32-S3-MINI** MCU running `master/` firmware.
 - Emits IR beacon from front LED.
 - Carrier currently configured to continuous **10 kHz**.
 
 ## Slave
 
-- ESP32-S3 running `slave/` firmware.
+- Dezibot node with **ESP32-S3-MINI** MCU running `slave/` firmware.
 - Reads four directional IR channels:
-  - `IR_FRONT`
-  - `IR_BACK`
-  - `IR_LEFT`
-  - `IR_RIGHT`
+    - `IR_FRONT`
+    - `IR_BACK`
+    - `IR_LEFT`
+    - `IR_RIGHT`
 - Executes closed-loop heading and drive control.
 
 ## IR meter
 
-- ESP32-S3 running `ir_meter/` firmware.
+- Dezibot node with **ESP32-S3-MINI** MCU running `ir_meter/` firmware.
 - Uses the same four directional channels as slave.
 - Publishes CSV telemetry for calibration and bearing validation.
 
-## Receive-path assumption
+## Motor controller
 
-Beacon-tracking firmware assumes each channel behaves as a demodulated amplitude source:
-
-`Photodiode -> TIA -> band-pass (~carrier) -> envelope detector -> low-pass -> ADC`
-
-If raw photodiode outputs are used instead, add analog demodulation or software demodulation before using current thresholds/constants.
-
-## Motor/actuator constraints
-
-Drive control uses duty dead-zone compensation because low PWM values do not reliably move vibration motors.
+- Standalone motor controller board with **ESP32-WROOM-32** MCU running `motor/` firmware.
+- Drives two stepper motors (`AccelStepper`/`MultiStepper`).
 
 ## Development board reference
 
-### ESP32 Development Board
+### MCU Reference
 
-- [Amazon link](https://amzn.eu/d/0aacuYDf)
-- [ESP32-WROOM-32 Microcontroller Datasheet](https://documentation.espressif.com/esp32-wroom-32_datasheet_en.pdf)
+- Dezibot nodes: [ESP32-S3-MINI-1 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-mini-1_datasheet_en.pdf)
+- Motor controller: [ESP32-WROOM-32 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf)
 
 #### Pinout
 

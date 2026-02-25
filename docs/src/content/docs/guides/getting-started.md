@@ -7,11 +7,21 @@ description: Build and run the charging-station firmware projects.
 
 This workspace contains separate firmware repositories:
 
-- `master/`: charging station master node (beacon transmitter + mesh control).
-- `slave/`: mobile node (beacon tracking and drive control).
-- `ir_meter/`: instrumentation firmware for beacon signal validation.
-- `motor/`: standalone motor controller experiments.
+- `master/`: Dezibot master node firmware (ESP32-S3-MINI).
+- `slave/`: Dezibot mobile node firmware (ESP32-S3-MINI).
+- `ir_meter/`: Dezibot instrumentation firmware for beacon validation (ESP32-S3-MINI).
+- `motor/`: standalone motor controller firmware (ESP32-WROOM-32).
+- `dashboard/`: live telemetry dashboard (SvelteKit + UART).
 - `docs/`: this documentation site.
+
+## Prerequisites
+
+Initialize submodules before building firmware (required for `dezibot/` library):
+
+```bash
+cd /Volumes/Programming/htwk/charging-station
+git submodule update --init --recursive
+```
 
 ## Build commands
 
@@ -20,15 +30,19 @@ Run the commands inside each repository.
 ```bash
 # Master firmware
 cd /Volumes/Programming/htwk/charging-station/master
-pio run -e esp32dev
+pio run
 
 # Slave firmware
 cd /Volumes/Programming/htwk/charging-station/slave
-pio run -e esp32dev
+pio run
 
 # IR meter firmware
 cd /Volumes/Programming/htwk/charging-station/ir_meter
-pio run -e esp32dev
+pio run
+
+# Motor controller firmware (ESP32-WROOM-32)
+cd /Volumes/Programming/htwk/charging-station/motor
+pio run
 ```
 
 ## Flash and monitor
@@ -36,9 +50,21 @@ pio run -e esp32dev
 ```bash
 # Example: slave
 cd /Volumes/Programming/htwk/charging-station/slave
-pio run -e esp32dev -t upload
+pio run -t upload
 pio device monitor -b 115200
 ```
+
+## Dashboard
+
+Run the live telemetry dashboard:
+
+```bash
+cd /Volumes/Programming/htwk/charging-station/dashboard
+bun install
+bun run dev
+```
+
+Open `http://localhost:5173`.
 
 ## Next step
 
