@@ -1,0 +1,32 @@
+---
+title: Charging Station Documentation
+description: Firmware and control documentation for beacon tracking, charging workflow, and system reference.
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Documentation map
+
+<CardGrid stagger>
+  <Card title="Getting Started" icon="rocket" href="/guides/getting-started/">
+    Build, flash, and monitor the firmware targets used in this workspace.
+  </Card>
+  <Card
+    title="Beacon Tracking + Drive Control"
+    icon="open-book"
+    href="/guides/beacon-tracking-drive-control/"
+  >
+    End-to-end implementation approach: signal inputs, bearing estimation, and
+    closed-loop motor commands.
+  </Card>
+  <Card title="Beacon Tracking Reference" icon="document" href="/reference/beacon-tracking/">
+    Equations, constants, state definitions, and telemetry fields used by the
+    tracker.
+  </Card>
+  <Card title="Drive Control Reference" icon="setting" href="/reference/drive-control/">
+    Control law, dead-zone mapping, search behavior, and arrival criteria.
+  </Card>
+  <Card title="Hardware" icon="document" href="/reference/hardware/">
+    Board-level component summary and receive-path assumptions used by firmware.
+  </Card>
+</CardGrid>

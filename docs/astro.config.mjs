@@ -1,0 +1,41 @@
+// @ts-check
+
+import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config";
+import rehypeExternalLinks from "rehype-external-links";
+
+// https://astro.build/config
+export default defineConfig({
+	markdown: {
+		rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }]],
+	},
+	integrations: [
+		starlight({
+			title: "Charging Station Documentation",
+			social: [
+				{
+					icon: "github",
+					label: "GitHub",
+					href: "https://github.com/moseschmiedel/charging_station-master",
+				},
+			],
+			sidebar: [
+				{
+					label: "Guides",
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: "Getting Started", slug: "guides/getting-started" },
+						{
+							label: "Beacon Tracking + Drive Control",
+							slug: "guides/beacon-tracking-drive-control",
+						},
+					],
+				},
+				{
+					label: "Reference",
+					autogenerate: { directory: "reference" },
+				},
+			],
+		}),
+	],
+});
