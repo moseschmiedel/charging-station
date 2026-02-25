@@ -473,10 +473,10 @@ $: if (keepScrolledToLatest && rawRows.length > 0) {
   .needle {
     position: absolute;
     width: 2px;
-    height: 47px;
+    height: 64px;
     left: 50%;
-    top: 14px;
-    margin-left: -1px;
+    top: calc(50% - 49px);
+    margin-left: 0px;
     transform-origin: 50% calc(100% - 14px);
     background: linear-gradient(180deg, #0c6f93 0%, #2f3e85 100%);
     border-radius: 8px;
