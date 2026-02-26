@@ -16,16 +16,24 @@ static const float stepsPerRevolution = 200;
 static float max_rpm = 80;
 static float rpm_per_sec = 10;
 static int microstepSetting = 1;
+
 static const uint8_t I2C_SLAVE_ADDRESS = 0x12;
 static const int I2C_SDA_PIN = 21;
 static const int I2C_SCL_PIN = 22;
 static const uint32_t I2C_FREQUENCY_HZ = 100000;
-static const long BRIDGE_RAISED_STEPS = 10000;
-static const long BRIDGE_LOWERED_STEPS = 9500;
+
+static const long BRIDGE_RAISED_STEPS = 3500;
+static const long BRIDGE_LOWERED_WALK_IN_STEPS = 2300;
+static const long BRIDGE_LOWERED_CHARGE_STEPS = 2200;
 
 const uint8_t STEPPER_AMOUNT = 2;
 
-enum class BridgeMotion : uint8_t { IDLE, LOWERING, RAISING };
+enum class BridgeMotion : uint8_t {
+  IDLE,
+  LOWERING_TO_WALK_IN,
+  LOWERING_TO_CHARGE,
+  RAISING
+};
 
 long position[STEPPER_AMOUNT] = {BRIDGE_RAISED_STEPS, BRIDGE_RAISED_STEPS};
 
@@ -33,19 +41,18 @@ static inline float convert_rotational_position_to_steps(float rotations) {
   return rotations * stepsPerRevolution * microstepSetting;
 }
 
-static inline float max_speed_steps_per_sec(float max_rpm) {
-  return microstepSetting * stepsPerRevolution * max_rpm / 60;
+static inline float max_speed_steps_per_sec(float max_rpm_value) {
+  return microstepSetting * stepsPerRevolution * max_rpm_value / 60;
 }
 
-static inline float accel_steps_per_sec(float rpm_per_sec) {
-  return microstepSetting * stepsPerRevolution * rpm_per_sec / 60;
+static inline float accel_steps_per_sec(float rpm_per_sec_value) {
+  return microstepSetting * stepsPerRevolution * rpm_per_sec_value / 60;
 }
 
 AccelStepper stepperLeft(AccelStepper::FULL4WIRE, LEFT_PIN1, LEFT_PIN2,
                          LEFT_PIN3, LEFT_PIN4);
 AccelStepper stepperRight(AccelStepper::FULL4WIRE, RIGHT_PIN1, RIGHT_PIN2,
                           RIGHT_PIN3, RIGHT_PIN4);
-
 MultiStepper stepperMgr;
 
 static String rx_line;
@@ -81,8 +88,8 @@ static void init_i2c_slave() {
 
   bool i2c_ready = false;
   for (uint8_t attempt = 1; attempt <= 5 && !i2c_ready; ++attempt) {
-    i2c_ready =
-        Wire.begin(I2C_SLAVE_ADDRESS, I2C_SDA_PIN, I2C_SCL_PIN, I2C_FREQUENCY_HZ);
+    i2c_ready = Wire.begin(I2C_SLAVE_ADDRESS, I2C_SDA_PIN, I2C_SCL_PIN,
+                           I2C_FREQUENCY_HZ);
     if (!i2c_ready) {
       Serial.printf(
           "I2C slave init attempt %u failed (line state sda=%d scl=%d)\n",
@@ -103,11 +110,16 @@ static void init_i2c_slave() {
 }
 
 static void start_bridge_motion(BridgeMotion motion) {
-  if (motion == BridgeMotion::LOWERING) {
-    position[0] = BRIDGE_LOWERED_STEPS;
-    position[1] = BRIDGE_LOWERED_STEPS;
-    bridge_status = "BUSY:LOWER";
-    Serial.println("Bridge lowering started");
+  if (motion == BridgeMotion::LOWERING_TO_WALK_IN) {
+    position[0] = BRIDGE_LOWERED_WALK_IN_STEPS;
+    position[1] = BRIDGE_LOWERED_WALK_IN_STEPS;
+    bridge_status = "BUSY:LOWER_WALK_IN";
+    Serial.println("Bridge lowering to walk-in started");
+  } else if (motion == BridgeMotion::LOWERING_TO_CHARGE) {
+    position[0] = BRIDGE_LOWERED_CHARGE_STEPS;
+    position[1] = BRIDGE_LOWERED_CHARGE_STEPS;
+    bridge_status = "BUSY:LOWER_CHARGE";
+    Serial.println("Bridge lowering to charge started");
   } else {
     position[0] = BRIDGE_RAISED_STEPS;
     position[1] = BRIDGE_RAISED_STEPS;
@@ -126,9 +138,17 @@ static void process_command(const String &command_in) {
     return;
   }
 
-  if (command.equalsIgnoreCase("LOWER")) {
+  if (command.equalsIgnoreCase("LOWER_WALK_IN") ||
+      command.equalsIgnoreCase("LOWER")) {
     if (bridge_motion == BridgeMotion::IDLE) {
-      start_bridge_motion(BridgeMotion::LOWERING);
+      start_bridge_motion(BridgeMotion::LOWERING_TO_WALK_IN);
+    }
+    return;
+  }
+
+  if (command.equalsIgnoreCase("LOWER_CHARGE")) {
+    if (bridge_motion == BridgeMotion::IDLE) {
+      start_bridge_motion(BridgeMotion::LOWERING_TO_CHARGE);
     }
     return;
   }
@@ -158,9 +178,12 @@ static void update_bridge_motion() {
     return;
   }
 
-  if (bridge_motion == BridgeMotion::LOWERING) {
-    bridge_status = "DONE:LOWER";
-    Serial.println("Bridge lowering finished");
+  if (bridge_motion == BridgeMotion::LOWERING_TO_WALK_IN) {
+    bridge_status = "DONE:LOWER_WALK_IN";
+    Serial.println("Bridge lowering to walk-in finished");
+  } else if (bridge_motion == BridgeMotion::LOWERING_TO_CHARGE) {
+    bridge_status = "DONE:LOWER_CHARGE";
+    Serial.println("Bridge lowering to charge finished");
   } else {
     bridge_status = "DONE:RAISE";
     Serial.println("Bridge raising finished");
@@ -168,28 +191,33 @@ static void update_bridge_motion() {
   bridge_motion = BridgeMotion::IDLE;
 }
 
-static void home_bridge_to_top_on_boot() {
-  Serial.println("Startup homing: driving bridge up to top");
+static void home_bridge_to_walk_in_on_boot() {
+  Serial.println("Startup homing: moving bridge to walk-in position");
 
-  // Assume boot can happen at or below the lower stop and run one full raise
-  // stroke to reach the top stop before enabling runtime commands.
-  position[0] = BRIDGE_LOWERED_STEPS;
-  position[1] = BRIDGE_LOWERED_STEPS;
-  stepperLeft.setCurrentPosition(position[0]);
-  stepperRight.setCurrentPosition(position[1]);
+  stepperLeft.setCurrentPosition(0);
+  stepperRight.setCurrentPosition(0);
 
   start_bridge_motion(BridgeMotion::RAISING);
   while (bridge_motion != BridgeMotion::IDLE) {
     update_bridge_motion();
     delay(1);
   }
+  stepperLeft.setCurrentPosition(BRIDGE_RAISED_STEPS);
+  stepperRight.setCurrentPosition(BRIDGE_RAISED_STEPS);
 
-  position[0] = BRIDGE_RAISED_STEPS;
-  position[1] = BRIDGE_RAISED_STEPS;
-  stepperLeft.setCurrentPosition(position[0]);
-  stepperRight.setCurrentPosition(position[1]);
+  start_bridge_motion(BridgeMotion::LOWERING_TO_WALK_IN);
+  while (bridge_motion != BridgeMotion::IDLE) {
+    update_bridge_motion();
+    delay(1);
+  }
+  stepperLeft.setCurrentPosition(BRIDGE_LOWERED_WALK_IN_STEPS);
+  stepperRight.setCurrentPosition(BRIDGE_LOWERED_WALK_IN_STEPS);
 
-  Serial.println("Startup homing complete: bridge at top");
+  position[0] = BRIDGE_LOWERED_WALK_IN_STEPS;
+  position[1] = BRIDGE_LOWERED_WALK_IN_STEPS;
+  bridge_status = "IDLE";
+
+  Serial.println("Startup homing complete: bridge at walk-in position");
 }
 
 void setup() {
@@ -201,12 +229,10 @@ void setup() {
 
   stepperLeft.setMaxSpeed(max_speed_steps_per_sec(max_rpm));
   stepperRight.setMaxSpeed(max_speed_steps_per_sec(max_rpm));
-
   Serial.printf("Set Max Speed = %f\n", max_speed_steps_per_sec(max_rpm));
 
   stepperLeft.setAcceleration(accel_steps_per_sec(rpm_per_sec));
   stepperRight.setAcceleration(accel_steps_per_sec(rpm_per_sec));
-
   Serial.printf("Set Acceleration = %f\n", accel_steps_per_sec(rpm_per_sec));
 
   stepperMgr.addStepper(stepperLeft);
@@ -214,14 +240,11 @@ void setup() {
   Serial.setRxFIFOFull(3);
   Serial.onReceive(uart_receive);
 
-  home_bridge_to_top_on_boot();
-
+  home_bridge_to_walk_in_on_boot();
   init_i2c_slave();
 
-  position[0] = BRIDGE_RAISED_STEPS;
-  position[1] = BRIDGE_RAISED_STEPS;
-
-  Serial.printf("Setup complete!\n");
+  Serial.printf("Setup complete! current=(%ld,%ld)\n", position[0],
+                position[1]);
 }
 
 void loop() {

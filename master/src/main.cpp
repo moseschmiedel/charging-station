@@ -9,10 +9,18 @@ constexpr uint16_t BEACON_DUTY = 256;
 
 // put function declarations here:
 void start_chg(Master *master, SlaveData *slave) {
+  if (slave == nullptr) {
+    Serial.println("start_chg skipped: slave is null");
+    return;
+  }
   Serial.printf("Execute 'start_chg for slave %u'\n", slave->id);
   master->enjoinCharge(slave);
 }
 void end_chg(Master *master, SlaveData *slave) {
+  if (slave == nullptr) {
+    Serial.println("end_chg skipped: slave is null");
+    return;
+  }
   Serial.printf("Execute 'end_chg for slave %u'\n", slave->id);
   master->cancelCharge(slave);
 }
@@ -40,4 +48,7 @@ void setup() {
       "theta_deg,S,detected,duty_l,duty_r");
 }
 
-void loop() { master.step(); }
+void loop() {
+  master.step();
+  delay(5);
+}
