@@ -73,7 +73,7 @@ flowchart LR
 Current defaults in firmware:
 
 - $S_{\min} = 800$ (ir_meter baseline)
-- $S_{\min} = 900$ (slave baseline)
+- $S_{\min} = 600$ (slave baseline)
 - $\alpha = 0.18$
 - $\mathrm{maxAngleStepRad} = 0.35$
 - $\mathrm{signalDropGuardRatio} = 0.22$

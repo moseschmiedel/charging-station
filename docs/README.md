@@ -31,6 +31,16 @@ bun run preview
 
 Static output is written to `docs/dist/`.
 
+## Regenerate code API reference
+
+The pages in `src/content/docs/reference/Code/` are generated from Doxygen XML.
+Regenerate them from repository root:
+
+```bash
+cd /Volumes/Programming/htwk/charging-station
+python3 scripts/generate_doxygen_docs.py
+```
+
 ## Structure
 
 - `src/content/docs/`: documentation pages (`guides/`, `reference/`, `index.mdx`)

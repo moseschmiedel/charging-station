@@ -158,7 +158,7 @@ def render_module_page(
                 "",
                 "No Doxygen XML was found for this module.",
                 "",
-                "Run `scripts/generate_doxygen_docs.sh` from repository root.",
+                "Run `python3 scripts/generate_doxygen_docs.py` from repository root.",
                 "",
             ]
         )

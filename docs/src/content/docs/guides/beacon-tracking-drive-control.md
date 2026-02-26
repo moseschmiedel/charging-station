@@ -57,13 +57,15 @@ window during saturation or abrupt $S$ drops to suppress one-sample bearing spik
 
 When beacon is detected:
 
-- $w = \operatorname{clamp}(K_p \cdot \theta_f,\,-w_{\max},\,w_{\max})$
+- $w = \operatorname{clamp}(K_p \cdot \theta_f + w_{\mathrm{jitter}},\,-w_{\max},\,w_{\max})$
 - $u = u_{\max} \cdot \max(0, \cos(\theta_f))$
 - if $|\theta_f| > \pi/2$, force $u = 0$
 - $m_L = \operatorname{clamp}(u - w,\,0,\,1)$
 - $m_R = \operatorname{clamp}(u + w,\,0,\,1)$
 
 Motor commands include dead-zone compensation before PWM duty is applied.
+`w_{\mathrm{jitter}}` is a small alternating steering term used near front-wall lock
+conditions to help recover heading.
 
 When beacon is not detected, the slave executes a slow spin search and periodically flips spin direction.
 

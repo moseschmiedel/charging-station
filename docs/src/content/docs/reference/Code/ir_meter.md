@@ -7,7 +7,7 @@ description: Auto-generated API summary from Doxygen XML.
 
 - Module: `ir_meter`
 - Doxygen XML: `/Volumes/Programming/htwk/charging-station/docs/generated/doxygen/ir_meter/xml`
-- Generated at: `2026-02-26T01:20:25Z`
+- Generated at: `2026-02-26T01:40:44Z`
 
 ## Functions
 

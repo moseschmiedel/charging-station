@@ -7,7 +7,7 @@ description: Auto-generated API summary from Doxygen XML.
 
 - Module: `master`
 - Doxygen XML: `/Volumes/Programming/htwk/charging-station/docs/generated/doxygen/master/xml`
-- Generated at: `2026-02-26T01:20:25Z`
+- Generated at: `2026-02-26T01:40:44Z`
 
 ## Functions
 
