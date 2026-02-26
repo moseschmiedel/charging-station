@@ -11,6 +11,27 @@ Drive control runs at a fixed period in `slave` firmware (20 ms target).
 
 Inputs are taken from `BeaconTrackerState`.
 
+## Control pipeline
+
+```mermaid
+flowchart TD
+  A["Input: BeaconTrackerState (filtered theta, total signal, detected, channels)"] --> B{"detected?"}
+  B -- "No" --> C["Search mode: slow spin"]
+  C --> D["Periodic spin-direction flip"]
+  D --> E["Apply search duty to one side"]
+  B -- "Yes" --> F["Compute angular term w"]
+  F --> G["Compute forward term u from cos(theta_f)"]
+  G --> H["Force u=0 when abs(theta_f) > pi/2"]
+  H --> I["Mix normalized commands m_L and m_R"]
+  I --> J["Map to PWM with dead-zone and quantization"]
+  E --> K["Apply motor duties"]
+  J --> K
+  K --> L{"Arrival condition met?"}
+  L -- "Yes" --> M["Return success to charging state machine"]
+  L -- "No" --> N["Continue control loop"]
+  O["Arrival condition:\ndetected=true, S ge S_arrive,\nfront channel dominant"] --> L
+```
+
 ## Controller
 
 With filtered angle $\theta_f$:
@@ -18,8 +39,8 @@ With filtered angle $\theta_f$:
 - $w = \operatorname{clamp}(K_p \cdot \theta_f,\,-w_{\max},\,w_{\max})$
 - $u = u_{\max} \cdot \max(0, \cos(\theta_f))$
 - if $|\theta_f| > \pi/2$, $u = 0$
-- $m_L = \operatorname{clamp}(u + w,\,0,\,1)$
-- $m_R = \operatorname{clamp}(u - w,\,0,\,1)$
+- $m_L = \operatorname{clamp}(u - w,\,0,\,1)$
+- $m_R = \operatorname{clamp}(u + w,\,0,\,1)$
 
 $m_L$ and $m_R$ are normalized motor commands in $[0, 1]$.
 

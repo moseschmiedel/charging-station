@@ -12,11 +12,15 @@ constexpr uint32_t NAV_LOG_PERIOD_MS = 200;
 
 constexpr float THETA_ALPHA = 0.18f;
 constexpr float THETA_MAX_STEP_RAD = 0.35f;
-constexpr float SIGNAL_MIN = 900.0f;
-constexpr float SIGNAL_ARRIVE = 6000.0f;
+constexpr float SIGNAL_MIN = 600.0f;
+constexpr float SIGNAL_ARRIVE = 4250.0f;
 constexpr float SIGNAL_DROP_GUARD_RATIO = 0.22f;
 constexpr uint16_t SATURATION_RAW_THRESHOLD = 4080;
 constexpr uint16_t TRACKER_GUARD_HOLD_MS = 120;
+constexpr uint32_t WALL_JITTER_PERIOD_MS = 240;
+constexpr float WALL_JITTER_MAX_THETA_RAD = 0.28f;
+constexpr float WALL_JITTER_MIN_SIGNAL = 1800.0f;
+constexpr float WALL_JITTER_W_AMPLITUDE = 0.14f;
 constexpr float KP_THETA = 0.70f;
 constexpr float W_MAX = 0.65f;
 constexpr float U_MAX = 0.75f;
@@ -46,10 +50,9 @@ uint16_t quantizeDuty(uint16_t duty) {
     duty = DUTY_MAX;
   }
 
-  uint16_t quantized =
-      static_cast<uint16_t>(((duty + (DUTY_QUANTIZE_STEP / 2)) /
-                             DUTY_QUANTIZE_STEP) *
-                            DUTY_QUANTIZE_STEP);
+  uint16_t quantized = static_cast<uint16_t>(
+      ((duty + (DUTY_QUANTIZE_STEP / 2)) / DUTY_QUANTIZE_STEP) *
+      DUTY_QUANTIZE_STEP);
 
   if (quantized < DUTY_DEADZONE) {
     quantized = DUTY_DEADZONE;
@@ -67,9 +70,8 @@ uint16_t mapNormalizedToDuty(float normalized) {
   }
 
   normalized = clampf(normalized, 0.0f, 1.0f);
-  const float duty =
-      static_cast<float>(DUTY_DEADZONE) +
-      normalized * static_cast<float>(DUTY_MAX - DUTY_DEADZONE);
+  const float duty = static_cast<float>(DUTY_DEADZONE) +
+                     normalized * static_cast<float>(DUTY_MAX - DUTY_DEADZONE);
   return quantizeDuty(static_cast<uint16_t>(duty));
 }
 
@@ -91,6 +93,8 @@ uint32_t nextControlAtMs = 0;
 uint32_t lastLedToggleAtMs = 0;
 uint32_t lastSearchFlipAtMs = 0;
 uint32_t lastLogAtMs = 0;
+uint32_t lastWallJitterFlipAtMs = 0;
+int8_t wallJitterSign = 1;
 
 void applyMotorDuties(Slave *slave, uint16_t leftDuty, uint16_t rightDuty) {
   leftDuty = quantizeDuty(leftDuty);
@@ -120,6 +124,8 @@ void resetNavigation(Slave *slave) {
   lastLedToggleAtMs = 0;
   lastSearchFlipAtMs = 0;
   lastLogAtMs = 0;
+  lastWallJitterFlipAtMs = 0;
+  wallJitterSign = 1;
   lastLeftDuty = 0;
   lastRightDuty = 0;
 }
@@ -133,6 +139,7 @@ void beginNavigation(Slave *slave, uint32_t now) {
   lastLedToggleAtMs = now;
   lastSearchFlipAtMs = now;
   lastLogAtMs = now;
+  lastWallJitterFlipAtMs = now;
   slave->multiColorLight.setTopLeds(YELLOW);
 }
 
@@ -177,19 +184,40 @@ void driveSearch(Slave *slave, uint32_t now) {
   }
 }
 
+float wallJitterTerm(const BeaconTrackerState &state) {
+  const bool likelyNearWall =
+      state.detected && isFrontDominant(state) &&
+      state.totalSignal >= WALL_JITTER_MIN_SIGNAL &&
+      std::fabs(state.filteredTheta) <= WALL_JITTER_MAX_THETA_RAD;
+  if (!likelyNearWall) {
+    return 0.0f;
+  }
+
+  if (state.timestampMs - lastWallJitterFlipAtMs >= WALL_JITTER_PERIOD_MS) {
+    wallJitterSign = -wallJitterSign;
+    lastWallJitterFlipAtMs = state.timestampMs;
+  }
+
+  return static_cast<float>(wallJitterSign) * WALL_JITTER_W_AMPLITUDE;
+}
+
 void driveTracking(Slave *slave, const BeaconTrackerState &state) {
   const float theta = state.filteredTheta;
-  const float w = clampf(KP_THETA * theta, -W_MAX, W_MAX);
+  const float w =
+      clampf(KP_THETA * theta + wallJitterTerm(state), -W_MAX, W_MAX);
 
   float u = U_MAX * std::fmax(0.0f, std::cos(theta));
   if (std::fabs(theta) > HALF_PI_RAD) {
     u = 0.0f;
   }
 
-  const float mLeft = clampf(u + w, 0.0f, 1.0f);
-  const float mRight = clampf(u - w, 0.0f, 1.0f);
+  // For this drivetrain, increasing right motor turns the robot left.
+  // So steering mix is mirrored: right-turn intent must boost left motor.
+  const float mLeft = clampf(u - w, 0.0f, 1.0f);
+  const float mRight = clampf(u + w, 0.0f, 1.0f);
 
-  applyMotorDuties(slave, mapNormalizedToDuty(mLeft), mapNormalizedToDuty(mRight));
+  applyMotorDuties(slave, mapNormalizedToDuty(mLeft),
+                   mapNormalizedToDuty(mRight));
 }
 
 bool reachedArrival(const BeaconTrackerState &state) {
@@ -201,7 +229,8 @@ void logNavigation(Slave *slave, const MasterData &master,
                    const BeaconTrackerState &state, bool searchMode) {
   char payload[224];
   snprintf(payload, sizeof(payload),
-           "beacon_nav,%lu,%s,%lu,%lu,%lu,%lu,%.1f,%.1f,%.1f,%.1f,%.2f,%.1f,%u,%u,%u",
+           "beacon_nav,%lu,%s,%lu,%lu,%lu,%lu,%.1f,%.1f,%.1f,%.1f,%.2f,%.1f,%u,"
+           "%u,%u",
            static_cast<unsigned long>(state.timestampMs),
            searchMode ? "search" : "track",
            static_cast<unsigned long>(state.rawFront),
@@ -210,10 +239,10 @@ void logNavigation(Slave *slave, const MasterData &master,
            static_cast<unsigned long>(state.rawRight), state.front, state.back,
            state.left, state.right, state.filteredTheta * 57.29577951308232f,
            state.totalSignal, static_cast<unsigned>(state.detected ? 1 : 0),
-           static_cast<unsigned>(lastLeftDuty), static_cast<unsigned>(lastRightDuty));
+           static_cast<unsigned>(lastLeftDuty),
+           static_cast<unsigned>(lastRightDuty));
 
-  Serial.printf(
-      "%s\n", payload);
+  Serial.printf("%s\n", payload);
 
   String meshMessage = "log:";
   meshMessage += payload;
@@ -334,9 +363,8 @@ void setup() {
   trackerConfig.guardHoldMs = TRACKER_GUARD_HOLD_MS;
   tracker = BeaconTracker(trackerConfig);
 
-  Serial.println(
-      "beacon_nav,t_ms,mode,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,"
-      "theta_deg,S,detected,duty_l,duty_r");
+  Serial.println("beacon_nav,t_ms,mode,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,"
+                 "theta_deg,S,detected,duty_l,duty_r");
   Serial.println("Setup complete");
   slave.multiColorLight.setTopLeds(RED);
 }

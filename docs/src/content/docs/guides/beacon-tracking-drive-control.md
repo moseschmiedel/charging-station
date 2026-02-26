@@ -60,8 +60,8 @@ When beacon is detected:
 - $w = \operatorname{clamp}(K_p \cdot \theta_f,\,-w_{\max},\,w_{\max})$
 - $u = u_{\max} \cdot \max(0, \cos(\theta_f))$
 - if $|\theta_f| > \pi/2$, force $u = 0$
-- $m_L = \operatorname{clamp}(u + w,\,0,\,1)$
-- $m_R = \operatorname{clamp}(u - w,\,0,\,1)$
+- $m_L = \operatorname{clamp}(u - w,\,0,\,1)$
+- $m_R = \operatorname{clamp}(u + w,\,0,\,1)$
 
 Motor commands include dead-zone compensation before PWM duty is applied.
 

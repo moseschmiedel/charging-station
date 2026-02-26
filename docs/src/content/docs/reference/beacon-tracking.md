@@ -50,6 +50,24 @@ The tracker applies three filtering/guard stages:
 
 $\theta_f$ is only updated while $\mathrm{detected}$ is true and guard hold is inactive.
 
+## Signal-processing pipeline
+
+```mermaid
+flowchart LR
+  A["Raw channels: rawFront, rawBack, rawLeft, rawRight"] --> B["Median prefilter: 3-sample per channel"]
+  B --> C["Calibration: gain and offset, clamp to non-negative"]
+  C --> D["Amplitudes: A_F, A_B, A_L, A_R"]
+  D --> E["Vector and magnitude: v_x, v_y, theta, S"]
+  E --> F{"Detection gate: S ge S_min?"}
+  F -- "No" --> G["detected=false"]
+  F -- "Yes" --> H{"Guard active?\n(saturation or abrupt signal drop)"}
+  H -- "Yes" --> I["Freeze filtered theta"]
+  H -- "No" --> J["Wrapped LPF update of filtered theta"]
+  G --> K["BeaconTrackerState output"]
+  I --> K
+  J --> K
+```
+
 ## Default constants
 
 Current defaults in firmware:
