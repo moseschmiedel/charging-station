@@ -16,6 +16,10 @@ for fw in master slave motor ir_meter; do
 done
 ```
 
+## TIP: Good surface for Dezibots to walk on
+
+[XXL Mouse Desktop Mat](https://amzn.eu/d/0cMn5z1g)
+
 ## Repository Layout
 
 - `master/` - Dezibot master node firmware (ESP32-S3-MINI, PlatformIO)
