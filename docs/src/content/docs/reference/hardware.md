@@ -39,6 +39,10 @@ description: Hardware components and signal-path assumptions for beacon tracking
 - Dezibot nodes: [ESP32-S3-MINI-1 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-mini-1_datasheet_en.pdf)
 - Motor controller: [ESP32-WROOM-32 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf)
 
+## Stepper Driver
+
+- [L2980N](https://www.st.com/resource/en/datasheet/l298.pdf)
+
 #### Pinout
 
 ![ESP32 Development Board Pinout](@assets/diymore-esp-dev-board-pinout.jpg)
