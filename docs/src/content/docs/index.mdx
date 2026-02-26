@@ -5,37 +5,14 @@ description: Firmware and control documentation for beacon tracking, charging wo
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
 
-## Documentation map
+![Charging station photo](@assets/charging-station.jpg)
 
-<CardGrid stagger>
-  <Card title="Getting Started" icon="rocket" href="/guides/getting-started/">
-    Build, flash, and monitor the firmware targets used in this workspace.
-  </Card>
-  <Card
-    title="Beacon Tracking + Drive Control"
-    icon="open-book"
-    href="/guides/beacon-tracking-drive-control/"
-  >
-    End-to-end implementation approach: signal inputs, bearing estimation, and
-    closed-loop motor commands.
-  </Card>
-  <Card title="Beacon Tracking Reference" icon="document" href="/reference/beacon-tracking/">
-    Equations, constants, state definitions, and telemetry fields used by the
-    tracker.
-  </Card>
-  <Card title="Drive Control Reference" icon="setting" href="/reference/drive-control/">
-    Control law, dead-zone mapping, search behavior, and arrival criteria.
-  </Card>
-  <Card title="Charging State Machine" icon="list" href="/reference/state-machine/">
-    Master/slave states, mesh command events, and transition conditions.
-  </Card>
-  <Card title="Software API Reference" icon="code" href="/reference/software-api/">
-    SSE endpoint, telemetry payload schema, and UART log contracts used by the dashboard.
-  </Card>
-  <Card title="Code API (Doxygen)" icon="file" href="/reference/code/">
-    Auto-generated class/file/function API docs for master, slave, ir_meter, motor, and dezibot.
-  </Card>
-  <Card title="Hardware" icon="document" href="/reference/hardware/">
-    Board-level component summary and receive-path assumptions used by firmware.
-  </Card>
-</CardGrid>
+This project documents a beacon-guided charging station: how the robot tracks the beacon, drives to dock, and executes the charging workflow, including hardware, firmware, and API details.
+
+## Table of contents
+
+- [Getting started](./guides/getting-started/)
+- [Beacon tracking + drive control guide](./guides/beacon-tracking-drive-control/)
+- [Reference overview](./reference/overview/)
+- [Hardware reference](./reference/hardware/)
+- [Software API reference](./reference/software-api/)

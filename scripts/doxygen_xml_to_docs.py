@@ -146,7 +146,6 @@ def render_module_page(
         "> Auto-generated. Do not edit manually.",
         "",
         f"- Module: `{module}`",
-        f"- Doxygen XML: `{xml_dir}`",
         f"- Generated at: `{now}`",
         "",
     ]

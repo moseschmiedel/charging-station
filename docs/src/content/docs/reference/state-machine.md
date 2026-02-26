@@ -75,6 +75,37 @@ Additional `OPEN` transition path:
 
 - On slave notify `notifyExitCharge`, master sets `currentChargingSlave = nullptr` and state `OPEN`.
 
+## LED patterns per state
+
+Top LED behavior is implemented by the project-specific step handlers (`slave/src/main.cpp`) and master state handlers (`dezibot/src/autocharge/master/Master.cpp`).
+
+### Slave (`SlaveState`)
+
+| State | LED pattern |
+| --- | --- |
+| `WORK` | solid `RED` (`setTopLeds(RED)`) |
+| `WALKING_TO_CHARGE` | `YELLOW` navigation blink by software toggle every `500 ms` (`toggleNavigationLed`) |
+| `WAIT_CHARGE` | solid `YELLOW` (`setTopLeds(YELLOW)`) |
+| `WALKING_INTO_CHARGE` | entry flash: `blink(3, GREEN, TOP, 1000)` then `turnOffLed(TOP)` |
+| `CHARGE` | solid `GREEN` (`setTopLeds(GREEN)`) |
+| `EXITING_CHARGE` | exit flash: `blink(3, RED, TOP, 1000)` then `turnOffLed(TOP)` |
+
+Notes:
+
+- On successful arrival in `WALKING_TO_CHARGE`, the code explicitly turns the top LED off before transitioning.
+- During `WALKING_TO_CHARGE`, search vs tracking motor mode does not change LED color; only the yellow toggle pattern is used.
+
+### Master (`ChargingStationState`)
+
+| State | LED pattern |
+| --- | --- |
+| `OPEN` | solid `GREEN` (`setTopLeds(GREEN)`) |
+| `LOWERING_GEAR` | `blink(5, YELLOW, TOP, 1000)` while waiting for bridge command `LOWER` to finish |
+| `CLOSED` | solid `YELLOW` (`setTopLeds(YELLOW)`) |
+| `ATTACHING_GEAR` | `blink(5, RED, TOP, 1000)` |
+| `SLAVE_CHARGE` | solid `RED` (`setTopLeds(RED)`) |
+| `LIFTING_GEAR` | `blink(5, GREEN, TOP, 1000)` while waiting for bridge command `RAISE` to finish |
+
 ## Mesh messages involved
 
 Commands from master to slave:
