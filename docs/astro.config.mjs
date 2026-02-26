@@ -7,8 +7,13 @@ import rehypeKatex from "rehype-katex";
 import rehypeMermaid from "rehype-mermaid";
 import remarkMath from "remark-math";
 
+const [githubOwner, githubRepo] = (process.env.GITHUB_REPOSITORY ?? "").split("/");
+const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+
 // https://astro.build/config
 export default defineConfig({
+	site: githubOwner ? `https://${githubOwner}.github.io` : undefined,
+	base: isGitHubActions && githubRepo ? `/${githubRepo}` : undefined,
 	markdown: {
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [
