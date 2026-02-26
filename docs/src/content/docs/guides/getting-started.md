@@ -19,7 +19,7 @@ This workspace contains separate firmware repositories:
 Initialize submodules before building firmware (required for `dezibot/` library):
 
 ```bash
-cd /Volumes/Programming/htwk/charging-station
+cd charging-station
 git submodule update --init --recursive
 ```
 
@@ -29,19 +29,19 @@ Run the commands inside each repository.
 
 ```bash
 # Master firmware
-cd /Volumes/Programming/htwk/charging-station/master
+cd charging-station/master
 pio run
 
 # Slave firmware
-cd /Volumes/Programming/htwk/charging-station/slave
+cd charging-station/slave
 pio run
 
 # IR meter firmware
-cd /Volumes/Programming/htwk/charging-station/ir_meter
+cd charging-station/ir_meter
 pio run
 
 # Motor controller firmware (ESP32-WROOM-32)
-cd /Volumes/Programming/htwk/charging-station/motor
+cd charging-station/motor
 pio run
 ```
 
@@ -49,7 +49,7 @@ pio run
 
 ```bash
 # Example: slave
-cd /Volumes/Programming/htwk/charging-station/slave
+cd charging-station/slave
 pio run -t upload
 pio device monitor -b 115200
 ```
@@ -59,7 +59,7 @@ pio device monitor -b 115200
 Run the live telemetry dashboard:
 
 ```bash
-cd /Volumes/Programming/htwk/charging-station/dashboard
+cd charging-station/dashboard
 bun install
 bun run dev
 ```

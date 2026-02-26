@@ -14,7 +14,7 @@ This site documents:
 ## Local development
 
 ```bash
-cd /Volumes/Programming/htwk/charging-station/docs
+cd charging-station/docs
 bun install
 bun run dev
 ```
@@ -24,7 +24,7 @@ Open `http://localhost:4321`.
 ## Production build
 
 ```bash
-cd /Volumes/Programming/htwk/charging-station/docs
+cd charging-station/docs
 bun run build
 bun run preview
 ```
@@ -37,7 +37,7 @@ The pages in `src/content/docs/reference/Code/` are generated from Doxygen XML.
 Regenerate them from repository root:
 
 ```bash
-cd /Volumes/Programming/htwk/charging-station
+cd charging-station
 python3 scripts/generate_doxygen_docs.py
 ```
 

@@ -6,7 +6,7 @@ description: Auto-generated API summary from Doxygen XML.
 > Auto-generated. Do not edit manually.
 
 - Module: `dezibot`
-- Doxygen XML: `/Volumes/Programming/htwk/charging-station/docs/generated/doxygen/dezibot/xml`
+- Doxygen XML: `charging-station/docs/generated/doxygen/dezibot/xml`
 - Generated at: `2026-02-26T01:40:44Z`
 
 ## Functions
