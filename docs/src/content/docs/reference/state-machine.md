@@ -81,30 +81,25 @@ Top LED behavior is implemented by the project-specific step handlers (`slave/sr
 
 ### Slave (`SlaveState`)
 
-| State | LED pattern |
-| --- | --- |
-| `WORK` | solid `RED` (`setTopLeds(RED)`) |
-| `WALKING_TO_CHARGE` | `YELLOW` navigation blink by software toggle every `500 ms` (`toggleNavigationLed`) |
-| `WAIT_CHARGE` | solid `YELLOW` (`setTopLeds(YELLOW)`) |
-| `WALKING_INTO_CHARGE` | entry flash: `blink(3, GREEN, TOP, 1000)` then `turnOffLed(TOP)` |
-| `CHARGE` | solid `GREEN` (`setTopLeds(GREEN)`) |
-| `EXITING_CHARGE` | exit flash: `blink(3, RED, TOP, 1000)` then `turnOffLed(TOP)` |
-
-Notes:
-
-- On successful arrival in `WALKING_TO_CHARGE`, the code explicitly turns the top LED off before transitioning.
-- During `WALKING_TO_CHARGE`, search vs tracking motor mode does not change LED color; only the yellow toggle pattern is used.
+| State                 | LED pattern    |
+| --------------------- | -------------- |
+| `WORK`                | solid `RED`    |
+| `WALKING_TO_CHARGE`   | blink `YELLOW` |
+| `WAIT_CHARGE`         | solid `YELLOW` |
+| `WALKING_INTO_CHARGE` | blink `GREEN`  |
+| `CHARGE`              | solid `GREEN`  |
+| `EXITING_CHARGE`      | blink `RED`    |
 
 ### Master (`ChargingStationState`)
 
-| State | LED pattern |
-| --- | --- |
-| `OPEN` | solid `GREEN` (`setTopLeds(GREEN)`) |
-| `LOWERING_GEAR` | `blink(5, YELLOW, TOP, 1000)` while waiting for bridge command `LOWER` to finish |
-| `CLOSED` | solid `YELLOW` (`setTopLeds(YELLOW)`) |
-| `ATTACHING_GEAR` | `blink(5, RED, TOP, 1000)` |
-| `SLAVE_CHARGE` | solid `RED` (`setTopLeds(RED)`) |
-| `LIFTING_GEAR` | `blink(5, GREEN, TOP, 1000)` while waiting for bridge command `RAISE` to finish |
+| State            | LED pattern    |
+| ---------------- | -------------- |
+| `OPEN`           | solid `GREEN`  |
+| `LOWERING_GEAR`  | blink `YELLOW` |
+| `CLOSED`         | solid `YELLOW` |
+| `ATTACHING_GEAR` | blink `RED`    |
+| `SLAVE_CHARGE`   | solid `RED`    |
+| `LIFTING_GEAR`   | blink `GREEN`  |
 
 ## Mesh messages involved
 
