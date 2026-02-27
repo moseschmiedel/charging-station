@@ -1,6 +1,7 @@
 // @ts-check
 
 import starlight from "@astrojs/starlight";
+import astroD2 from "astro-d2";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
 import rehypeKatex from "rehype-katex";
@@ -23,7 +24,7 @@ export default defineConfig({
 	markdown: {
 		syntaxHighlight: {
 			type: "shiki",
-			excludeLangs: ["mermaid", "math"],
+			excludeLangs: ["mermaid", "math", "d2"],
 		},
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [
@@ -33,6 +34,11 @@ export default defineConfig({
 		],
 	},
 	integrations: [
+		astroD2({
+			experimental: {
+				useD2js: true,
+			},
+		}),
 		starlight({
 			plugins: [starlightThemeNova()],
 			title: "Charging Station Documentation",

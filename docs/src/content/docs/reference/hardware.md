@@ -3,6 +3,29 @@ title: Hardware
 description: Hardware components and signal-path assumptions for beacon tracking.
 ---
 
+## Block diagram
+
+```d2
+direction: down
+
+slaveA: "Slave Dezibot"
+slaveB: "Slave Dezibot"
+slaveC: "Slave Dezibot"
+slaveD: "Slave Dezibot"
+master: "Master Dezibot\nI2C: SDA=GPIO1, SCL=GPIO2"
+motor: "Motor Controller\nI2C: SDA=GPIO21, SCL=GPIO22"
+stepper_left: "Stepper Driver Left (H-Bridge)\nIN1..IN4: 14, 27, 26, 25"
+stepper_right: "Stepper Driver Right (H-Bridge)\nIN1..IN4: 5, 17, 16, 4"
+
+slaveA <-> master: "Wi-Fi (painlessMesh)"
+slaveB <-> master: "Wi-Fi (painlessMesh)"
+slaveC <-> master: "Wi-Fi (painlessMesh)"
+slaveD <-> master: "Wi-Fi (painlessMesh)"
+master <-> motor: "I2C (addr 0x12)"
+motor -> stepper_left: "GPIO"
+motor -> stepper_right: "GPIO"
+```
+
 ## System roles
 
 ## Master
