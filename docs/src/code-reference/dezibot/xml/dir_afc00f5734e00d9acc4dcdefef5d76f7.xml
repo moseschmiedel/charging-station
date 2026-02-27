@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_afc00f5734e00d9acc4dcdefef5d76f7" kind="dir">
+    <compoundname>dezibot/src/communication</compoundname>
+    <innerfile refid="_communication_8cpp">Communication.cpp</innerfile>
+    <innerfile refid="_communication_8h">Communication.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/communication/"/>
+  </compounddef>
+</doxygen>

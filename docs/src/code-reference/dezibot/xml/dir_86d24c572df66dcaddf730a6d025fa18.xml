@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_86d24c572df66dcaddf730a6d025fa18" kind="dir">
+    <compoundname>dezibot/src/multiColorLight</compoundname>
+    <innerfile refid="_color_constants_8h">ColorConstants.h</innerfile>
+    <innerfile refid="_multi_color_light_8cpp">MultiColorLight.cpp</innerfile>
+    <innerfile refid="_multi_color_light_8h">MultiColorLight.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/multiColorLight/"/>
+  </compounddef>
+</doxygen>

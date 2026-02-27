@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_abstract_set" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AbstractSet</compoundname>
+    <derivedcompoundref refid="class_fifo" prot="public" virt="non-virtual">Fifo&lt; T &gt;</derivedcompoundref>
+    <includes refid="_abstract_set_8hpp" local="no">AbstractSet.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_abstract_set_1a3142669fe084535e9db8bd39c5518f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void AbstractSet&lt; T &gt;::insert</definition>
+        <argsstring>(T item)=0</argsstring>
+        <name>insert</name>
+        <qualifiedname>AbstractSet::insert</qualifiedname>
+        <reimplementedby refid="class_fifo_1a3cdedc25dceb45da4bfe9d1b1d2a2391">insert</reimplementedby>
+        <param>
+          <type>T</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/AbstractSet.hpp" line="5" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_set_1acb826749f534f3c8f5da87273a1ebb6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T AbstractSet&lt; T &gt;::pick</definition>
+        <argsstring>()=0</argsstring>
+        <name>pick</name>
+        <qualifiedname>AbstractSet::pick</qualifiedname>
+        <reimplementedby refid="class_fifo_1ad030665fcf959b11a3ca8610cdc0544f">pick</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/AbstractSet.hpp" line="6" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_set_1ad35654b0f496a79b6f1b7750848ef92e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool AbstractSet&lt; T &gt;::isEmpty</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>AbstractSet::isEmpty</qualifiedname>
+        <reimplementedby refid="class_fifo_1a2c8f47edbe509f926bda9c7f0682ece1">isEmpty</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/AbstractSet.hpp" line="7" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_abstract_set_1a4378ad978ace5979300062fde6ba0933" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual AbstractSet&lt; T &gt;::~AbstractSet</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AbstractSet</name>
+        <qualifiedname>AbstractSet::~AbstractSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/AbstractSet.hpp" line="8" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AbstractSet&lt; T &gt;</label>
+        <link refid="class_abstract_set"/>
+      </node>
+      <node id="2">
+        <label>Fifo&lt; T &gt;</label>
+        <link refid="class_fifo"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="dezibot/src/autocharge/master/abstractSet/AbstractSet.hpp" line="3" column="12" bodyfile="dezibot/src/autocharge/master/abstractSet/AbstractSet.hpp" bodystart="3" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_abstract_set_1a3142669fe084535e9db8bd39c5518f3b" prot="public" virt="pure-virtual"><scope>AbstractSet</scope><name>insert</name></member>
+      <member refid="class_abstract_set_1ad35654b0f496a79b6f1b7750848ef92e" prot="public" virt="pure-virtual"><scope>AbstractSet</scope><name>isEmpty</name></member>
+      <member refid="class_abstract_set_1acb826749f534f3c8f5da87273a1ebb6a" prot="public" virt="pure-virtual"><scope>AbstractSet</scope><name>pick</name></member>
+      <member refid="class_abstract_set_1a4378ad978ace5979300062fde6ba0933" prot="public" virt="virtual"><scope>AbstractSet</scope><name>~AbstractSet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

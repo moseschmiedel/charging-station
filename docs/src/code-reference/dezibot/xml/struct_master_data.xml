@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_master_data" kind="struct" language="C++" prot="public">
+    <compoundname>MasterData</compoundname>
+    <includes refid="_master_data_8hpp" local="no">MasterData.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_master_data_1a0219054c6ac8e1e2061958ab03b45329" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MasterData::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>MasterData::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/MasterData.hpp" line="7" column="12" bodyfile="dezibot/src/autocharge/slave/MasterData.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_master_data_1a2c16ab589ed67a81a6f462fe87b86005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MasterData::MasterData</definition>
+        <argsstring>(uint32_t id)</argsstring>
+        <name>MasterData</name>
+        <qualifiedname>MasterData::MasterData</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/MasterData.hpp" line="9" column="3" bodyfile="dezibot/src/autocharge/slave/MasterData.hpp" bodystart="9" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/autocharge/slave/MasterData.hpp" line="6" column="1" bodyfile="dezibot/src/autocharge/slave/MasterData.hpp" bodystart="6" bodyend="10"/>
+    <listofallmembers>
+      <member refid="struct_master_data_1a0219054c6ac8e1e2061958ab03b45329" prot="public" virt="non-virtual"><scope>MasterData</scope><name>id</name></member>
+      <member refid="struct_master_data_1a2c16ab589ed67a81a6f462fe87b86005" prot="public" virt="non-virtual"><scope>MasterData</scope><name>MasterData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

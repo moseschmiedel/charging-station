@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_d962060fda39348add853676f8e3e04a" kind="dir">
+    <compoundname>dezibot/src/motion</compoundname>
+    <innerfile refid="_motion_8cpp">Motion.cpp</innerfile>
+    <innerfile refid="_motion_8h">Motion.h</innerfile>
+    <innerfile refid="_motor_8cpp">Motor.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/motion/"/>
+  </compounddef>
+</doxygen>

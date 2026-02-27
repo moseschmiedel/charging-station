@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_motion_detection_8h" kind="file" language="C++">
+    <compoundname>MotionDetection.h</compoundname>
+    <includes local="no">SPI.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="_i_m_u___c_m_ds_8h" local="yes">IMU_CMDs.h</includes>
+    <includedby refid="_dezibot_8h" local="yes">dezibot/src/Dezibot.h</includedby>
+    <includedby refid="_motion_8h" local="yes">dezibot/src/motion/Motion.h</includedby>
+    <includedby refid="_motion_detection_8cpp" local="yes">dezibot/src/motionDetection/MotionDetection.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>IMU_CMDs.h</label>
+        <link refid="_i_m_u___c_m_ds_8h"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/motionDetection/MotionDetection.h</label>
+        <link refid="_motion_detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="2">
+        <label>SPI.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>dezibot/src/Dezibot.cpp</label>
+        <link refid="_dezibot_8cpp"/>
+      </node>
+      <node id="2">
+        <label>dezibot/src/Dezibot.h</label>
+        <link refid="_dezibot_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="6">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="4">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dezibot/src/autocharge/slave/Slave.cpp</label>
+        <link refid="_slave_8cpp"/>
+      </node>
+      <node id="7">
+        <label>dezibot/src/autocharge/slave/Slave.hpp</label>
+        <link refid="_slave_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dezibot/src/motion/Motion.cpp</label>
+        <link refid="_motion_8cpp"/>
+      </node>
+      <node id="9">
+        <label>dezibot/src/motion/Motion.h</label>
+        <link refid="_motion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dezibot/src/motion/Motor.cpp</label>
+        <link refid="_motor_8cpp"/>
+      </node>
+      <node id="12">
+        <label>dezibot/src/motionDetection/MotionDetection.cpp</label>
+        <link refid="_motion_detection_8cpp"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/motionDetection/MotionDetection.h</label>
+        <link refid="_motion_detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_i_m_u_result" prot="public">IMUResult</innerclass>
+    <innerclass refid="struct_orientation" prot="public">Orientation</innerclass>
+    <innerclass refid="struct_f_i_f_o___package" prot="public">FIFO_Package</innerclass>
+    <innerclass refid="class_motion_detection" prot="public">MotionDetection</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Axis</name>
+        <enumvalue id="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8fbcdc66e72c998377080c5aed044884" prot="public">
+          <name>xAxis</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea3123e0676bbf5648acb1df5a54f4a784" prot="public">
+          <name>yAxis</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8b398ee6e2441b74d36b507261499da9" prot="public">
+          <name>zAxis</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="23" column="1" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Direction</name>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa0cf84affdc2d20637bc9e8120b80ae95" prot="public">
+          <name>Front</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb" prot="public">
+          <name>Left</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66" prot="public">
+          <name>Right</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa36625780699489b5c3dfceadfb9c27d1" prot="public">
+          <name>Back</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa32bb6c621f52f6a0932c646d5ed47f91" prot="public">
+          <name>Neutral</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaac311a71173e9a9e29f650408570c896d" prot="public">
+          <name>Flipped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa4dfd42ec49d09d8c6555c218301cc30f" prot="public">
+          <name>Error</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="34" column="1" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="34" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This component controls the IMU (Accelerometer &amp; Gyroscope) ICM-42670-P. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Hans Haupt </para>
+</simplesect>
+<simplesect kind="attention"><para>This componend is used internally by the <ref refid="class_motion" kindref="compound">Motion</ref> Class<itemizedlist>
+<listitem><para>whenever any of the <ref refid="class_motion" kindref="compound">Motion</ref> Functions is executed, the result of the <ref refid="class_motion_detection" kindref="compound">MotionDetection</ref> Methods may be invalid </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-12-15</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MotionDetection_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MotionDetection_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_i_m_u___c_m_ds_8h" kindref="compound">IMU_CMDs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="struct_i_m_u_result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref>{</highlight></codeline>
+<codeline lineno="19" refid="struct_i_m_u_result_1a4aba5f1752ec744e02874e570ac03fab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="struct_i_m_u_result_1a4aba5f1752ec744e02874e570ac03fab" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="20" refid="struct_i_m_u_result_1afd779c1be8193773f8e3aaa1cada94b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="struct_i_m_u_result_1afd779c1be8193773f8e3aaa1cada94b8" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="21" refid="struct_i_m_u_result_1a2bec9a2c94326d4ddc44f8a110c4f915" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="struct_i_m_u_result_1a2bec9a2c94326d4ddc44f8a110c4f915" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23" refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8e" kindref="member">Axis</ref>{</highlight></codeline>
+<codeline lineno="24" refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8fbcdc66e72c998377080c5aed044884" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8fbcdc66e72c998377080c5aed044884" kindref="member">xAxis</ref><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="25" refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea3123e0676bbf5648acb1df5a54f4a784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea3123e0676bbf5648acb1df5a54f4a784" kindref="member">yAxis</ref><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="26" refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8b398ee6e2441b74d36b507261499da9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8b398ee6e2441b74d36b507261499da9" kindref="member">zAxis</ref><sp/>=<sp/>0x04</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct_orientation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_orientation" kindref="compound">Orientation</ref>{</highlight></codeline>
+<codeline lineno="30" refid="struct_orientation_1a52c2eaa5ad28a92b0da4408e250d7597" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_orientation_1a52c2eaa5ad28a92b0da4408e250d7597" kindref="member">xRotation</ref>;</highlight></codeline>
+<codeline lineno="31" refid="struct_orientation_1a57fcda7d106952b9d415bd0049422c9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_orientation_1a57fcda7d106952b9d415bd0049422c9b" kindref="member">yRotation</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref>{</highlight></codeline>
+<codeline lineno="35" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa0cf84affdc2d20637bc9e8120b80ae95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa0cf84affdc2d20637bc9e8120b80ae95" kindref="member">Front</ref>,</highlight></codeline>
+<codeline lineno="36" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb" kindref="member">Left</ref>,</highlight></codeline>
+<codeline lineno="37" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66" kindref="member">Right</ref>,</highlight></codeline>
+<codeline lineno="38" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa36625780699489b5c3dfceadfb9c27d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa36625780699489b5c3dfceadfb9c27d1" kindref="member">Back</ref>,</highlight></codeline>
+<codeline lineno="39" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa32bb6c621f52f6a0932c646d5ed47f91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa32bb6c621f52f6a0932c646d5ed47f91" kindref="member">Neutral</ref>,</highlight></codeline>
+<codeline lineno="40" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaac311a71173e9a9e29f650408570c896d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaac311a71173e9a9e29f650408570c896d" kindref="member">Flipped</ref>,</highlight></codeline>
+<codeline lineno="41" refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa4dfd42ec49d09d8c6555c218301cc30f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa4dfd42ec49d09d8c6555c218301cc30f" kindref="member">Error</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="struct_f_i_f_o___package" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref>{</highlight></codeline>
+<codeline lineno="45" refid="struct_f_i_f_o___package_1a508631d74240d70901d42f2d1d60ff94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="struct_f_i_f_o___package_1a508631d74240d70901d42f2d1d60ff94" kindref="member">header</ref>;</highlight></codeline>
+<codeline lineno="46" refid="struct_f_i_f_o___package_1a9bbd1ce3aabb96eaf372f88e60d05097" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref><sp/><ref refid="struct_f_i_f_o___package_1a9bbd1ce3aabb96eaf372f88e60d05097" kindref="member">gyro</ref>;</highlight></codeline>
+<codeline lineno="47" refid="struct_f_i_f_o___package_1a13d017781f1658ab069ea54bdc0dc767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref><sp/><ref refid="struct_f_i_f_o___package_1a13d017781f1658ab069ea54bdc0dc767" kindref="member">accel</ref>;</highlight></codeline>
+<codeline lineno="48" refid="struct_f_i_f_o___package_1aac437ccb8deb8c45e1af081160d38771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="struct_f_i_f_o___package_1aac437ccb8deb8c45e1af081160d38771" kindref="member">temperature</ref>;</highlight></codeline>
+<codeline lineno="49" refid="struct_f_i_f_o___package_1a3bae340fe5623a440211616310e83ef3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="struct_f_i_f_o___package_1a3bae340fe5623a440211616310e83ef3" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_motion_detection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_motion_detection_1a599a8e3991b40a19fc79bac5a47b0932" kindref="member">MotionDetection</ref>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55" refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea09a115ca6d04fd1e40cb2a29bd967ab9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" kindref="member">registerBank</ref>{<ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea09a115ca6d04fd1e40cb2a29bd967ab9" kindref="member">MREG1</ref>,<ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea50f0e931ad0d42d822e96857f5c2e2fd" kindref="member">MREG2</ref>,<ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea5179c1fd752fb6c571fc10c55d996813" kindref="member">MREG3</ref>};</highlight></codeline>
+<codeline lineno="56" refid="class_motion_detection_1a7e4235e1e4f6019c0c9751706a0efd5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint<sp/><ref refid="class_motion_detection_1a7e4235e1e4f6019c0c9751706a0efd5a" kindref="member">frequency</ref><sp/>=<sp/>24000000;</highlight></codeline>
+<codeline lineno="57" refid="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" kindref="member">defaultShakeThreshold</ref><sp/>=<sp/>500;</highlight></codeline>
+<codeline lineno="58" refid="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint<sp/><ref refid="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" kindref="member">bufferLength</ref><sp/>=<sp/>64*16;</highlight></codeline>
+<codeline lineno="59" refid="class_motion_detection_1a7632ede4ab9bd90bb9eaa8d76d2d75d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t*<sp/><ref refid="class_motion_detection_1a7632ede4ab9bd90bb9eaa8d76d2d75d8" kindref="member">buf</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>int8_t[<ref refid="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" kindref="member">bufferLength</ref>];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_motion_detection_1a479599e1ccee2aeba55a22c567d46128" kindref="member">readFromRegisterBank</ref>(<ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" kindref="member">registerBank</ref><sp/>bank,uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1acd275bd42ed7c5f72743a18e9804e703" kindref="member">writeToRegisterBank</ref>(<ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" kindref="member">registerBank</ref><sp/>bank,<sp/>uint8_t<sp/>reg,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1a6a3c4844f237aa19ea630a168e364ca8" kindref="member">resetRegisterBankAccess</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_motion_detection_1a580de3c513e465fb405ff347b8813bd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_motion_detection_1a580de3c513e465fb405ff347b8813bd4" kindref="member">cmdRead</ref>(uint8_t<sp/>regHigh,uint8_t<sp/>regLow);</highlight></codeline>
+<codeline lineno="65" refid="class_motion_detection_1a1e6e2f65509099a1a79420239b5fbcd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_motion_detection_1a1e6e2f65509099a1a79420239b5fbcd8" kindref="member">cmdWrite</ref>(uint8_t<sp/>regHigh,uint8_t<sp/>regLow);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_motion_detection_1a580de3c513e465fb405ff347b8813bd4" kindref="member">cmdRead</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_motion_detection_1a1e6e2f65509099a1a79420239b5fbcd8" kindref="member">cmdWrite</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_motion_detection_1a69cfe9da940521cb120e658a526c3eeb" kindref="member">readRegister</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="70" refid="class_motion_detection_1ad94cb56f42ae9bdfa0539c4b54bc4994" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_motion_detection_1ad94cb56f42ae9bdfa0539c4b54bc4994" kindref="member">readDoubleRegister</ref>(uint8_t<sp/>lowerReg);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1aba17fa0603316ef24fd7880aa2276e2b" kindref="member">writeRegister</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1aeb5ab5ae5ab7ba81221ff0d922380a13" kindref="member">initFIFO</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1aafb36c50b274ad26c75bd76ae7097f10" kindref="member">startFIFO</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1a026101b13bc5b101a23d9037848c88c5" kindref="member">stopFIFO</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_motion_detection_1ae918b3dde9606190b7ee22f821fa342e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>SPIClass<sp/>*<sp/><ref refid="class_motion_detection_1ae918b3dde9606190b7ee22f821fa342e" kindref="member">handler</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_motion_detection_1a283f7d0020218e771e6eb99e08397073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint<sp/><ref refid="class_motion_detection_1a283f7d0020218e771e6eb99e08397073" kindref="member">gForceCalib</ref><sp/>=<sp/>2050;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_motion_detection_1a599a8e3991b40a19fc79bac5a47b0932" kindref="member">MotionDetection</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1adb3527c0ab3636a7fae351480897a39e" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1ab087c9d705181b9ba5077f8d258507b8" kindref="member">end</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref><sp/><ref refid="class_motion_detection_1aee34d3385f3a35ee42c5f486dc32aa5a" kindref="member">getAcceleration</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref><sp/><ref refid="class_motion_detection_1a81171c485732f2ae40c7f5faa9476f8a" kindref="member">getRotation</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1af9448de508b81cf68fb299eecdc0da55" kindref="member">getTemperature</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="class_motion_detection_1a77fdeb48595d646258218d3b378a36a7" kindref="member">getWhoAmI</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1a3935eccf9e7773772a39c70485ed28f2" kindref="member">isShaken</ref>(uint32_t<sp/>threshold<sp/>=<sp/><ref refid="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" kindref="member">defaultShakeThreshold</ref>,uint8_t<sp/>axis<sp/>=<sp/><ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8fbcdc66e72c998377080c5aed044884" kindref="member">xAxis</ref>|<ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea3123e0676bbf5648acb1df5a54f4a784" kindref="member">yAxis</ref>|<ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8b398ee6e2441b74d36b507261499da9" kindref="member">zAxis</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_orientation" kindref="compound">Orientation</ref><sp/><ref refid="class_motion_detection_1a7016032b7d81e44a80c23820f772feb8" kindref="member">getTilt</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref><sp/><ref refid="class_motion_detection_1aa3b54cc2b5bc712f4e95d9820b1d01b8" kindref="member">getTiltDirection</ref>(uint<sp/>tolerance<sp/>=<sp/>10);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection_1aaaa6f0499a0ba42aab0e1136b7bd4aa9" kindref="member">calibrateZAxis</ref>(uint<sp/>gforceValue);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>uint<sp/><ref refid="class_motion_detection_1a154bfb74496b7e015d16fc30d3d5c258" kindref="member">getDataFromFIFO</ref>(<ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref>*<sp/>buffer);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="class_motion_detection_1a6c2266a15bd2360b3047560297f23316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_motion_detection_1a6c2266a15bd2360b3047560297f23316" kindref="member">Motion</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//MotionDetection</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/motionDetection/MotionDetection.h"/>
+  </compounddef>
+</doxygen>

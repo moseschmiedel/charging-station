@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespace_0d305332317101327315021077077254000020101156010247" kind="namespace" language="C++">
+    <compoundname></compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>BridgeCommand</name>
+        <qualifiedname>::BridgeCommand</qualifiedname>
+        <enumvalue id="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13ab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13a855c0066a3b4c4c52ed8b14d6d481087" prot="public">
+          <name>LOWER_TO_WALK_IN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13a490b21f697dccebe273ef6c851760a0c" prot="public">
+          <name>LOWER_TO_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13a22b61bc49292970095594840b2de557d" prot="public">
+          <name>RAISE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/Master.cpp" line="9" column="1" bodyfile="dezibot/src/autocharge/master/Master.cpp" bodystart="9" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/autocharge/master/Master.cpp" line="5" column="1"/>
+  </compounddef>
+</doxygen>

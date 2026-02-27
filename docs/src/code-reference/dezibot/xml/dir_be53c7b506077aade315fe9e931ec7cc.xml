@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_be53c7b506077aade315fe9e931ec7cc" kind="dir">
+    <compoundname>dezibot/src/motionDetection</compoundname>
+    <innerfile refid="_i_m_u___c_m_ds_8h">IMU_CMDs.h</innerfile>
+    <innerfile refid="_motion_detection_8cpp">MotionDetection.cpp</innerfile>
+    <innerfile refid="_motion_detection_8h">MotionDetection.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/motionDetection/"/>
+  </compounddef>
+</doxygen>

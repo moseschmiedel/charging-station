@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_1ae97a90ccb7f4c142f9aff2fa75bd59" kind="dir">
+    <compoundname>dezibot/src</compoundname>
+    <innerdir refid="dir_4693e2cace8ae8417975def6d5f76528">dezibot/src/autocharge</innerdir>
+    <innerdir refid="dir_118a3febac62d99a601cc072b32b672a">dezibot/src/colorDetection</innerdir>
+    <innerdir refid="dir_afc00f5734e00d9acc4dcdefef5d76f7">dezibot/src/communication</innerdir>
+    <innerdir refid="dir_791a0dd3e014912aeacc6bad8d32bd6d">dezibot/src/display</innerdir>
+    <innerdir refid="dir_841e220dcc5c96d6f074b913e9171a54">dezibot/src/infraredLight</innerdir>
+    <innerdir refid="dir_7fd0386cec699856f0213e290e6baf00">dezibot/src/lightDetection</innerdir>
+    <innerdir refid="dir_d962060fda39348add853676f8e3e04a">dezibot/src/motion</innerdir>
+    <innerdir refid="dir_be53c7b506077aade315fe9e931ec7cc">dezibot/src/motionDetection</innerdir>
+    <innerdir refid="dir_86d24c572df66dcaddf730a6d025fa18">dezibot/src/multiColorLight</innerdir>
+    <innerfile refid="_dezibot_8cpp">Dezibot.cpp</innerfile>
+    <innerfile refid="_dezibot_8h">Dezibot.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/"/>
+  </compounddef>
+</doxygen>

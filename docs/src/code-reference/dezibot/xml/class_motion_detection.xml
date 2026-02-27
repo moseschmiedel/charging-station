@@ -1,0 +1,754 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_motion_detection" kind="class" language="C++" prot="public">
+    <compoundname>MotionDetection</compoundname>
+    <includes refid="_motion_detection_8h" local="no">MotionDetection.h</includes>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>registerBank</name>
+        <qualifiedname>MotionDetection::registerBank</qualifiedname>
+        <enumvalue id="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea09a115ca6d04fd1e40cb2a29bd967ab9" prot="protected">
+          <name>MREG1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea50f0e931ad0d42d822e96857f5c2e2fd" prot="protected">
+          <name>MREG2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea5179c1fd752fb6c571fc10c55d996813" prot="protected">
+          <name>MREG3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="55" column="5" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_motion_detection_1a7e4235e1e4f6019c0c9751706a0efd5a" prot="protected" static="yes" mutable="no">
+        <type>const uint</type>
+        <definition>const uint MotionDetection::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <qualifiedname>MotionDetection::frequency</qualifiedname>
+        <initializer>= 24000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="56" column="23" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" prot="protected" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t MotionDetection::defaultShakeThreshold</definition>
+        <argsstring></argsstring>
+        <name>defaultShakeThreshold</name>
+        <qualifiedname>MotionDetection::defaultShakeThreshold</qualifiedname>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="57" column="27" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" prot="protected" static="no" mutable="no">
+        <type>const uint</type>
+        <definition>const uint MotionDetection::bufferLength</definition>
+        <argsstring></argsstring>
+        <name>bufferLength</name>
+        <qualifiedname>MotionDetection::bufferLength</qualifiedname>
+        <initializer>= 64*16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="58" column="16" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_detection_1a7632ede4ab9bd90bb9eaa8d76d2d75d8" prot="protected" static="no" mutable="no">
+        <type>int8_t *</type>
+        <definition>int8_t* MotionDetection::buf</definition>
+        <argsstring></argsstring>
+        <name>buf</name>
+        <qualifiedname>MotionDetection::buf</qualifiedname>
+        <initializer>= new int8_t[<ref refid="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" kindref="member">bufferLength</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="59" column="12" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_detection_1ae918b3dde9606190b7ee22f821fa342e" prot="protected" static="no" mutable="no">
+        <type>SPIClass *</type>
+        <definition>SPIClass* MotionDetection::handler</definition>
+        <argsstring></argsstring>
+        <name>handler</name>
+        <qualifiedname>MotionDetection::handler</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="91" column="15" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_detection_1a283f7d0020218e771e6eb99e08397073" prot="protected" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint MotionDetection::gForceCalib</definition>
+        <argsstring></argsstring>
+        <name>gForceCalib</name>
+        <qualifiedname>MotionDetection::gForceCalib</qualifiedname>
+        <initializer>= 2050</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="93" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_motion_detection_1a6c2266a15bd2360b3047560297f23316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Motion</definition>
+        <argsstring></argsstring>
+        <name>Motion</name>
+        <qualifiedname>MotionDetection::Motion</qualifiedname>
+        <param>
+          <type><ref refid="class_motion" kindref="compound">Motion</ref></type>
+        </param>
+        <briefdescription>
+<para>set <ref refid="class_motion" kindref="compound">Motion</ref> as a friend class so it can access the methods to start and stop writing data to FIFO </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="212" column="18" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_motion_detection_1a479599e1ccee2aeba55a22c567d46128" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t MotionDetection::readFromRegisterBank</definition>
+        <argsstring>(registerBank bank, uint8_t reg)</argsstring>
+        <name>readFromRegisterBank</name>
+        <qualifiedname>MotionDetection::readFromRegisterBank</qualifiedname>
+        <param>
+          <type><ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" kindref="member">registerBank</ref></type>
+          <declname>bank</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="60" column="13" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="175" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1acd275bd42ed7c5f72743a18e9804e703" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::writeToRegisterBank</definition>
+        <argsstring>(registerBank bank, uint8_t reg, uint8_t value)</argsstring>
+        <name>writeToRegisterBank</name>
+        <qualifiedname>MotionDetection::writeToRegisterBank</qualifiedname>
+        <param>
+          <type><ref refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" kindref="member">registerBank</ref></type>
+          <declname>bank</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="61" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="196" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a6a3c4844f237aa19ea630a168e364ca8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::resetRegisterBankAccess</definition>
+        <argsstring>()</argsstring>
+        <name>resetRegisterBankAccess</name>
+        <qualifiedname>MotionDetection::resetRegisterBankAccess</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="62" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="222" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a580de3c513e465fb405ff347b8813bd4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t MotionDetection::cmdRead</definition>
+        <argsstring>(uint8_t regHigh, uint8_t regLow)</argsstring>
+        <name>cmdRead</name>
+        <qualifiedname>MotionDetection::cmdRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>regHigh</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>regLow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="64" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a1e6e2f65509099a1a79420239b5fbcd8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t MotionDetection::cmdWrite</definition>
+        <argsstring>(uint8_t regHigh, uint8_t regLow)</argsstring>
+        <name>cmdWrite</name>
+        <qualifiedname>MotionDetection::cmdWrite</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>regHigh</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>regLow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a63502fb0aadf4be9f5a4e83542eb9016" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t MotionDetection::cmdRead</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>cmdRead</name>
+        <qualifiedname>MotionDetection::cmdRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="66" column="13" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a5c9873668d3133bbcf814f8b7d8e266c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t MotionDetection::cmdWrite</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>cmdWrite</name>
+        <qualifiedname>MotionDetection::cmdWrite</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="67" column="13" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a69cfe9da940521cb120e658a526c3eeb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t MotionDetection::readRegister</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>readRegister</name>
+        <qualifiedname>MotionDetection::readRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="69" column="13" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="164" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1ad94cb56f42ae9bdfa0539c4b54bc4994" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t MotionDetection::readDoubleRegister</definition>
+        <argsstring>(uint8_t lowerReg)</argsstring>
+        <name>readDoubleRegister</name>
+        <qualifiedname>MotionDetection::readDoubleRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>lowerReg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="70" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1aba17fa0603316ef24fd7880aa2276e2b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::writeRegister</definition>
+        <argsstring>(uint8_t reg, uint8_t value)</argsstring>
+        <name>writeRegister</name>
+        <qualifiedname>MotionDetection::writeRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="71" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="281" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1aeb5ab5ae5ab7ba81221ff0d922380a13" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::initFIFO</definition>
+        <argsstring>(void)</argsstring>
+        <name>initFIFO</name>
+        <qualifiedname>MotionDetection::initFIFO</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>makes all settings necessary so it is possible to use the FIFO, but does not actually start writing packages to FIFO </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="77" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="229" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1aafb36c50b274ad26c75bd76ae7097f10" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::startFIFO</definition>
+        <argsstring>(void)</argsstring>
+        <name>startFIFO</name>
+        <qualifiedname>MotionDetection::startFIFO</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>starts writing the measurment results to the FIFO-Storage </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="attention"><para>before usage, the method <ref refid="class_motion_detection_1aeb5ab5ae5ab7ba81221ff0d922380a13" kindref="member">initFIFO()</ref> must be called once </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="83" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="238" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a026101b13bc5b101a23d9037848c88c5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::stopFIFO</definition>
+        <argsstring>(void)</argsstring>
+        <name>stopFIFO</name>
+        <qualifiedname>MotionDetection::stopFIFO</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>stops writing results to FIFO-Storage needs to be called before Data Registers (such as GYRO_DATA_*, ACCEL_DATA_*) are read </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="89" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="245" bodyend="250"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_motion_detection_1a599a8e3991b40a19fc79bac5a47b0932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MotionDetection::MotionDetection</definition>
+        <argsstring>()</argsstring>
+        <name>MotionDetection</name>
+        <qualifiedname>MotionDetection::MotionDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="97" column="5" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1adb3527c0ab3636a7fae351480897a39e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>MotionDetection::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>initialized the IMU Component. Wakes the IMU from Standby Set configuration </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="105" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="8" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1ab087c9d705181b9ba5077f8d258507b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::end</definition>
+        <argsstring>(void)</argsstring>
+        <name>end</name>
+        <qualifiedname>MotionDetection::end</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>stops the component Sets the IMU to Low-Power-Mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="112" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1aee34d3385f3a35ee42c5f486dc32aa5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref></type>
+        <definition>IMUResult MotionDetection::getAcceleration</definition>
+        <argsstring>(void)</argsstring>
+        <name>getAcceleration</name>
+        <qualifiedname>MotionDetection::getAcceleration</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Triggers a new Reading of the accelerationvalues and reads them from the IMU. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref> that contains the new read values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="119" column="15" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a81171c485732f2ae40c7f5faa9476f8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref></type>
+        <definition>IMUResult MotionDetection::getRotation</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRotation</name>
+        <qualifiedname>MotionDetection::getRotation</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Triggers a new reading of the gyroscope and reads the values from the imu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="126" column="15" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="40" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1af9448de508b81cf68fb299eecdc0da55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MotionDetection::getTemperature</definition>
+        <argsstring>(void)</argsstring>
+        <name>getTemperature</name>
+        <qualifiedname>MotionDetection::getTemperature</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads the current On Chip temperature of the IMU. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>normalized temperature in degree Centigrade </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="133" column="11" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a77fdeb48595d646258218d3b378a36a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t MotionDetection::getWhoAmI</definition>
+        <argsstring>(void)</argsstring>
+        <name>getWhoAmI</name>
+        <qualifiedname>MotionDetection::getWhoAmI</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns the value of reading the whoAmI register When IMU working correctly, value should be 0x67. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the value of the whoami register of the ICM-42670 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="141" column="12" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a3935eccf9e7773772a39c70485ed28f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MotionDetection::isShaken</definition>
+        <argsstring>(uint32_t threshold=defaultShakeThreshold, uint8_t axis=xAxis|yAxis|zAxis)</argsstring>
+        <name>isShaken</name>
+        <qualifiedname>MotionDetection::isShaken</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>threshold</declname>
+          <defval><ref refid="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" kindref="member">defaultShakeThreshold</ref></defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>axis</declname>
+          <defval><ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8fbcdc66e72c998377080c5aed044884" kindref="member">xAxis</ref>|<ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea3123e0676bbf5648acb1df5a54f4a784" kindref="member">yAxis</ref>|<ref refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8b398ee6e2441b74d36b507261499da9" kindref="member">zAxis</ref></defval>
+        </param>
+        <briefdescription>
+<para>Detects if at the time of calling is shaken. Therefore the sum over all accelerationvalues is calculated and checked against threshold. If sum &gt; threshold a shake is detected, else not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) the level of acceleration that must be reached to detect a shake </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) select which axis should be used for detection. Possible values ar xAxis,yAxis,zAxis It&apos;s possible to combine multiple axis with the bitwise or Operator | For Example: to detect x and y axis: axis = xAxis|yAxis</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a shake is detected, false else </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="154" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="60" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a7016032b7d81e44a80c23820f772feb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_orientation" kindref="compound">Orientation</ref></type>
+        <definition>Orientation MotionDetection::getTilt</definition>
+        <argsstring>()</argsstring>
+        <name>getTilt</name>
+        <qualifiedname>MotionDetection::getTilt</qualifiedname>
+        <briefdescription>
+<para>calculates how the robot is tilted. It is set, that when the robot is placed normally on a flat table, the result will be (0,0) Tilting the robot, so that the front leg is deeper than the other to results in an increasing degrees, tilting the front leg up will increase negativ degrees Tilting the robot to the right will increase the degrees until 180° (upside down), tilting it left will result in increasing negativ degrees (-1,-2,...,-180). On the top there is a jump of the values from 180-&gt;-180 and vice versa. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Precision is rounded to 1 deg steps</para>
+<para><simplesect kind="attention"><para>The results are only valid, if the robot is not moved in any way during the measurment, as the calculation is made by using the accelration values. If it&apos;s detected, that the robot is accelerated while measuring, the method will return max(int). Please note that the imu is pretty sensitiv, even walking next to the table may influcene the result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="169" column="17" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="83" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1aa3b54cc2b5bc712f4e95d9820b1d01b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref></type>
+        <definition>Direction MotionDetection::getTiltDirection</definition>
+        <argsstring>(uint tolerance=10)</argsstring>
+        <name>getTiltDirection</name>
+        <qualifiedname>MotionDetection::getTiltDirection</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>tolerance</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Checks in which direction (Front, Left, Right, Back) the robot is tilted. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="attention"><para>Does only work if the robot is not moving</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tolerance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional, default = 10) how many degrees can the robot be tilted, and still will be considerd as neutral.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kindref="member">Direction</ref> the direction in that the robot is tilted most. Front is onsiderd as the direction of driving. If robot is not tilted more than the tolerance in any direction, return is Neutral. If Robot is upside down, return is Flipped. If Robot is moved, return is Error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="185" column="15" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="126" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1aaaa6f0499a0ba42aab0e1136b7bd4aa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MotionDetection::calibrateZAxis</definition>
+        <argsstring>(uint gforceValue)</argsstring>
+        <name>calibrateZAxis</name>
+        <qualifiedname>MotionDetection::calibrateZAxis</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>gforceValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>can be used to set a custom value for the gforceReading of the zaxis, which will improve the getTiltFunction.</para>
+<para><simplesect kind="attention"><para>this method is not persisten, so the value is not stored when the programm is restarted / the robot is powerd off</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gforceValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value the IMU returns for the gravitationforce -&gt; to get this value, place the robot on a leveled surface and read the value <ref refid="class_motion_detection_1aee34d3385f3a35ee42c5f486dc32aa5a" kindref="member">getAcceleration()</ref>.z </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="195" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_detection_1a154bfb74496b7e015d16fc30d3d5c258" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint</type>
+        <definition>uint MotionDetection::getDataFromFIFO</definition>
+        <argsstring>(FIFO_Package *buffer)</argsstring>
+        <name>getDataFromFIFO</name>
+        <qualifiedname>MotionDetection::getDataFromFIFO</qualifiedname>
+        <param>
+          <type><ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>will read all availible packages from fifo, after 40ms <ref refid="class_fifo" kindref="compound">Fifo</ref> is full Only works when startFIFO was called </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to <ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref> Struct that at least must have size 64 (this is the max package count with APEX Enabled)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the amount of acutally fetched packages </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="205" column="10" bodyfile="dezibot/src/motionDetection/MotionDetection.cpp" bodystart="252" bodyend="279"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/motionDetection/MotionDetection.h" line="53" column="1" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="53" bodyend="213"/>
+    <listofallmembers>
+      <member refid="class_motion_detection_1adb3527c0ab3636a7fae351480897a39e" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>begin</name></member>
+      <member refid="class_motion_detection_1a7632ede4ab9bd90bb9eaa8d76d2d75d8" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>buf</name></member>
+      <member refid="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>bufferLength</name></member>
+      <member refid="class_motion_detection_1aaaa6f0499a0ba42aab0e1136b7bd4aa9" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>calibrateZAxis</name></member>
+      <member refid="class_motion_detection_1a580de3c513e465fb405ff347b8813bd4" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>cmdRead</name></member>
+      <member refid="class_motion_detection_1a63502fb0aadf4be9f5a4e83542eb9016" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>cmdRead</name></member>
+      <member refid="class_motion_detection_1a1e6e2f65509099a1a79420239b5fbcd8" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>cmdWrite</name></member>
+      <member refid="class_motion_detection_1a5c9873668d3133bbcf814f8b7d8e266c" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>cmdWrite</name></member>
+      <member refid="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>defaultShakeThreshold</name></member>
+      <member refid="class_motion_detection_1ab087c9d705181b9ba5077f8d258507b8" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>end</name></member>
+      <member refid="class_motion_detection_1a7e4235e1e4f6019c0c9751706a0efd5a" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>frequency</name></member>
+      <member refid="class_motion_detection_1aee34d3385f3a35ee42c5f486dc32aa5a" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getAcceleration</name></member>
+      <member refid="class_motion_detection_1a154bfb74496b7e015d16fc30d3d5c258" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getDataFromFIFO</name></member>
+      <member refid="class_motion_detection_1a81171c485732f2ae40c7f5faa9476f8a" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getRotation</name></member>
+      <member refid="class_motion_detection_1af9448de508b81cf68fb299eecdc0da55" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getTemperature</name></member>
+      <member refid="class_motion_detection_1a7016032b7d81e44a80c23820f772feb8" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getTilt</name></member>
+      <member refid="class_motion_detection_1aa3b54cc2b5bc712f4e95d9820b1d01b8" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getTiltDirection</name></member>
+      <member refid="class_motion_detection_1a77fdeb48595d646258218d3b378a36a7" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>getWhoAmI</name></member>
+      <member refid="class_motion_detection_1a283f7d0020218e771e6eb99e08397073" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>gForceCalib</name></member>
+      <member refid="class_motion_detection_1ae918b3dde9606190b7ee22f821fa342e" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>handler</name></member>
+      <member refid="class_motion_detection_1aeb5ab5ae5ab7ba81221ff0d922380a13" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>initFIFO</name></member>
+      <member refid="class_motion_detection_1a3935eccf9e7773772a39c70485ed28f2" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>isShaken</name></member>
+      <member refid="class_motion_detection_1a6c2266a15bd2360b3047560297f23316" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>Motion</name></member>
+      <member refid="class_motion_detection_1a599a8e3991b40a19fc79bac5a47b0932" prot="public" virt="non-virtual"><scope>MotionDetection</scope><name>MotionDetection</name></member>
+      <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea09a115ca6d04fd1e40cb2a29bd967ab9" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>MREG1</name></member>
+      <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea50f0e931ad0d42d822e96857f5c2e2fd" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>MREG2</name></member>
+      <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea5179c1fd752fb6c571fc10c55d996813" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>MREG3</name></member>
+      <member refid="class_motion_detection_1ad94cb56f42ae9bdfa0539c4b54bc4994" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>readDoubleRegister</name></member>
+      <member refid="class_motion_detection_1a479599e1ccee2aeba55a22c567d46128" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>readFromRegisterBank</name></member>
+      <member refid="class_motion_detection_1a69cfe9da940521cb120e658a526c3eeb" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>readRegister</name></member>
+      <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>registerBank</name></member>
+      <member refid="class_motion_detection_1a6a3c4844f237aa19ea630a168e364ca8" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>resetRegisterBankAccess</name></member>
+      <member refid="class_motion_detection_1aafb36c50b274ad26c75bd76ae7097f10" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>startFIFO</name></member>
+      <member refid="class_motion_detection_1a026101b13bc5b101a23d9037848c88c5" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>stopFIFO</name></member>
+      <member refid="class_motion_detection_1aba17fa0603316ef24fd7880aa2276e2b" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>writeRegister</name></member>
+      <member refid="class_motion_detection_1acd275bd42ed7c5f72743a18e9804e703" prot="protected" virt="non-virtual"><scope>MotionDetection</scope><name>writeToRegisterBank</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

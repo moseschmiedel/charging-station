@@ -1,0 +1,80 @@
+---
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import type { CodeProjectSummary } from "../../../../lib/code-reference";
+import { getProjectSummaries } from "../../../../lib/code-reference";
+
+interface StaticPath {
+  params: {
+    project: string;
+  };
+  props: {
+    projectSummary: CodeProjectSummary;
+  };
+}
+
+export function getStaticPaths(): StaticPath[] {
+  return getProjectSummaries().map((projectSummary) => ({
+    params: {
+      project: projectSummary.project,
+    },
+    props: {
+      projectSummary,
+    },
+  }));
+}
+
+const { projectSummary } = Astro.props;
+const pageTitle = `${projectSummary.title} Code Reference`;
+const description = `Module-level code reference index for project ${projectSummary.project}.`;
+---
+
+<StarlightPage frontmatter={{ title: pageTitle, description }}>
+  <p>
+    Browse modules for <code>{projectSummary.project}</code>.
+  </p>
+
+  {
+    projectSummary.modules.length > 0 ? (
+      <ul class="symbol-list">
+        {projectSummary.modules.map((moduleSummary) => (
+          <li>
+            <a
+              href={`/reference/code/${encodeURIComponent(projectSummary.project)}/${encodeURIComponent(moduleSummary.module)}/`}
+            >
+              <code>{moduleSummary.module}</code>
+            </a>
+            <span class="count">{moduleSummary.files.length} files</span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="placeholder">No documented modules were found for this project.</p>
+    )
+  }
+</StarlightPage>
+
+<style>
+  .symbol-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .symbol-list li {
+    border-top: 1px solid var(--sl-color-hairline);
+    padding: 0.7rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .count {
+    color: var(--sl-color-text-accent);
+    font-family: var(--__sl-font-mono);
+    font-size: 0.9rem;
+  }
+
+  .placeholder {
+    font-style: italic;
+  }
+</style>

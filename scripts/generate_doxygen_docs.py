@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Doxygen XML and integrate it into docs pages.
+"""Generate Doxygen XML for the docs site.
 
 This file intentionally keeps the historic `.sh` path, but is implemented in Python.
 """
@@ -116,26 +116,8 @@ def run_doxygen_for_module(root_dir: Path, doxygen_root: Path, module: str) -> N
         doxyfile_path.unlink(missing_ok=True)
 
 
-def regenerate_docs_pages(root_dir: Path, doxygen_root: Path, docs_root: Path) -> None:
-    print("Generating docs pages from Doxygen XML...")
-    subprocess.run(
-        [
-            sys.executable,
-            str(root_dir / "scripts" / "doxygen_xml_to_docs.py"),
-            "--doxygen-root",
-            str(doxygen_root),
-            "--docs-root",
-            str(docs_root),
-            "--modules",
-            *MODULES,
-        ],
-        check=True,
-        cwd=root_dir,
-    )
-
-
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate Doxygen XML and docs pages.")
+    parser = argparse.ArgumentParser(description="Generate Doxygen XML outputs.")
     parser.add_argument(
         "--skip-pixi",
         action="store_true",
@@ -144,8 +126,7 @@ def main() -> int:
     args = parser.parse_args()
 
     root_dir = repo_root()
-    doxygen_root = root_dir / "docs" / "generated" / "doxygen"
-    docs_root = root_dir / "docs" / "src" / "content" / "docs" / "reference" / "Code"
+    doxygen_root = root_dir / "docs" / "src" / "code-reference"
 
     if not args.skip_pixi:
         ensure_running_in_pixi_environment(root_dir)
@@ -164,10 +145,7 @@ def main() -> int:
             root_dir=root_dir, doxygen_root=doxygen_root, module=module
         )
 
-    regenerate_docs_pages(
-        root_dir=root_dir, doxygen_root=doxygen_root, docs_root=docs_root
-    )
-    print("Done. Generated pages are in docs/src/content/docs/reference/Code/.")
+    print("Done. Generated XML is in docs/src/code-reference/<project>/xml/.")
     return 0
 
 

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_v_e_m_l___c_o_n_f_i_g" kind="struct" language="C++" prot="public">
+    <compoundname>VEML_CONFIG</compoundname>
+    <includes refid="_color_detection_8h" local="no">ColorDetection.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_v_e_m_l___c_o_n_f_i_g_1a3fc2265cf41311b4271a255b6e2da799" prot="public" static="no" mutable="no">
+        <type><ref refid="_color_detection_8h_1af7517787c551f083c210509e75c96c53" kindref="member">vemlMode</ref></type>
+        <definition>vemlMode VEML_CONFIG::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>VEML_CONFIG::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="39" column="14" bodyfile="dezibot/src/colorDetection/ColorDetection.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_v_e_m_l___c_o_n_f_i_g_1a42b371d6ff08249e2d611d7c318afb29" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VEML_CONFIG::enabled</definition>
+        <argsstring></argsstring>
+        <name>enabled</name>
+        <qualifiedname>VEML_CONFIG::enabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="42" column="10" bodyfile="dezibot/src/colorDetection/ColorDetection.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_v_e_m_l___c_o_n_f_i_g_1a3a624bc2cce24ec2772d2ebac99327f4" prot="public" static="no" mutable="no">
+        <type><ref refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49" kindref="member">duration</ref></type>
+        <definition>duration VEML_CONFIG::exposureTime</definition>
+        <argsstring></argsstring>
+        <name>exposureTime</name>
+        <qualifiedname>VEML_CONFIG::exposureTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="45" column="14" bodyfile="dezibot/src/colorDetection/ColorDetection.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/colorDetection/ColorDetection.h" line="37" column="1" bodyfile="dezibot/src/colorDetection/ColorDetection.h" bodystart="37" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct_v_e_m_l___c_o_n_f_i_g_1a42b371d6ff08249e2d611d7c318afb29" prot="public" virt="non-virtual"><scope>VEML_CONFIG</scope><name>enabled</name></member>
+      <member refid="struct_v_e_m_l___c_o_n_f_i_g_1a3a624bc2cce24ec2772d2ebac99327f4" prot="public" virt="non-virtual"><scope>VEML_CONFIG</scope><name>exposureTime</name></member>
+      <member refid="struct_v_e_m_l___c_o_n_f_i_g_1a3fc2265cf41311b4271a255b6e2da799" prot="public" virt="non-virtual"><scope>VEML_CONFIG</scope><name>mode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

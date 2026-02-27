@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_slave" kind="class" language="C++" prot="public">
+    <compoundname>Slave</compoundname>
+    <basecompoundref refid="class_dezibot" prot="public" virt="non-virtual">Dezibot</basecompoundref>
+    <includes refid="_slave_8hpp" local="no">Slave.hpp</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_slave_1ac2f739790159a13962fee7ee4edbffdf" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_slave" kindref="compound">Slave</ref> *</type>
+        <definition>Slave * Slave::slave</definition>
+        <argsstring></argsstring>
+        <name>slave</name>
+        <qualifiedname>Slave::slave</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="24" column="16" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_slave_1a17d2803858c6f6f693e19f8bd4564ea7" prot="private" static="no" mutable="no">
+        <type><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" kindref="member">SlaveState</ref></type>
+        <definition>SlaveState Slave::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>Slave::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="32" column="14" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1a7fab418617860810f38fe2c5f420a652" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;</type>
+        <definition>MasterData&amp; Slave::master</definition>
+        <argsstring></argsstring>
+        <name>master</name>
+        <qualifiedname>Slave::master</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="33" column="14" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1a0bd5e6c2ff917efcf1f72b9c86c0eaed" prot="private" static="no" mutable="no">
+        <type>const std::function&lt; void(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>)&gt;</type>
+        <definition>const std::function&lt;void(Slave *slave)&gt; Slave::stepWork</definition>
+        <argsstring></argsstring>
+        <name>stepWork</name>
+        <qualifiedname>Slave::stepWork</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="34" column="23" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1a0ef7d583d3a72949ef00dffebb553199" prot="private" static="no" mutable="no">
+        <type>const std::function&lt; bool(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+        <definition>const std::function&lt;bool(Slave *slave, MasterData &amp;master)&gt; Slave::stepToCharge</definition>
+        <argsstring></argsstring>
+        <name>stepToCharge</name>
+        <qualifiedname>Slave::stepToCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="35" column="23" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1a97cc37b09c7fdffd13ced985366fd7e3" prot="private" static="no" mutable="no">
+        <type>const std::function&lt; void(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+        <definition>const std::function&lt;void(Slave *slave, MasterData &amp;master)&gt; Slave::stepWaitCharge</definition>
+        <argsstring></argsstring>
+        <name>stepWaitCharge</name>
+        <qualifiedname>Slave::stepWaitCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="36" column="23" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1ae3aeb42935820a8b3a3c9c043e98b551" prot="private" static="no" mutable="no">
+        <type>const std::function&lt; bool(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+        <definition>const std::function&lt;bool(Slave *slave, MasterData &amp;master)&gt; Slave::stepIntoCharge</definition>
+        <argsstring></argsstring>
+        <name>stepIntoCharge</name>
+        <qualifiedname>Slave::stepIntoCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="37" column="23" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1a2d662815f7722d88a0390b8202779aba" prot="private" static="no" mutable="no">
+        <type>const std::function&lt; void(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+        <definition>const std::function&lt;void(Slave *slave, MasterData &amp;master)&gt; Slave::stepCharge</definition>
+        <argsstring></argsstring>
+        <name>stepCharge</name>
+        <qualifiedname>Slave::stepCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="38" column="23" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_1af1d39beb4556c42339f6fc19b6f746ff" prot="private" static="no" mutable="no">
+        <type>const std::function&lt; bool(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+        <definition>const std::function&lt;bool(Slave *slave, MasterData &amp;master)&gt; Slave::stepExitCharge</definition>
+        <argsstring></argsstring>
+        <name>stepExitCharge</name>
+        <qualifiedname>Slave::stepExitCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="39" column="23" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_slave_1aa441b01af45486a588e1eb2e9563d4e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Slave::Slave</definition>
+        <argsstring>(SlaveState state, MasterData &amp;master, const std::function&lt; void(Slave *slave)&gt; stepWork, const std::function&lt; bool(Slave *slave, MasterData &amp;master)&gt; stepToCharge, const std::function&lt; void(Slave *slave, MasterData &amp;master)&gt; stepWaitCharge, const std::function&lt; bool(Slave *slave, MasterData &amp;master)&gt; stepIntoCharge, const std::function&lt; void(Slave *slave, MasterData &amp;master)&gt; stepCharge, const std::function&lt; bool(Slave *slave, MasterData &amp;master)&gt; stepExitCharge)</argsstring>
+        <name>Slave</name>
+        <qualifiedname>Slave::Slave</qualifiedname>
+        <param>
+          <type><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" kindref="member">SlaveState</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;</type>
+          <declname>master</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>)&gt;</type>
+          <declname>stepWork</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; bool(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+          <declname>stepToCharge</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+          <declname>stepWaitCharge</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; bool(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+          <declname>stepIntoCharge</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+          <declname>stepCharge</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; bool(<ref refid="class_slave" kindref="compound">Slave</ref> *<ref refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kindref="member">slave</ref>, <ref refid="struct_master_data" kindref="compound">MasterData</ref> &amp;master)&gt;</type>
+          <declname>stepExitCharge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="10" column="3" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="10" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a35bea995501b64235d1243edcbdc5ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Slave::begin</definition>
+        <argsstring>() override</argsstring>
+        <name>begin</name>
+        <qualifiedname>Slave::begin</qualifiedname>
+        <reimplements refid="class_dezibot_1aec0d0e534fdd9ba12c0fc1d4521e1b27">begin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="26" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="6" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1ab2b2556f13271d04d83c68a4e9d8adfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::step</definition>
+        <argsstring>()</argsstring>
+        <name>step</name>
+        <qualifiedname>Slave::step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="27" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="12" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a73d1f4e973ba10a321270d9a10537f5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::requestCharge</definition>
+        <argsstring>()</argsstring>
+        <name>requestCharge</name>
+        <qualifiedname>Slave::requestCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="28" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a9908e01d85d867b1bf716223a142f996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::requestStopCharge</definition>
+        <argsstring>()</argsstring>
+        <name>requestStopCharge</name>
+        <qualifiedname>Slave::requestStopCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="29" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_slave_1a23c639ab89129aa0a29b8e93fd01c60f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::notifyWork</definition>
+        <argsstring>()</argsstring>
+        <name>notifyWork</name>
+        <qualifiedname>Slave::notifyWork</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="41" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a5c548fa79d0578d10608d47e944cfadc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::notifyWalkToCharge</definition>
+        <argsstring>()</argsstring>
+        <name>notifyWalkToCharge</name>
+        <qualifiedname>Slave::notifyWalkToCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="42" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a4471e1cf44f72e517f82016130e421cc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::notifyInWait</definition>
+        <argsstring>()</argsstring>
+        <name>notifyInWait</name>
+        <qualifiedname>Slave::notifyInWait</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="43" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a3d45643c5f59c3da7a95b08084f64b0b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::notifyWalkIntoCharge</definition>
+        <argsstring>()</argsstring>
+        <name>notifyWalkIntoCharge</name>
+        <qualifiedname>Slave::notifyWalkIntoCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="44" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1aa087a07ab832082237ef720f06629efd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::notifyInCharge</definition>
+        <argsstring>()</argsstring>
+        <name>notifyInCharge</name>
+        <qualifiedname>Slave::notifyInCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="45" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a420d839ea703b8abb0e55ef3574298e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::notifyExitCharge</definition>
+        <argsstring>()</argsstring>
+        <name>notifyExitCharge</name>
+        <qualifiedname>Slave::notifyExitCharge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="46" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1ac7344d603c5b633250241c7f3c89d731" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::handleEnjoinChargeCommand</definition>
+        <argsstring>()</argsstring>
+        <name>handleEnjoinChargeCommand</name>
+        <qualifiedname>Slave::handleEnjoinChargeCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="48" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="93" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_1a9e31f7d393ed70f06ed1e81c4448e4e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Slave::handleCancelChargeCommand</definition>
+        <argsstring>()</argsstring>
+        <name>handleCancelChargeCommand</name>
+        <qualifiedname>Slave::handleCancelChargeCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="49" column="8" bodyfile="dezibot/src/autocharge/slave/Slave.cpp" bodystart="125" bodyend="155"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_slave_1ac5d338582dcb514c5198caf6fb8ac7b1" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Slave::onReceiveSingle</definition>
+        <argsstring>(uint32_t from, String &amp;message)</argsstring>
+        <name>onReceiveSingle</name>
+        <qualifiedname>Slave::onReceiveSingle</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>String &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/Slave.hpp" line="51" column="15" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="51" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Dezibot</label>
+        <link refid="class_dezibot"/>
+      </node>
+      <node id="1">
+        <label>Slave</label>
+        <link refid="class_slave"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>ColorDetection</label>
+        <link refid="class_color_detection"/>
+      </node>
+      <node id="13">
+        <label>Communication</label>
+        <link refid="class_communication"/>
+      </node>
+      <node id="2">
+        <label>Dezibot</label>
+        <link refid="class_dezibot"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>motion</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>lightDetection</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>colorDetection</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>multiColorLight</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>infraredLight</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>communication</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>display</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Display</label>
+        <link refid="class_display"/>
+      </node>
+      <node id="4">
+        <label>FIFO_Package</label>
+        <link refid="struct_f_i_f_o___package"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>accel</edgelabel>
+          <edgelabel>gyro</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IMUResult</label>
+        <link refid="struct_i_m_u_result"/>
+      </node>
+      <node id="12">
+        <label>InfraredLED</label>
+        <link refid="class_infrared_l_e_d"/>
+      </node>
+      <node id="11">
+        <label>InfraredLight</label>
+        <link refid="class_infrared_light"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>bottom</edgelabel>
+          <edgelabel>front</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>LightDetection</label>
+        <link refid="class_light_detection"/>
+      </node>
+      <node id="3">
+        <label>Motion</label>
+        <link refid="class_motion"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>detection</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MotionDetection</label>
+        <link refid="class_motion_detection"/>
+      </node>
+      <node id="6">
+        <label>Motor</label>
+        <link refid="class_motor"/>
+      </node>
+      <node id="10">
+        <label>MultiColorLight</label>
+        <link refid="class_multi_color_light"/>
+      </node>
+      <node id="1">
+        <label>Slave</label>
+        <link refid="class_slave"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>slave</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dezibot/src/autocharge/slave/Slave.hpp" line="8" column="1" bodyfile="dezibot/src/autocharge/slave/Slave.hpp" bodystart="8" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_slave_1a35bea995501b64235d1243edcbdc5ead" prot="public" virt="virtual"><scope>Slave</scope><name>begin</name></member>
+      <member refid="class_dezibot_1a1e4fc28976fdb4e0649d80ffdfd5eed9" prot="public" virt="non-virtual"><scope>Slave</scope><name>colorDetection</name></member>
+      <member refid="class_dezibot_1abf761f1e805e172f26b9bede0e8f4609" prot="public" virt="non-virtual"><scope>Slave</scope><name>communication</name></member>
+      <member refid="class_dezibot_1af6068d9881bda1145ccfc14f763cdbfb" prot="public" virt="non-virtual"><scope>Slave</scope><name>Dezibot</name></member>
+      <member refid="class_dezibot_1a54f320ecb8c7c103aeb0c12650dc9743" prot="public" virt="non-virtual"><scope>Slave</scope><name>display</name></member>
+      <member refid="class_slave_1a9e31f7d393ed70f06ed1e81c4448e4e1" prot="private" virt="non-virtual"><scope>Slave</scope><name>handleCancelChargeCommand</name></member>
+      <member refid="class_slave_1ac7344d603c5b633250241c7f3c89d731" prot="private" virt="non-virtual"><scope>Slave</scope><name>handleEnjoinChargeCommand</name></member>
+      <member refid="class_dezibot_1ab60c07335bc6bc3fb791445fef8e79b3" prot="public" virt="non-virtual"><scope>Slave</scope><name>infraredLight</name></member>
+      <member refid="class_dezibot_1a1d3fc7291834c366cd48028e6a8e0c59" prot="public" virt="non-virtual"><scope>Slave</scope><name>lightDetection</name></member>
+      <member refid="class_slave_1a7fab418617860810f38fe2c5f420a652" prot="private" virt="non-virtual"><scope>Slave</scope><name>master</name></member>
+      <member refid="class_dezibot_1a232613af2fb2707bffe2b7993c87f2f7" prot="public" virt="non-virtual"><scope>Slave</scope><name>motion</name></member>
+      <member refid="class_dezibot_1a8da83e693c96fad528c77fdbe1dc856b" prot="public" virt="non-virtual"><scope>Slave</scope><name>multiColorLight</name></member>
+      <member refid="class_slave_1a420d839ea703b8abb0e55ef3574298e1" prot="private" virt="non-virtual"><scope>Slave</scope><name>notifyExitCharge</name></member>
+      <member refid="class_slave_1aa087a07ab832082237ef720f06629efd" prot="private" virt="non-virtual"><scope>Slave</scope><name>notifyInCharge</name></member>
+      <member refid="class_slave_1a4471e1cf44f72e517f82016130e421cc" prot="private" virt="non-virtual"><scope>Slave</scope><name>notifyInWait</name></member>
+      <member refid="class_slave_1a3d45643c5f59c3da7a95b08084f64b0b" prot="private" virt="non-virtual"><scope>Slave</scope><name>notifyWalkIntoCharge</name></member>
+      <member refid="class_slave_1a5c548fa79d0578d10608d47e944cfadc" prot="private" virt="non-virtual"><scope>Slave</scope><name>notifyWalkToCharge</name></member>
+      <member refid="class_slave_1a23c639ab89129aa0a29b8e93fd01c60f" prot="private" virt="non-virtual"><scope>Slave</scope><name>notifyWork</name></member>
+      <member refid="class_slave_1ac5d338582dcb514c5198caf6fb8ac7b1" prot="private" virt="non-virtual"><scope>Slave</scope><name>onReceiveSingle</name></member>
+      <member refid="class_slave_1a73d1f4e973ba10a321270d9a10537f5e" prot="public" virt="non-virtual"><scope>Slave</scope><name>requestCharge</name></member>
+      <member refid="class_slave_1a9908e01d85d867b1bf716223a142f996" prot="public" virt="non-virtual"><scope>Slave</scope><name>requestStopCharge</name></member>
+      <member refid="class_slave_1aa441b01af45486a588e1eb2e9563d4e6" prot="public" virt="non-virtual"><scope>Slave</scope><name>Slave</name></member>
+      <member refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" prot="public" virt="non-virtual"><scope>Slave</scope><name>slave</name></member>
+      <member refid="class_slave_1a17d2803858c6f6f693e19f8bd4564ea7" prot="private" virt="non-virtual"><scope>Slave</scope><name>state</name></member>
+      <member refid="class_slave_1ab2b2556f13271d04d83c68a4e9d8adfa" prot="public" virt="non-virtual"><scope>Slave</scope><name>step</name></member>
+      <member refid="class_slave_1a2d662815f7722d88a0390b8202779aba" prot="private" virt="non-virtual"><scope>Slave</scope><name>stepCharge</name></member>
+      <member refid="class_slave_1af1d39beb4556c42339f6fc19b6f746ff" prot="private" virt="non-virtual"><scope>Slave</scope><name>stepExitCharge</name></member>
+      <member refid="class_slave_1ae3aeb42935820a8b3a3c9c043e98b551" prot="private" virt="non-virtual"><scope>Slave</scope><name>stepIntoCharge</name></member>
+      <member refid="class_slave_1a0ef7d583d3a72949ef00dffebb553199" prot="private" virt="non-virtual"><scope>Slave</scope><name>stepToCharge</name></member>
+      <member refid="class_slave_1a97cc37b09c7fdffd13ced985366fd7e3" prot="private" virt="non-virtual"><scope>Slave</scope><name>stepWaitCharge</name></member>
+      <member refid="class_slave_1a0bd5e6c2ff917efcf1f72b9c86c0eaed" prot="private" virt="non-virtual"><scope>Slave</scope><name>stepWork</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

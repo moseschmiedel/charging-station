@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">Dezibot.h</includes>
+    <includes local="no">autocharge/Autocharge.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>master/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="3">
+        <label>Dezibot.h</label>
+      </node>
+      <node id="4">
+        <label>autocharge/Autocharge.hpp</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto chargingSlaves</definition>
+        <argsstring></argsstring>
+        <name>chargingSlaves</name>
+        <initializer>= Fifo&lt;SlaveData *&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="master/src/main.cpp" line="28" column="6" bodyfile="master/src/main.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" prot="public" static="no" mutable="no">
+        <type>Master</type>
+        <definition>Master master</definition>
+        <argsstring></argsstring>
+        <name>master</name>
+        <initializer>= Master(<ref refid="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" kindref="member">chargingSlaves</ref>, <ref refid="main_8cpp_1a146fc424c2ebbe77ff39a28d6bc25bf6" kindref="member">start_chg</ref>, <ref refid="main_8cpp_1a4cfc2235922e972bc260844f4d34daaf" kindref="member">end_chg</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="master/src/main.cpp" line="30" column="8" bodyfile="master/src/main.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a146fc424c2ebbe77ff39a28d6bc25bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start_chg</definition>
+        <argsstring>(Master *master, SlaveData *slave)</argsstring>
+        <name>start_chg</name>
+        <param>
+          <type>Master *</type>
+          <declname>master</declname>
+        </param>
+        <param>
+          <type>SlaveData *</type>
+          <declname>slave</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="master/src/main.cpp" line="11" column="6" bodyfile="master/src/main.cpp" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4cfc2235922e972bc260844f4d34daaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void end_chg</definition>
+        <argsstring>(Master *master, SlaveData *slave)</argsstring>
+        <name>end_chg</name>
+        <param>
+          <type>Master *</type>
+          <declname>master</declname>
+        </param>
+        <param>
+          <type>SlaveData *</type>
+          <declname>slave</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="master/src/main.cpp" line="19" column="6" bodyfile="master/src/main.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="master/src/main.cpp" line="32" column="6" bodyfile="master/src/main.cpp" bodystart="32" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="master/src/main.cpp" line="51" column="6" bodyfile="master/src/main.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Dezibot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;autocharge/Autocharge.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>BEACON_CARRIER_HZ<sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>BEACON_DUTY<sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>put<sp/>function<sp/>declarations<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a146fc424c2ebbe77ff39a28d6bc25bf6" kindref="member">start_chg</ref>(Master<sp/>*<ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>,<sp/>SlaveData<sp/>*slave)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(slave<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;start_chg<sp/>skipped:<sp/>slave<sp/>is<sp/>null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Execute<sp/>&apos;start_chg<sp/>for<sp/>slave<sp/>%u&apos;\n&quot;</highlight><highlight class="normal">,<sp/>slave-&gt;id);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>-&gt;enjoinCharge(slave);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4cfc2235922e972bc260844f4d34daaf" kindref="member">end_chg</ref>(Master<sp/>*<ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>,<sp/>SlaveData<sp/>*slave)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(slave<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;end_chg<sp/>skipped:<sp/>slave<sp/>is<sp/>null&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Execute<sp/>&apos;end_chg<sp/>for<sp/>slave<sp/>%u&apos;\n&quot;</highlight><highlight class="normal">,<sp/>slave-&gt;id);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>-&gt;cancelCharge(slave);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" kindref="member">chargingSlaves</ref><sp/>=<sp/>Fifo&lt;SlaveData<sp/>*&gt;();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">Master<sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref><sp/>=<sp/>Master(<ref refid="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" kindref="member">chargingSlaves</ref>,<sp/><ref refid="main_8cpp_1a146fc424c2ebbe77ff39a28d6bc25bf6" kindref="member">start_chg</ref>,<sp/><ref refid="main_8cpp_1a4cfc2235922e972bc260844f4d34daaf" kindref="member">end_chg</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>your<sp/>setup<sp/>code<sp/>here,<sp/>to<sp/>run<sp/>once:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>delay(2000);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;+-------------------------+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;|<sp/>Charging<sp/>Station<sp/>Master<sp/>|&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;+-------------------------+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>.begin();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;NodeID<sp/>&apos;%u&apos;\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>.communication.getNodeId());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>.infraredLight.front.sendFrequency(BEACON_CARRIER_HZ);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>.infraredLight.front.setDutyCycle(BEACON_DUTY);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Beacon<sp/>config:<sp/>front=%u<sp/>Hz<sp/>duty=%u/1023\n&quot;</highlight><highlight class="normal">,<sp/>BEACON_CARRIER_HZ,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BEACON_DUTY);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>Serial.println(</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;wireless_log,from,t_ms,mode,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;theta_deg,S,detected,duty_l,duty_r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kindref="member">master</ref>.step();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>delay(5);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="master/src/main.cpp"/>
+  </compounddef>
+</doxygen>

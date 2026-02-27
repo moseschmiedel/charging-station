@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_slave_state_8hpp" kind="file" language="C++">
+    <compoundname>SlaveState.hpp</compoundname>
+    <includedby refid="_autocharge_8hpp" local="yes">dezibot/src/autocharge/Autocharge.hpp</includedby>
+    <includedby refid="_slave_data_8hpp" local="yes">dezibot/src/autocharge/master/SlaveData.hpp</includedby>
+    <includedby refid="_slave_8hpp" local="yes">dezibot/src/autocharge/slave/Slave.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="4">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="5">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dezibot/src/autocharge/master/SlaveData.hpp</label>
+        <link refid="_slave_data_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dezibot/src/autocharge/slave/Slave.cpp</label>
+        <link refid="_slave_8cpp"/>
+      </node>
+      <node id="6">
+        <label>dezibot/src/autocharge/slave/Slave.hpp</label>
+        <link refid="_slave_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dezibot/src/autocharge/slave/SlaveState.hpp</label>
+        <link refid="_slave_state_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>SlaveState</name>
+        <enumvalue id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea9f20f1fb4bd4638144d4f642b3159812" prot="public">
+          <name>WORK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea919adf0370d6c5202b98566eeaedb8e2" prot="public">
+          <name>WALKING_TO_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea5932d5dbb77bd3215d32cc3760d6ca7f" prot="public">
+          <name>WAIT_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea12a07ec24745645782f8826ff02339c1" prot="public">
+          <name>WALKING_INTO_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea0405a707a4790a264c10e6cacded18b3" prot="public">
+          <name>CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ead9fb228520122994757b08cb4102e81e" prot="public">
+          <name>EXITING_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/slave/SlaveState.hpp" line="3" column="1" bodyfile="dezibot/src/autocharge/slave/SlaveState.hpp" bodystart="3" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" kindref="member">SlaveState</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea9f20f1fb4bd4638144d4f642b3159812" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea9f20f1fb4bd4638144d4f642b3159812" kindref="member">WORK</ref>,</highlight></codeline>
+<codeline lineno="5" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea919adf0370d6c5202b98566eeaedb8e2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea919adf0370d6c5202b98566eeaedb8e2" kindref="member">WALKING_TO_CHARGE</ref>,</highlight></codeline>
+<codeline lineno="6" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea5932d5dbb77bd3215d32cc3760d6ca7f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea5932d5dbb77bd3215d32cc3760d6ca7f" kindref="member">WAIT_CHARGE</ref>,</highlight></codeline>
+<codeline lineno="7" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea12a07ec24745645782f8826ff02339c1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea12a07ec24745645782f8826ff02339c1" kindref="member">WALKING_INTO_CHARGE</ref>,</highlight></codeline>
+<codeline lineno="8" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea0405a707a4790a264c10e6cacded18b3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea0405a707a4790a264c10e6cacded18b3" kindref="member">CHARGE</ref>,</highlight></codeline>
+<codeline lineno="9" refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ead9fb228520122994757b08cb4102e81e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ead9fb228520122994757b08cb4102e81e" kindref="member">EXITING_CHARGE</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/autocharge/slave/SlaveState.hpp"/>
+  </compounddef>
+</doxygen>

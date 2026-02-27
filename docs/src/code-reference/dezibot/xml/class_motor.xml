@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_motor" kind="class" language="C++" prot="public">
+    <compoundname>Motor</compoundname>
+    <includes refid="_motion_8h" local="no">Motion.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_motor_1ac5b603def5973874c29d5b25b7deb42c" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Motor::pin</definition>
+        <argsstring></argsstring>
+        <name>pin</name>
+        <qualifiedname>Motor::pin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="52" column="17" bodyfile="dezibot/src/motion/Motion.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_1af1e002fa579fa991c8ea2a81eb98fe44" prot="protected" static="no" mutable="no">
+        <type>ledc_timer_t</type>
+        <definition>ledc_timer_t Motor::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>Motor::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="53" column="22" bodyfile="dezibot/src/motion/Motion.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_1abffc4e140e4ee8b988680304c9527bae" prot="protected" static="no" mutable="no">
+        <type>ledc_channel_t</type>
+        <definition>ledc_channel_t Motor::channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <qualifiedname>Motor::channel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="54" column="24" bodyfile="dezibot/src/motion/Motion.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motor_1a6cbdaabe22898182b391618fbc9ca4a2" prot="protected" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Motor::duty</definition>
+        <argsstring></argsstring>
+        <name>duty</name>
+        <qualifiedname>Motor::duty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="56" column="18" bodyfile="dezibot/src/motion/Motion.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_motor_1a6329b2766faceab988244d01362539aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Motor::Motor</definition>
+        <argsstring>(uint8_t pin, ledc_timer_t timer, ledc_channel_t channel)</argsstring>
+        <name>Motor</name>
+        <qualifiedname>Motor::Motor</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>ledc_timer_t</type>
+          <declname>timer</declname>
+        </param>
+        <param>
+          <type>ledc_channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="29" column="9" bodyfile="dezibot/src/motion/Motor.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motor_1a6be167642542458d397b08d89513576b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motor::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Motor::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the motor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="34" column="14" bodyfile="dezibot/src/motion/Motor.cpp" bodystart="10" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motor_1a88e5f69c260d67d9f7d25616de8e2bf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motor::setSpeed</definition>
+        <argsstring>(uint16_t duty)</argsstring>
+        <name>setSpeed</name>
+        <qualifiedname>Motor::setSpeed</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>duty</declname>
+        </param>
+        <briefdescription>
+<para>Set the Speed by changing the pwm. To avoid current peaks, a linear ramp-up is used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="attention"><para>it is requried at any time to use that method to access the motors or methods of the motionclass to avoid such peaks.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the duty cyle that should be set, can be between 0-8192 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="43" column="14" bodyfile="dezibot/src/motion/Motor.cpp" bodystart="24" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motor_1a1cc4a7f2edd7d4885c96f169bce2d9fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Motor::getSpeed</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSpeed</name>
+        <qualifiedname>Motor::getSpeed</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>returns the currently activ speed </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current speedvalue of the motor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="50" column="18" bodyfile="dezibot/src/motion/Motor.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/motion/Motion.h" line="27" column="1" bodyfile="dezibot/src/motion/Motion.h" bodystart="27" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_motor_1a6be167642542458d397b08d89513576b" prot="public" virt="non-virtual"><scope>Motor</scope><name>begin</name></member>
+      <member refid="class_motor_1abffc4e140e4ee8b988680304c9527bae" prot="protected" virt="non-virtual"><scope>Motor</scope><name>channel</name></member>
+      <member refid="class_motor_1a6cbdaabe22898182b391618fbc9ca4a2" prot="protected" virt="non-virtual"><scope>Motor</scope><name>duty</name></member>
+      <member refid="class_motor_1a1cc4a7f2edd7d4885c96f169bce2d9fd" prot="public" virt="non-virtual"><scope>Motor</scope><name>getSpeed</name></member>
+      <member refid="class_motor_1a6329b2766faceab988244d01362539aa" prot="public" virt="non-virtual"><scope>Motor</scope><name>Motor</name></member>
+      <member refid="class_motor_1ac5b603def5973874c29d5b25b7deb42c" prot="protected" virt="non-virtual"><scope>Motor</scope><name>pin</name></member>
+      <member refid="class_motor_1a88e5f69c260d67d9f7d25616de8e2bf7" prot="public" virt="non-virtual"><scope>Motor</scope><name>setSpeed</name></member>
+      <member refid="class_motor_1af1e002fa579fa991c8ea2a81eb98fe44" prot="protected" virt="non-virtual"><scope>Motor</scope><name>timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

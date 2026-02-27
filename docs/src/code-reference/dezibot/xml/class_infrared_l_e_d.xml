@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_infrared_l_e_d" kind="class" language="C++" prot="public">
+    <compoundname>InfraredLED</compoundname>
+    <includes refid="_infrared_light_8h" local="no">InfraredLight.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_infrared_l_e_d_1a8a812a9a1a13a6091cccb9658c9ba2b7" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t InfraredLED::ledPin</definition>
+        <argsstring></argsstring>
+        <name>ledPin</name>
+        <qualifiedname>InfraredLED::ledPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="55" column="11" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_infrared_l_e_d_1a2a3e607cab63b9675b675327793d1ecb" prot="protected" static="no" mutable="no">
+        <type>ledc_timer_t</type>
+        <definition>ledc_timer_t InfraredLED::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>InfraredLED::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="56" column="16" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_infrared_l_e_d_1a83a0ae56be09a96e4554f44718f08e68" prot="protected" static="no" mutable="no">
+        <type>ledc_channel_t</type>
+        <definition>ledc_channel_t InfraredLED::channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <qualifiedname>InfraredLED::channel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="57" column="18" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_infrared_l_e_d_1ab682065fdf73cd4e86d29883587feea2" prot="protected" static="no" mutable="no">
+        <type>ledc_timer_config_t</type>
+        <definition>ledc_timer_config_t InfraredLED::pwmTimer</definition>
+        <argsstring></argsstring>
+        <name>pwmTimer</name>
+        <qualifiedname>InfraredLED::pwmTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="58" column="23" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_infrared_l_e_d_1a3827c29b66d56750c654fcbd0b2d3c72" prot="protected" static="no" mutable="no">
+        <type>ledc_channel_config_t</type>
+        <definition>ledc_channel_config_t InfraredLED::pwmChannel</definition>
+        <argsstring></argsstring>
+        <name>pwmChannel</name>
+        <qualifiedname>InfraredLED::pwmChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="59" column="25" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_infrared_l_e_d_1a2321d55e05acb8bb50b821729d6ab7b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InfraredLED::InfraredLED</definition>
+        <argsstring>(uint8_t pin, ledc_timer_t timer, ledc_channel_t channel)</argsstring>
+        <name>InfraredLED</name>
+        <qualifiedname>InfraredLED::InfraredLED</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>ledc_timer_t</type>
+          <declname>timer</declname>
+        </param>
+        <param>
+          <type>ledc_channel_t</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="19" column="3" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="7" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_infrared_l_e_d_1a04a7d8dd5670a7c8394e69363be561b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLED::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>InfraredLED::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="20" column="8" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="14" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_infrared_l_e_d_1a30e809e5b1ce6a739c3fe78a5074b518" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLED::turnOn</definition>
+        <argsstring>(void)</argsstring>
+        <name>turnOn</name>
+        <qualifiedname>InfraredLED::turnOn</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>enables selected LED </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="25" column="8" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_infrared_l_e_d_1a3e2b44a804b9e13707d1916f1de4084f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLED::turnOff</definition>
+        <argsstring>(void)</argsstring>
+        <name>turnOff</name>
+        <qualifiedname>InfraredLED::turnOff</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>disables selected LED </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="31" column="8" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_infrared_l_e_d_1abd41baf3bc10f83179a0416c0c81fb09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLED::setState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setState</name>
+        <qualifiedname>InfraredLED::setState</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>changes state of selected LED depending on the state </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which led will be affected </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if led should be turned on, else false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="38" column="8" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_infrared_l_e_d_1a8259665f1bdf2deb9155a621ff4acd21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLED::sendFrequency</definition>
+        <argsstring>(uint16_t frequency)</argsstring>
+        <name>sendFrequency</name>
+        <qualifiedname>InfraredLED::sendFrequency</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+<para>starts flashing the IRLed with a specific frequency Won&apos;t stop automatically, must be stopped by calling any other IR-Method </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="45" column="8" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_infrared_l_e_d_1affbcafdca55c9c95822a26697e27a04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLED::setDutyCycle</definition>
+        <argsstring>(uint16_t dutyCycle)</argsstring>
+        <name>setDutyCycle</name>
+        <qualifiedname>InfraredLED::setDutyCycle</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>dutyCycle</declname>
+        </param>
+        <briefdescription>
+<para>sets the duty cycle of the selected LED </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dutyCycle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>internally capped at DUTY_CYCLE_MAX (1023) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="52" column="8" bodyfile="dezibot/src/infraredLight/InfraredLED.cpp" bodystart="53" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/infraredLight/InfraredLight.h" line="17" column="1" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="17" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_infrared_l_e_d_1a04a7d8dd5670a7c8394e69363be561b3" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>begin</name></member>
+      <member refid="class_infrared_l_e_d_1a83a0ae56be09a96e4554f44718f08e68" prot="protected" virt="non-virtual"><scope>InfraredLED</scope><name>channel</name></member>
+      <member refid="class_infrared_l_e_d_1a2321d55e05acb8bb50b821729d6ab7b8" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>InfraredLED</name></member>
+      <member refid="class_infrared_l_e_d_1a8a812a9a1a13a6091cccb9658c9ba2b7" prot="protected" virt="non-virtual"><scope>InfraredLED</scope><name>ledPin</name></member>
+      <member refid="class_infrared_l_e_d_1a3827c29b66d56750c654fcbd0b2d3c72" prot="protected" virt="non-virtual"><scope>InfraredLED</scope><name>pwmChannel</name></member>
+      <member refid="class_infrared_l_e_d_1ab682065fdf73cd4e86d29883587feea2" prot="protected" virt="non-virtual"><scope>InfraredLED</scope><name>pwmTimer</name></member>
+      <member refid="class_infrared_l_e_d_1a8259665f1bdf2deb9155a621ff4acd21" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>sendFrequency</name></member>
+      <member refid="class_infrared_l_e_d_1affbcafdca55c9c95822a26697e27a04b" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>setDutyCycle</name></member>
+      <member refid="class_infrared_l_e_d_1abd41baf3bc10f83179a0416c0c81fb09" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>setState</name></member>
+      <member refid="class_infrared_l_e_d_1a2a3e607cab63b9675b675327793d1ecb" prot="protected" virt="non-virtual"><scope>InfraredLED</scope><name>timer</name></member>
+      <member refid="class_infrared_l_e_d_1a3e2b44a804b9e13707d1916f1de4084f" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>turnOff</name></member>
+      <member refid="class_infrared_l_e_d_1a30e809e5b1ce6a739c3fe78a5074b518" prot="public" virt="non-virtual"><scope>InfraredLED</scope><name>turnOn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_color_detection" kind="class" language="C++" prot="public">
+    <compoundname>ColorDetection</compoundname>
+    <includes refid="_color_detection_8h" local="no">ColorDetection.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_color_detection_1a15b68f0132963701f6c4d630fa802aaf" prot="protected" static="no" mutable="no">
+        <type>VEML6040</type>
+        <definition>VEML6040 ColorDetection::rgbwSensor</definition>
+        <argsstring></argsstring>
+        <name>rgbwSensor</name>
+        <qualifiedname>ColorDetection::rgbwSensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="86" column="14" bodyfile="dezibot/src/colorDetection/ColorDetection.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_color_detection_1a807d3b22b8dad775c3fbe36035532d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ColorDetection::beginAutoMode</definition>
+        <argsstring>()</argsstring>
+        <name>beginAutoMode</name>
+        <qualifiedname>ColorDetection::beginAutoMode</qualifiedname>
+        <briefdescription>
+<para>Start RBGW sensor with default configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="61" column="10" bodyfile="dezibot/src/colorDetection/ColorDetection.cpp" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_detection_1a5c3277ac1a53ffe6b160a8a5092045cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ColorDetection::configure</definition>
+        <argsstring>(VEML_CONFIG config)</argsstring>
+        <name>configure</name>
+        <qualifiedname>ColorDetection::configure</qualifiedname>
+        <param>
+          <type><ref refid="struct_v_e_m_l___c_o_n_f_i_g" kindref="compound">VEML_CONFIG</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Begin RGBW sensor with passed configuration values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>configuration for VEML6040 sensor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="68" column="10" bodyfile="dezibot/src/colorDetection/ColorDetection.cpp" bodystart="11" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_detection_1a3a0f0ada556d01d241a948808fea992e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ColorDetection::getColorValue</definition>
+        <argsstring>(color color)</argsstring>
+        <name>getColorValue</name>
+        <qualifiedname>ColorDetection::getColorValue</qualifiedname>
+        <param>
+          <type><ref refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kindref="member">color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Get color value of RGBW sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>RGBW color which to get </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint16_t color value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="76" column="14" bodyfile="dezibot/src/colorDetection/ColorDetection.cpp" bodystart="43" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_detection_1a53fc45bb245bf87f15fd9f71f95d7f80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ColorDetection::getAmbientLight</definition>
+        <argsstring>()</argsstring>
+        <name>getAmbientLight</name>
+        <qualifiedname>ColorDetection::getAmbientLight</qualifiedname>
+        <briefdescription>
+<para>Get the ambient light in lux. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float ambient light in lux. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/colorDetection/ColorDetection.h" line="83" column="11" bodyfile="dezibot/src/colorDetection/ColorDetection.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/colorDetection/ColorDetection.h" line="55" column="1" bodyfile="dezibot/src/colorDetection/ColorDetection.h" bodystart="55" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_color_detection_1a807d3b22b8dad775c3fbe36035532d99" prot="public" virt="non-virtual"><scope>ColorDetection</scope><name>beginAutoMode</name></member>
+      <member refid="class_color_detection_1a5c3277ac1a53ffe6b160a8a5092045cd" prot="public" virt="non-virtual"><scope>ColorDetection</scope><name>configure</name></member>
+      <member refid="class_color_detection_1a53fc45bb245bf87f15fd9f71f95d7f80" prot="public" virt="non-virtual"><scope>ColorDetection</scope><name>getAmbientLight</name></member>
+      <member refid="class_color_detection_1a3a0f0ada556d01d241a948808fea992e" prot="public" virt="non-virtual"><scope>ColorDetection</scope><name>getColorValue</name></member>
+      <member refid="class_color_detection_1a15b68f0132963701f6c4d630fa802aaf" prot="protected" virt="non-virtual"><scope>ColorDetection</scope><name>rgbwSensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

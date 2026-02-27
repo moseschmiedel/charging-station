@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_slave_data" kind="class" language="C++" prot="public">
+    <compoundname>SlaveData</compoundname>
+    <includes refid="_slave_data_8hpp" local="no">SlaveData.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_slave_data_1a8e0aa42d593851470abec35daaf410a5" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t SlaveData::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>SlaveData::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/SlaveData.hpp" line="9" column="18" bodyfile="dezibot/src/autocharge/master/SlaveData.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_slave_data_1ae0df89591f7434846690b6a713e7e9d0" prot="public" static="no" mutable="no">
+        <type><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" kindref="member">SlaveState</ref></type>
+        <definition>SlaveState SlaveData::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>SlaveData::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/SlaveData.hpp" line="10" column="14" bodyfile="dezibot/src/autocharge/master/SlaveData.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_slave_data_1a433e65b22fb5c3d1f352aed959311ec2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SlaveData::SlaveData</definition>
+        <argsstring>(uint32_t id)</argsstring>
+        <name>SlaveData</name>
+        <qualifiedname>SlaveData::SlaveData</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/SlaveData.hpp" line="12" column="3" bodyfile="dezibot/src/autocharge/master/SlaveData.hpp" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_slave_data_1a86bd5584673ed9cd39dfb353ea75025e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SlaveData::SlaveData</definition>
+        <argsstring>(uint32_t id, SlaveState state)</argsstring>
+        <name>SlaveData</name>
+        <qualifiedname>SlaveData::SlaveData</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" kindref="member">SlaveState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/SlaveData.hpp" line="13" column="3" bodyfile="dezibot/src/autocharge/master/SlaveData.hpp" bodystart="13" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/autocharge/master/SlaveData.hpp" line="7" column="1" bodyfile="dezibot/src/autocharge/master/SlaveData.hpp" bodystart="7" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_slave_data_1a8e0aa42d593851470abec35daaf410a5" prot="public" virt="non-virtual"><scope>SlaveData</scope><name>id</name></member>
+      <member refid="class_slave_data_1a433e65b22fb5c3d1f352aed959311ec2" prot="public" virt="non-virtual"><scope>SlaveData</scope><name>SlaveData</name></member>
+      <member refid="class_slave_data_1a86bd5584673ed9cd39dfb353ea75025e" prot="public" virt="non-virtual"><scope>SlaveData</scope><name>SlaveData</name></member>
+      <member refid="class_slave_data_1ae0df89591f7434846690b6a713e7e9d0" prot="public" virt="non-virtual"><scope>SlaveData</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

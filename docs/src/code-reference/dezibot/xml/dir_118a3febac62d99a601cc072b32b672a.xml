@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_118a3febac62d99a601cc072b32b672a" kind="dir">
+    <compoundname>dezibot/src/colorDetection</compoundname>
+    <innerfile refid="_color_detection_8cpp">ColorDetection.cpp</innerfile>
+    <innerfile refid="_color_detection_8h">ColorDetection.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/colorDetection/"/>
+  </compounddef>
+</doxygen>

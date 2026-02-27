@@ -1,0 +1,119 @@
+---
+import { Code } from "astro/components";
+import type { CodeClassDoc } from "../lib/code-reference";
+import FunctionDoc from "./FunctionDoc.astro";
+import {
+    DECLARATION_LANGUAGE,
+    SYNTAX_DEFAULT_COLOR,
+    SYNTAX_THEMES,
+} from "../../syntax-highlighting.config.mjs";
+
+interface Props {
+    classDoc: CodeClassDoc;
+}
+
+const { classDoc } = Astro.props;
+const toAnchorId = (value: string) =>
+    value
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+const anchorId = toAnchorId(`type-${classDoc.name}`);
+---
+
+<section
+    class:list={[
+        "type-doc",
+        classDoc.kind === "class" && "is-class",
+        classDoc.kind === "struct" && "is-struct",
+    ]}
+>
+    <h3 id={anchorId} class="type-heading">
+        <a href={`#${anchorId}`}>
+            <code>{classDoc.name}</code>
+        </a>
+    </h3>
+    <div class="declaration">
+        <Code
+            code={`${classDoc.kind} ${classDoc.name}`}
+            lang={DECLARATION_LANGUAGE}
+            themes={SYNTAX_THEMES}
+            defaultColor={SYNTAX_DEFAULT_COLOR}
+            data-code-reference
+        />
+    </div>
+    <div class="meta-row">
+        <span><code>{classDoc.kind}</code></span>
+        {
+            classDoc.location && (
+                <span>
+                    <code>{classDoc.location}</code>
+                </span>
+            )
+        }
+    </div>
+    {
+        classDoc.brief ? (
+            <p>{classDoc.brief}</p>
+        ) : (
+            <p class="muted">No description.</p>
+        )
+    }
+
+    <h4>Methods ({classDoc.methods.length})</h4>
+    {
+        classDoc.methods.length > 0 ? (
+            classDoc.methods.map((methodDoc) => (
+                <FunctionDoc
+                    functionDoc={methodDoc}
+                    headingLevel={5}
+                    sectionIdPrefix={`method-${classDoc.name}`}
+                    nested={true}
+                />
+            ))
+        ) : (
+            <p class="muted">No methods documented for this type.</p>
+        )
+    }
+</section>
+
+<style>
+    .type-doc {
+        border: 1px solid var(--sl-color-hairline);
+        border-radius: 0.8rem;
+        padding: 1rem 1rem 1rem 1.1rem;
+        margin-top: 1.35rem;
+        background: color-mix(in srgb, var(--sl-color-gray-6) 20%, transparent);
+        box-shadow: 0 2px 10px
+            color-mix(in srgb, var(--sl-color-black) 28%, transparent);
+    }
+
+    .type-heading {
+        margin: 0;
+    }
+
+    .type-heading a {
+        color: var(--sl-color-white);
+        text-decoration: none;
+    }
+
+    .type-heading a:hover {
+        text-decoration: underline;
+    }
+
+    .declaration {
+        margin: 0.55rem 0 0.65rem;
+    }
+
+    .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .muted {
+        color: var(--sl-color-text-accent);
+        font-style: italic;
+    }
+</style>

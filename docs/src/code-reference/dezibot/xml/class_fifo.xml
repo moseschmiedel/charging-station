@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_fifo" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Fifo</compoundname>
+    <basecompoundref refid="class_abstract_set" prot="public" virt="non-virtual">AbstractSet&lt; T &gt;</basecompoundref>
+    <includes refid="_fifo_8hpp" local="no">Fifo.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fifo_1abd88fa634817cf8f87b151d9b55384d0" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; T &gt;</type>
+        <definition>std::queue&lt;T&gt; Fifo&lt; T &gt;::queue</definition>
+        <argsstring></argsstring>
+        <name>queue</name>
+        <qualifiedname>Fifo::queue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" line="10" column="14" bodyfile="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fifo_1a3cdedc25dceb45da4bfe9d1b1d2a2391" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Fifo&lt; T &gt;::insert</definition>
+        <argsstring>(T item) override</argsstring>
+        <name>insert</name>
+        <qualifiedname>Fifo::insert</qualifiedname>
+        <reimplements refid="class_abstract_set_1a3142669fe084535e9db8bd39c5518f3b">insert</reimplements>
+        <param>
+          <type>T</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" line="13" column="8" bodyfile="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fifo_1ad030665fcf959b11a3ca8610cdc0544f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>T</type>
+        <definition>T Fifo&lt; T &gt;::pick</definition>
+        <argsstring>() override</argsstring>
+        <name>pick</name>
+        <qualifiedname>Fifo::pick</qualifiedname>
+        <reimplements refid="class_abstract_set_1acb826749f534f3c8f5da87273a1ebb6a">pick</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" line="17" column="5" bodyfile="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" bodystart="17" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fifo_1a2c8f47edbe509f926bda9c7f0682ece1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool Fifo&lt; T &gt;::isEmpty</definition>
+        <argsstring>() const override</argsstring>
+        <name>isEmpty</name>
+        <qualifiedname>Fifo::isEmpty</qualifiedname>
+        <reimplements refid="class_abstract_set_1ad35654b0f496a79b6f1b7750848ef92e">isEmpty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" line="27" column="8" bodyfile="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AbstractSet&lt; T &gt;</label>
+        <link refid="class_abstract_set"/>
+      </node>
+      <node id="1">
+        <label>Fifo&lt; T &gt;</label>
+        <link refid="class_fifo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AbstractSet&lt; T &gt;</label>
+        <link refid="class_abstract_set"/>
+      </node>
+      <node id="1">
+        <label>Fifo&lt; T &gt;</label>
+        <link refid="class_fifo"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" line="8" column="1" bodyfile="dezibot/src/autocharge/master/abstractSet/Fifo.hpp" bodystart="8" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_fifo_1a3cdedc25dceb45da4bfe9d1b1d2a2391" prot="public" virt="virtual"><scope>Fifo</scope><name>insert</name></member>
+      <member refid="class_fifo_1a2c8f47edbe509f926bda9c7f0682ece1" prot="public" virt="virtual"><scope>Fifo</scope><name>isEmpty</name></member>
+      <member refid="class_fifo_1ad030665fcf959b11a3ca8610cdc0544f" prot="public" virt="virtual"><scope>Fifo</scope><name>pick</name></member>
+      <member refid="class_fifo_1abd88fa634817cf8f87b151d9b55384d0" prot="private" virt="non-virtual"><scope>Fifo</scope><name>queue</name></member>
+      <member refid="class_abstract_set_1a4378ad978ace5979300062fde6ba0933" prot="public" virt="virtual"><scope>Fifo</scope><name>~AbstractSet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

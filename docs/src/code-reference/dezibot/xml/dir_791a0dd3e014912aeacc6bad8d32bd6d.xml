@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_791a0dd3e014912aeacc6bad8d32bd6d" kind="dir">
+    <compoundname>dezibot/src/display</compoundname>
+    <innerfile refid="_char_table_8h">CharTable.h</innerfile>
+    <innerfile refid="_display_8cpp">Display.cpp</innerfile>
+    <innerfile refid="_display_8h">Display.h</innerfile>
+    <innerfile refid="_display_c_m_ds_8h">DisplayCMDs.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/display/"/>
+  </compounddef>
+</doxygen>

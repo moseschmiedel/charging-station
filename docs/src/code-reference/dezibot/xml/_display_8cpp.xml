@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_display_8cpp" kind="file" language="C++">
+    <compoundname>Display.cpp</compoundname>
+    <includes refid="_display_8h" local="yes">Display.h</includes>
+    <includes refid="_char_table_8h" local="yes">CharTable.h</includes>
+    <includes local="yes">Wire.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>CharTable.h</label>
+        <link refid="_char_table_8h"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/display/Display.cpp</label>
+        <link refid="_display_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Display.h</label>
+        <link refid="_display_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DisplayCMDs.h</label>
+        <link refid="_display_c_m_ds_8h"/>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="7">
+        <label>Wire.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Adds the ability to print to the display of the robot. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Hans Haupt (<ulink url="mailto:hans.haupt@dezibot.de">hans.haupt@dezibot.de</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-06-05</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_display_8h" kindref="compound">Display.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_char_table_8h" kindref="compound">CharTable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Wire.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1ae20d7a3de610fdad801dcd23702f7fb8" kindref="member">Display::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>Mux<sp/>Ratio</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a9921426f06d5206189364d9de0e1e38e" kindref="member">muxRatio</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x3f);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1ab48cec91d681a522fe06b80d7f8e86b0" kindref="member">setOffset</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x00);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a42f13292d27dbcc6c1e82f9f6e3588bc" kindref="member">setStartLine</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a8787c75cbe6b535306a261cb61d9255c" kindref="member">stopCompleteOn</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*which<sp/>pixels<sp/>are<sp/>bright:<sp/>normal<sp/>=<sp/>1s<sp/>are<sp/>bright,<sp/>inverese=<sp/>0s<sp/>are<sp/>bright*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<sp/><ref refid="_display_c_m_ds_8h_1a8a6bba821c314093b134ef29062e5ad8" kindref="member">setNormalMode</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<sp/><ref refid="_display_c_m_ds_8h_1ae9ed833a9d8b4d83553588c4044267f6" kindref="member">setOscFreq</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x80);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a2c13100d920035229e6f619c9e5a448f" kindref="member">setChargePump</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x14);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1ad7df1c864beb982004c38e57c0f3ef09" kindref="member">activateDisplay</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a699e5a8f28243dd2d5c0df2dfa9c72a0" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">Display::sendDisplayCMD</ref>(uint8_t<sp/>cmd){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.beginTransmission(<ref refid="_display_c_m_ds_8h_1a3669be2cd8456e10df7406c3d02c0a9c" kindref="member">DisplayAdress</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.write(<ref refid="_display_c_m_ds_8h_1af9076d74feac1db0b857f976f3712952" kindref="member">cmd_byte</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.write(cmd);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a699e5a8f28243dd2d5c0df2dfa9c72a0" kindref="member">Display::clear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1adbe423db82caa42f70c484b13921bf81" kindref="member">addressingMode</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x00);<sp/></highlight><highlight class="comment">//horizontal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a59458f5ed7291821766393e93da167cb" kindref="member">colRange</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x00);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x7f);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a76d2462a7a7e2e2e61917cda44dc5ece" kindref="member">pageRange</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x00);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(0x07);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;j&lt;64;j++){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.beginTransmission(<ref refid="_display_c_m_ds_8h_1a3669be2cd8456e10df7406c3d02c0a9c" kindref="member">DisplayAdress</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write(<ref refid="_display_c_m_ds_8h_1a61754b69e388e4b2c74da0022c9458f0" kindref="member">data_byte</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;i&lt;16;i++){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write(0x00);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" kindref="member">currLine</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a8dbb38513cfe6ba3dffff8b0012cc7e4" kindref="member">Display::updateLine</ref>(uint<sp/>charAmount)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(charAmount+this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref>&gt;16)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" kindref="member">currLine</ref><sp/>=<sp/>(this-&gt;<ref refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" kindref="member">currLine</ref>+((charAmount+this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref>)/16))%8;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref><sp/>=<sp/>(charAmount+this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref>)%17;<sp/></highlight><highlight class="comment">//there<sp/>can<sp/>be<sp/>0-16<sp/>chars<sp/>on<sp/>one<sp/>line,<sp/>so<sp/>the<sp/>17th<sp/>char<sp/>is<sp/>on<sp/>next<sp/>line<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref><sp/>=<sp/>charAmount+this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kindref="member">Display::print</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*nextchar;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>write<sp/>data<sp/>to<sp/>the<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(value<sp/>&amp;&amp;<sp/>*value<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//check<sp/>if<sp/>pointer<sp/>is<sp/>still<sp/>valid<sp/>and<sp/>string<sp/>is<sp/>not<sp/>terminated<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//check<sp/>if<sp/>next<sp/>character<sp/>is<sp/>a<sp/>linebreak</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*value==</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fill<sp/>the<sp/>current<sp/>line<sp/>with<sp/>blanks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref>&lt;16)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a8dbb38513cfe6ba3dffff8b0012cc7e4" kindref="member">updateLine</ref>(1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.beginTransmission(<ref refid="_display_c_m_ds_8h_1a3669be2cd8456e10df7406c3d02c0a9c" kindref="member">DisplayAdress</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;i&lt;9;i++){</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write(<ref refid="_char_table_8h_1a05cd4f6bfca63b5b9681edb54aaaa656" kindref="member">font8x8_colwise</ref>[0][i]);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//make<sp/>the<sp/>linebreak</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" kindref="member">currLine</ref>=<ref refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" kindref="member">currLine</ref>+1;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kindref="member">charsOnCurrLine</ref>=0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a8dbb38513cfe6ba3dffff8b0012cc7e4" kindref="member">updateLine</ref>(1);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.beginTransmission(<ref refid="_display_c_m_ds_8h_1a3669be2cd8456e10df7406c3d02c0a9c" kindref="member">DisplayAdress</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print<sp/>the<sp/>character</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;i&lt;9;i++){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write(<ref refid="_char_table_8h_1a05cd4f6bfca63b5b9681edb54aaaa656" kindref="member">font8x8_colwise</ref>[*value][i]);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value++;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_display_1a79fd42e03a25ba4329c5cfaf45eecb22" kindref="member">Display::stringToCharArray</ref>(String<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>value.length()<sp/>+<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>+1<sp/>for<sp/>the<sp/>null<sp/>terminator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>msgBuffer[len];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>buffer<sp/>of<sp/>the<sp/>appropriate<sp/>length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>value.toCharArray(msgBuffer,<sp/>len);<sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>the<sp/>string<sp/>into<sp/>the<sp/>buffer,<sp/>including<sp/>the<sp/>null<sp/>terminator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*msgBuffer;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kindref="member">Display::print</ref>(String<sp/>value){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>value.length()<sp/>+<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>+1<sp/>for<sp/>the<sp/>null<sp/>terminator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>msgBuffer[len];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>buffer<sp/>of<sp/>the<sp/>appropriate<sp/>length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>value.toCharArray(msgBuffer,<sp/>len);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kindref="member">print</ref>(msgBuffer);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" kindref="member">Display::println</ref>(String<sp/>value){</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>value.length()<sp/>+<sp/>1;<sp/><sp/></highlight><highlight class="comment">//<sp/>+1<sp/>for<sp/>the<sp/>null<sp/>terminator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>msgBuffer[len];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>buffer<sp/>of<sp/>the<sp/>appropriate<sp/>length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>value.toCharArray(msgBuffer,<sp/>len);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" kindref="member">println</ref>(msgBuffer);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kindref="member">Display::print</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cstr[16];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kindref="member">print</ref>(itoa(value,<sp/>cstr,<sp/>10));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" kindref="member">Display::println</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cstr[16];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" kindref="member">println</ref>(itoa(value,<sp/>cstr,<sp/>10));</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" kindref="member">Display::println</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value){</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>-&gt;print(value);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kindref="member">print</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1a36fa737efadcf53742d41a336fe02599" kindref="member">Display::flipOrientation</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_display_1a1ef6d44935ca6787eb8c359d4db5ad6f" kindref="member">orientationFlipped</ref>){</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1ae4bb2d91a51558ab43ed36cefd3d04a6" kindref="member">setComDirectionNormal</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a95be732fbfa86dc6c2cb4dfbe8c9b2da" kindref="member">setSegmentMap</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a61a8eb50e52cd2ed6afba0e031d0cea4" kindref="member">setComDirectionFlipped</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a87d9dd0f71022726e2165ef1f6e5df23" kindref="member">setSegmentReMap</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a1ef6d44935ca6787eb8c359d4db5ad6f" kindref="member">orientationFlipped</ref><sp/>=<sp/>!this-&gt;<ref refid="class_display_1a1ef6d44935ca6787eb8c359d4db5ad6f" kindref="member">orientationFlipped</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_display_1aa0db715ac5b14c35801ac02b49246ac4" kindref="member">Display::invertColor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_display_1a1d8009939defa977e42e7b70cca6c5e6" kindref="member">colorInverted</ref>){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a8a6bba821c314093b134ef29062e5ad8" kindref="member">setNormalMode</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kindref="member">sendDisplayCMD</ref>(<ref refid="_display_c_m_ds_8h_1a316c1e44ed9f73aa266cffedb8f5167c" kindref="member">setInverseMode</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_display_1a1d8009939defa977e42e7b70cca6c5e6" kindref="member">colorInverted</ref><sp/>=<sp/>!this-&gt;<ref refid="class_display_1a1d8009939defa977e42e7b70cca6c5e6" kindref="member">colorInverted</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/display/Display.cpp"/>
+  </compounddef>
+</doxygen>

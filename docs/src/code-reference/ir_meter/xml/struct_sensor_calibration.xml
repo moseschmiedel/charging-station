@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_sensor_calibration" kind="struct" language="C++" prot="public">
+    <compoundname>SensorCalibration</compoundname>
+    <includes refid="beacon__tracker_8h" local="no">beacon_tracker.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_sensor_calibration_1af24ce7d8dd53818dfdae3021124ac49b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorCalibration::gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <qualifiedname>SensorCalibration::gain</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ir_meter/src/beacon_tracker.h" line="6" column="9" bodyfile="ir_meter/src/beacon_tracker.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_sensor_calibration_1a40d57916cab30a4040364fd34ffab1de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorCalibration::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>SensorCalibration::offset</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ir_meter/src/beacon_tracker.h" line="7" column="9" bodyfile="ir_meter/src/beacon_tracker.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ir_meter/src/beacon_tracker.h" line="5" column="1" bodyfile="ir_meter/src/beacon_tracker.h" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="struct_sensor_calibration_1af24ce7d8dd53818dfdae3021124ac49b" prot="public" virt="non-virtual"><scope>SensorCalibration</scope><name>gain</name></member>
+      <member refid="struct_sensor_calibration_1a40d57916cab30a4040364fd34ffab1de" prot="public" virt="non-virtual"><scope>SensorCalibration</scope><name>offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

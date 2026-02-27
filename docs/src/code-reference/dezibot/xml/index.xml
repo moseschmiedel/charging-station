@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="class_abstract_set" kind="class"><name>AbstractSet</name>
+    <member refid="class_abstract_set_1a3142669fe084535e9db8bd39c5518f3b" kind="function"><name>insert</name></member>
+    <member refid="class_abstract_set_1acb826749f534f3c8f5da87273a1ebb6a" kind="function"><name>pick</name></member>
+    <member refid="class_abstract_set_1ad35654b0f496a79b6f1b7750848ef92e" kind="function"><name>isEmpty</name></member>
+    <member refid="class_abstract_set_1a4378ad978ace5979300062fde6ba0933" kind="function"><name>~AbstractSet</name></member>
+  </compound>
+  <compound refid="structaverage_measurement" kind="struct"><name>averageMeasurement</name>
+    <member refid="structaverage_measurement_1ac34d303bb1a1dc99f9b3cc4940c56b2e" kind="variable"><name>sensor</name></member>
+    <member refid="structaverage_measurement_1acca3e6ac6c0476afeb6a5fc3df9672a0" kind="variable"><name>measurementAmount</name></member>
+    <member refid="structaverage_measurement_1ae7e0aa29ba71630e9a7060289c4f2fd6" kind="variable"><name>timeBetween</name></member>
+    <member refid="structaverage_measurement_1abeaa808bddb53929c0db2903463ec4c8" kind="variable"><name>result</name></member>
+    <member refid="structaverage_measurement_1ae28a6ebdedc06953d976a2c73252d078" kind="variable"><name>done</name></member>
+  </compound>
+  <compound refid="class_color_detection" kind="class"><name>ColorDetection</name>
+    <member refid="class_color_detection_1a15b68f0132963701f6c4d630fa802aaf" kind="variable"><name>rgbwSensor</name></member>
+    <member refid="class_color_detection_1a807d3b22b8dad775c3fbe36035532d99" kind="function"><name>beginAutoMode</name></member>
+    <member refid="class_color_detection_1a5c3277ac1a53ffe6b160a8a5092045cd" kind="function"><name>configure</name></member>
+    <member refid="class_color_detection_1a3a0f0ada556d01d241a948808fea992e" kind="function"><name>getColorValue</name></member>
+    <member refid="class_color_detection_1a53fc45bb245bf87f15fd9f71f95d7f80" kind="function"><name>getAmbientLight</name></member>
+  </compound>
+  <compound refid="class_communication" kind="class"><name>Communication</name>
+    <member refid="class_communication_1a9386851e46e26e7cd4b7605051e1c3c3" kind="variable"><name>userCallbackSingle</name></member>
+    <member refid="class_communication_1ac2827dac521283262bbdca6fdce7657d" kind="variable"><name>userCallbackGroup</name></member>
+    <member refid="class_communication_1ac03c1aa58187e71700c5ebf49b805c7d" kind="variable"><name>groupNumber</name></member>
+    <member refid="class_communication_1af7eea76d811d38b02fb67ec5133e6eec" kind="function"><name>begin</name></member>
+    <member refid="class_communication_1afe643701ab2545e227e051a22be6485f" kind="function"><name>setGroupNumber</name></member>
+    <member refid="class_communication_1adc69c7bb0c0e5b22a32afa47a37bcaee" kind="function"><name>broadcast</name></member>
+    <member refid="class_communication_1ac35e1b8d6d44a3dab4cb49cba0331cbc" kind="function"><name>unicast</name></member>
+    <member refid="class_communication_1ad3592ea7ee006faddb0fcc18ea3c806e" kind="function"><name>onReceiveGroup</name></member>
+    <member refid="class_communication_1a7b87a1a8c765ad2eaabca50f88568337" kind="function"><name>onReceiveSingle</name></member>
+    <member refid="class_communication_1ae1b48a873b79a022a5a68ae3b2e21dc5" kind="function"><name>getNodeId</name></member>
+    <member refid="class_communication_1ac63d7a0f8338105f37cb644c77288eb3" kind="function"><name>receivedCallback</name></member>
+  </compound>
+  <compound refid="class_dezibot" kind="class"><name>Dezibot</name>
+    <member refid="class_dezibot_1a232613af2fb2707bffe2b7993c87f2f7" kind="variable"><name>motion</name></member>
+    <member refid="class_dezibot_1a1d3fc7291834c366cd48028e6a8e0c59" kind="variable"><name>lightDetection</name></member>
+    <member refid="class_dezibot_1a1e4fc28976fdb4e0649d80ffdfd5eed9" kind="variable"><name>colorDetection</name></member>
+    <member refid="class_dezibot_1a8da83e693c96fad528c77fdbe1dc856b" kind="variable"><name>multiColorLight</name></member>
+    <member refid="class_dezibot_1ab60c07335bc6bc3fb791445fef8e79b3" kind="variable"><name>infraredLight</name></member>
+    <member refid="class_dezibot_1abf761f1e805e172f26b9bede0e8f4609" kind="variable"><name>communication</name></member>
+    <member refid="class_dezibot_1a54f320ecb8c7c103aeb0c12650dc9743" kind="variable"><name>display</name></member>
+    <member refid="class_dezibot_1af6068d9881bda1145ccfc14f763cdbfb" kind="function"><name>Dezibot</name></member>
+    <member refid="class_dezibot_1aec0d0e534fdd9ba12c0fc1d4521e1b27" kind="function"><name>begin</name></member>
+  </compound>
+  <compound refid="class_display" kind="class"><name>Display</name>
+    <member refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" kind="variable"><name>charsOnCurrLine</name></member>
+    <member refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" kind="variable"><name>currLine</name></member>
+    <member refid="class_display_1a1ef6d44935ca6787eb8c359d4db5ad6f" kind="variable"><name>orientationFlipped</name></member>
+    <member refid="class_display_1a1d8009939defa977e42e7b70cca6c5e6" kind="variable"><name>colorInverted</name></member>
+    <member refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" kind="function"><name>sendDisplayCMD</name></member>
+    <member refid="class_display_1a8dbb38513cfe6ba3dffff8b0012cc7e4" kind="function"><name>updateLine</name></member>
+    <member refid="class_display_1ae20d7a3de610fdad801dcd23702f7fb8" kind="function"><name>begin</name></member>
+    <member refid="class_display_1a699e5a8f28243dd2d5c0df2dfa9c72a0" kind="function"><name>clear</name></member>
+    <member refid="class_display_1a861039ddb834e6b818b8407c048c4f97" kind="function"><name>print</name></member>
+    <member refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" kind="function"><name>println</name></member>
+    <member refid="class_display_1aed49168c89ba18b34e9c48d65ad001c0" kind="function"><name>print</name></member>
+    <member refid="class_display_1a64f1d76767cf6a48a92ba3d201d45868" kind="function"><name>println</name></member>
+    <member refid="class_display_1a65da70dc2c7dc3d0fe7f8915e854c830" kind="function"><name>print</name></member>
+    <member refid="class_display_1ab79b7511c1197b2048ff09852dcfc4e3" kind="function"><name>println</name></member>
+    <member refid="class_display_1a79fd42e03a25ba4329c5cfaf45eecb22" kind="function"><name>stringToCharArray</name></member>
+    <member refid="class_display_1a36fa737efadcf53742d41a336fe02599" kind="function"><name>flipOrientation</name></member>
+    <member refid="class_display_1aa0db715ac5b14c35801ac02b49246ac4" kind="function"><name>invertColor</name></member>
+  </compound>
+  <compound refid="class_fifo" kind="class"><name>Fifo</name>
+    <member refid="class_fifo_1abd88fa634817cf8f87b151d9b55384d0" kind="variable"><name>queue</name></member>
+    <member refid="class_fifo_1a3cdedc25dceb45da4bfe9d1b1d2a2391" kind="function"><name>insert</name></member>
+    <member refid="class_fifo_1ad030665fcf959b11a3ca8610cdc0544f" kind="function"><name>pick</name></member>
+    <member refid="class_fifo_1a2c8f47edbe509f926bda9c7f0682ece1" kind="function"><name>isEmpty</name></member>
+  </compound>
+  <compound refid="struct_f_i_f_o___package" kind="struct"><name>FIFO_Package</name>
+    <member refid="struct_f_i_f_o___package_1a508631d74240d70901d42f2d1d60ff94" kind="variable"><name>header</name></member>
+    <member refid="struct_f_i_f_o___package_1a9bbd1ce3aabb96eaf372f88e60d05097" kind="variable"><name>gyro</name></member>
+    <member refid="struct_f_i_f_o___package_1a13d017781f1658ab069ea54bdc0dc767" kind="variable"><name>accel</name></member>
+    <member refid="struct_f_i_f_o___package_1aac437ccb8deb8c45e1af081160d38771" kind="variable"><name>temperature</name></member>
+    <member refid="struct_f_i_f_o___package_1a3bae340fe5623a440211616310e83ef3" kind="variable"><name>timestamp</name></member>
+  </compound>
+  <compound refid="struct_i_m_u_result" kind="struct"><name>IMUResult</name>
+    <member refid="struct_i_m_u_result_1a4aba5f1752ec744e02874e570ac03fab" kind="variable"><name>x</name></member>
+    <member refid="struct_i_m_u_result_1afd779c1be8193773f8e3aaa1cada94b8" kind="variable"><name>y</name></member>
+    <member refid="struct_i_m_u_result_1a2bec9a2c94326d4ddc44f8a110c4f915" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="class_infrared_l_e_d" kind="class"><name>InfraredLED</name>
+    <member refid="class_infrared_l_e_d_1a8a812a9a1a13a6091cccb9658c9ba2b7" kind="variable"><name>ledPin</name></member>
+    <member refid="class_infrared_l_e_d_1a2a3e607cab63b9675b675327793d1ecb" kind="variable"><name>timer</name></member>
+    <member refid="class_infrared_l_e_d_1a83a0ae56be09a96e4554f44718f08e68" kind="variable"><name>channel</name></member>
+    <member refid="class_infrared_l_e_d_1ab682065fdf73cd4e86d29883587feea2" kind="variable"><name>pwmTimer</name></member>
+    <member refid="class_infrared_l_e_d_1a3827c29b66d56750c654fcbd0b2d3c72" kind="variable"><name>pwmChannel</name></member>
+    <member refid="class_infrared_l_e_d_1a2321d55e05acb8bb50b821729d6ab7b8" kind="function"><name>InfraredLED</name></member>
+    <member refid="class_infrared_l_e_d_1a04a7d8dd5670a7c8394e69363be561b3" kind="function"><name>begin</name></member>
+    <member refid="class_infrared_l_e_d_1a30e809e5b1ce6a739c3fe78a5074b518" kind="function"><name>turnOn</name></member>
+    <member refid="class_infrared_l_e_d_1a3e2b44a804b9e13707d1916f1de4084f" kind="function"><name>turnOff</name></member>
+    <member refid="class_infrared_l_e_d_1abd41baf3bc10f83179a0416c0c81fb09" kind="function"><name>setState</name></member>
+    <member refid="class_infrared_l_e_d_1a8259665f1bdf2deb9155a621ff4acd21" kind="function"><name>sendFrequency</name></member>
+    <member refid="class_infrared_l_e_d_1affbcafdca55c9c95822a26697e27a04b" kind="function"><name>setDutyCycle</name></member>
+  </compound>
+  <compound refid="class_infrared_light" kind="class"><name>InfraredLight</name>
+    <member refid="class_infrared_light_1a2f28dea6f3e7ba45e33c76497f6e3624" kind="variable"><name>bottom</name></member>
+    <member refid="class_infrared_light_1add1e4f3e968d68565b4cc169bb720c8a" kind="variable"><name>front</name></member>
+    <member refid="class_infrared_light_1a7f22bff667229b8b10c2e90595eb0015" kind="variable"><name>IRFrontPin</name></member>
+    <member refid="class_infrared_light_1ab6a46a7e1aa2f8ce2ef2d6162d8234e1" kind="variable"><name>IRBottomPin</name></member>
+    <member refid="class_infrared_light_1a77320b74af211ea70464a99a96203c68" kind="function"><name>begin</name></member>
+  </compound>
+  <compound refid="class_light_detection" kind="class"><name>LightDetection</name>
+    <member refid="class_light_detection_1aecaaa792f02df14abe734c9811cb93f7" kind="variable"><name>IR_PT_FRONT_ADC</name></member>
+    <member refid="class_light_detection_1ae4a64fbf6fd532828817b01278a9f634" kind="variable"><name>IR_PT_LEFT_ADC</name></member>
+    <member refid="class_light_detection_1afdccb95b7d899969a4ef5d01a9eedc43" kind="variable"><name>IR_PT_RIGHT_ADC</name></member>
+    <member refid="class_light_detection_1adcfd748f093fa644d2381646638429e8" kind="variable"><name>IR_PT_BACK_ADC</name></member>
+    <member refid="class_light_detection_1a3dd3525f6447d213da457d0fa1a538c8" kind="variable"><name>DL_PT_FRONT_ADC</name></member>
+    <member refid="class_light_detection_1a937d41e3ba2820dd3c0aa1efbe4c6fd0" kind="variable"><name>DL_PT_BOTTOM_ADC</name></member>
+    <member refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" kind="variable"><name>DL_PT_ENABLE</name></member>
+    <member refid="class_light_detection_1a0e221af7106fa65a63c50287b77bd7dc" kind="variable"><name>IR_PT_ENABLE</name></member>
+    <member refid="class_light_detection_1afe7fb577a53c1d9efbc70ebac9e04e94" kind="function"><name>begin</name></member>
+    <member refid="class_light_detection_1a691d0813257d5fa4094496da34866875" kind="function"><name>getValue</name></member>
+    <member refid="class_light_detection_1addefd7ac51cd90cc4b2a99261a6f73a7" kind="function"><name>getBrightest</name></member>
+    <member refid="class_light_detection_1ac2305adde12c095ee759919b99919410" kind="function"><name>getAverageValue</name></member>
+    <member refid="class_light_detection_1a2b2c0006c917cf3ad15acbea37a4d3d4" kind="function"><name>beginInfrared</name></member>
+    <member refid="class_light_detection_1a2678305979c37e5c7ae7d0b8fc66575c" kind="function"><name>beginDaylight</name></member>
+    <member refid="class_light_detection_1a4f0bf4d18ddde3854aa5c6791bd25999" kind="function"><name>readIRPT</name></member>
+    <member refid="class_light_detection_1a99285843dae4e4b560e5d241700352a7" kind="function"><name>readDLPT</name></member>
+  </compound>
+  <compound refid="class_master" kind="class"><name>Master</name>
+    <member refid="class_master_1a085bae2cdee63682b0479f431d8c393f" kind="variable"><name>master</name></member>
+    <member refid="class_master_1aa09f53c5e508d1d2a26cbab48901101b" kind="variable"><name>registeredSlaves</name></member>
+    <member refid="class_master_1ab3ff733fae052110780a4b127ba3441f" kind="variable"><name>chargingSlaves</name></member>
+    <member refid="class_master_1a294972b62c07035ae42302243d64b422" kind="variable"><name>chargingStationState</name></member>
+    <member refid="class_master_1a41f19154ddb2711167f8119db82e2a26" kind="variable"><name>currentChargingSlave</name></member>
+    <member refid="class_master_1a073fa1caf988a3d0af566538a72027f3" kind="variable"><name>handleSlaveChargeRequest</name></member>
+    <member refid="class_master_1aca56b0082fecfe87516bebcd68ac9b25" kind="variable"><name>handleSlaveStopChargeRequest</name></member>
+    <member refid="class_master_1ae2c7a411cbc33ae2c605759ff5a9c4e2" kind="function"><name>Master</name></member>
+    <member refid="class_master_1a2f0f4c8e95e09328dbfd567290cb92d1" kind="function"><name>begin</name></member>
+    <member refid="class_master_1add0db13084000f06000365add15d864c" kind="function"><name>step</name></member>
+    <member refid="class_master_1a919e81252bd540f1588973d3422bca20" kind="function"><name>enjoinCharge</name></member>
+    <member refid="class_master_1a4b0003aa4b508140be03102b0be74da4" kind="function"><name>cancelCharge</name></member>
+    <member refid="class_master_1aabf7a81a6630ecb1076261fb8ddb5e99" kind="function"><name>stepOpen</name></member>
+    <member refid="class_master_1a2e450a82998acb588aef02202a73829e" kind="function"><name>stepLowerToWalkIn</name></member>
+    <member refid="class_master_1a40e043e38b420b42f53e2ace6e0827aa" kind="function"><name>stepAttachGear</name></member>
+    <member refid="class_master_1a9c06f52f6773e60b739cf616cbc0d1e4" kind="function"><name>stepLiftGear</name></member>
+    <member refid="class_master_1ad5569c27433e9505a1398eaef05945fa" kind="function"><name>stepClosed</name></member>
+    <member refid="class_master_1ae50455645d864bd83875ac45837c6e80" kind="function"><name>stepSlaveCharge</name></member>
+    <member refid="class_master_1aa2ed37be737a645fb5cedc8559c191fc" kind="function"><name>handleWorkInfo</name></member>
+    <member refid="class_master_1a46947ca1280446a1b92018a8698cbbf4" kind="function"><name>handleWalkToChargeInfo</name></member>
+    <member refid="class_master_1a06f17653f398862867d98c9c22bb6de7" kind="function"><name>handleInWaitInfo</name></member>
+    <member refid="class_master_1ad6aa78c18d82933499e093d969b63f92" kind="function"><name>handleWalkIntoChargeInfo</name></member>
+    <member refid="class_master_1a61b53962c76cbbd275fcaf9da386a1ce" kind="function"><name>handleInChargeInfo</name></member>
+    <member refid="class_master_1a19000a292b5a1fae8663397ecec79212" kind="function"><name>handleExitChargeInfo</name></member>
+    <member refid="class_master_1af063fed08881c4fec4522ee1c1f3d82c" kind="function"><name>onReceiveSingle</name></member>
+  </compound>
+  <compound refid="struct_master_data" kind="struct"><name>MasterData</name>
+    <member refid="struct_master_data_1a0219054c6ac8e1e2061958ab03b45329" kind="variable"><name>id</name></member>
+    <member refid="struct_master_data_1a2c16ab589ed67a81a6f462fe87b86005" kind="function"><name>MasterData</name></member>
+  </compound>
+  <compound refid="class_motion" kind="class"><name>Motion</name>
+    <member refid="class_motion_1a220a4afda6c4c1774aa85e2a5c5d63da" kind="variable"><name>RIGHT_MOTOR_DUTY</name></member>
+    <member refid="class_motion_1ace4b91ef17cada10db5ec4eaf89475ae" kind="variable"><name>LEFT_MOTOR_DUTY</name></member>
+    <member refid="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" kind="variable"><name>MOTOR_RIGHT_PIN</name></member>
+    <member refid="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" kind="variable"><name>MOTOR_LEFT_PIN</name></member>
+    <member refid="class_motion_1acc000439521d9e60f48f2bb8f17e8c0b" kind="variable"><name>xMoveTaskHandle</name></member>
+    <member refid="class_motion_1aea1d38206dd3cd3e9c6065826b35b6b3" kind="variable"><name>xClockwiseTaskHandle</name></member>
+    <member refid="class_motion_1a9432d709c1cf4c5362cddbf6cb0846c3" kind="variable"><name>xAntiClockwiseTaskHandle</name></member>
+    <member refid="class_motion_1a19c2685f7f8c5eaefcebe6ca593f93ca" kind="variable"><name>xLastWakeTime</name></member>
+    <member refid="class_motion_1a8caeae26554a0231878de8c9d240b186" kind="variable"><name>buffer</name></member>
+    <member refid="class_motion_1a55b01588e3ae1fc4f6773f28036ec76c" kind="variable"><name>correctionThreshold</name></member>
+    <member refid="class_motion_1a61000bc6a3f36b44c392b21e1b48eb90" kind="variable"><name>left</name></member>
+    <member refid="class_motion_1af822d19ebc08f0982a9f3ef703d673ed" kind="variable"><name>right</name></member>
+    <member refid="class_motion_1a91f1eb93380a20a97c2868baf21e61b0" kind="variable"><name>detection</name></member>
+    <member refid="class_motion_1af664e0e90da90964f77190d4da19e6cf" kind="function"><name>moveTask</name></member>
+    <member refid="class_motion_1a66808437e25311fb03f69b8a8ad7565f" kind="function"><name>leftMotorTask</name></member>
+    <member refid="class_motion_1a722c99b5ead487d353c289be0fc9a085" kind="function"><name>rightMotorTask</name></member>
+    <member refid="class_motion_1a43f6e43bb59734d35206e18a22bfe8a4" kind="function"><name>begin</name></member>
+    <member refid="class_motion_1a929f07ef5f5821468f433b9772bce416" kind="function"><name>move</name></member>
+    <member refid="class_motion_1ae812e47ee6ddef344d838458b09cd5bf" kind="function"><name>rotateClockwise</name></member>
+    <member refid="class_motion_1a21f08f6d4bda91747ca4ae4505378108" kind="function"><name>rotateAntiClockwise</name></member>
+    <member refid="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" kind="function"><name>stop</name></member>
+    <member refid="class_motion_1ab3895e38d77fc82c4a4bec5df2ba4c47" kind="function"><name>moveWithoutCorrection</name></member>
+  </compound>
+  <compound refid="class_motion_detection" kind="class"><name>MotionDetection</name>
+    <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829e" kind="enum"><name>registerBank</name></member>
+    <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea09a115ca6d04fd1e40cb2a29bd967ab9" kind="enumvalue"><name>MREG1</name></member>
+    <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea50f0e931ad0d42d822e96857f5c2e2fd" kind="enumvalue"><name>MREG2</name></member>
+    <member refid="class_motion_detection_1a22d39744aa50717e569b4097cb03829ea5179c1fd752fb6c571fc10c55d996813" kind="enumvalue"><name>MREG3</name></member>
+    <member refid="class_motion_detection_1a7e4235e1e4f6019c0c9751706a0efd5a" kind="variable"><name>frequency</name></member>
+    <member refid="class_motion_detection_1a36cd6235f03f4387b1cb2dd78f1949de" kind="variable"><name>defaultShakeThreshold</name></member>
+    <member refid="class_motion_detection_1a28c65d2aaf9cb326975ca5f670873bb9" kind="variable"><name>bufferLength</name></member>
+    <member refid="class_motion_detection_1a7632ede4ab9bd90bb9eaa8d76d2d75d8" kind="variable"><name>buf</name></member>
+    <member refid="class_motion_detection_1ae918b3dde9606190b7ee22f821fa342e" kind="variable"><name>handler</name></member>
+    <member refid="class_motion_detection_1a283f7d0020218e771e6eb99e08397073" kind="variable"><name>gForceCalib</name></member>
+    <member refid="class_motion_detection_1a6c2266a15bd2360b3047560297f23316" kind="friend"><name>Motion</name></member>
+    <member refid="class_motion_detection_1a479599e1ccee2aeba55a22c567d46128" kind="function"><name>readFromRegisterBank</name></member>
+    <member refid="class_motion_detection_1acd275bd42ed7c5f72743a18e9804e703" kind="function"><name>writeToRegisterBank</name></member>
+    <member refid="class_motion_detection_1a6a3c4844f237aa19ea630a168e364ca8" kind="function"><name>resetRegisterBankAccess</name></member>
+    <member refid="class_motion_detection_1a580de3c513e465fb405ff347b8813bd4" kind="function"><name>cmdRead</name></member>
+    <member refid="class_motion_detection_1a1e6e2f65509099a1a79420239b5fbcd8" kind="function"><name>cmdWrite</name></member>
+    <member refid="class_motion_detection_1a63502fb0aadf4be9f5a4e83542eb9016" kind="function"><name>cmdRead</name></member>
+    <member refid="class_motion_detection_1a5c9873668d3133bbcf814f8b7d8e266c" kind="function"><name>cmdWrite</name></member>
+    <member refid="class_motion_detection_1a69cfe9da940521cb120e658a526c3eeb" kind="function"><name>readRegister</name></member>
+    <member refid="class_motion_detection_1ad94cb56f42ae9bdfa0539c4b54bc4994" kind="function"><name>readDoubleRegister</name></member>
+    <member refid="class_motion_detection_1aba17fa0603316ef24fd7880aa2276e2b" kind="function"><name>writeRegister</name></member>
+    <member refid="class_motion_detection_1aeb5ab5ae5ab7ba81221ff0d922380a13" kind="function"><name>initFIFO</name></member>
+    <member refid="class_motion_detection_1aafb36c50b274ad26c75bd76ae7097f10" kind="function"><name>startFIFO</name></member>
+    <member refid="class_motion_detection_1a026101b13bc5b101a23d9037848c88c5" kind="function"><name>stopFIFO</name></member>
+    <member refid="class_motion_detection_1a599a8e3991b40a19fc79bac5a47b0932" kind="function"><name>MotionDetection</name></member>
+    <member refid="class_motion_detection_1adb3527c0ab3636a7fae351480897a39e" kind="function"><name>begin</name></member>
+    <member refid="class_motion_detection_1ab087c9d705181b9ba5077f8d258507b8" kind="function"><name>end</name></member>
+    <member refid="class_motion_detection_1aee34d3385f3a35ee42c5f486dc32aa5a" kind="function"><name>getAcceleration</name></member>
+    <member refid="class_motion_detection_1a81171c485732f2ae40c7f5faa9476f8a" kind="function"><name>getRotation</name></member>
+    <member refid="class_motion_detection_1af9448de508b81cf68fb299eecdc0da55" kind="function"><name>getTemperature</name></member>
+    <member refid="class_motion_detection_1a77fdeb48595d646258218d3b378a36a7" kind="function"><name>getWhoAmI</name></member>
+    <member refid="class_motion_detection_1a3935eccf9e7773772a39c70485ed28f2" kind="function"><name>isShaken</name></member>
+    <member refid="class_motion_detection_1a7016032b7d81e44a80c23820f772feb8" kind="function"><name>getTilt</name></member>
+    <member refid="class_motion_detection_1aa3b54cc2b5bc712f4e95d9820b1d01b8" kind="function"><name>getTiltDirection</name></member>
+    <member refid="class_motion_detection_1aaaa6f0499a0ba42aab0e1136b7bd4aa9" kind="function"><name>calibrateZAxis</name></member>
+    <member refid="class_motion_detection_1a154bfb74496b7e015d16fc30d3d5c258" kind="function"><name>getDataFromFIFO</name></member>
+  </compound>
+  <compound refid="class_motor" kind="class"><name>Motor</name>
+    <member refid="class_motor_1ac5b603def5973874c29d5b25b7deb42c" kind="variable"><name>pin</name></member>
+    <member refid="class_motor_1af1e002fa579fa991c8ea2a81eb98fe44" kind="variable"><name>timer</name></member>
+    <member refid="class_motor_1abffc4e140e4ee8b988680304c9527bae" kind="variable"><name>channel</name></member>
+    <member refid="class_motor_1a6cbdaabe22898182b391618fbc9ca4a2" kind="variable"><name>duty</name></member>
+    <member refid="class_motor_1a6329b2766faceab988244d01362539aa" kind="function"><name>Motor</name></member>
+    <member refid="class_motor_1a6be167642542458d397b08d89513576b" kind="function"><name>begin</name></member>
+    <member refid="class_motor_1a88e5f69c260d67d9f7d25616de8e2bf7" kind="function"><name>setSpeed</name></member>
+    <member refid="class_motor_1a1cc4a7f2edd7d4885c96f169bce2d9fd" kind="function"><name>getSpeed</name></member>
+  </compound>
+  <compound refid="class_multi_color_light" kind="class"><name>MultiColorLight</name>
+    <member refid="class_multi_color_light_1a474c01e660bc642f416e0f75f16d727c" kind="variable"><name>ledAmount</name></member>
+    <member refid="class_multi_color_light_1ab0b493779e9cb1925c9c330cddcfb11c" kind="variable"><name>ledPin</name></member>
+    <member refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kind="variable"><name>maxBrightness</name></member>
+    <member refid="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" kind="variable"><name>rgbLeds</name></member>
+    <member refid="class_multi_color_light_1ae9fba3a0f5834e4a73cbc43362e91ea7" kind="function"><name>MultiColorLight</name></member>
+    <member refid="class_multi_color_light_1a796adb16296fb9d27f55e4f6f818fe98" kind="function"><name>begin</name></member>
+    <member refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kind="function"><name>setLed</name></member>
+    <member refid="class_multi_color_light_1ae30ab46416190a191466cd23c26b91ef" kind="function"><name>setLed</name></member>
+    <member refid="class_multi_color_light_1a35cda9e562ded9568e0ccd0d05ccb406" kind="function"><name>setLed</name></member>
+    <member refid="class_multi_color_light_1ac2e7859a558b6840f2ade8c41520f18d" kind="function"><name>setTopLeds</name></member>
+    <member refid="class_multi_color_light_1a81cb01bc7cb9f704e2c91746e6336f14" kind="function"><name>setTopLeds</name></member>
+    <member refid="class_multi_color_light_1a44309c4b895182454fc9b32b685b0a79" kind="function"><name>blink</name></member>
+    <member refid="class_multi_color_light_1a02ae577d79bcaa83672937d0b123c668" kind="function"><name>turnOffLed</name></member>
+    <member refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kind="function"><name>color</name></member>
+    <member refid="class_multi_color_light_1a987624773419b11f1dceca75bea17ff9" kind="function"><name>normalizeColor</name></member>
+  </compound>
+  <compound refid="struct_orientation" kind="struct"><name>Orientation</name>
+    <member refid="struct_orientation_1a52c2eaa5ad28a92b0da4408e250d7597" kind="variable"><name>xRotation</name></member>
+    <member refid="struct_orientation_1a57fcda7d106952b9d415bd0049422c9b" kind="variable"><name>yRotation</name></member>
+  </compound>
+  <compound refid="class_slave" kind="class"><name>Slave</name>
+    <member refid="class_slave_1ac2f739790159a13962fee7ee4edbffdf" kind="variable"><name>slave</name></member>
+    <member refid="class_slave_1a17d2803858c6f6f693e19f8bd4564ea7" kind="variable"><name>state</name></member>
+    <member refid="class_slave_1a7fab418617860810f38fe2c5f420a652" kind="variable"><name>master</name></member>
+    <member refid="class_slave_1a0bd5e6c2ff917efcf1f72b9c86c0eaed" kind="variable"><name>stepWork</name></member>
+    <member refid="class_slave_1a0ef7d583d3a72949ef00dffebb553199" kind="variable"><name>stepToCharge</name></member>
+    <member refid="class_slave_1a97cc37b09c7fdffd13ced985366fd7e3" kind="variable"><name>stepWaitCharge</name></member>
+    <member refid="class_slave_1ae3aeb42935820a8b3a3c9c043e98b551" kind="variable"><name>stepIntoCharge</name></member>
+    <member refid="class_slave_1a2d662815f7722d88a0390b8202779aba" kind="variable"><name>stepCharge</name></member>
+    <member refid="class_slave_1af1d39beb4556c42339f6fc19b6f746ff" kind="variable"><name>stepExitCharge</name></member>
+    <member refid="class_slave_1aa441b01af45486a588e1eb2e9563d4e6" kind="function"><name>Slave</name></member>
+    <member refid="class_slave_1a35bea995501b64235d1243edcbdc5ead" kind="function"><name>begin</name></member>
+    <member refid="class_slave_1ab2b2556f13271d04d83c68a4e9d8adfa" kind="function"><name>step</name></member>
+    <member refid="class_slave_1a73d1f4e973ba10a321270d9a10537f5e" kind="function"><name>requestCharge</name></member>
+    <member refid="class_slave_1a9908e01d85d867b1bf716223a142f996" kind="function"><name>requestStopCharge</name></member>
+    <member refid="class_slave_1a23c639ab89129aa0a29b8e93fd01c60f" kind="function"><name>notifyWork</name></member>
+    <member refid="class_slave_1a5c548fa79d0578d10608d47e944cfadc" kind="function"><name>notifyWalkToCharge</name></member>
+    <member refid="class_slave_1a4471e1cf44f72e517f82016130e421cc" kind="function"><name>notifyInWait</name></member>
+    <member refid="class_slave_1a3d45643c5f59c3da7a95b08084f64b0b" kind="function"><name>notifyWalkIntoCharge</name></member>
+    <member refid="class_slave_1aa087a07ab832082237ef720f06629efd" kind="function"><name>notifyInCharge</name></member>
+    <member refid="class_slave_1a420d839ea703b8abb0e55ef3574298e1" kind="function"><name>notifyExitCharge</name></member>
+    <member refid="class_slave_1ac7344d603c5b633250241c7f3c89d731" kind="function"><name>handleEnjoinChargeCommand</name></member>
+    <member refid="class_slave_1a9e31f7d393ed70f06ed1e81c4448e4e1" kind="function"><name>handleCancelChargeCommand</name></member>
+    <member refid="class_slave_1ac5d338582dcb514c5198caf6fb8ac7b1" kind="function"><name>onReceiveSingle</name></member>
+  </compound>
+  <compound refid="class_slave_data" kind="class"><name>SlaveData</name>
+    <member refid="class_slave_data_1a8e0aa42d593851470abec35daaf410a5" kind="variable"><name>id</name></member>
+    <member refid="class_slave_data_1ae0df89591f7434846690b6a713e7e9d0" kind="variable"><name>state</name></member>
+    <member refid="class_slave_data_1a433e65b22fb5c3d1f352aed959311ec2" kind="function"><name>SlaveData</name></member>
+    <member refid="class_slave_data_1a86bd5584673ed9cd39dfb353ea75025e" kind="function"><name>SlaveData</name></member>
+  </compound>
+  <compound refid="struct_v_e_m_l___c_o_n_f_i_g" kind="struct"><name>VEML_CONFIG</name>
+    <member refid="struct_v_e_m_l___c_o_n_f_i_g_1a3fc2265cf41311b4271a255b6e2da799" kind="variable"><name>mode</name></member>
+    <member refid="struct_v_e_m_l___c_o_n_f_i_g_1a42b371d6ff08249e2d611d7c318afb29" kind="variable"><name>enabled</name></member>
+    <member refid="struct_v_e_m_l___c_o_n_f_i_g_1a3a624bc2cce24ec2772d2ebac99327f4" kind="variable"><name>exposureTime</name></member>
+  </compound>
+  <compound refid="namespace_0d305332317101327315021077077254000020101156010247" kind="namespace"><name>@305332317101327315021077077254000020101156010247</name>
+    <member refid="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13" kind="enum"><name>BridgeCommand</name></member>
+    <member refid="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13ab50339a10e1de285ac99d4c3990b8693" kind="enumvalue"><name>NONE</name></member>
+    <member refid="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13a855c0066a3b4c4c52ed8b14d6d481087" kind="enumvalue"><name>LOWER_TO_WALK_IN</name></member>
+    <member refid="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13a490b21f697dccebe273ef6c851760a0c" kind="enumvalue"><name>LOWER_TO_CHARGE</name></member>
+    <member refid="namespace_0d305332317101327315021077077254000020101156010247_1a18b22ed9b9a2a94b7bf883947a511e13a22b61bc49292970095594840b2de557d" kind="enumvalue"><name>RAISE</name></member>
+  </compound>
+  <compound refid="_autocharge_8hpp" kind="file"><name>Autocharge.hpp</name>
+  </compound>
+  <compound refid="_abstract_set_8hpp" kind="file"><name>AbstractSet.hpp</name>
+  </compound>
+  <compound refid="_fifo_8hpp" kind="file"><name>Fifo.hpp</name>
+  </compound>
+  <compound refid="_charging_station_state_8hpp" kind="file"><name>ChargingStationState.hpp</name>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976" kind="enum"><name>ChargingStationState</name></member>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976aa38bd5138bf35514df41a1795ebbf5c3" kind="enumvalue"><name>OPEN</name></member>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a1664e2606313837bcbd2c814dd200c16" kind="enumvalue"><name>LOWERING_TO_WALK_IN</name></member>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a110ccf2f5d2ff4eda1fd1a494293467d" kind="enumvalue"><name>CLOSED</name></member>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a6bee7e22b1ec8e42848884ed52e0a00a" kind="enumvalue"><name>ATTACHING_GEAR</name></member>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a4fd4efc3c2e191b599386015a68f94d7" kind="enumvalue"><name>SLAVE_CHARGE</name></member>
+    <member refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976acd2753a267b089d6926226ddd187c2bf" kind="enumvalue"><name>LIFTING_GEAR</name></member>
+  </compound>
+  <compound refid="_master_8cpp" kind="file"><name>Master.cpp</name>
+  </compound>
+  <compound refid="_master_8hpp" kind="file"><name>Master.hpp</name>
+  </compound>
+  <compound refid="_slave_data_8hpp" kind="file"><name>SlaveData.hpp</name>
+  </compound>
+  <compound refid="_master_data_8hpp" kind="file"><name>MasterData.hpp</name>
+  </compound>
+  <compound refid="_slave_8cpp" kind="file"><name>Slave.cpp</name>
+  </compound>
+  <compound refid="_slave_8hpp" kind="file"><name>Slave.hpp</name>
+  </compound>
+  <compound refid="_slave_state_8hpp" kind="file"><name>SlaveState.hpp</name>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830e" kind="enum"><name>SlaveState</name></member>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea9f20f1fb4bd4638144d4f642b3159812" kind="enumvalue"><name>WORK</name></member>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea919adf0370d6c5202b98566eeaedb8e2" kind="enumvalue"><name>WALKING_TO_CHARGE</name></member>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea5932d5dbb77bd3215d32cc3760d6ca7f" kind="enumvalue"><name>WAIT_CHARGE</name></member>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea12a07ec24745645782f8826ff02339c1" kind="enumvalue"><name>WALKING_INTO_CHARGE</name></member>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ea0405a707a4790a264c10e6cacded18b3" kind="enumvalue"><name>CHARGE</name></member>
+    <member refid="_slave_state_8hpp_1ad37f6399239eeecb9006ee50fbb5830ead9fb228520122994757b08cb4102e81e" kind="enumvalue"><name>EXITING_CHARGE</name></member>
+  </compound>
+  <compound refid="_color_detection_8cpp" kind="file"><name>ColorDetection.cpp</name>
+  </compound>
+  <compound refid="_color_detection_8h" kind="file"><name>ColorDetection.h</name>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49" kind="enum"><name>duration</name></member>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49a8f5bc64d80003ac3cec12ab2a05db3f5" kind="enumvalue"><name>MS40</name></member>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49a93855c7c24d6cd86696fe11ad8906d52" kind="enumvalue"><name>MS80</name></member>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49a383e201ff56be0c6f8a24fdd0ae7aed8" kind="enumvalue"><name>MS160</name></member>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49a22ec1ebcb6471f69a6a7d9bda17b0f1c" kind="enumvalue"><name>MS320</name></member>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49af8c5fb21038a0ae6fa69e1d2bdb4e14e" kind="enumvalue"><name>MS640</name></member>
+    <member refid="_color_detection_8h_1a71f530f1f32dbca56a6af8a5fbbfbe49a39bf9c827c70a7334545e456a7c05299" kind="enumvalue"><name>MS1280</name></member>
+    <member refid="_color_detection_8h_1af7517787c551f083c210509e75c96c53" kind="enum"><name>vemlMode</name></member>
+    <member refid="_color_detection_8h_1af7517787c551f083c210509e75c96c53aeef9468d1b98bca652a04bf5063fd9d6" kind="enumvalue"><name>AUTO</name></member>
+    <member refid="_color_detection_8h_1af7517787c551f083c210509e75c96c53a506e8dd29460ea318b68d035f679b01b" kind="enumvalue"><name>MANUAL</name></member>
+    <member refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kind="enum"><name>color</name></member>
+    <member refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8fa668120bbfd82509b3027efba83b07b02" kind="enumvalue"><name>VEML_RED</name></member>
+    <member refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8fa3b9d03311423165c5b7df4435e84d51d" kind="enumvalue"><name>VEML_GREEN</name></member>
+    <member refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8faefe2963e8f997a98aaf19925e1d9e9e0" kind="enumvalue"><name>VEML_BLUE</name></member>
+    <member refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8faf9f2ba2962e6ae3d6bbde50a906df59f" kind="enumvalue"><name>VEML_WHITE</name></member>
+  </compound>
+  <compound refid="_communication_8cpp" kind="file"><name>Communication.cpp</name>
+    <member refid="_communication_8cpp_1a0f41a428fa00ededcee25c8a2dafe690" kind="variable"><name>userScheduler</name></member>
+    <member refid="_communication_8cpp_1ab26d19e0dca45c621ee9e97a345efc03" kind="variable"><name>mesh</name></member>
+    <member refid="_communication_8cpp_1ab204ffabb75f0f826ff7707130c3de1e" kind="function"><name>newConnectionCallback</name></member>
+    <member refid="_communication_8cpp_1a3067ee655c5fa6d15fc4afb5ee804918" kind="function"><name>changedConnectionCallback</name></member>
+    <member refid="_communication_8cpp_1af83ba476ea0af35a85c3152671256c7f" kind="function"><name>nodeTimeAdjustedCallback</name></member>
+    <member refid="_communication_8cpp_1a16f194e7b40a4361ae8442514e095251" kind="function"><name>vTaskUpdate</name></member>
+  </compound>
+  <compound refid="_communication_8h" kind="file"><name>Communication.h</name>
+    <member refid="_communication_8h_1a3cff1c27d78708c0c0fd803ccab37ca7" kind="define"><name>MESH_PREFIX</name></member>
+    <member refid="_communication_8h_1af6cdc02b83c744305b96acc45053cf3b" kind="define"><name>MESH_PASSWORD</name></member>
+    <member refid="_communication_8h_1a18c25eaf6d7220b554300a512776d52f" kind="define"><name>MESH_PORT</name></member>
+  </compound>
+  <compound refid="_dezibot_8cpp" kind="file"><name>Dezibot.cpp</name>
+    <member refid="_dezibot_8cpp_1a526d580d324bce60a3e964066fae77e3" kind="define"><name>SDA_PIN</name></member>
+    <member refid="_dezibot_8cpp_1a06c967e78bcedcee909a70764f879433" kind="define"><name>SCL_PIN</name></member>
+  </compound>
+  <compound refid="_dezibot_8h" kind="file"><name>Dezibot.h</name>
+  </compound>
+  <compound refid="_char_table_8h" kind="file"><name>CharTable.h</name>
+    <member refid="_char_table_8h_1a05cd4f6bfca63b5b9681edb54aaaa656" kind="variable"><name>font8x8_colwise</name></member>
+  </compound>
+  <compound refid="_display_8cpp" kind="file"><name>Display.cpp</name>
+  </compound>
+  <compound refid="_display_8h" kind="file"><name>Display.h</name>
+  </compound>
+  <compound refid="_display_c_m_ds_8h" kind="file"><name>DisplayCMDs.h</name>
+    <member refid="_display_c_m_ds_8h_1af9076d74feac1db0b857f976f3712952" kind="define"><name>cmd_byte</name></member>
+    <member refid="_display_c_m_ds_8h_1a61754b69e388e4b2c74da0022c9458f0" kind="define"><name>data_byte</name></member>
+    <member refid="_display_c_m_ds_8h_1a9921426f06d5206189364d9de0e1e38e" kind="define"><name>muxRatio</name></member>
+    <member refid="_display_c_m_ds_8h_1ab48cec91d681a522fe06b80d7f8e86b0" kind="define"><name>setOffset</name></member>
+    <member refid="_display_c_m_ds_8h_1a42f13292d27dbcc6c1e82f9f6e3588bc" kind="define"><name>setStartLine</name></member>
+    <member refid="_display_c_m_ds_8h_1a95be732fbfa86dc6c2cb4dfbe8c9b2da" kind="define"><name>setSegmentMap</name></member>
+    <member refid="_display_c_m_ds_8h_1a87d9dd0f71022726e2165ef1f6e5df23" kind="define"><name>setSegmentReMap</name></member>
+    <member refid="_display_c_m_ds_8h_1ae4bb2d91a51558ab43ed36cefd3d04a6" kind="define"><name>setComDirectionNormal</name></member>
+    <member refid="_display_c_m_ds_8h_1a61a8eb50e52cd2ed6afba0e031d0cea4" kind="define"><name>setComDirectionFlipped</name></member>
+    <member refid="_display_c_m_ds_8h_1af519db19be8dc6b7be885f1bf798a697" kind="define"><name>setComHardwareConfig</name></member>
+    <member refid="_display_c_m_ds_8h_1acf03a2838ceb5c652cd31d8e74f9e503" kind="define"><name>setContrast</name></member>
+    <member refid="_display_c_m_ds_8h_1a7e8a3d39e87ffbf100d4c9838ba79e4f" kind="define"><name>completeOn</name></member>
+    <member refid="_display_c_m_ds_8h_1a8787c75cbe6b535306a261cb61d9255c" kind="define"><name>stopCompleteOn</name></member>
+    <member refid="_display_c_m_ds_8h_1a8a6bba821c314093b134ef29062e5ad8" kind="define"><name>setNormalMode</name></member>
+    <member refid="_display_c_m_ds_8h_1a316c1e44ed9f73aa266cffedb8f5167c" kind="define"><name>setInverseMode</name></member>
+    <member refid="_display_c_m_ds_8h_1ae9ed833a9d8b4d83553588c4044267f6" kind="define"><name>setOscFreq</name></member>
+    <member refid="_display_c_m_ds_8h_1a2c13100d920035229e6f619c9e5a448f" kind="define"><name>setChargePump</name></member>
+    <member refid="_display_c_m_ds_8h_1ad7df1c864beb982004c38e57c0f3ef09" kind="define"><name>activateDisplay</name></member>
+    <member refid="_display_c_m_ds_8h_1aba3744fd8c0430328cbcd6bb770b7b74" kind="define"><name>disableDisplay</name></member>
+    <member refid="_display_c_m_ds_8h_1adbe423db82caa42f70c484b13921bf81" kind="define"><name>addressingMode</name></member>
+    <member refid="_display_c_m_ds_8h_1a59458f5ed7291821766393e93da167cb" kind="define"><name>colRange</name></member>
+    <member refid="_display_c_m_ds_8h_1a76d2462a7a7e2e2e61917cda44dc5ece" kind="define"><name>pageRange</name></member>
+    <member refid="_display_c_m_ds_8h_1a3669be2cd8456e10df7406c3d02c0a9c" kind="define"><name>DisplayAdress</name></member>
+  </compound>
+  <compound refid="_infrared_l_e_d_8cpp" kind="file"><name>InfraredLED.cpp</name>
+    <member refid="_infrared_l_e_d_8cpp_1aed912407c4f506af93dcb91995549768" kind="define"><name>pwmSpeedMode</name></member>
+    <member refid="_infrared_l_e_d_8cpp_1a994d9f112b804790cb294940eb9d323b" kind="define"><name>DUTY_CYCLE_MAX</name></member>
+  </compound>
+  <compound refid="_infrared_light_8cpp" kind="file"><name>InfraredLight.cpp</name>
+  </compound>
+  <compound refid="_infrared_light_8h" kind="file"><name>InfraredLight.h</name>
+  </compound>
+  <compound refid="_light_detection_8cpp" kind="file"><name>LightDetection.cpp</name>
+  </compound>
+  <compound refid="_light_detection_8h" kind="file"><name>LightDetection.h</name>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kind="enum"><name>photoTransistors</name></member>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" kind="enumvalue"><name>IR_LEFT</name></member>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" kind="enumvalue"><name>IR_RIGHT</name></member>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kind="enumvalue"><name>IR_FRONT</name></member>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" kind="enumvalue"><name>IR_BACK</name></member>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kind="enumvalue"><name>DL_FRONT</name></member>
+    <member refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" kind="enumvalue"><name>DL_BOTTOM</name></member>
+    <member refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2" kind="enum"><name>ptType</name></member>
+    <member refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2a37f5e4ec9707c7d3c7ecf1bad3e740c4" kind="enumvalue"><name>IR</name></member>
+    <member refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2ab6e1fcdb282347a59fc22d96dce6417a" kind="enumvalue"><name>DAYLIGHT</name></member>
+    <member refid="_light_detection_8h_1a541b30a4ccaf388bd8cc9357cd85514a" kind="variable"><name>allIRPTs</name></member>
+    <member refid="_light_detection_8h_1a9971cd7d69069a38202d8fe1c10fc436" kind="variable"><name>allDLPTs</name></member>
+  </compound>
+  <compound refid="_motion_8cpp" kind="file"><name>Motion.cpp</name>
+  </compound>
+  <compound refid="_motion_8h" kind="file"><name>Motion.h</name>
+    <member refid="_motion_8h_1adaeb1cfe90b02710d73c9eb032e05bb6" kind="define"><name>LEDC_MODE</name></member>
+    <member refid="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" kind="define"><name>TIMER</name></member>
+    <member refid="_motion_8h_1ab758924897efcdba10da36f79a38a103" kind="define"><name>CHANNEL_LEFT</name></member>
+    <member refid="_motion_8h_1aee42717f6069b240ff12670aaee3ad42" kind="define"><name>CHANNEL_RIGHT</name></member>
+    <member refid="_motion_8h_1a4a291e38e9004e007645725cda0e9c2d" kind="define"><name>DUTY_RES</name></member>
+    <member refid="_motion_8h_1a84142cd3e3bf14c4ecd4b6707a808c39" kind="define"><name>FREQUENCY</name></member>
+    <member refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kind="define"><name>DEFAULT_BASE_VALUE</name></member>
+  </compound>
+  <compound refid="_motor_8cpp" kind="file"><name>Motor.cpp</name>
+  </compound>
+  <compound refid="_i_m_u___c_m_ds_8h" kind="file"><name>IMU_CMDs.h</name>
+    <member refid="_i_m_u___c_m_ds_8h_1a9c953a6c538020e644127ee080608021" kind="define"><name>CMD_READ</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a7391deb9c3a262ded3e186e94eb884e2" kind="define"><name>CMD_WRITE</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a15b16c1073c60f0be255caf0a60251be" kind="define"><name>ADDR_MASK</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a96b8d0eef91f5573a91ecaf9c33ef9f5" kind="define"><name>MCLK_RDY</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a6063067900925daaeb976928acca1173" kind="define"><name>REG_TEMP_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1aaa4e6781d227e969f829def0f7b206cc" kind="define"><name>REG_TEMP_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1adeb9efc08ab4b871ed478d6ec2ff086c" kind="define"><name>ACCEL_DATA_X_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a70cd46c5087352624e1d7a13071ac223" kind="define"><name>ACCEL_DATA_X_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1ab4c8cb1168c504e78e5817ead085b6cd" kind="define"><name>ACCEL_DATA_Y_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1ae8114228b8b09344254465f2da042317" kind="define"><name>ACCEL_DATA_Y_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a4676d440ba44d73b8ffc552e978384fa" kind="define"><name>ACCEL_DATA_Z_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1ad3c3b6bcc8a3fb896b76fa7b254a84d8" kind="define"><name>ACCEL_DATA_Z_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a842f32baf84c9a81c535a3ac7db2ca15" kind="define"><name>GYRO_DATA_X_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1ac2f58c8a076e2a4e968d9e97d452679d" kind="define"><name>GYRO_DATA_X_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1adc32ed599cea9ba0538c8d52f12cff73" kind="define"><name>GYRO_DATA_Y_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1abe9775332a5692399e8b04ceb1ea79f4" kind="define"><name>GYRO_DATA_Y_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1aee4e40c314e67e540da8f09c8fe87216" kind="define"><name>GYRO_DATA_Z_HIGH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a0146e9d7d64671dc4249cb5efd2fb404" kind="define"><name>GYRO_DATA_Z_LOW</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a0f0eed1cd292d83c67481523c09f0cf3" kind="define"><name>PWR_MGMT0</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a9fcb9e460d175bfc7ab4d80bf788b43a" kind="define"><name>WHO_AM_I</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a99c150c949d8ca2fcb0f88024c039751" kind="define"><name>INTF_CONFIG0</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a26d57436cdc27d7ff90682c527f64b3f" kind="define"><name>BLK_SEL_W</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1aa5f283d6065cca95c379cc87d00208ca" kind="define"><name>BLK_SEL_R</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a716263d45480a3a38aa1e708b6694563" kind="define"><name>MADDR_W</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a17aaa6b0d70922c06da32394f74ce67c" kind="define"><name>MADDR_R</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a358ac4ec91c07f67d49958ede6574698" kind="define"><name>M_W</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1aecc48a560e67afb7d70c9082e43451ae" kind="define"><name>M_R</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1adbbef0e95665e066deb615f04b347491" kind="define"><name>FIFO_COUNTH</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1adbede65b2cfa35abde780bd704077f53" kind="define"><name>FIFO_COUNTL</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a88e074c68027a1dee870dbb2536165cc" kind="define"><name>FIFO_DATA</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a0f8b0bdd6f2960e72f790b0b0c843bd7" kind="define"><name>FIFO_CONFIG1</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a4ddfefd55ac8494f2c892c1527f73a3c" kind="define"><name>FIFO_CONFIG2</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a9b12a7fa2ab39cf0c03c6e9127eb3ef3" kind="define"><name>FIFO_CONFIG5</name></member>
+    <member refid="_i_m_u___c_m_ds_8h_1a3795e1b22a716d94b7573893077d8a07" kind="define"><name>TMST_CONFIG1</name></member>
+  </compound>
+  <compound refid="_motion_detection_8cpp" kind="file"><name>MotionDetection.cpp</name>
+  </compound>
+  <compound refid="_motion_detection_8h" kind="file"><name>MotionDetection.h</name>
+    <member refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8e" kind="enum"><name>Axis</name></member>
+    <member refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8fbcdc66e72c998377080c5aed044884" kind="enumvalue"><name>xAxis</name></member>
+    <member refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea3123e0676bbf5648acb1df5a54f4a784" kind="enumvalue"><name>yAxis</name></member>
+    <member refid="_motion_detection_8h_1ae3996976d8ffb3e58d88f58227473f8ea8b398ee6e2441b74d36b507261499da9" kind="enumvalue"><name>zAxis</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aa" kind="enum"><name>Direction</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa0cf84affdc2d20637bc9e8120b80ae95" kind="enumvalue"><name>Front</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa9d4d8b0b72fc2659da772d761a3c5ecb" kind="enumvalue"><name>Left</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaad48f7af8c070184f3774c8e85854eb66" kind="enumvalue"><name>Right</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa36625780699489b5c3dfceadfb9c27d1" kind="enumvalue"><name>Back</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa32bb6c621f52f6a0932c646d5ed47f91" kind="enumvalue"><name>Neutral</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaac311a71173e9a9e29f650408570c896d" kind="enumvalue"><name>Flipped</name></member>
+    <member refid="_motion_detection_8h_1a224b9163917ac32fc95a60d8c1eec3aaa4dfd42ec49d09d8c6555c218301cc30f" kind="enumvalue"><name>Error</name></member>
+  </compound>
+  <compound refid="_color_constants_8h" kind="file"><name>ColorConstants.h</name>
+    <member refid="_color_constants_8h_1a65c666c353fdb6dc7cc726f8a5b48ddc" kind="variable"><name>RED</name></member>
+    <member refid="_color_constants_8h_1a0865512a9bb6b19e84267299f8936daa" kind="variable"><name>GREEN</name></member>
+    <member refid="_color_constants_8h_1aafe9e585acf3525c1b551359a72206e0" kind="variable"><name>BLUE</name></member>
+    <member refid="_color_constants_8h_1acf6845a9cc897e1e358560d1a7f0dd31" kind="variable"><name>WHITE</name></member>
+    <member refid="_color_constants_8h_1a93b9e8c04bf7328964c9237b40f4de3f" kind="variable"><name>ORANGE</name></member>
+    <member refid="_color_constants_8h_1ae91461e39bc2be9c92809f0106f8effc" kind="variable"><name>YELLOW</name></member>
+    <member refid="_color_constants_8h_1adafc00e827b8c0f74e48f952bd94dfbc" kind="variable"><name>TURQUOISE</name></member>
+    <member refid="_color_constants_8h_1a29e7e9624f0f1f0cbf9801e938db5483" kind="variable"><name>PURPEL</name></member>
+    <member refid="_color_constants_8h_1a1df864dcee7fe9ffc5a1716abd3e6bfd" kind="variable"><name>PINK</name></member>
+  </compound>
+  <compound refid="_multi_color_light_8cpp" kind="file"><name>MultiColorLight.cpp</name>
+  </compound>
+  <compound refid="_multi_color_light_8h" kind="file"><name>MultiColorLight.h</name>
+    <member refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kind="enum"><name>leds</name></member>
+    <member refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a6b4ed010af97f067c8ba669e400f3f93" kind="enumvalue"><name>TOP_LEFT</name></member>
+    <member refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66aab97669fecf009df518a0d2016b86364" kind="enumvalue"><name>TOP_RIGHT</name></member>
+    <member refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a8c371f4e766fb2c49c219bbc88989461" kind="enumvalue"><name>BOTTOM</name></member>
+    <member refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a0ad44897a70fba309c24a5b6007de3e3" kind="enumvalue"><name>TOP</name></member>
+    <member refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66ab1d5eac4b1dca480c8056eaea7663b7a" kind="enumvalue"><name>ALL</name></member>
+  </compound>
+  <compound refid="dir_9429171019393cec1d37bc2d1318bb73" kind="dir"><name>dezibot/src/autocharge/master/abstractSet</name>
+  </compound>
+  <compound refid="dir_4693e2cace8ae8417975def6d5f76528" kind="dir"><name>dezibot/src/autocharge</name>
+  </compound>
+  <compound refid="dir_118a3febac62d99a601cc072b32b672a" kind="dir"><name>dezibot/src/colorDetection</name>
+  </compound>
+  <compound refid="dir_afc00f5734e00d9acc4dcdefef5d76f7" kind="dir"><name>dezibot/src/communication</name>
+  </compound>
+  <compound refid="dir_77eec19b700f6d46a9e0193b5df2be0d" kind="dir"><name>dezibot</name>
+  </compound>
+  <compound refid="dir_791a0dd3e014912aeacc6bad8d32bd6d" kind="dir"><name>dezibot/src/display</name>
+  </compound>
+  <compound refid="dir_841e220dcc5c96d6f074b913e9171a54" kind="dir"><name>dezibot/src/infraredLight</name>
+  </compound>
+  <compound refid="dir_7fd0386cec699856f0213e290e6baf00" kind="dir"><name>dezibot/src/lightDetection</name>
+  </compound>
+  <compound refid="dir_bb7d96ec0fe180584f722d8c467091fb" kind="dir"><name>dezibot/src/autocharge/master</name>
+  </compound>
+  <compound refid="dir_d962060fda39348add853676f8e3e04a" kind="dir"><name>dezibot/src/motion</name>
+  </compound>
+  <compound refid="dir_be53c7b506077aade315fe9e931ec7cc" kind="dir"><name>dezibot/src/motionDetection</name>
+  </compound>
+  <compound refid="dir_86d24c572df66dcaddf730a6d025fa18" kind="dir"><name>dezibot/src/multiColorLight</name>
+  </compound>
+  <compound refid="dir_bbffb27b0387d30c9794bf5c0ad041e5" kind="dir"><name>dezibot/src/autocharge/slave</name>
+  </compound>
+  <compound refid="dir_1ae97a90ccb7f4c142f9aff2fa75bd59" kind="dir"><name>dezibot/src</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_9429171019393cec1d37bc2d1318bb73" kind="dir">
+    <compoundname>dezibot/src/autocharge/master/abstractSet</compoundname>
+    <innerfile refid="_abstract_set_8hpp">AbstractSet.hpp</innerfile>
+    <innerfile refid="_fifo_8hpp">Fifo.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/autocharge/master/abstractSet/"/>
+  </compounddef>
+</doxygen>

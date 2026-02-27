@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_light_detection_8h" kind="file" language="C++">
+    <compoundname>LightDetection.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includedby refid="_dezibot_8h" local="yes">dezibot/src/Dezibot.h</includedby>
+    <includedby refid="_light_detection_8cpp" local="yes">dezibot/src/lightDetection/LightDetection.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dezibot/src/lightDetection/LightDetection.h</label>
+        <link refid="_light_detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>dezibot/src/Dezibot.cpp</label>
+        <link refid="_dezibot_8cpp"/>
+      </node>
+      <node id="2">
+        <label>dezibot/src/Dezibot.h</label>
+        <link refid="_dezibot_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="6">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="4">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dezibot/src/autocharge/slave/Slave.cpp</label>
+        <link refid="_slave_8cpp"/>
+      </node>
+      <node id="7">
+        <label>dezibot/src/autocharge/slave/Slave.hpp</label>
+        <link refid="_slave_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dezibot/src/lightDetection/LightDetection.cpp</label>
+        <link refid="_light_detection_8cpp"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/lightDetection/LightDetection.h</label>
+        <link refid="_light_detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structaverage_measurement" prot="public">averageMeasurement</innerclass>
+    <innerclass refid="class_light_detection" prot="public">LightDetection</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" prot="public" static="no" strong="no">
+        <type></type>
+        <name>photoTransistors</name>
+        <enumvalue id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" prot="public">
+          <name>IR_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" prot="public">
+          <name>IR_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" prot="public">
+          <name>IR_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" prot="public">
+          <name>IR_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" prot="public">
+          <name>DL_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" prot="public">
+          <name>DL_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/lightDetection/LightDetection.h" line="19" column="1" bodyfile="dezibot/src/lightDetection/LightDetection.h" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="enum" id="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ptType</name>
+        <enumvalue id="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2a37f5e4ec9707c7d3c7ecf1bad3e740c4" prot="public">
+          <name>IR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2ab6e1fcdb282347a59fc22d96dce6417a" prot="public">
+          <name>DAYLIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/lightDetection/LightDetection.h" line="36" column="1" bodyfile="dezibot/src/lightDetection/LightDetection.h" bodystart="36" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_light_detection_8h_1a541b30a4ccaf388bd8cc9357cd85514a" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref></type>
+        <definition>const photoTransistors allIRPTs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>allIRPTs</name>
+        <initializer>= {<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kindref="member">IR_FRONT</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" kindref="member">IR_LEFT</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" kindref="member">IR_RIGHT</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" kindref="member">IR_BACK</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/lightDetection/LightDetection.h" line="40" column="31" bodyfile="dezibot/src/lightDetection/LightDetection.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="variable" id="_light_detection_8h_1a9971cd7d69069a38202d8fe1c10fc436" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref></type>
+        <definition>const photoTransistors allDLPTs[]</definition>
+        <argsstring>[]</argsstring>
+        <name>allDLPTs</name>
+        <initializer>= {<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" kindref="member">DL_BOTTOM</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kindref="member">DL_FRONT</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/lightDetection/LightDetection.h" line="41" column="35" bodyfile="dezibot/src/lightDetection/LightDetection.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class for Reading the values of the different Phototransistors, both IR, and DaylightSensors are supported. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Hans Haupt (<ulink url="mailto:hans.haupt@dezibot.de">hans.haupt@dezibot.de</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-04-26</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LightDetection_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LightDetection_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref>{</highlight></codeline>
+<codeline lineno="20" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" kindref="member">IR_LEFT</ref>,</highlight></codeline>
+<codeline lineno="21" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" kindref="member">IR_RIGHT</ref>,</highlight></codeline>
+<codeline lineno="22" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kindref="member">IR_FRONT</ref>,</highlight></codeline>
+<codeline lineno="23" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" kindref="member">IR_BACK</ref>,</highlight></codeline>
+<codeline lineno="24" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kindref="member">DL_FRONT</ref>,</highlight></codeline>
+<codeline lineno="25" refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" kindref="member">DL_BOTTOM</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="structaverage_measurement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structaverage_measurement" kindref="compound">averageMeasurement</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structaverage_measurement_1ac34d303bb1a1dc99f9b3cc4940c56b2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/><ref refid="structaverage_measurement_1ac34d303bb1a1dc99f9b3cc4940c56b2e" kindref="member">sensor</ref>;</highlight></codeline>
+<codeline lineno="30" refid="structaverage_measurement_1acca3e6ac6c0476afeb6a5fc3df9672a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structaverage_measurement_1acca3e6ac6c0476afeb6a5fc3df9672a0" kindref="member">measurementAmount</ref>;</highlight></codeline>
+<codeline lineno="31" refid="structaverage_measurement_1ae7e0aa29ba71630e9a7060289c4f2fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structaverage_measurement_1ae7e0aa29ba71630e9a7060289c4f2fd6" kindref="member">timeBetween</ref>;</highlight></codeline>
+<codeline lineno="32" refid="structaverage_measurement_1abeaa808bddb53929c0db2903463ec4c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structaverage_measurement_1abeaa808bddb53929c0db2903463ec4c8" kindref="member">result</ref>;</highlight></codeline>
+<codeline lineno="33" refid="structaverage_measurement_1ae28a6ebdedc06953d976a2c73252d078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structaverage_measurement_1ae28a6ebdedc06953d976a2c73252d078" kindref="member">done</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2" kindref="member">ptType</ref>{</highlight></codeline>
+<codeline lineno="37" refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2a37f5e4ec9707c7d3c7ecf1bad3e740c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2a37f5e4ec9707c7d3c7ecf1bad3e740c4" kindref="member">IR</ref>,</highlight></codeline>
+<codeline lineno="38" refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2ab6e1fcdb282347a59fc22d96dce6417a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2ab6e1fcdb282347a59fc22d96dce6417a" kindref="member">DAYLIGHT</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40" refid="_light_detection_8h_1a541b30a4ccaf388bd8cc9357cd85514a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/><ref refid="_light_detection_8h_1a541b30a4ccaf388bd8cc9357cd85514a" kindref="member">allIRPTs</ref>[]<sp/>=<sp/>{<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kindref="member">IR_FRONT</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" kindref="member">IR_LEFT</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" kindref="member">IR_RIGHT</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" kindref="member">IR_BACK</ref>};</highlight></codeline>
+<codeline lineno="41" refid="_light_detection_8h_1a9971cd7d69069a38202d8fe1c10fc436" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/><ref refid="_light_detection_8h_1a9971cd7d69069a38202d8fe1c10fc436" kindref="member">allDLPTs</ref>[]<sp/>=<sp/>{<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" kindref="member">DL_BOTTOM</ref>,<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kindref="member">DL_FRONT</ref>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_light_detection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_light_detection" kindref="compound">LightDetection</ref>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1afe7fb577a53c1d9efbc70ebac9e04e94" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_light_detection_1a691d0813257d5fa4094496da34866875" kindref="member">getValue</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/><ref refid="class_light_detection_1addefd7ac51cd90cc4b2a99261a6f73a7" kindref="member">getBrightest</ref>(<ref refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2" kindref="member">ptType</ref><sp/>type);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="class_light_detection_1ac2305adde12c095ee759919b99919410" kindref="member">getAverageValue</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor,<sp/>uint32_t<sp/>measurments,<sp/>uint32_t<sp/>timeBetween);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="79" refid="class_light_detection_1aecaaa792f02df14abe734c9811cb93f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1aecaaa792f02df14abe734c9811cb93f7" kindref="member">IR_PT_FRONT_ADC</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="80" refid="class_light_detection_1ae4a64fbf6fd532828817b01278a9f634" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1ae4a64fbf6fd532828817b01278a9f634" kindref="member">IR_PT_LEFT_ADC</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="81" refid="class_light_detection_1afdccb95b7d899969a4ef5d01a9eedc43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1afdccb95b7d899969a4ef5d01a9eedc43" kindref="member">IR_PT_RIGHT_ADC</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="82" refid="class_light_detection_1adcfd748f093fa644d2381646638429e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1adcfd748f093fa644d2381646638429e8" kindref="member">IR_PT_BACK_ADC</ref><sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_light_detection_1a3dd3525f6447d213da457d0fa1a538c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1a3dd3525f6447d213da457d0fa1a538c8" kindref="member">DL_PT_FRONT_ADC</ref><sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="85" refid="class_light_detection_1a937d41e3ba2820dd3c0aa1efbe4c6fd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1a937d41e3ba2820dd3c0aa1efbe4c6fd0" kindref="member">DL_PT_BOTTOM_ADC</ref><sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" kindref="member">DL_PT_ENABLE</ref><sp/>=<sp/>41;</highlight></codeline>
+<codeline lineno="88" refid="class_light_detection_1a0e221af7106fa65a63c50287b77bd7dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_light_detection_1a0e221af7106fa65a63c50287b77bd7dc" kindref="member">IR_PT_ENABLE</ref><sp/>=<sp/>40;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1a2b2c0006c917cf3ad15acbea37a4d3d4" kindref="member">beginInfrared</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1a2678305979c37e5c7ae7d0b8fc66575c" kindref="member">beginDaylight</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_light_detection_1a4f0bf4d18ddde3854aa5c6791bd25999" kindref="member">readIRPT</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_light_detection_1a99285843dae4e4b560e5d241700352a7" kindref="member">readDLPT</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor);<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//LightDetection_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/lightDetection/LightDetection.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_display" kind="class" language="C++" prot="public">
+    <compoundname>Display</compoundname>
+    <includes refid="_display_8h" local="no">Display.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Display::charsOnCurrLine</definition>
+        <argsstring></argsstring>
+        <name>charsOnCurrLine</name>
+        <qualifiedname>Display::charsOnCurrLine</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="21" column="17" bodyfile="dezibot/src/display/Display.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Display::currLine</definition>
+        <argsstring></argsstring>
+        <name>currLine</name>
+        <qualifiedname>Display::currLine</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="24" column="17" bodyfile="dezibot/src/display/Display.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_display_1a1ef6d44935ca6787eb8c359d4db5ad6f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Display::orientationFlipped</definition>
+        <argsstring></argsstring>
+        <name>orientationFlipped</name>
+        <qualifiedname>Display::orientationFlipped</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="27" column="14" bodyfile="dezibot/src/display/Display.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_display_1a1d8009939defa977e42e7b70cca6c5e6" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Display::colorInverted</definition>
+        <argsstring></argsstring>
+        <name>colorInverted</name>
+        <qualifiedname>Display::colorInverted</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="30" column="14" bodyfile="dezibot/src/display/Display.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_display_1a18d77255e3e528c67a85f1813cfc9c34" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::sendDisplayCMD</definition>
+        <argsstring>(uint8_t cmd)</argsstring>
+        <name>sendDisplayCMD</name>
+        <qualifiedname>Display::sendDisplayCMD</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>sends the passed cmd to the display, cmd_byte is added as prefix by the function </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the byte instruction that shold by sent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="37" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a8dbb38513cfe6ba3dffff8b0012cc7e4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::updateLine</definition>
+        <argsstring>(uint charAmount)</argsstring>
+        <name>updateLine</name>
+        <qualifiedname>Display::updateLine</qualifiedname>
+        <param>
+          <type>uint</type>
+          <declname>charAmount</declname>
+        </param>
+        <briefdescription>
+<para>should be called whenever characters where printed to the display. Updates the data of the class to handle linebreaks correctly </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>charAmount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How many characters where added to the screen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="44" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="66" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_display_1ae20d7a3de610fdad801dcd23702f7fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Display::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>initializes the display datastructures and sents the required cmds to start the display. Should only be called once. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>doesn&apos;t initalize the I²C bus itself, therefore wire.begin(1,2) must be called elsewhere, before this method. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="52" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="16" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a699e5a8f28243dd2d5c0df2dfa9c72a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>clear</name>
+        <qualifiedname>Display::clear</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>delets all content from the display, resets the linecounter, new print will start at the top left. Orientationflip is not resetted </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="58" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="44" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a861039ddb834e6b818b8407c048c4f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::print</definition>
+        <argsstring>(char *value)</argsstring>
+        <name>print</name>
+        <qualifiedname>Display::print</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>prints the passed string right behind the current displaycontent the sequence &quot;\n&quot; can be used to make a linebreak on the display </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string &quot;xyz&quot; that should be printed to the display </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="66" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="79" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a1df4c8a06177ec32c048c08019c034bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::println</definition>
+        <argsstring>(char *value)</argsstring>
+        <name>println</name>
+        <qualifiedname>Display::println</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>same as the print method, but after the string a line break is inserted </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string that should be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="73" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1aed49168c89ba18b34e9c48d65ad001c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::print</definition>
+        <argsstring>(String value)</argsstring>
+        <name>print</name>
+        <qualifiedname>Display::print</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>prints the passed string right behind the current displaycontent the sequence &quot;\n&quot; can be used to make a linebreak on the display </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string &quot;xyz&quot; that should be printed to the display </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="81" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="124" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a64f1d76767cf6a48a92ba3d201d45868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::println</definition>
+        <argsstring>(String value)</argsstring>
+        <name>println</name>
+        <qualifiedname>Display::println</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>same as the print method, but after the string a line break is inserted </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string that should be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="88" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="132" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a65da70dc2c7dc3d0fe7f8915e854c830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::print</definition>
+        <argsstring>(int value)</argsstring>
+        <name>print</name>
+        <qualifiedname>Display::print</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>prints the passed string right behind the current displaycontent the sequence &quot;\n&quot; can be used to make a linebreak on the display </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string &quot;xyz&quot; that should be printed to the display </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="96" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="140" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1ab79b7511c1197b2048ff09852dcfc4e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::println</definition>
+        <argsstring>(int value)</argsstring>
+        <name>println</name>
+        <qualifiedname>Display::println</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>same as the print method, but after the string a line break is inserted </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string that should be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="103" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="146" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a79fd42e03a25ba4329c5cfaf45eecb22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char Display::stringToCharArray</definition>
+        <argsstring>(String value)</argsstring>
+        <name>stringToCharArray</name>
+        <qualifiedname>Display::stringToCharArray</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>string to char </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string that should be converted to char </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="110" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1a36fa737efadcf53742d41a336fe02599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::flipOrientation</definition>
+        <argsstring>(void)</argsstring>
+        <name>flipOrientation</name>
+        <qualifiedname>Display::flipOrientation</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>flips the horizontal orientation of all content on the display </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="116" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="157" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_display_1aa0db715ac5b14c35801ac02b49246ac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Display::invertColor</definition>
+        <argsstring>(void)</argsstring>
+        <name>invertColor</name>
+        <qualifiedname>Display::invertColor</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>inverts the pixelcolors, so pixels on will be set to off and currently off pixels will be turned off. affects already printed content as well as future prints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/display/Display.h" line="123" column="14" bodyfile="dezibot/src/display/Display.cpp" bodystart="168" bodyend="175"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/display/Display.h" line="18" column="1" bodyfile="dezibot/src/display/Display.h" bodystart="18" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_display_1ae20d7a3de610fdad801dcd23702f7fb8" prot="public" virt="non-virtual"><scope>Display</scope><name>begin</name></member>
+      <member refid="class_display_1a4449d13ad86e3d8b6c07bc5beb90f8ed" prot="protected" virt="non-virtual"><scope>Display</scope><name>charsOnCurrLine</name></member>
+      <member refid="class_display_1a699e5a8f28243dd2d5c0df2dfa9c72a0" prot="public" virt="non-virtual"><scope>Display</scope><name>clear</name></member>
+      <member refid="class_display_1a1d8009939defa977e42e7b70cca6c5e6" prot="protected" virt="non-virtual"><scope>Display</scope><name>colorInverted</name></member>
+      <member refid="class_display_1a35af54d9ed5dd9b7cd0c484a5b985a4e" prot="protected" virt="non-virtual"><scope>Display</scope><name>currLine</name></member>
+      <member refid="class_display_1a36fa737efadcf53742d41a336fe02599" prot="public" virt="non-virtual"><scope>Display</scope><name>flipOrientation</name></member>
+      <member refid="class_display_1aa0db715ac5b14c35801ac02b49246ac4" prot="public" virt="non-virtual"><scope>Display</scope><name>invertColor</name></member>
+      <member refid="class_display_1a1ef6d44935ca6787eb8c359d4db5ad6f" prot="protected" virt="non-virtual"><scope>Display</scope><name>orientationFlipped</name></member>
+      <member refid="class_display_1a861039ddb834e6b818b8407c048c4f97" prot="public" virt="non-virtual"><scope>Display</scope><name>print</name></member>
+      <member refid="class_display_1aed49168c89ba18b34e9c48d65ad001c0" prot="public" virt="non-virtual"><scope>Display</scope><name>print</name></member>
+      <member refid="class_display_1a65da70dc2c7dc3d0fe7f8915e854c830" prot="public" virt="non-virtual"><scope>Display</scope><name>print</name></member>
+      <member refid="class_display_1a1df4c8a06177ec32c048c08019c034bc" prot="public" virt="non-virtual"><scope>Display</scope><name>println</name></member>
+      <member refid="class_display_1a64f1d76767cf6a48a92ba3d201d45868" prot="public" virt="non-virtual"><scope>Display</scope><name>println</name></member>
+      <member refid="class_display_1ab79b7511c1197b2048ff09852dcfc4e3" prot="public" virt="non-virtual"><scope>Display</scope><name>println</name></member>
+      <member refid="class_display_1a18d77255e3e528c67a85f1813cfc9c34" prot="protected" virt="non-virtual"><scope>Display</scope><name>sendDisplayCMD</name></member>
+      <member refid="class_display_1a79fd42e03a25ba4329c5cfaf45eecb22" prot="public" virt="non-virtual"><scope>Display</scope><name>stringToCharArray</name></member>
+      <member refid="class_display_1a8dbb38513cfe6ba3dffff8b0012cc7e4" prot="protected" virt="non-virtual"><scope>Display</scope><name>updateLine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

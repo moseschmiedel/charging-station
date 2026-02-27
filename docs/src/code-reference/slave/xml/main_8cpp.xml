@@ -1,0 +1,1023 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="beacon__tracker_8h" local="yes">beacon_tracker.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">Dezibot.h</includes>
+    <includes local="no">autocharge/Autocharge.hpp</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>beacon_tracker.h</label>
+        <link refid="beacon__tracker_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>slave/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="5">
+        <label>Dezibot.h</label>
+      </node>
+      <node id="6">
+        <label>autocharge/Autocharge.hpp</label>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1a194b53757bea102ac0e62123154ceb33" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_beacon_tracker_config" kindref="compound">BeaconTrackerConfig</ref></type>
+        <definition>BeaconTrackerConfig trackerConfig</definition>
+        <argsstring></argsstring>
+        <name>trackerConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="84" column="21" bodyfile="slave/src/main.cpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac6d2e952aa82dccb6ae516df07e367e1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_beacon_tracker" kindref="compound">BeaconTracker</ref></type>
+        <definition>BeaconTracker tracker</definition>
+        <argsstring></argsstring>
+        <name>tracker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="85" column="15" bodyfile="slave/src/main.cpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool navigationActive</definition>
+        <argsstring></argsstring>
+        <name>navigationActive</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="87" column="6" bodyfile="slave/src/main.cpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ledsOn</definition>
+        <argsstring></argsstring>
+        <name>ledsOn</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="88" column="6" bodyfile="slave/src/main.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool searchClockwise</definition>
+        <argsstring></argsstring>
+        <name>searchClockwise</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="89" column="6" bodyfile="slave/src/main.cpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lastLeftDuty</definition>
+        <argsstring></argsstring>
+        <name>lastLeftDuty</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="90" column="10" bodyfile="slave/src/main.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lastRightDuty</definition>
+        <argsstring></argsstring>
+        <name>lastRightDuty</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="91" column="10" bodyfile="slave/src/main.cpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nextControlAtMs</definition>
+        <argsstring></argsstring>
+        <name>nextControlAtMs</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="92" column="10" bodyfile="slave/src/main.cpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lastLedToggleAtMs</definition>
+        <argsstring></argsstring>
+        <name>lastLedToggleAtMs</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="93" column="10" bodyfile="slave/src/main.cpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a65dfdb127813821b3470f332574a313b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lastSearchFlipAtMs</definition>
+        <argsstring></argsstring>
+        <name>lastSearchFlipAtMs</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="94" column="10" bodyfile="slave/src/main.cpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lastLogAtMs</definition>
+        <argsstring></argsstring>
+        <name>lastLogAtMs</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="95" column="10" bodyfile="slave/src/main.cpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t lastWallJitterFlipAtMs</definition>
+        <argsstring></argsstring>
+        <name>lastWallJitterFlipAtMs</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="96" column="10" bodyfile="slave/src/main.cpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t wallJitterSign</definition>
+        <argsstring></argsstring>
+        <name>wallJitterSign</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="97" column="8" bodyfile="slave/src/main.cpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a914c8c0e9995bc2b4a1ddf96c18b0308" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool requestedStop</definition>
+        <argsstring></argsstring>
+        <name>requestedStop</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="311" column="6" bodyfile="slave/src/main.cpp" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto chargingSlaves</definition>
+        <argsstring></argsstring>
+        <name>chargingSlaves</name>
+        <initializer>= Fifo&lt;SlaveData *&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="342" column="6" bodyfile="slave/src/main.cpp" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" prot="public" static="no" mutable="no">
+        <type>auto</type>
+        <definition>auto master</definition>
+        <argsstring></argsstring>
+        <name>master</name>
+        <initializer>= MasterData(4200495964)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="343" column="6" bodyfile="slave/src/main.cpp" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" prot="public" static="no" mutable="no">
+        <type>Slave</type>
+        <definition>Slave slave</definition>
+        <argsstring></argsstring>
+        <name>slave</name>
+        <initializer>=
+    Slave(SlaveState::WORK, <ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>, <ref refid="main_8cpp_1addcef59bf035ca87bfc1459a78eb0f3a" kindref="member">step_work</ref>, <ref refid="main_8cpp_1a85e9839ef12822ba5a63442d844af9fe" kindref="member">step_to_charge</ref>, <ref refid="main_8cpp_1afd93aab439539234576cf7837e548eaf" kindref="member">step_wait_charge</ref>,
+          <ref refid="main_8cpp_1a73a930e83cd1193fe38c5a7cef4d4cae" kindref="member">step_into_charge</ref>, <ref refid="main_8cpp_1a433be12d39cb8afd6e9369335c94490d" kindref="member">step_charge</ref>, <ref refid="main_8cpp_1a14372e23c523a72fca1c7185752f571b" kindref="member">step_exit_charge</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="345" column="7" bodyfile="slave/src/main.cpp" bodystart="345" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a5a700a8b068dc863a8ee75f6cf291375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void applyMotorDuties</definition>
+        <argsstring>(Slave *slave, uint16_t leftDuty, uint16_t rightDuty)</argsstring>
+        <name>applyMotorDuties</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>leftDuty</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>rightDuty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="99" column="6" bodyfile="slave/src/main.cpp" bodystart="99" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resetNavigation</definition>
+        <argsstring>(Slave *slave)</argsstring>
+        <name>resetNavigation</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="114" column="6" bodyfile="slave/src/main.cpp" bodystart="114" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3f2732a8b6711cfcf655d385994de63f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void beginNavigation</definition>
+        <argsstring>(Slave *slave, uint32_t now)</argsstring>
+        <name>beginNavigation</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="133" column="6" bodyfile="slave/src/main.cpp" bodystart="133" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3e13a166432b37068ae81532f0f2cbae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool shouldRunControl</definition>
+        <argsstring>(uint32_t now)</argsstring>
+        <name>shouldRunControl</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="146" column="6" bodyfile="slave/src/main.cpp" bodystart="146" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a1ad66c8c31c4da88351181fa1c7545e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleNavigationLed</definition>
+        <argsstring>(Slave *slave, uint32_t now)</argsstring>
+        <name>toggleNavigationLed</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="160" column="6" bodyfile="slave/src/main.cpp" bodystart="160" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a1e690c01b4fa115a892b3492f4ebe3cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void driveSearch</definition>
+        <argsstring>(Slave *slave, uint32_t now)</argsstring>
+        <name>driveSearch</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="174" column="6" bodyfile="slave/src/main.cpp" bodystart="174" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3e4d314622562ea746ed01133ccdd791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float wallJitterTerm</definition>
+        <argsstring>(const BeaconTrackerState &amp;state)</argsstring>
+        <name>wallJitterTerm</name>
+        <param>
+          <type>const <ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="187" column="7" bodyfile="slave/src/main.cpp" bodystart="187" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1aae750d44076eafbfc278908916aedde2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void driveTracking</definition>
+        <argsstring>(Slave *slave, const BeaconTrackerState &amp;state)</argsstring>
+        <name>driveTracking</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="204" column="6" bodyfile="slave/src/main.cpp" bodystart="204" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a39f6c5719e854735e1bc4591f1a44e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool reachedArrival</definition>
+        <argsstring>(const BeaconTrackerState &amp;state)</argsstring>
+        <name>reachedArrival</name>
+        <param>
+          <type>const <ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="223" column="6" bodyfile="slave/src/main.cpp" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1acb0d128225f87eeab2104d5b01dacdaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void logNavigation</definition>
+        <argsstring>(Slave *slave, const MasterData &amp;master, const BeaconTrackerState &amp;state, bool searchMode)</argsstring>
+        <name>logNavigation</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>const MasterData &amp;</type>
+          <declname>master</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>searchMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="228" column="6" bodyfile="slave/src/main.cpp" bodystart="228" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1addcef59bf035ca87bfc1459a78eb0f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void step_work</definition>
+        <argsstring>(Slave *slave)</argsstring>
+        <name>step_work</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="252" column="6" bodyfile="slave/src/main.cpp" bodystart="252" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a85e9839ef12822ba5a63442d844af9fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool step_to_charge</definition>
+        <argsstring>(Slave *slave, MasterData &amp;master)</argsstring>
+        <name>step_to_charge</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>MasterData &amp;</type>
+          <declname>master</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="261" column="6" bodyfile="slave/src/main.cpp" bodystart="261" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1afd93aab439539234576cf7837e548eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void step_wait_charge</definition>
+        <argsstring>(Slave *slave, MasterData &amp;master)</argsstring>
+        <name>step_wait_charge</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>MasterData &amp;</type>
+          <declname>master</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="304" column="6" bodyfile="slave/src/main.cpp" bodystart="304" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a73a930e83cd1193fe38c5a7cef4d4cae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool step_into_charge</definition>
+        <argsstring>(Slave *slave, MasterData &amp;master)</argsstring>
+        <name>step_into_charge</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>MasterData &amp;</type>
+          <declname>master</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="313" column="6" bodyfile="slave/src/main.cpp" bodystart="313" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a433be12d39cb8afd6e9369335c94490d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void step_charge</definition>
+        <argsstring>(Slave *slave, MasterData &amp;master)</argsstring>
+        <name>step_charge</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>MasterData &amp;</type>
+          <declname>master</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="322" column="6" bodyfile="slave/src/main.cpp" bodystart="322" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a14372e23c523a72fca1c7185752f571b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool step_exit_charge</definition>
+        <argsstring>(Slave *slave, MasterData &amp;master)</argsstring>
+        <name>step_exit_charge</name>
+        <param>
+          <type>Slave *</type>
+          <declname>slave</declname>
+        </param>
+        <param>
+          <type>MasterData &amp;</type>
+          <declname>master</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="333" column="6" bodyfile="slave/src/main.cpp" bodystart="333" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="349" column="6" bodyfile="slave/src/main.cpp" bodystart="349" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/main.cpp" line="372" column="6" bodyfile="slave/src/main.cpp" bodystart="372" bodyend="372"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="beacon__tracker_8h" kindref="compound">beacon_tracker.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Dezibot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;autocharge/Autocharge.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint32_t<sp/>CONTROL_PERIOD_MS<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint32_t<sp/>LED_TOGGLE_PERIOD_MS<sp/>=<sp/>500;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint32_t<sp/>SEARCH_FLIP_PERIOD_MS<sp/>=<sp/>1500;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint32_t<sp/>NAV_LOG_PERIOD_MS<sp/>=<sp/>200;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>THETA_ALPHA<sp/>=<sp/>0.18f;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>THETA_MAX_STEP_RAD<sp/>=<sp/>0.35f;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SIGNAL_MIN<sp/>=<sp/>600.0f;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SIGNAL_ARRIVE<sp/>=<sp/>4300.0f;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SIGNAL_DROP_GUARD_RATIO<sp/>=<sp/>0.22f;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>SATURATION_RAW_THRESHOLD<sp/>=<sp/>4080;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>TRACKER_GUARD_HOLD_MS<sp/>=<sp/>120;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint32_t<sp/>WALL_JITTER_PERIOD_MS<sp/>=<sp/>240;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>WALL_JITTER_MAX_THETA_RAD<sp/>=<sp/>0.28f;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>WALL_JITTER_MIN_SIGNAL<sp/>=<sp/>1800.0f;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>WALL_JITTER_W_AMPLITUDE<sp/>=<sp/>0.14f;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>KP_THETA<sp/>=<sp/>0.70f;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>W_MAX<sp/>=<sp/>0.65f;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>U_MAX<sp/>=<sp/>0.75f;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>HALF_PI_RAD<sp/>=<sp/>1.57079632679489661923f;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>DUTY_DEADZONE<sp/>=<sp/>3300;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>DUTY_MAX<sp/>=<sp/>4600;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>DUTY_SEARCH<sp/>=<sp/>3560;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>uint16_t<sp/>DUTY_QUANTIZE_STEP<sp/>=<sp/>40;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>clampf(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>high)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&lt;<sp/>low)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>low;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value<sp/>&gt;<sp/>high)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>high;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">uint16_t<sp/>quantizeDuty(uint16_t<sp/>duty)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duty<sp/>&gt;<sp/>DUTY_MAX)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>duty<sp/>=<sp/>DUTY_MAX;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>uint16_t<sp/>quantized<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>((duty<sp/>+<sp/>(DUTY_QUANTIZE_STEP<sp/>/<sp/>2))<sp/>/<sp/>DUTY_QUANTIZE_STEP)<sp/>*</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DUTY_QUANTIZE_STEP);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(quantized<sp/>&lt;<sp/>DUTY_DEADZONE)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>quantized<sp/>=<sp/>DUTY_DEADZONE;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(quantized<sp/>&gt;<sp/>DUTY_MAX)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>quantized<sp/>=<sp/>DUTY_MAX;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>quantized;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">uint16_t<sp/>mapNormalizedToDuty(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>normalized)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(normalized<sp/>&lt;=<sp/>0.0f)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>normalized<sp/>=<sp/>clampf(normalized,<sp/>0.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duty<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(DUTY_DEADZONE)<sp/>+</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>normalized<sp/>*<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(DUTY_MAX<sp/>-<sp/>DUTY_DEADZONE);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>quantizeDuty(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(duty));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFrontDominant(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;state)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state.<ref refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" kindref="member">front</ref><sp/>&gt;=<sp/>state.<ref refid="struct_beacon_tracker_state_1ac2654a2b0cdf2ba45f93c1961844b51f" kindref="member">back</ref><sp/>&amp;&amp;<sp/>state.<ref refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" kindref="member">front</ref><sp/>&gt;=<sp/>state.<ref refid="struct_beacon_tracker_state_1ae21621aef92669de86eb80071a755c91" kindref="member">left</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" kindref="member">front</ref><sp/>&gt;=<sp/>state.<ref refid="struct_beacon_tracker_state_1a328db37e1d0b06fb53961415c03255de" kindref="member">right</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="struct_beacon_tracker_config" kindref="compound">BeaconTrackerConfig</ref><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="class_beacon_tracker" kindref="compound">BeaconTracker</ref><sp/><ref refid="main_8cpp_1ac6d2e952aa82dccb6ae516df07e367e1" kindref="member">tracker</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" kindref="member">navigationActive</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kindref="member">ledsOn</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kindref="member">searchClockwise</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">uint16_t<sp/><ref refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kindref="member">lastLeftDuty</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">uint16_t<sp/><ref refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kindref="member">lastRightDuty</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">uint32_t<sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">uint32_t<sp/><ref refid="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" kindref="member">lastLedToggleAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">uint32_t<sp/><ref refid="main_8cpp_1a65dfdb127813821b3470f332574a313b" kindref="member">lastSearchFlipAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">uint32_t<sp/><ref refid="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" kindref="member">lastLogAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">uint32_t<sp/><ref refid="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" kindref="member">lastWallJitterFlipAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">int8_t<sp/><ref refid="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" kindref="member">wallJitterSign</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a5a700a8b068dc863a8ee75f6cf291375" kindref="member">applyMotorDuties</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>uint16_t<sp/>leftDuty,<sp/>uint16_t<sp/>rightDuty)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>leftDuty<sp/>=<sp/>quantizeDuty(leftDuty);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>rightDuty<sp/>=<sp/>quantizeDuty(rightDuty);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(leftDuty<sp/>!=<sp/><ref refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kindref="member">lastLeftDuty</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;motion.left.setSpeed(leftDuty);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kindref="member">lastLeftDuty</ref><sp/>=<sp/>leftDuty;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rightDuty<sp/>!=<sp/><ref refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kindref="member">lastRightDuty</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;motion.right.setSpeed(rightDuty);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kindref="member">lastRightDuty</ref><sp/>=<sp/>rightDuty;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" kindref="member">navigationActive</ref><sp/>||<sp/><ref refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kindref="member">lastLeftDuty</ref><sp/>!=<sp/>0<sp/>||<sp/><ref refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kindref="member">lastRightDuty</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;motion.stop();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac6d2e952aa82dccb6ae516df07e367e1" kindref="member">tracker</ref>.reset();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" kindref="member">navigationActive</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kindref="member">ledsOn</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kindref="member">searchClockwise</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" kindref="member">lastLedToggleAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a65dfdb127813821b3470f332574a313b" kindref="member">lastSearchFlipAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" kindref="member">lastLogAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" kindref="member">lastWallJitterFlipAtMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" kindref="member">wallJitterSign</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kindref="member">lastLeftDuty</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kindref="member">lastRightDuty</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a3f2732a8b6711cfcf655d385994de63f" kindref="member">beginNavigation</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>uint32_t<sp/>now)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" kindref="member">navigationActive</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kindref="member">ledsOn</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kindref="member">searchClockwise</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" kindref="member">lastLedToggleAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a65dfdb127813821b3470f332574a313b" kindref="member">lastSearchFlipAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" kindref="member">lastLogAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" kindref="member">lastWallJitterFlipAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.setTopLeds(YELLOW);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a3e13a166432b37068ae81532f0f2cbae" kindref="member">shouldRunControl</ref>(uint32_t<sp/>now)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(now<sp/>-<sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref>)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref><sp/>+=<sp/>CONTROL_PERIOD_MS;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(now<sp/>-<sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref>)<sp/>&gt;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(CONTROL_PERIOD_MS))<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kindref="member">nextControlAtMs</ref><sp/>=<sp/>now<sp/>+<sp/>CONTROL_PERIOD_MS;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a1ad66c8c31c4da88351181fa1c7545e6" kindref="member">toggleNavigationLed</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>uint32_t<sp/>now)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>-<sp/><ref refid="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" kindref="member">lastLedToggleAtMs</ref><sp/>&lt;<sp/>LED_TOGGLE_PERIOD_MS)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kindref="member">ledsOn</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.turnOffLed(TOP);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.setTopLeds(YELLOW);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kindref="member">ledsOn</ref><sp/>=<sp/>!<ref refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kindref="member">ledsOn</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" kindref="member">lastLedToggleAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a1e690c01b4fa115a892b3492f4ebe3cc" kindref="member">driveSearch</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>uint32_t<sp/>now)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>-<sp/><ref refid="main_8cpp_1a65dfdb127813821b3470f332574a313b" kindref="member">lastSearchFlipAtMs</ref><sp/>&gt;=<sp/>SEARCH_FLIP_PERIOD_MS)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kindref="member">searchClockwise</ref><sp/>=<sp/>!<ref refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kindref="member">searchClockwise</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a65dfdb127813821b3470f332574a313b" kindref="member">lastSearchFlipAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kindref="member">searchClockwise</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5a700a8b068dc863a8ee75f6cf291375" kindref="member">applyMotorDuties</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>0,<sp/>DUTY_SEARCH);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5a700a8b068dc863a8ee75f6cf291375" kindref="member">applyMotorDuties</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>DUTY_SEARCH,<sp/>0);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a3e4d314622562ea746ed01133ccdd791" kindref="member">wallJitterTerm</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;state)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>likelyNearWall<sp/>=</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" kindref="member">detected</ref><sp/>&amp;&amp;<sp/>isFrontDominant(state)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_beacon_tracker_state_1ae5b0ba0ef79403c4565d1d38c8a37185" kindref="member">totalSignal</ref><sp/>&gt;=<sp/>WALL_JITTER_MIN_SIGNAL<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::fabs(state.<ref refid="struct_beacon_tracker_state_1acdbd3f46f3d0e06e542051211b330602" kindref="member">filteredTheta</ref>)<sp/>&lt;=<sp/>WALL_JITTER_MAX_THETA_RAD;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!likelyNearWall)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="struct_beacon_tracker_state_1a6b565e213e8dce00c50c6e6d5df6e163" kindref="member">timestampMs</ref><sp/>-<sp/><ref refid="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" kindref="member">lastWallJitterFlipAtMs</ref><sp/>&gt;=<sp/>WALL_JITTER_PERIOD_MS)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" kindref="member">wallJitterSign</ref><sp/>=<sp/>-<ref refid="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" kindref="member">wallJitterSign</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" kindref="member">lastWallJitterFlipAtMs</ref><sp/>=<sp/>state.<ref refid="struct_beacon_tracker_state_1a6b565e213e8dce00c50c6e6d5df6e163" kindref="member">timestampMs</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" kindref="member">wallJitterSign</ref>)<sp/>*<sp/>WALL_JITTER_W_AMPLITUDE;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1aae750d44076eafbfc278908916aedde2" kindref="member">driveTracking</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;state)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>state.<ref refid="struct_beacon_tracker_state_1acdbd3f46f3d0e06e542051211b330602" kindref="member">filteredTheta</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>w<sp/>=</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>clampf(KP_THETA<sp/>*<sp/>theta<sp/>+<sp/><ref refid="main_8cpp_1a3e4d314622562ea746ed01133ccdd791" kindref="member">wallJitterTerm</ref>(state),<sp/>-W_MAX,<sp/>W_MAX);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>U_MAX<sp/>*<sp/>std::fmax(0.0f,<sp/>std::cos(theta));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::fabs(theta)<sp/>&gt;<sp/>HALF_PI_RAD)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>u<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>this<sp/>drivetrain,<sp/>increasing<sp/>right<sp/>motor<sp/>turns<sp/>the<sp/>robot<sp/>left.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>So<sp/>steering<sp/>mix<sp/>is<sp/>mirrored:<sp/>right-turn<sp/>intent<sp/>must<sp/>boost<sp/>left<sp/>motor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mLeft<sp/>=<sp/>clampf(u<sp/>-<sp/>w,<sp/>0.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mRight<sp/>=<sp/>clampf(u<sp/>+<sp/>w,<sp/>0.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a5a700a8b068dc863a8ee75f6cf291375" kindref="member">applyMotorDuties</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>mapNormalizedToDuty(mLeft),</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mapNormalizedToDuty(mRight));</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a39f6c5719e854735e1bc4591f1a44e7e" kindref="member">reachedArrival</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;state)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state.<ref refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" kindref="member">detected</ref><sp/>&amp;&amp;<sp/>state.<ref refid="struct_beacon_tracker_state_1ae5b0ba0ef79403c4565d1d38c8a37185" kindref="member">totalSignal</ref><sp/>&gt;=<sp/>SIGNAL_ARRIVE<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isFrontDominant(state);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1acb0d128225f87eeab2104d5b01dacdaf" kindref="member">logNavigation</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MasterData<sp/>&amp;<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;state,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>searchMode)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>payload[224];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>snprintf(payload,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(payload),</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;beacon_nav,%lu,%s,%lu,%lu,%lu,%lu,%.1f,%.1f,%.1f,%.1f,%.2f,%.1f,%u,&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%u,%u&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(state.<ref refid="struct_beacon_tracker_state_1a6b565e213e8dce00c50c6e6d5df6e163" kindref="member">timestampMs</ref>),</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>searchMode<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;search&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;track&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(state.<ref refid="struct_beacon_tracker_state_1a139c86415c7dce4d10577929d5046e06" kindref="member">rawFront</ref>),</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(state.<ref refid="struct_beacon_tracker_state_1a4179728f38eb38a0af6ceeff8625c267" kindref="member">rawBack</ref>),</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(state.<ref refid="struct_beacon_tracker_state_1a9992b05324d156b0f35cf0e60c54a9c8" kindref="member">rawLeft</ref>),</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(state.<ref refid="struct_beacon_tracker_state_1a8a722259cd20fb37a664f3b951974d36" kindref="member">rawRight</ref>),<sp/>state.<ref refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" kindref="member">front</ref>,<sp/>state.<ref refid="struct_beacon_tracker_state_1ac2654a2b0cdf2ba45f93c1961844b51f" kindref="member">back</ref>,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_beacon_tracker_state_1ae21621aef92669de86eb80071a755c91" kindref="member">left</ref>,<sp/>state.<ref refid="struct_beacon_tracker_state_1a328db37e1d0b06fb53961415c03255de" kindref="member">right</ref>,<sp/>state.<ref refid="struct_beacon_tracker_state_1acdbd3f46f3d0e06e542051211b330602" kindref="member">filteredTheta</ref><sp/>*<sp/>57.29577951308232f,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_beacon_tracker_state_1ae5b0ba0ef79403c4565d1d38c8a37185" kindref="member">totalSignal</ref>,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(state.<ref refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" kindref="member">detected</ref><sp/>?<sp/>1<sp/>:<sp/>0),</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kindref="member">lastLeftDuty</ref>),</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kindref="member">lastRightDuty</ref>));</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>payload);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/>String<sp/>meshMessage<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;log:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>meshMessage<sp/>+=<sp/>payload;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;communication.unicast(<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>.id,<sp/>meshMessage);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1addcef59bf035ca87bfc1459a78eb0f3a" kindref="member">step_work</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Execute<sp/>&apos;step_work&apos;<sp/>for<sp/>slave<sp/>%u\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;communication.getNodeId());</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;requestCharge();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.setTopLeds(RED);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>delay(3000);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a85e9839ef12822ba5a63442d844af9fe" kindref="member">step_to_charge</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>MasterData<sp/>&amp;<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>(void)<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>now<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" kindref="member">navigationActive</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a3f2732a8b6711cfcf655d385994de63f" kindref="member">beginNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>now);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a1ad66c8c31c4da88351181fa1c7545e6" kindref="member">toggleNavigationLed</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>now);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="main_8cpp_1a3e13a166432b37068ae81532f0f2cbae" kindref="member">shouldRunControl</ref>(now))<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>rawFront<sp/>=<sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;lightDetection.getValue(IR_FRONT);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>rawBack<sp/>=<sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;lightDetection.getValue(IR_BACK);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>rawLeft<sp/>=<sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;lightDetection.getValue(IR_LEFT);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>rawRight<sp/>=<sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;lightDetection.getValue(IR_RIGHT);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;state<sp/>=</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ac6d2e952aa82dccb6ae516df07e367e1" kindref="member">tracker</ref>.update(rawFront,<sp/>rawBack,<sp/>rawLeft,<sp/>rawRight,<sp/>now);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>searchMode<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" kindref="member">detected</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1aae750d44076eafbfc278908916aedde2" kindref="member">driveTracking</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>state);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a1e690c01b4fa115a892b3492f4ebe3cc" kindref="member">driveSearch</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>now);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>searchMode<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>-<sp/><ref refid="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" kindref="member">lastLogAtMs</ref><sp/>&gt;=<sp/>NAV_LOG_PERIOD_MS)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1acb0d128225f87eeab2104d5b01dacdaf" kindref="member">logNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/><ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>,<sp/>state,<sp/>searchMode);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" kindref="member">lastLogAtMs</ref><sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a39f6c5719e854735e1bc4591f1a44e7e" kindref="member">reachedArrival</ref>(state))<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.turnOffLed(TOP);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1afd93aab439539234576cf7837e548eaf" kindref="member">step_wait_charge</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>MasterData<sp/>&amp;<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/>(void)<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.setTopLeds(YELLOW);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/>delay(3000);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a914c8c0e9995bc2b4a1ddf96c18b0308" kindref="member">requestedStop</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a73a930e83cd1193fe38c5a7cef4d4cae" kindref="member">step_into_charge</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>MasterData<sp/>&amp;<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/>(void)<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.blink(3,<sp/>GREEN,<sp/>TOP,<sp/>1000);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.turnOffLed(TOP);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a914c8c0e9995bc2b4a1ddf96c18b0308" kindref="member">requestedStop</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a433be12d39cb8afd6e9369335c94490d" kindref="member">step_charge</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>MasterData<sp/>&amp;<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/>(void)<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.setTopLeds(GREEN);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/>delay(15000);<sp/></highlight><highlight class="comment">//<sp/>the<sp/>dezibot<sp/>should<sp/>wait<sp/>here<sp/>until<sp/>it<sp/>is<sp/>charged<sp/>full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="main_8cpp_1a914c8c0e9995bc2b4a1ddf96c18b0308" kindref="member">requestedStop</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;requestStopCharge();</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a914c8c0e9995bc2b4a1ddf96c18b0308" kindref="member">requestedStop</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a14372e23c523a72fca1c7185752f571b" kindref="member">step_exit_charge</ref>(Slave<sp/>*<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>,<sp/>MasterData<sp/>&amp;<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/>(void)<ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kindref="member">resetNavigation</ref>(<ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.blink(3,<sp/>RED,<sp/>TOP,<sp/>1000);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>-&gt;multiColorLight.turnOffLed(TOP);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/>delay(3000);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" kindref="member">chargingSlaves</ref><sp/>=<sp/>Fifo&lt;SlaveData<sp/>*&gt;();</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref><sp/>=<sp/>MasterData(4200495964);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal">Slave<sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref><sp/>=</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>Slave(SlaveState::WORK,<sp/><ref refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kindref="member">master</ref>,<sp/><ref refid="main_8cpp_1addcef59bf035ca87bfc1459a78eb0f3a" kindref="member">step_work</ref>,<sp/><ref refid="main_8cpp_1a85e9839ef12822ba5a63442d844af9fe" kindref="member">step_to_charge</ref>,<sp/><ref refid="main_8cpp_1afd93aab439539234576cf7837e548eaf" kindref="member">step_wait_charge</ref>,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a73a930e83cd1193fe38c5a7cef4d4cae" kindref="member">step_into_charge</ref>,<sp/><ref refid="main_8cpp_1a433be12d39cb8afd6e9369335c94490d" kindref="member">step_charge</ref>,<sp/><ref refid="main_8cpp_1a14372e23c523a72fca1c7185752f571b" kindref="member">step_exit_charge</ref>);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/>delay(2000);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;+------------------------+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;|<sp/>Charging<sp/>Station<sp/>Slave<sp/>|&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;+------------------------+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>.begin();</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>.signalMin<sp/>=<sp/>SIGNAL_MIN;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>.angleAlpha<sp/>=<sp/>THETA_ALPHA;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>.maxAngleStepRad<sp/>=<sp/>THETA_MAX_STEP_RAD;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>.signalDropGuardRatio<sp/>=<sp/>SIGNAL_DROP_GUARD_RATIO;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>.saturationRawThreshold<sp/>=<sp/>SATURATION_RAW_THRESHOLD;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>.guardHoldMs<sp/>=<sp/>TRACKER_GUARD_HOLD_MS;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac6d2e952aa82dccb6ae516df07e367e1" kindref="member">tracker</ref><sp/>=<sp/><ref refid="class_beacon_tracker" kindref="compound">BeaconTracker</ref>(<ref refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kindref="member">trackerConfig</ref>);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;beacon_nav,t_ms,mode,raw_f,raw_b,raw_l,raw_r,A_F,A_B,A_L,A_R,&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;theta_deg,S,detected,duty_l,duty_r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Setup<sp/>complete&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>.multiColorLight.setTopLeds(RED);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref>()<sp/>{<sp/><ref refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kindref="member">slave</ref>.step();<sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="slave/src/main.cpp"/>
+  </compounddef>
+</doxygen>

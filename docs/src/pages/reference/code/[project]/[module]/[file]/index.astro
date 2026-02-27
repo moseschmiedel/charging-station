@@ -1,0 +1,94 @@
+---
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import ClassDoc from "@components/ClassDoc.astro";
+import FunctionDoc from "@components/FunctionDoc.astro";
+import type { CodeFileDoc } from "../../../../../../lib/code-reference";
+import { getProjectSummaries } from "../../../../../../lib/code-reference";
+
+interface StaticPath {
+  params: {
+    project: string;
+    module: string;
+    file: string;
+  };
+  props: {
+    fileDoc: CodeFileDoc;
+  };
+}
+
+export function getStaticPaths(): StaticPath[] {
+  const projects = getProjectSummaries();
+  return projects.flatMap((project) =>
+    project.modules.flatMap((moduleSummary) =>
+      moduleSummary.files.map((fileDoc) => ({
+        params: {
+          project: fileDoc.project,
+          module: fileDoc.module,
+          file: fileDoc.fileSlug,
+        },
+        props: {
+          fileDoc,
+        },
+      })),
+    ),
+  );
+}
+
+const { fileDoc } = Astro.props;
+const moduleHref = `/reference/code/${encodeURIComponent(fileDoc.project)}/${encodeURIComponent(fileDoc.module)}/`;
+const pageTitle = `${fileDoc.fileName} (${fileDoc.projectTitle})`;
+const pageDescription = `API reference generated from Doxygen XML for ${fileDoc.sourcePath}.`;
+---
+
+<StarlightPage frontmatter={{ title: pageTitle, description: pageDescription }}>
+  <div class="overview-grid">
+    <p><strong>Project</strong><br /><code>{fileDoc.project}</code></p>
+    <p><strong>Module</strong><br /><a href={moduleHref}><code>{fileDoc.module}</code></a></p>
+    <p><strong>Functions</strong><br /><code>{fileDoc.functions.length}</code></p>
+    <p><strong>Types</strong><br /><code>{fileDoc.classes.length}</code></p>
+  </div>
+  <p><strong>Source Files</strong></p>
+  <ul>
+    {fileDoc.sourcePaths.map((sourcePath) => <li><code>{sourcePath}</code></li>)}
+  </ul>
+  {fileDoc.brief && <p>{fileDoc.brief}</p>}
+
+  <h2 id="functions">Functions</h2>
+  {
+    fileDoc.functions.length > 0 ? (
+      fileDoc.functions.map((functionDoc) => <FunctionDoc functionDoc={functionDoc} />)
+    ) : (
+      <p class="placeholder">No free functions documented for this file.</p>
+    )
+  }
+
+  <h2 id="types">Types</h2>
+  {
+    fileDoc.classes.length > 0 ? (
+      fileDoc.classes.map((classDoc) => <ClassDoc classDoc={classDoc} />)
+    ) : (
+      <p class="placeholder">No classes or structs documented for this file.</p>
+    )
+  }
+</StarlightPage>
+
+<style>
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 0.75rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background: color-mix(in srgb, var(--sl-color-gray-6) 16%, transparent);
+  }
+
+  .overview-grid p {
+    margin: 0;
+  }
+
+  .placeholder {
+    font-style: italic;
+  }
+</style>

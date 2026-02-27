@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_communication_8h" kind="file" language="C++">
+    <compoundname>Communication.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">painlessMesh.h</includes>
+    <includedby refid="_dezibot_8h" local="yes">dezibot/src/Dezibot.h</includedby>
+    <includedby refid="_slave_8cpp" local="yes">dezibot/src/autocharge/slave/Slave.cpp</includedby>
+    <includedby refid="_communication_8cpp" local="yes">dezibot/src/communication/Communication.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dezibot/src/communication/Communication.h</label>
+        <link refid="_communication_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>painlessMesh.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>dezibot/src/Dezibot.cpp</label>
+        <link refid="_dezibot_8cpp"/>
+      </node>
+      <node id="2">
+        <label>dezibot/src/Dezibot.h</label>
+        <link refid="_dezibot_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="6">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="4">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dezibot/src/autocharge/slave/Slave.cpp</label>
+        <link refid="_slave_8cpp"/>
+      </node>
+      <node id="7">
+        <label>dezibot/src/autocharge/slave/Slave.hpp</label>
+        <link refid="_slave_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dezibot/src/communication/Communication.cpp</label>
+        <link refid="_communication_8cpp"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/communication/Communication.h</label>
+        <link refid="_communication_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_communication" prot="public">Communication</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_communication_8h_1a3cff1c27d78708c0c0fd803ccab37ca7" prot="public" static="no">
+        <name>MESH_PREFIX</name>
+        <initializer>&quot;DEZIBOT_MESH&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="8" column="11" bodyfile="dezibot/src/communication/Communication.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_communication_8h_1af6cdc02b83c744305b96acc45053cf3b" prot="public" static="no">
+        <name>MESH_PASSWORD</name>
+        <initializer>&quot;somethingSneaky&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="9" column="11" bodyfile="dezibot/src/communication/Communication.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_communication_8h_1a18c25eaf6d7220b554300a512776d52f" prot="public" static="no">
+        <name>MESH_PORT</name>
+        <initializer>5555</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="10" column="11" bodyfile="dezibot/src/communication/Communication.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Communication_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Communication_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;painlessMesh.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_communication_8h_1a3cff1c27d78708c0c0fd803ccab37ca7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MESH_PREFIX<sp/><sp/><sp/><sp/><sp/>&quot;DEZIBOT_MESH&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="_communication_8h_1af6cdc02b83c744305b96acc45053cf3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MESH_PASSWORD<sp/><sp/><sp/>&quot;somethingSneaky&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_communication_8h_1a18c25eaf6d7220b554300a512776d52f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/>MESH_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>5555</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_communication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_communication" kindref="compound">Communication</ref>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_communication_1af7eea76d811d38b02fb67ec5133e6eec" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_communication_1afe643701ab2545e227e051a22be6485f" kindref="member">setGroupNumber</ref>(uint32_t<sp/>number);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_communication_1adc69c7bb0c0e5b22a32afa47a37bcaee" kindref="member">broadcast</ref>(String<sp/>msg);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_communication_1ac35e1b8d6d44a3dab4cb49cba0331cbc" kindref="member">unicast</ref>(uint32_t<sp/>targetId,<sp/>String<sp/>msg);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_communication_1ad3592ea7ee006faddb0fcc18ea3c806e" kindref="member">onReceiveGroup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*callbackFunc)(uint32_t<sp/>from,<sp/>String<sp/>&amp;msg));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_communication_1a7b87a1a8c765ad2eaabca50f88568337" kindref="member">onReceiveSingle</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*callbackFunc)(uint32_t<sp/>from,<sp/>String<sp/>&amp;msg));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_communication_1ae1b48a873b79a022a5a68ae3b2e21dc5" kindref="member">getNodeId</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>void<sp/>(*userCallbackSingle)(uint32_t<sp/>from,<sp/>String<sp/>&amp;msg);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>void<sp/>(*userCallbackGroup)(uint32_t<sp/>from,<sp/>String<sp/>&amp;msg);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>receivedCallback(uint32_t<sp/>from,<sp/>String<sp/>&amp;msg);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>groupNumber;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//Communication_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/communication/Communication.h"/>
+  </compounddef>
+</doxygen>

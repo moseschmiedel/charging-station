@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_motion_8h" kind="file" language="C++">
+    <compoundname>Motion.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">freertos/FreeRTOS.h</includes>
+    <includes local="no">freertos/task.h</includes>
+    <includes local="yes">driver/ledc.h</includes>
+    <includes refid="_motion_detection_8h" local="yes">motionDetection/MotionDetection.h</includes>
+    <includedby refid="_dezibot_8h" local="yes">dezibot/src/Dezibot.h</includedby>
+    <includedby refid="_motion_8cpp" local="yes">dezibot/src/motion/Motion.cpp</includedby>
+    <includedby refid="_motor_8cpp" local="yes">dezibot/src/motion/Motor.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>dezibot/src/motion/Motion.h</label>
+        <link refid="_motion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>IMU_CMDs.h</label>
+        <link refid="_i_m_u___c_m_ds_8h"/>
+      </node>
+      <node id="7">
+        <label>motionDetection/MotionDetection.h</label>
+        <link refid="_motion_detection_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="8">
+        <label>SPI.h</label>
+      </node>
+      <node id="6">
+        <label>driver/ledc.h</label>
+      </node>
+      <node id="4">
+        <label>freertos/FreeRTOS.h</label>
+      </node>
+      <node id="5">
+        <label>freertos/task.h</label>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>dezibot/src/Dezibot.cpp</label>
+        <link refid="_dezibot_8cpp"/>
+      </node>
+      <node id="2">
+        <label>dezibot/src/Dezibot.h</label>
+        <link refid="_dezibot_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="6">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="4">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dezibot/src/autocharge/slave/Slave.cpp</label>
+        <link refid="_slave_8cpp"/>
+      </node>
+      <node id="7">
+        <label>dezibot/src/autocharge/slave/Slave.hpp</label>
+        <link refid="_slave_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dezibot/src/motion/Motion.cpp</label>
+        <link refid="_motion_8cpp"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/motion/Motion.h</label>
+        <link refid="_motion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dezibot/src/motion/Motor.cpp</label>
+        <link refid="_motor_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_motor" prot="public">Motor</innerclass>
+    <innerclass refid="class_motion" prot="public">Motion</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_motion_8h_1adaeb1cfe90b02710d73c9eb032e05bb6" prot="public" static="no">
+        <name>LEDC_MODE</name>
+        <initializer>LEDC_LOW_SPEED_MODE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="20" column="23" bodyfile="dezibot/src/motion/Motion.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" prot="public" static="no">
+        <name>TIMER</name>
+        <initializer>LEDC_TIMER_2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="21" column="9" bodyfile="dezibot/src/motion/Motion.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_motion_8h_1ab758924897efcdba10da36f79a38a103" prot="public" static="no">
+        <name>CHANNEL_LEFT</name>
+        <initializer>LEDC_CHANNEL_3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="22" column="9" bodyfile="dezibot/src/motion/Motion.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_motion_8h_1aee42717f6069b240ff12670aaee3ad42" prot="public" static="no">
+        <name>CHANNEL_RIGHT</name>
+        <initializer>LEDC_CHANNEL_4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="23" column="9" bodyfile="dezibot/src/motion/Motion.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_motion_8h_1a4a291e38e9004e007645725cda0e9c2d" prot="public" static="no">
+        <name>DUTY_RES</name>
+        <initializer>LEDC_TIMER_13_BIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="24" column="9" bodyfile="dezibot/src/motion/Motion.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_motion_8h_1a84142cd3e3bf14c4ecd4b6707a808c39" prot="public" static="no">
+        <name>FREQUENCY</name>
+        <initializer>(5000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="25" column="9" bodyfile="dezibot/src/motion/Motion.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_motion_8h_1a850d90141d22c806c346487d1b690082" prot="public" static="no">
+        <name>DEFAULT_BASE_VALUE</name>
+        <initializer>3900</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="26" column="9" bodyfile="dezibot/src/motion/Motion.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This component controls the ability to rotate and change position. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jonathan Schulze, Nick Hübenthal, Hans Haupt </para>
+</simplesect>
+<simplesect kind="version"><para>0.2 </para>
+</simplesect>
+<simplesect kind="date"><para>2023-12-13</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2023 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Motion_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Motion_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;freertos/FreeRTOS.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;freertos/task.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;driver/ledc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_motion_detection_8h" kindref="compound">motionDetection/MotionDetection.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_motion_8h_1adaeb1cfe90b02710d73c9eb032e05bb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEDC_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDC_LOW_SPEED_MODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDC_TIMER_2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_motion_8h_1ab758924897efcdba10da36f79a38a103" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHANNEL_LEFT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDC_CHANNEL_3<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="_motion_8h_1aee42717f6069b240ff12670aaee3ad42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHANNEL_RIGHT<sp/><sp/><sp/><sp/><sp/><sp/>LEDC_CHANNEL_4<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_motion_8h_1a4a291e38e9004e007645725cda0e9c2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DUTY_RES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEDC_TIMER_13_BIT<sp/></highlight><highlight class="comment">//<sp/>Set<sp/>duty<sp/>resolution<sp/>to<sp/>13<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_motion_8h_1a84142cd3e3bf14c4ecd4b6707a808c39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FREQUENCY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(5000)<sp/></highlight><highlight class="comment">//<sp/>Frequency<sp/>in<sp/>Hertz.<sp/>Set<sp/>frequency<sp/>at<sp/>5<sp/>kHz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_motion_8h_1a850d90141d22c806c346487d1b690082" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_BASE_VALUE<sp/><sp/>3900</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_motor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_motor_1a6329b2766faceab988244d01362539aa" kindref="member">Motor</ref>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_motor_1a6329b2766faceab988244d01362539aa" kindref="member">Motor</ref>(uint8_t<sp/><ref refid="class_motor_1ac5b603def5973874c29d5b25b7deb42c" kindref="member">pin</ref>,<sp/>ledc_timer_t<sp/><ref refid="class_motor_1af1e002fa579fa991c8ea2a81eb98fe44" kindref="member">timer</ref>,<sp/>ledc_channel_t<sp/><ref refid="class_motor_1abffc4e140e4ee8b988680304c9527bae" kindref="member">channel</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_1a6be167642542458d397b08d89513576b" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motor_1a88e5f69c260d67d9f7d25616de8e2bf7" kindref="member">setSpeed</ref>(uint16_t<sp/><ref refid="class_motor_1a6cbdaabe22898182b391618fbc9ca4a2" kindref="member">duty</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_motor_1a1cc4a7f2edd7d4885c96f169bce2d9fd" kindref="member">getSpeed</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="class_motor_1ac5b603def5973874c29d5b25b7deb42c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_motor_1ac5b603def5973874c29d5b25b7deb42c" kindref="member">pin</ref>;</highlight></codeline>
+<codeline lineno="53" refid="class_motor_1af1e002fa579fa991c8ea2a81eb98fe44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ledc_timer_t<sp/><ref refid="class_motor_1af1e002fa579fa991c8ea2a81eb98fe44" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="54" refid="class_motor_1abffc4e140e4ee8b988680304c9527bae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ledc_channel_t<sp/><ref refid="class_motor_1abffc4e140e4ee8b988680304c9527bae" kindref="member">channel</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="class_motor_1a6cbdaabe22898182b391618fbc9ca4a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_motor_1a6cbdaabe22898182b391618fbc9ca4a2" kindref="member">duty</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_motion" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_motion" kindref="compound">Motion</ref>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61" refid="class_motion_1a220a4afda6c4c1774aa85e2a5c5d63da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_motion_1a220a4afda6c4c1774aa85e2a5c5d63da" kindref="member">RIGHT_MOTOR_DUTY</ref><sp/>=<sp/><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref>;</highlight></codeline>
+<codeline lineno="62" refid="class_motion_1ace4b91ef17cada10db5ec4eaf89475ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_motion_1ace4b91ef17cada10db5ec4eaf89475ae" kindref="member">LEFT_MOTOR_DUTY</ref><sp/>=<sp/><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref>;</highlight></codeline>
+<codeline lineno="63" refid="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" kindref="member">MOTOR_RIGHT_PIN</ref><sp/>=<sp/>11;<sp/></highlight></codeline>
+<codeline lineno="64" refid="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" kindref="member">MOTOR_LEFT_PIN</ref><sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1af664e0e90da90964f77190d4da19e6cf" kindref="member">moveTask</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>args);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a66808437e25311fb03f69b8a8ad7565f" kindref="member">leftMotorTask</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>args);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a722c99b5ead487d353c289be0fc9a085" kindref="member">rightMotorTask</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>args);</highlight></codeline>
+<codeline lineno="68" refid="class_motion_1acc000439521d9e60f48f2bb8f17e8c0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>TaskHandle_t<sp/><ref refid="class_motion_1acc000439521d9e60f48f2bb8f17e8c0b" kindref="member">xMoveTaskHandle</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="69" refid="class_motion_1aea1d38206dd3cd3e9c6065826b35b6b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>TaskHandle_t<sp/><ref refid="class_motion_1aea1d38206dd3cd3e9c6065826b35b6b3" kindref="member">xClockwiseTaskHandle</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="70" refid="class_motion_1a9432d709c1cf4c5362cddbf6cb0846c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>TaskHandle_t<sp/><ref refid="class_motion_1a9432d709c1cf4c5362cddbf6cb0846c3" kindref="member">xAntiClockwiseTaskHandle</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="71" refid="class_motion_1a19c2685f7f8c5eaefcebe6ca593f93ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>TickType_t<sp/><ref refid="class_motion_1a19c2685f7f8c5eaefcebe6ca593f93ca" kindref="member">xLastWakeTime</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_motion_1a8caeae26554a0231878de8c9d240b186" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref>*<sp/><ref refid="class_motion_1a8caeae26554a0231878de8c9d240b186" kindref="member">buffer</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref>[64];</highlight></codeline>
+<codeline lineno="74" refid="class_motion_1a55b01588e3ae1fc4f6773f28036ec76c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a55b01588e3ae1fc4f6773f28036ec76c" kindref="member">correctionThreshold</ref><sp/>=<sp/>150;<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Instances<sp/>of<sp/>the<sp/>motors,<sp/>so<sp/>they<sp/>can<sp/>also<sp/>be<sp/>used<sp/>from<sp/>outside<sp/>to<sp/>set<sp/>values<sp/>for<sp/>the<sp/>motors<sp/>directly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_motion_1a61000bc6a3f36b44c392b21e1b48eb90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_motor" kindref="compound">Motor</ref><sp/><ref refid="class_motion_1a61000bc6a3f36b44c392b21e1b48eb90" kindref="member">left</ref><sp/>=<sp/><ref refid="class_motor" kindref="compound">Motor</ref>(<ref refid="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" kindref="member">MOTOR_LEFT_PIN</ref>,<ref refid="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" kindref="member">TIMER</ref>,<ref refid="_motion_8h_1ab758924897efcdba10da36f79a38a103" kindref="member">CHANNEL_LEFT</ref>);</highlight></codeline>
+<codeline lineno="79" refid="class_motion_1af822d19ebc08f0982a9f3ef703d673ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_motor" kindref="compound">Motor</ref><sp/><ref refid="class_motion_1af822d19ebc08f0982a9f3ef703d673ed" kindref="member">right</ref><sp/>=<sp/><ref refid="class_motor" kindref="compound">Motor</ref>(<ref refid="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" kindref="member">MOTOR_RIGHT_PIN</ref>,<ref refid="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" kindref="member">TIMER</ref>,<ref refid="_motion_8h_1aee42717f6069b240ff12670aaee3ad42" kindref="member">CHANNEL_RIGHT</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MotionDetection<sp/>instance,<sp/>for<sp/>motion<sp/>Correction<sp/>and<sp/>user<sp/>(access<sp/>with<sp/>dezibot.motion.detection)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_motion_1a91f1eb93380a20a97c2868baf21e61b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_motion_detection" kindref="compound">MotionDetection</ref><sp/><ref refid="class_motion_1a91f1eb93380a20a97c2868baf21e61b0" kindref="member">detection</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a43f6e43bb59734d35206e18a22bfe8a4" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a929f07ef5f5821468f433b9772bce416" kindref="member">move</ref>(uint32_t<sp/>moveForMs=0,uint<sp/>baseValue=<ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1ae812e47ee6ddef344d838458b09cd5bf" kindref="member">rotateClockwise</ref>(uint32_t<sp/>rotateForMs=0,uint<sp/>baseValue=<ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a21f08f6d4bda91747ca4ae4505378108" kindref="member">rotateAntiClockwise</ref>(uint32_t<sp/>rotateForMs=0,uint<sp/>baseValue=<ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" kindref="member">stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="class_motion_1ab3895e38d77fc82c4a4bec5df2ba4c47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_motion_1ab3895e38d77fc82c4a4bec5df2ba4c47" kindref="member">moveWithoutCorrection</ref>(uint32_t<sp/>moveForMs=0,<sp/>uint<sp/>baseValue<sp/>=<sp/><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//Motion_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/motion/Motion.h"/>
+  </compounddef>
+</doxygen>

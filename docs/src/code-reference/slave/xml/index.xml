@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="class_beacon_tracker" kind="class"><name>BeaconTracker</name>
+    <member refid="class_beacon_tracker_1a2836c9f39078899a2ee352014118aec4" kind="variable"><name>config_</name></member>
+    <member refid="class_beacon_tracker_1a1cadcf0152748fedff86a124fc3dcf04" kind="variable"><name>state_</name></member>
+    <member refid="class_beacon_tracker_1ad5a711aaa200252d3c24da8c1b0b6ca4" kind="variable"><name>historyFront_</name></member>
+    <member refid="class_beacon_tracker_1a72540db62fd8ba50b2485835a78048e2" kind="variable"><name>historyBack_</name></member>
+    <member refid="class_beacon_tracker_1a237fbdd06d6d8f13b91f877a1de8f6c8" kind="variable"><name>historyLeft_</name></member>
+    <member refid="class_beacon_tracker_1a1074b1e81f2127a87630c05db83066e4" kind="variable"><name>historyRight_</name></member>
+    <member refid="class_beacon_tracker_1a62417ab3404c4b314510d96ccd0c0d9b" kind="variable"><name>previousSignal_</name></member>
+    <member refid="class_beacon_tracker_1a4948fb493b443f36e592abb32768fd3e" kind="variable"><name>guardUntilMs_</name></member>
+    <member refid="class_beacon_tracker_1a6aa154b31c9f11f08560efcc66c9c623" kind="function"><name>BeaconTracker</name></member>
+    <member refid="class_beacon_tracker_1a48748963878819d40b9000ded5bedda4" kind="function"><name>update</name></member>
+    <member refid="class_beacon_tracker_1a9ec5d383bdf0782316730e1309efdc66" kind="function"><name>state</name></member>
+    <member refid="class_beacon_tracker_1af5c8bdc762366f061d8f799fa8299682" kind="function"><name>reset</name></member>
+    <member refid="class_beacon_tracker_1a40cf4edac6de614560ece9b6edf337aa" kind="function"><name>median3</name></member>
+    <member refid="class_beacon_tracker_1a62718b90629971892f9b46d26bd60fb9" kind="function"><name>clampf</name></member>
+    <member refid="class_beacon_tracker_1a41841be5f8adf0a2e318574d28c9d0dd" kind="function"><name>isBefore</name></member>
+    <member refid="class_beacon_tracker_1ab4f2b893952663412ff35a74d373a579" kind="function"><name>pushAndMedian</name></member>
+    <member refid="class_beacon_tracker_1afa6491a7ecbcb53c5ba4061094a18f86" kind="function"><name>extendGuard</name></member>
+    <member refid="class_beacon_tracker_1a23abe610fe102751716a30977e8045ea" kind="function"><name>guardActive</name></member>
+  </compound>
+  <compound refid="struct_beacon_tracker_config" kind="struct"><name>BeaconTrackerConfig</name>
+    <member refid="struct_beacon_tracker_config_1ad44dcebe292bc67d3c0f600c29e04785" kind="variable"><name>front</name></member>
+    <member refid="struct_beacon_tracker_config_1a27fda1fc9599c6258a08b2e6b63a6ef2" kind="variable"><name>back</name></member>
+    <member refid="struct_beacon_tracker_config_1a7b304c02321d26fdb4d1f2e08b2cd436" kind="variable"><name>left</name></member>
+    <member refid="struct_beacon_tracker_config_1ac8fdd2db100137d65d6af524e718524e" kind="variable"><name>right</name></member>
+    <member refid="struct_beacon_tracker_config_1a1935eb76273ef3cb6ef0cb3f13770c08" kind="variable"><name>signalMin</name></member>
+    <member refid="struct_beacon_tracker_config_1a4a031eb8f49bd60b2dd397fde7d7c417" kind="variable"><name>angleAlpha</name></member>
+    <member refid="struct_beacon_tracker_config_1a07d9f4531d96bcbb402496f32bf61e90" kind="variable"><name>maxAngleStepRad</name></member>
+    <member refid="struct_beacon_tracker_config_1a83d9b73d16a61b3f1dede56657735722" kind="variable"><name>signalDropGuardRatio</name></member>
+    <member refid="struct_beacon_tracker_config_1a7c83ce4b9a4ae0880492eaf316064e75" kind="variable"><name>saturationRawThreshold</name></member>
+    <member refid="struct_beacon_tracker_config_1aeef5bacb1c5d0cb1bb7b80ded17d83b4" kind="variable"><name>guardHoldMs</name></member>
+  </compound>
+  <compound refid="struct_beacon_tracker_state" kind="struct"><name>BeaconTrackerState</name>
+    <member refid="struct_beacon_tracker_state_1a6b565e213e8dce00c50c6e6d5df6e163" kind="variable"><name>timestampMs</name></member>
+    <member refid="struct_beacon_tracker_state_1a139c86415c7dce4d10577929d5046e06" kind="variable"><name>rawFront</name></member>
+    <member refid="struct_beacon_tracker_state_1a4179728f38eb38a0af6ceeff8625c267" kind="variable"><name>rawBack</name></member>
+    <member refid="struct_beacon_tracker_state_1a9992b05324d156b0f35cf0e60c54a9c8" kind="variable"><name>rawLeft</name></member>
+    <member refid="struct_beacon_tracker_state_1a8a722259cd20fb37a664f3b951974d36" kind="variable"><name>rawRight</name></member>
+    <member refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" kind="variable"><name>front</name></member>
+    <member refid="struct_beacon_tracker_state_1ac2654a2b0cdf2ba45f93c1961844b51f" kind="variable"><name>back</name></member>
+    <member refid="struct_beacon_tracker_state_1ae21621aef92669de86eb80071a755c91" kind="variable"><name>left</name></member>
+    <member refid="struct_beacon_tracker_state_1a328db37e1d0b06fb53961415c03255de" kind="variable"><name>right</name></member>
+    <member refid="struct_beacon_tracker_state_1aef186fb93c0544d80123761953c1325e" kind="variable"><name>vx</name></member>
+    <member refid="struct_beacon_tracker_state_1a2b10f05fc766531b06af1053cf4a4b51" kind="variable"><name>vy</name></member>
+    <member refid="struct_beacon_tracker_state_1a3c86db35e1f653857bd3beb20ce137de" kind="variable"><name>theta</name></member>
+    <member refid="struct_beacon_tracker_state_1acdbd3f46f3d0e06e542051211b330602" kind="variable"><name>filteredTheta</name></member>
+    <member refid="struct_beacon_tracker_state_1ae5b0ba0ef79403c4565d1d38c8a37185" kind="variable"><name>totalSignal</name></member>
+    <member refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" kind="variable"><name>detected</name></member>
+    <member refid="struct_beacon_tracker_state_1adefaa8f94c723008c071eac962b5a607" kind="variable"><name>initialized</name></member>
+  </compound>
+  <compound refid="struct_beacon_tracker_1_1_channel_history" kind="struct"><name>BeaconTracker::ChannelHistory</name>
+    <member refid="struct_beacon_tracker_1_1_channel_history_1af4ee05d242681a60cab41b925a371468" kind="variable"><name>values</name></member>
+    <member refid="struct_beacon_tracker_1_1_channel_history_1af3a933d1ea0abf03c58e7ba06d26df38" kind="variable"><name>count</name></member>
+    <member refid="struct_beacon_tracker_1_1_channel_history_1a50d0aaca9df8516f86c0ed0998bc5c82" kind="variable"><name>index</name></member>
+  </compound>
+  <compound refid="class_i_r_value" kind="class"><name>IRValue</name>
+    <member refid="class_i_r_value_1aa448e759c64ea654722e8c0d48576936" kind="variable"><name>value</name></member>
+    <member refid="class_i_r_value_1a6d9b29200c69a4ad72db49f7f5e7e067" kind="variable"><name>counter</name></member>
+    <member refid="class_i_r_value_1a320faf87532048df258d3becef59aa1b" kind="variable"><name>maxCounter</name></member>
+    <member refid="class_i_r_value_1aa6e3af3e6c71fb4d5dcde9a85654be78" kind="variable"><name>minThreshold</name></member>
+    <member refid="class_i_r_value_1aba0b67206beb7e026427ede4a1fefd8f" kind="function"><name>IRValue</name></member>
+    <member refid="class_i_r_value_1aa491c83f7fd0736f477d5a057ec4a747" kind="function"><name>IRValue</name></member>
+    <member refid="class_i_r_value_1a0875d283da62069cb60cb81409b19d97" kind="function"><name>update</name></member>
+    <member refid="class_i_r_value_1a04c4a2312586f8880c405d70a2b41370" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="struct_sensor_calibration" kind="struct"><name>SensorCalibration</name>
+    <member refid="struct_sensor_calibration_1af24ce7d8dd53818dfdae3021124ac49b" kind="variable"><name>gain</name></member>
+    <member refid="struct_sensor_calibration_1a40d57916cab30a4040364fd34ffab1de" kind="variable"><name>offset</name></member>
+  </compound>
+  <compound refid="namespace_0d056201327277236057117111302050170021221110067227" kind="namespace"><name>@056201327277236057117111302050170021221110067227</name>
+  </compound>
+  <compound refid="namespace_0d133373023341251050133062246330001040272054201211" kind="namespace"><name>@133373023341251050133062246330001040272054201211</name>
+  </compound>
+  <compound refid="beacon__tracker_8cpp" kind="file"><name>beacon_tracker.cpp</name>
+  </compound>
+  <compound refid="beacon__tracker_8h" kind="file"><name>beacon_tracker.h</name>
+  </compound>
+  <compound refid="ir__value_8h" kind="file"><name>ir_value.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a194b53757bea102ac0e62123154ceb33" kind="variable"><name>trackerConfig</name></member>
+    <member refid="main_8cpp_1ac6d2e952aa82dccb6ae516df07e367e1" kind="variable"><name>tracker</name></member>
+    <member refid="main_8cpp_1a1864eaaffb4c1888483735fab1a13133" kind="variable"><name>navigationActive</name></member>
+    <member refid="main_8cpp_1abd6b37b2ae22d2c3a8d726aac5046d9a" kind="variable"><name>ledsOn</name></member>
+    <member refid="main_8cpp_1a13300ab14ca4cd741272cba3fe6b1a8e" kind="variable"><name>searchClockwise</name></member>
+    <member refid="main_8cpp_1aff7558c04577aec51304442a0d1a9a5f" kind="variable"><name>lastLeftDuty</name></member>
+    <member refid="main_8cpp_1a11696dc7f86766ed8b830b8b55e5a653" kind="variable"><name>lastRightDuty</name></member>
+    <member refid="main_8cpp_1adaae8fb1daafe843c390654814cd5d85" kind="variable"><name>nextControlAtMs</name></member>
+    <member refid="main_8cpp_1a395c486c721117c7f148aec5b650e3d1" kind="variable"><name>lastLedToggleAtMs</name></member>
+    <member refid="main_8cpp_1a65dfdb127813821b3470f332574a313b" kind="variable"><name>lastSearchFlipAtMs</name></member>
+    <member refid="main_8cpp_1a4cb868fab8ee758076ba237c650cbc35" kind="variable"><name>lastLogAtMs</name></member>
+    <member refid="main_8cpp_1a112cb66ef5ebefc34a4fccec32df5e4e" kind="variable"><name>lastWallJitterFlipAtMs</name></member>
+    <member refid="main_8cpp_1ab5989ae2af03ac0f6acd0373c54a8220" kind="variable"><name>wallJitterSign</name></member>
+    <member refid="main_8cpp_1a914c8c0e9995bc2b4a1ddf96c18b0308" kind="variable"><name>requestedStop</name></member>
+    <member refid="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" kind="variable"><name>chargingSlaves</name></member>
+    <member refid="main_8cpp_1a36ae1cdbb4a2213ce16ab34ab6f52254" kind="variable"><name>master</name></member>
+    <member refid="main_8cpp_1ae5944f4c3d54cf6bb4aa49a34c5a48a1" kind="variable"><name>slave</name></member>
+    <member refid="main_8cpp_1a5a700a8b068dc863a8ee75f6cf291375" kind="function"><name>applyMotorDuties</name></member>
+    <member refid="main_8cpp_1a122db2e588269f9a0d5e7874325a36a0" kind="function"><name>resetNavigation</name></member>
+    <member refid="main_8cpp_1a3f2732a8b6711cfcf655d385994de63f" kind="function"><name>beginNavigation</name></member>
+    <member refid="main_8cpp_1a3e13a166432b37068ae81532f0f2cbae" kind="function"><name>shouldRunControl</name></member>
+    <member refid="main_8cpp_1a1ad66c8c31c4da88351181fa1c7545e6" kind="function"><name>toggleNavigationLed</name></member>
+    <member refid="main_8cpp_1a1e690c01b4fa115a892b3492f4ebe3cc" kind="function"><name>driveSearch</name></member>
+    <member refid="main_8cpp_1a3e4d314622562ea746ed01133ccdd791" kind="function"><name>wallJitterTerm</name></member>
+    <member refid="main_8cpp_1aae750d44076eafbfc278908916aedde2" kind="function"><name>driveTracking</name></member>
+    <member refid="main_8cpp_1a39f6c5719e854735e1bc4591f1a44e7e" kind="function"><name>reachedArrival</name></member>
+    <member refid="main_8cpp_1acb0d128225f87eeab2104d5b01dacdaf" kind="function"><name>logNavigation</name></member>
+    <member refid="main_8cpp_1addcef59bf035ca87bfc1459a78eb0f3a" kind="function"><name>step_work</name></member>
+    <member refid="main_8cpp_1a85e9839ef12822ba5a63442d844af9fe" kind="function"><name>step_to_charge</name></member>
+    <member refid="main_8cpp_1afd93aab439539234576cf7837e548eaf" kind="function"><name>step_wait_charge</name></member>
+    <member refid="main_8cpp_1a73a930e83cd1193fe38c5a7cef4d4cae" kind="function"><name>step_into_charge</name></member>
+    <member refid="main_8cpp_1a433be12d39cb8afd6e9369335c94490d" kind="function"><name>step_charge</name></member>
+    <member refid="main_8cpp_1a14372e23c523a72fca1c7185752f571b" kind="function"><name>step_exit_charge</name></member>
+    <member refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="dir_39a86c731a2e7f0709b2ecd5aa6789b2" kind="dir"><name>slave</name>
+  </compound>
+  <compound refid="dir_9fa061267e91b55663abe1391f30f38f" kind="dir"><name>slave/src</name>
+  </compound>
+</doxygenindex>

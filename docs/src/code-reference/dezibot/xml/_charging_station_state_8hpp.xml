@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_charging_station_state_8hpp" kind="file" language="C++">
+    <compoundname>ChargingStationState.hpp</compoundname>
+    <includedby refid="_autocharge_8hpp" local="yes">dezibot/src/autocharge/Autocharge.hpp</includedby>
+    <includedby refid="_master_8hpp" local="yes">dezibot/src/autocharge/master/Master.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/autocharge/master/ChargingStationState.hpp</label>
+        <link refid="_charging_station_state_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="3">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ChargingStationState</name>
+        <enumvalue id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976aa38bd5138bf35514df41a1795ebbf5c3" prot="public">
+          <name>OPEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a1664e2606313837bcbd2c814dd200c16" prot="public">
+          <name>LOWERING_TO_WALK_IN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a110ccf2f5d2ff4eda1fd1a494293467d" prot="public">
+          <name>CLOSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a6bee7e22b1ec8e42848884ed52e0a00a" prot="public">
+          <name>ATTACHING_GEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a4fd4efc3c2e191b599386015a68f94d7" prot="public">
+          <name>SLAVE_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976acd2753a267b089d6926226ddd187c2bf" prot="public">
+          <name>LIFTING_GEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/autocharge/master/ChargingStationState.hpp" line="3" column="1" bodyfile="dezibot/src/autocharge/master/ChargingStationState.hpp" bodystart="3" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976" kindref="member">ChargingStationState</ref><sp/>{</highlight></codeline>
+<codeline lineno="4" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976aa38bd5138bf35514df41a1795ebbf5c3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976aa38bd5138bf35514df41a1795ebbf5c3" kindref="member">OPEN</ref>,</highlight></codeline>
+<codeline lineno="5" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a1664e2606313837bcbd2c814dd200c16" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a1664e2606313837bcbd2c814dd200c16" kindref="member">LOWERING_TO_WALK_IN</ref>,</highlight></codeline>
+<codeline lineno="6" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a110ccf2f5d2ff4eda1fd1a494293467d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a110ccf2f5d2ff4eda1fd1a494293467d" kindref="member">CLOSED</ref>,</highlight></codeline>
+<codeline lineno="7" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a6bee7e22b1ec8e42848884ed52e0a00a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a6bee7e22b1ec8e42848884ed52e0a00a" kindref="member">ATTACHING_GEAR</ref>,</highlight></codeline>
+<codeline lineno="8" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a4fd4efc3c2e191b599386015a68f94d7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976a4fd4efc3c2e191b599386015a68f94d7" kindref="member">SLAVE_CHARGE</ref>,</highlight></codeline>
+<codeline lineno="9" refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976acd2753a267b089d6926226ddd187c2bf" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_charging_station_state_8hpp_1a590e5a5ddf2b40d17b810690f4941976acd2753a267b089d6926226ddd187c2bf" kindref="member">LIFTING_GEAR</ref>,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/autocharge/master/ChargingStationState.hpp"/>
+  </compounddef>
+</doxygen>

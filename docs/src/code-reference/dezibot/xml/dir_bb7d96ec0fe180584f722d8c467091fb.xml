@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_bb7d96ec0fe180584f722d8c467091fb" kind="dir">
+    <compoundname>dezibot/src/autocharge/master</compoundname>
+    <innerdir refid="dir_9429171019393cec1d37bc2d1318bb73">dezibot/src/autocharge/master/abstractSet</innerdir>
+    <innerfile refid="_charging_station_state_8hpp">ChargingStationState.hpp</innerfile>
+    <innerfile refid="_master_8cpp">Master.cpp</innerfile>
+    <innerfile refid="_master_8hpp">Master.hpp</innerfile>
+    <innerfile refid="_slave_data_8hpp">SlaveData.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/autocharge/master/"/>
+  </compounddef>
+</doxygen>

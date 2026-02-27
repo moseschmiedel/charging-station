@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_light_detection_8cpp" kind="file" language="C++">
+    <compoundname>LightDetection.cpp</compoundname>
+    <includes refid="_light_detection_8h" local="yes">LightDetection.h</includes>
+    <includes local="no">limits.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>dezibot/src/lightDetection/LightDetection.cpp</label>
+        <link refid="_light_detection_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LightDetection.h</label>
+        <link refid="_light_detection_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="5">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_light_detection_8h" kindref="compound">LightDetection.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1afe7fb577a53c1d9efbc70ebac9e04e94" kindref="member">LightDetection::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_light_detection_1a2b2c0006c917cf3ad15acbea37a4d3d4" kindref="member">LightDetection::beginInfrared</ref>();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_light_detection_1a2678305979c37e5c7ae7d0b8fc66575c" kindref="member">LightDetection::beginDaylight</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">uint16_t<sp/><ref refid="class_light_detection_1a691d0813257d5fa4094496da34866875" kindref="member">LightDetection::getValue</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(sensor){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Fall<sp/>Through<sp/>intended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kindref="member">IR_FRONT</ref>:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" kindref="member">IR_LEFT</ref>:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" kindref="member">IR_RIGHT</ref>:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" kindref="member">IR_BACK</ref>:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1a4f0bf4d18ddde3854aa5c6791bd25999" kindref="member">readIRPT</ref>(sensor);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" kindref="member">DL_BOTTOM</ref>:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kindref="member">DL_FRONT</ref>:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1a99285843dae4e4b560e5d241700352a7" kindref="member">readDLPT</ref>(sensor);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//currently<sp/>not<sp/>reachable,<sp/>just<sp/>if<sp/>enum<sp/>will<sp/>be<sp/>extended<sp/>in<sp/>the<sp/>future</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>UINT16_MAX;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/><ref refid="class_light_detection_1addefd7ac51cd90cc4b2a99261a6f73a7" kindref="member">LightDetection::getBrightest</ref>(<ref refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2" kindref="member">ptType</ref><sp/>type){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>maxSensor;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>maxReading<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>currentReading<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/><ref refid="_light_detection_8h_1afbd7752579b188a7284b2d44acf777b2a37f5e4ec9707c7d3c7ecf1bad3e740c4" kindref="member">IR</ref>){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxSensor<sp/>=<sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kindref="member">IR_FRONT</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pt<sp/>:<sp/><ref refid="_light_detection_8h_1a541b30a4ccaf388bd8cc9357cd85514a" kindref="member">allIRPTs</ref>){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentReading<sp/>=<sp/><ref refid="class_light_detection_1a691d0813257d5fa4094496da34866875" kindref="member">LightDetection::getValue</ref>(pt);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentReading<sp/>&gt;<sp/>maxReading){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxReading<sp/>=<sp/>currentReading;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxSensor<sp/>=<sp/>pt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxSensor<sp/>=<sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kindref="member">DL_FRONT</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pt<sp/>:<sp/><ref refid="_light_detection_8h_1a9971cd7d69069a38202d8fe1c10fc436" kindref="member">allDLPTs</ref>){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentReading<sp/>=<sp/><ref refid="class_light_detection_1a691d0813257d5fa4094496da34866875" kindref="member">LightDetection::getValue</ref>(pt);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentReading<sp/>&gt;<sp/>maxReading){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxReading<sp/>=<sp/>currentReading;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>maxSensor<sp/>=<sp/>pt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maxSensor;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">uint32_t<sp/><ref refid="class_light_detection_1ac2305adde12c095ee759919b99919410" kindref="member">LightDetection::getAverageValue</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor,<sp/>uint32_t<sp/>measurments,<sp/>uint32_t<sp/>timeBetween){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>TickType_t<sp/>xLastWakeTime<sp/>=<sp/>xTaskGetTickCount();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TickType_t<sp/>frequency<sp/>=<sp/>timeBetween<sp/>/<sp/>portTICK_PERIOD_MS;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>cumulatedResult<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>measurments;<sp/>i++){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cumulatedResult<sp/>+=<sp/><ref refid="class_light_detection_1a691d0813257d5fa4094496da34866875" kindref="member">LightDetection::getValue</ref>(sensor);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xTaskDelayUntil(&amp;xLastWakeTime,frequency);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cumulatedResult/measurments;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1a2b2c0006c917cf3ad15acbea37a4d3d4" kindref="member">LightDetection::beginInfrared</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="class_light_detection_1a0e221af7106fa65a63c50287b77bd7dc" kindref="member">IR_PT_ENABLE</ref>,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1a0e221af7106fa65a63c50287b77bd7dc" kindref="member">IR_PT_ENABLE</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1aecaaa792f02df14abe734c9811cb93f7" kindref="member">IR_PT_FRONT_ADC</ref>,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1ae4a64fbf6fd532828817b01278a9f634" kindref="member">IR_PT_LEFT_ADC</ref>,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1afdccb95b7d899969a4ef5d01a9eedc43" kindref="member">IR_PT_RIGHT_ADC</ref>,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1adcfd748f093fa644d2381646638429e8" kindref="member">IR_PT_BACK_ADC</ref>,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_light_detection_1a2678305979c37e5c7ae7d0b8fc66575c" kindref="member">LightDetection::beginDaylight</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" kindref="member">DL_PT_ENABLE</ref>,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" kindref="member">DL_PT_ENABLE</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1a937d41e3ba2820dd3c0aa1efbe4c6fd0" kindref="member">DL_PT_BOTTOM_ADC</ref>,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="class_light_detection_1a3dd3525f6447d213da457d0fa1a538c8" kindref="member">DL_PT_FRONT_ADC</ref>,<sp/>INPUT<sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">uint16_t<sp/><ref refid="class_light_detection_1a4f0bf4d18ddde3854aa5c6791bd25999" kindref="member">LightDetection::readIRPT</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//digitalWrite(IR_PT_ENABLE,HIGH);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(sensor)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3f45ee99ada61518f3fa83ab3d98267f" kindref="member">IR_FRONT</ref>:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>analogRead(<ref refid="class_light_detection_1aecaaa792f02df14abe734c9811cb93f7" kindref="member">IR_PT_FRONT_ADC</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a0a10b0ddb320745d22c3a8eea8af068b" kindref="member">IR_LEFT</ref>:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>analogRead(<ref refid="class_light_detection_1ae4a64fbf6fd532828817b01278a9f634" kindref="member">IR_PT_LEFT_ADC</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3df2ef1ae0982f0c76aaebfa74e4c31a" kindref="member">IR_RIGHT</ref>:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>analogRead(<ref refid="class_light_detection_1afdccb95b7d899969a4ef5d01a9eedc43" kindref="member">IR_PT_RIGHT_ADC</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033aa903a1399cfe6b7cbf8e64b02fbecfe1" kindref="member">IR_BACK</ref>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>analogRead(<ref refid="class_light_detection_1adcfd748f093fa644d2381646638429e8" kindref="member">IR_PT_BACK_ADC</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//digitalWrite(IR_PT_ENABLE,LOW);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">uint16_t<sp/><ref refid="class_light_detection_1a99285843dae4e4b560e5d241700352a7" kindref="member">LightDetection::readDLPT</ref>(<ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033" kindref="member">photoTransistors</ref><sp/>sensor){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" kindref="member">DL_PT_ENABLE</ref>,HIGH);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(sensor)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a7c1d0b3b9106a36f55c5cb72f00c3aa1" kindref="member">DL_FRONT</ref>:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>analogRead(<ref refid="class_light_detection_1a3dd3525f6447d213da457d0fa1a538c8" kindref="member">DL_PT_FRONT_ADC</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_light_detection_8h_1a354d99a959b0c5bd7ffa0f0cab093033a3d47ab9768e6d5444c1a16ffe022e74a" kindref="member">DL_BOTTOM</ref>:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>analogRead(<ref refid="class_light_detection_1a937d41e3ba2820dd3c0aa1efbe4c6fd0" kindref="member">DL_PT_BOTTOM_ADC</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="class_light_detection_1a8383620ac7fd259965a5b8df6520bdcb" kindref="member">DL_PT_ENABLE</ref>,LOW);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/lightDetection/LightDetection.cpp"/>
+  </compounddef>
+</doxygen>

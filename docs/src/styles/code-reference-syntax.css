@@ -1,0 +1,21 @@
+/* Shared syntax styling for code-reference snippets rendered with Astro Code. */
+pre.astro-code[data-code-reference] {
+	margin: 0;
+	border: 1px solid var(--sl-color-hairline);
+	border-radius: 0.5rem;
+	padding: 0.65rem 0.75rem !important;
+	overflow-x: auto;
+}
+
+pre.astro-code[data-code-reference] code {
+	font-family: var(--__sl-font-mono);
+}
+
+html[data-theme="dark"] pre.astro-code[data-code-reference],
+html[data-theme="dark"] pre.astro-code[data-code-reference] span {
+	color: var(--shiki-dark) !important;
+}
+
+html[data-theme="dark"] pre.astro-code[data-code-reference] {
+	background-color: var(--shiki-dark-bg) !important;
+}

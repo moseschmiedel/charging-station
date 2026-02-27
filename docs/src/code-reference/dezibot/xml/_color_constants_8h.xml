@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_color_constants_8h" kind="file" language="C++">
+    <compoundname>ColorConstants.h</compoundname>
+    <includedby refid="_multi_color_light_8h" local="yes">dezibot/src/multiColorLight/MultiColorLight.h</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>dezibot/src/Dezibot.cpp</label>
+        <link refid="_dezibot_8cpp"/>
+      </node>
+      <node id="3">
+        <label>dezibot/src/Dezibot.h</label>
+        <link refid="_dezibot_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dezibot/src/autocharge/Autocharge.hpp</label>
+        <link refid="_autocharge_8hpp"/>
+      </node>
+      <node id="7">
+        <label>dezibot/src/autocharge/master/Master.cpp</label>
+        <link refid="_master_8cpp"/>
+      </node>
+      <node id="5">
+        <label>dezibot/src/autocharge/master/Master.hpp</label>
+        <link refid="_master_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dezibot/src/autocharge/slave/Slave.cpp</label>
+        <link refid="_slave_8cpp"/>
+      </node>
+      <node id="8">
+        <label>dezibot/src/autocharge/slave/Slave.hpp</label>
+        <link refid="_slave_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dezibot/src/multiColorLight/ColorConstants.h</label>
+        <link refid="_color_constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dezibot/src/multiColorLight/MultiColorLight.cpp</label>
+        <link refid="_multi_color_light_8cpp"/>
+      </node>
+      <node id="2">
+        <label>dezibot/src/multiColorLight/MultiColorLight.h</label>
+        <link refid="_multi_color_light_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_color_constants_8h_1a65c666c353fdb6dc7cc726f8a5b48ddc" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t RED</definition>
+        <argsstring></argsstring>
+        <name>RED</name>
+        <initializer>= 0xFF0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="1" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1a0865512a9bb6b19e84267299f8936daa" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t GREEN</definition>
+        <argsstring></argsstring>
+        <name>GREEN</name>
+        <initializer>= 0x00FF00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="2" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1aafe9e585acf3525c1b551359a72206e0" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t BLUE</definition>
+        <argsstring></argsstring>
+        <name>BLUE</name>
+        <initializer>= 0x0000FF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="3" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1acf6845a9cc897e1e358560d1a7f0dd31" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t WHITE</definition>
+        <argsstring></argsstring>
+        <name>WHITE</name>
+        <initializer>= 0xFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="4" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1a93b9e8c04bf7328964c9237b40f4de3f" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t ORANGE</definition>
+        <argsstring></argsstring>
+        <name>ORANGE</name>
+        <initializer>= 0x961E00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="5" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1ae91461e39bc2be9c92809f0106f8effc" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t YELLOW</definition>
+        <argsstring></argsstring>
+        <name>YELLOW</name>
+        <initializer>= 0x965000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="6" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1adafc00e827b8c0f74e48f952bd94dfbc" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t TURQUOISE</definition>
+        <argsstring></argsstring>
+        <name>TURQUOISE</name>
+        <initializer>= 0x005064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="7" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1a29e7e9624f0f1f0cbf9801e938db5483" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t PURPEL</definition>
+        <argsstring></argsstring>
+        <name>PURPEL</name>
+        <initializer>= 0x320064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="8" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_color_constants_8h_1a1df864dcee7fe9ffc5a1716abd3e6bfd" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t PINK</definition>
+        <argsstring></argsstring>
+        <name>PINK</name>
+        <initializer>= 0x960064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/ColorConstants.h" line="9" column="23" bodyfile="dezibot/src/multiColorLight/ColorConstants.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_color_constants_8h_1a65c666c353fdb6dc7cc726f8a5b48ddc" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1a65c666c353fdb6dc7cc726f8a5b48ddc" kindref="member">RED</ref><sp/>=<sp/>0xFF0000;</highlight></codeline>
+<codeline lineno="2" refid="_color_constants_8h_1a0865512a9bb6b19e84267299f8936daa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1a0865512a9bb6b19e84267299f8936daa" kindref="member">GREEN</ref><sp/>=<sp/>0x00FF00;</highlight></codeline>
+<codeline lineno="3" refid="_color_constants_8h_1aafe9e585acf3525c1b551359a72206e0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1aafe9e585acf3525c1b551359a72206e0" kindref="member">BLUE</ref><sp/>=<sp/>0x0000FF;</highlight></codeline>
+<codeline lineno="4" refid="_color_constants_8h_1acf6845a9cc897e1e358560d1a7f0dd31" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1acf6845a9cc897e1e358560d1a7f0dd31" kindref="member">WHITE</ref><sp/>=<sp/>0xFFFFFF;</highlight></codeline>
+<codeline lineno="5" refid="_color_constants_8h_1a93b9e8c04bf7328964c9237b40f4de3f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1a93b9e8c04bf7328964c9237b40f4de3f" kindref="member">ORANGE</ref><sp/>=<sp/>0x961E00;</highlight></codeline>
+<codeline lineno="6" refid="_color_constants_8h_1ae91461e39bc2be9c92809f0106f8effc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1ae91461e39bc2be9c92809f0106f8effc" kindref="member">YELLOW</ref><sp/>=<sp/>0x965000;</highlight></codeline>
+<codeline lineno="7" refid="_color_constants_8h_1adafc00e827b8c0f74e48f952bd94dfbc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1adafc00e827b8c0f74e48f952bd94dfbc" kindref="member">TURQUOISE</ref><sp/>=<sp/>0x005064;</highlight></codeline>
+<codeline lineno="8" refid="_color_constants_8h_1a29e7e9624f0f1f0cbf9801e938db5483" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1a29e7e9624f0f1f0cbf9801e938db5483" kindref="member">PURPEL</ref><sp/>=<sp/>0x320064;</highlight></codeline>
+<codeline lineno="9" refid="_color_constants_8h_1a1df864dcee7fe9ffc5a1716abd3e6bfd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="_color_constants_8h_1a1df864dcee7fe9ffc5a1716abd3e6bfd" kindref="member">PINK</ref><sp/>=<sp/>0x960064;</highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/multiColorLight/ColorConstants.h"/>
+  </compounddef>
+</doxygen>

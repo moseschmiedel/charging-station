@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" kind="enum"><name>BridgeMotion</name></member>
+    <member refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kind="enumvalue"><name>IDLE</name></member>
+    <member refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" kind="enumvalue"><name>LOWERING_TO_WALK_IN</name></member>
+    <member refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daf9d315e58cbb1b67d6cf3d7962734151" kind="enumvalue"><name>LOWERING_TO_CHARGE</name></member>
+    <member refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daef93cc2e2a5c4faeb7f04b396009b84c" kind="enumvalue"><name>RAISING</name></member>
+    <member refid="main_8cpp_1afc474cacfcd3c13a7380735bbf2a5e2c" kind="variable"><name>LEFT_PIN1</name></member>
+    <member refid="main_8cpp_1a4079a51d28347eea0d440abd63be57f6" kind="variable"><name>LEFT_PIN2</name></member>
+    <member refid="main_8cpp_1af99ae7b296285608578401611c2c92d5" kind="variable"><name>LEFT_PIN3</name></member>
+    <member refid="main_8cpp_1a92ac727f9b7b409388b1207fc32ba8aa" kind="variable"><name>LEFT_PIN4</name></member>
+    <member refid="main_8cpp_1a7af122d3c1164898fbad94c8070a87dd" kind="variable"><name>RIGHT_PIN1</name></member>
+    <member refid="main_8cpp_1a5c2c82635f4608c607c0c8a81e0475d5" kind="variable"><name>RIGHT_PIN2</name></member>
+    <member refid="main_8cpp_1ae86fdf03d0449f27859852dfb772a354" kind="variable"><name>RIGHT_PIN3</name></member>
+    <member refid="main_8cpp_1a06070a9e4d6cb0d5a1603e2c5ede6f27" kind="variable"><name>RIGHT_PIN4</name></member>
+    <member refid="main_8cpp_1ad7f96cd301111b3305456805884d750c" kind="variable"><name>stepsPerRevolution</name></member>
+    <member refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kind="variable"><name>max_rpm</name></member>
+    <member refid="main_8cpp_1a78ffd3514b2d632a7169ec49c9da3e59" kind="variable"><name>rpm_per_sec</name></member>
+    <member refid="main_8cpp_1a7b877725241eea00c1b95dd153829e77" kind="variable"><name>microstepSetting</name></member>
+    <member refid="main_8cpp_1a9aa35e6d170245de325d9a2b6aca91f6" kind="variable"><name>I2C_SLAVE_ADDRESS</name></member>
+    <member refid="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" kind="variable"><name>I2C_SDA_PIN</name></member>
+    <member refid="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" kind="variable"><name>I2C_SCL_PIN</name></member>
+    <member refid="main_8cpp_1ac2afb6d51de9bb375e69e5093b75e339" kind="variable"><name>I2C_FREQUENCY_HZ</name></member>
+    <member refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kind="variable"><name>BRIDGE_RAISED_STEPS</name></member>
+    <member refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kind="variable"><name>BRIDGE_LOWERED_WALK_IN_STEPS</name></member>
+    <member refid="main_8cpp_1a0062b4a1420cb8711c3f5b920b1105c8" kind="variable"><name>BRIDGE_LOWERED_CHARGE_STEPS</name></member>
+    <member refid="main_8cpp_1a1fb70feed84f7e4854dc33b609e55263" kind="variable"><name>STEPPER_AMOUNT</name></member>
+    <member refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kind="variable"><name>position</name></member>
+    <member refid="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" kind="variable"><name>stepperMgr</name></member>
+    <member refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kind="variable"><name>rx_line</name></member>
+    <member refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kind="variable"><name>bridge_status</name></member>
+    <member refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kind="variable"><name>bridge_motion</name></member>
+    <member refid="main_8cpp_1aa93247594e0635d1f1b656561271d352" kind="function"><name>convert_rotational_position_to_steps</name></member>
+    <member refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kind="function"><name>max_speed_steps_per_sec</name></member>
+    <member refid="main_8cpp_1aca7e3849589a8d3f6bc5e433560ae6af" kind="function"><name>accel_steps_per_sec</name></member>
+    <member refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kind="function"><name>stepperLeft</name></member>
+    <member refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kind="function"><name>stepperRight</name></member>
+    <member refid="main_8cpp_1a3095693569d3f21ef35eb29aa5ad089b" kind="function"><name>append_rx_char</name></member>
+    <member refid="main_8cpp_1a770f4b13bf2542f92efb7637cf1d9ff4" kind="function"><name>uart_receive</name></member>
+    <member refid="main_8cpp_1a4fb5f4dbd25268da5b6a660aff6e8dd9" kind="function"><name>i2c_receive</name></member>
+    <member refid="main_8cpp_1a5edda47233df7db7e00394ae70fd71a0" kind="function"><name>i2c_request</name></member>
+    <member refid="main_8cpp_1a04166c24b24fb9fb53c97203cb734963" kind="function"><name>init_i2c_slave</name></member>
+    <member refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kind="function"><name>start_bridge_motion</name></member>
+    <member refid="main_8cpp_1a9bcb0f187e38ad38ebf2c2aaf9eb6329" kind="function"><name>process_command</name></member>
+    <member refid="main_8cpp_1a5ac21a983a7df338c4b8180643ed7af9" kind="function"><name>update_bridge_motion</name></member>
+    <member refid="main_8cpp_1a793087c111599b222a576d70747cc0c6" kind="function"><name>home_bridge_to_walk_in_on_boot</name></member>
+    <member refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="dir_a69b099b9e2cc5cf8d4062951e0d7f85" kind="dir"><name>motor</name>
+  </compound>
+  <compound refid="dir_55508bd4b72d14672945d6d52c9814fe" kind="dir"><name>motor/src</name>
+  </compound>
+</doxygenindex>

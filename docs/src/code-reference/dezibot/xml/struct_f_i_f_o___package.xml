@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_f_i_f_o___package" kind="struct" language="C++" prot="public">
+    <compoundname>FIFO_Package</compoundname>
+    <includes refid="_motion_detection_8h" local="no">MotionDetection.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_i_f_o___package_1a508631d74240d70901d42f2d1d60ff94" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t FIFO_Package::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <qualifiedname>FIFO_Package::header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="45" column="12" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_i_f_o___package_1a9bbd1ce3aabb96eaf372f88e60d05097" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref></type>
+        <definition>IMUResult FIFO_Package::gyro</definition>
+        <argsstring></argsstring>
+        <name>gyro</name>
+        <qualifiedname>FIFO_Package::gyro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="46" column="15" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_i_f_o___package_1a13d017781f1658ab069ea54bdc0dc767" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_m_u_result" kindref="compound">IMUResult</ref></type>
+        <definition>IMUResult FIFO_Package::accel</definition>
+        <argsstring></argsstring>
+        <name>accel</name>
+        <qualifiedname>FIFO_Package::accel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="47" column="15" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_i_f_o___package_1aac437ccb8deb8c45e1af081160d38771" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t FIFO_Package::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <qualifiedname>FIFO_Package::temperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="48" column="13" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_i_f_o___package_1a3bae340fe5623a440211616310e83ef3" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t FIFO_Package::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <qualifiedname>FIFO_Package::timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motionDetection/MotionDetection.h" line="49" column="13" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>FIFO_Package</label>
+        <link refid="struct_f_i_f_o___package"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>accel</edgelabel>
+          <edgelabel>gyro</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IMUResult</label>
+        <link refid="struct_i_m_u_result"/>
+      </node>
+    </collaborationgraph>
+    <location file="dezibot/src/motionDetection/MotionDetection.h" line="44" column="1" bodyfile="dezibot/src/motionDetection/MotionDetection.h" bodystart="44" bodyend="50"/>
+    <listofallmembers>
+      <member refid="struct_f_i_f_o___package_1a13d017781f1658ab069ea54bdc0dc767" prot="public" virt="non-virtual"><scope>FIFO_Package</scope><name>accel</name></member>
+      <member refid="struct_f_i_f_o___package_1a9bbd1ce3aabb96eaf372f88e60d05097" prot="public" virt="non-virtual"><scope>FIFO_Package</scope><name>gyro</name></member>
+      <member refid="struct_f_i_f_o___package_1a508631d74240d70901d42f2d1d60ff94" prot="public" virt="non-virtual"><scope>FIFO_Package</scope><name>header</name></member>
+      <member refid="struct_f_i_f_o___package_1aac437ccb8deb8c45e1af081160d38771" prot="public" virt="non-virtual"><scope>FIFO_Package</scope><name>temperature</name></member>
+      <member refid="struct_f_i_f_o___package_1a3bae340fe5623a440211616310e83ef3" prot="public" virt="non-virtual"><scope>FIFO_Package</scope><name>timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

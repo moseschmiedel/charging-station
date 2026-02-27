@@ -1,0 +1,965 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">AccelStepper.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">MultiStepper.h</includes>
+    <includes local="no">Wire.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>motor/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AccelStepper.h</label>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>MultiStepper.h</label>
+      </node>
+      <node id="5">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>BridgeMotion</name>
+        <enumvalue id="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" prot="public">
+          <name>IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" prot="public">
+          <name>LOWERING_TO_WALK_IN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daf9d315e58cbb1b67d6cf3d7962734151" prot="public">
+          <name>LOWERING_TO_CHARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daef93cc2e2a5c4faeb7f04b396009b84c" prot="public">
+          <name>RAISING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="31" column="1" bodyfile="motor/src/main.cpp" bodystart="31" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1afc474cacfcd3c13a7380735bbf2a5e2c" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t LEFT_PIN1</definition>
+        <argsstring></argsstring>
+        <name>LEFT_PIN1</name>
+        <initializer>= 14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="6" column="22" bodyfile="motor/src/main.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a4079a51d28347eea0d440abd63be57f6" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t LEFT_PIN2</definition>
+        <argsstring></argsstring>
+        <name>LEFT_PIN2</name>
+        <initializer>= 27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="7" column="22" bodyfile="motor/src/main.cpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1af99ae7b296285608578401611c2c92d5" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t LEFT_PIN3</definition>
+        <argsstring></argsstring>
+        <name>LEFT_PIN3</name>
+        <initializer>= 26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="8" column="22" bodyfile="motor/src/main.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a92ac727f9b7b409388b1207fc32ba8aa" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t LEFT_PIN4</definition>
+        <argsstring></argsstring>
+        <name>LEFT_PIN4</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="9" column="22" bodyfile="motor/src/main.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a7af122d3c1164898fbad94c8070a87dd" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t RIGHT_PIN1</definition>
+        <argsstring></argsstring>
+        <name>RIGHT_PIN1</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="10" column="22" bodyfile="motor/src/main.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a5c2c82635f4608c607c0c8a81e0475d5" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t RIGHT_PIN2</definition>
+        <argsstring></argsstring>
+        <name>RIGHT_PIN2</name>
+        <initializer>= 17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="11" column="22" bodyfile="motor/src/main.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ae86fdf03d0449f27859852dfb772a354" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t RIGHT_PIN3</definition>
+        <argsstring></argsstring>
+        <name>RIGHT_PIN3</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="12" column="22" bodyfile="motor/src/main.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a06070a9e4d6cb0d5a1603e2c5ede6f27" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t RIGHT_PIN4</definition>
+        <argsstring></argsstring>
+        <name>RIGHT_PIN4</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="13" column="22" bodyfile="motor/src/main.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ad7f96cd301111b3305456805884d750c" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float stepsPerRevolution</definition>
+        <argsstring></argsstring>
+        <name>stepsPerRevolution</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="15" column="20" bodyfile="motor/src/main.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1aafbcc046c875c73e6507214f01729652" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float max_rpm</definition>
+        <argsstring></argsstring>
+        <name>max_rpm</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="16" column="14" bodyfile="motor/src/main.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a78ffd3514b2d632a7169ec49c9da3e59" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float rpm_per_sec</definition>
+        <argsstring></argsstring>
+        <name>rpm_per_sec</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="17" column="14" bodyfile="motor/src/main.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a7b877725241eea00c1b95dd153829e77" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int microstepSetting</definition>
+        <argsstring></argsstring>
+        <name>microstepSetting</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="18" column="12" bodyfile="motor/src/main.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a9aa35e6d170245de325d9a2b6aca91f6" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t I2C_SLAVE_ADDRESS</definition>
+        <argsstring></argsstring>
+        <name>I2C_SLAVE_ADDRESS</name>
+        <initializer>= 0x12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="20" column="22" bodyfile="motor/src/main.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int I2C_SDA_PIN</definition>
+        <argsstring></argsstring>
+        <name>I2C_SDA_PIN</name>
+        <initializer>= 21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="21" column="18" bodyfile="motor/src/main.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int I2C_SCL_PIN</definition>
+        <argsstring></argsstring>
+        <name>I2C_SCL_PIN</name>
+        <initializer>= 22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="22" column="18" bodyfile="motor/src/main.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac2afb6d51de9bb375e69e5093b75e339" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t I2C_FREQUENCY_HZ</definition>
+        <argsstring></argsstring>
+        <name>I2C_FREQUENCY_HZ</name>
+        <initializer>= 100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="23" column="23" bodyfile="motor/src/main.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" prot="public" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long BRIDGE_RAISED_STEPS</definition>
+        <argsstring></argsstring>
+        <name>BRIDGE_RAISED_STEPS</name>
+        <initializer>= 3500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="25" column="19" bodyfile="motor/src/main.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" prot="public" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long BRIDGE_LOWERED_WALK_IN_STEPS</definition>
+        <argsstring></argsstring>
+        <name>BRIDGE_LOWERED_WALK_IN_STEPS</name>
+        <initializer>= 2300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="26" column="19" bodyfile="motor/src/main.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a0062b4a1420cb8711c3f5b920b1105c8" prot="public" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long BRIDGE_LOWERED_CHARGE_STEPS</definition>
+        <argsstring></argsstring>
+        <name>BRIDGE_LOWERED_CHARGE_STEPS</name>
+        <initializer>= 2200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="27" column="19" bodyfile="motor/src/main.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a1fb70feed84f7e4854dc33b609e55263" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t STEPPER_AMOUNT</definition>
+        <argsstring></argsstring>
+        <name>STEPPER_AMOUNT</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="29" column="15" bodyfile="motor/src/main.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long position[STEPPER_AMOUNT]</definition>
+        <argsstring>[STEPPER_AMOUNT]</argsstring>
+        <name>position</name>
+        <initializer>= {<ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>, <ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="38" column="6" bodyfile="motor/src/main.cpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" prot="public" static="no" mutable="no">
+        <type>MultiStepper</type>
+        <definition>MultiStepper stepperMgr</definition>
+        <argsstring></argsstring>
+        <name>stepperMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="56" column="14" bodyfile="motor/src/main.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" prot="public" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String rx_line</definition>
+        <argsstring></argsstring>
+        <name>rx_line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="58" column="15" bodyfile="motor/src/main.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a5856e0654376aeba118422c6af589c60" prot="public" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String bridge_status</definition>
+        <argsstring></argsstring>
+        <name>bridge_status</name>
+        <initializer>= &quot;IDLE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="59" column="15" bodyfile="motor/src/main.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" prot="public" static="yes" mutable="no">
+        <type><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" kindref="member">BridgeMotion</ref></type>
+        <definition>BridgeMotion bridge_motion</definition>
+        <argsstring></argsstring>
+        <name>bridge_motion</name>
+        <initializer>= <ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="60" column="21" bodyfile="motor/src/main.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1aa93247594e0635d1f1b656561271d352" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float convert_rotational_position_to_steps</definition>
+        <argsstring>(float rotations)</argsstring>
+        <name>convert_rotational_position_to_steps</name>
+        <param>
+          <type>float</type>
+          <declname>rotations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="40" column="21" bodyfile="motor/src/main.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float max_speed_steps_per_sec</definition>
+        <argsstring>(float max_rpm_value)</argsstring>
+        <name>max_speed_steps_per_sec</name>
+        <param>
+          <type>float</type>
+          <declname>max_rpm_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="44" column="21" bodyfile="motor/src/main.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1aca7e3849589a8d3f6bc5e433560ae6af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float accel_steps_per_sec</definition>
+        <argsstring>(float rpm_per_sec_value)</argsstring>
+        <name>accel_steps_per_sec</name>
+        <param>
+          <type>float</type>
+          <declname>rpm_per_sec_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="48" column="21" bodyfile="motor/src/main.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AccelStepper</type>
+        <definition>AccelStepper stepperLeft</definition>
+        <argsstring>(AccelStepper::FULL4WIRE, LEFT_PIN1, LEFT_PIN2, LEFT_PIN3, LEFT_PIN4)</argsstring>
+        <name>stepperLeft</name>
+        <param>
+          <type>AccelStepper::FULL4WIRE</type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1afc474cacfcd3c13a7380735bbf2a5e2c" kindref="member">LEFT_PIN1</ref></type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1a4079a51d28347eea0d440abd63be57f6" kindref="member">LEFT_PIN2</ref></type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1af99ae7b296285608578401611c2c92d5" kindref="member">LEFT_PIN3</ref></type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1a92ac727f9b7b409388b1207fc32ba8aa" kindref="member">LEFT_PIN4</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="52" column="14" declfile="motor/src/main.cpp" declline="52" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AccelStepper</type>
+        <definition>AccelStepper stepperRight</definition>
+        <argsstring>(AccelStepper::FULL4WIRE, RIGHT_PIN1, RIGHT_PIN2, RIGHT_PIN3, RIGHT_PIN4)</argsstring>
+        <name>stepperRight</name>
+        <param>
+          <type>AccelStepper::FULL4WIRE</type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1a7af122d3c1164898fbad94c8070a87dd" kindref="member">RIGHT_PIN1</ref></type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1a5c2c82635f4608c607c0c8a81e0475d5" kindref="member">RIGHT_PIN2</ref></type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1ae86fdf03d0449f27859852dfb772a354" kindref="member">RIGHT_PIN3</ref></type>
+        </param>
+        <param>
+          <type><ref refid="main_8cpp_1a06070a9e4d6cb0d5a1603e2c5ede6f27" kindref="member">RIGHT_PIN4</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="54" column="14" declfile="motor/src/main.cpp" declline="54" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a3095693569d3f21ef35eb29aa5ad089b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void append_rx_char</definition>
+        <argsstring>(char ch)</argsstring>
+        <name>append_rx_char</name>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="62" column="13" bodyfile="motor/src/main.cpp" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a770f4b13bf2542f92efb7637cf1d9ff4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uart_receive</definition>
+        <argsstring>(void)</argsstring>
+        <name>uart_receive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="69" column="13" bodyfile="motor/src/main.cpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4fb5f4dbd25268da5b6a660aff6e8dd9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_receive</definition>
+        <argsstring>(int bytes_available)</argsstring>
+        <name>i2c_receive</name>
+        <param>
+          <type>int</type>
+          <declname>bytes_available</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="75" column="13" bodyfile="motor/src/main.cpp" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a5edda47233df7db7e00394ae70fd71a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void i2c_request</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_request</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="82" column="13" bodyfile="motor/src/main.cpp" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a04166c24b24fb9fb53c97203cb734963" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void init_i2c_slave</definition>
+        <argsstring>()</argsstring>
+        <name>init_i2c_slave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="84" column="13" bodyfile="motor/src/main.cpp" bodystart="84" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void start_bridge_motion</definition>
+        <argsstring>(BridgeMotion motion)</argsstring>
+        <name>start_bridge_motion</name>
+        <param>
+          <type><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" kindref="member">BridgeMotion</ref></type>
+          <declname>motion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="112" column="13" bodyfile="motor/src/main.cpp" bodystart="112" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a9bcb0f187e38ad38ebf2c2aaf9eb6329" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void process_command</definition>
+        <argsstring>(const String &amp;command_in)</argsstring>
+        <name>process_command</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>command_in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="134" column="13" bodyfile="motor/src/main.cpp" bodystart="134" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a5ac21a983a7df338c4b8180643ed7af9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void update_bridge_motion</definition>
+        <argsstring>()</argsstring>
+        <name>update_bridge_motion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="172" column="13" bodyfile="motor/src/main.cpp" bodystart="172" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a793087c111599b222a576d70747cc0c6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void home_bridge_to_walk_in_on_boot</definition>
+        <argsstring>()</argsstring>
+        <name>home_bridge_to_walk_in_on_boot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="194" column="13" bodyfile="motor/src/main.cpp" bodystart="194" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="223" column="6" bodyfile="motor/src/main.cpp" bodystart="223" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="motor/src/main.cpp" line="250" column="6" bodyfile="motor/src/main.cpp" bodystart="250" bodyend="260"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;AccelStepper.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;MultiStepper.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1afc474cacfcd3c13a7380735bbf2a5e2c" kindref="member">LEFT_PIN1</ref><sp/>=<sp/>14;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a4079a51d28347eea0d440abd63be57f6" kindref="member">LEFT_PIN2</ref><sp/>=<sp/>27;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1af99ae7b296285608578401611c2c92d5" kindref="member">LEFT_PIN3</ref><sp/>=<sp/>26;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a92ac727f9b7b409388b1207fc32ba8aa" kindref="member">LEFT_PIN4</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a7af122d3c1164898fbad94c8070a87dd" kindref="member">RIGHT_PIN1</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a5c2c82635f4608c607c0c8a81e0475d5" kindref="member">RIGHT_PIN2</ref><sp/>=<sp/>17;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1ae86fdf03d0449f27859852dfb772a354" kindref="member">RIGHT_PIN3</ref><sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a06070a9e4d6cb0d5a1603e2c5ede6f27" kindref="member">RIGHT_PIN4</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ad7f96cd301111b3305456805884d750c" kindref="member">stepsPerRevolution</ref><sp/>=<sp/>200;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref><sp/>=<sp/>80;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a78ffd3514b2d632a7169ec49c9da3e59" kindref="member">rpm_per_sec</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a7b877725241eea00c1b95dd153829e77" kindref="member">microstepSetting</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a9aa35e6d170245de325d9a2b6aca91f6" kindref="member">I2C_SLAVE_ADDRESS</ref><sp/>=<sp/>0x12;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" kindref="member">I2C_SDA_PIN</ref><sp/>=<sp/>21;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" kindref="member">I2C_SCL_PIN</ref><sp/>=<sp/>22;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="main_8cpp_1ac2afb6d51de9bb375e69e5093b75e339" kindref="member">I2C_FREQUENCY_HZ</ref><sp/>=<sp/>100000;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref><sp/>=<sp/>3500;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref><sp/>=<sp/>2300;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0062b4a1420cb8711c3f5b920b1105c8" kindref="member">BRIDGE_LOWERED_CHARGE_STEPS</ref><sp/>=<sp/>2200;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="main_8cpp_1a1fb70feed84f7e4854dc33b609e55263" kindref="member">STEPPER_AMOUNT</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" kindref="member">BridgeMotion</ref><sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">IDLE</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" kindref="member">LOWERING_TO_WALK_IN</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daf9d315e58cbb1b67d6cf3d7962734151" kindref="member">LOWERING_TO_CHARGE</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daef93cc2e2a5c4faeb7f04b396009b84c" kindref="member">RAISING</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[<ref refid="main_8cpp_1a1fb70feed84f7e4854dc33b609e55263" kindref="member">STEPPER_AMOUNT</ref>]<sp/>=<sp/>{<ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>,<sp/><ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1aa93247594e0635d1f1b656561271d352" kindref="member">convert_rotational_position_to_steps</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotations)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rotations<sp/>*<sp/><ref refid="main_8cpp_1ad7f96cd301111b3305456805884d750c" kindref="member">stepsPerRevolution</ref><sp/>*<sp/><ref refid="main_8cpp_1a7b877725241eea00c1b95dd153829e77" kindref="member">microstepSetting</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kindref="member">max_speed_steps_per_sec</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_rpm_value)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a7b877725241eea00c1b95dd153829e77" kindref="member">microstepSetting</ref><sp/>*<sp/><ref refid="main_8cpp_1ad7f96cd301111b3305456805884d750c" kindref="member">stepsPerRevolution</ref><sp/>*<sp/>max_rpm_value<sp/>/<sp/>60;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1aca7e3849589a8d3f6bc5e433560ae6af" kindref="member">accel_steps_per_sec</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rpm_per_sec_value)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a7b877725241eea00c1b95dd153829e77" kindref="member">microstepSetting</ref><sp/>*<sp/><ref refid="main_8cpp_1ad7f96cd301111b3305456805884d750c" kindref="member">stepsPerRevolution</ref><sp/>*<sp/>rpm_per_sec_value<sp/>/<sp/>60;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">AccelStepper<sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>(AccelStepper::FULL4WIRE,<sp/><ref refid="main_8cpp_1afc474cacfcd3c13a7380735bbf2a5e2c" kindref="member">LEFT_PIN1</ref>,<sp/><ref refid="main_8cpp_1a4079a51d28347eea0d440abd63be57f6" kindref="member">LEFT_PIN2</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1af99ae7b296285608578401611c2c92d5" kindref="member">LEFT_PIN3</ref>,<sp/><ref refid="main_8cpp_1a92ac727f9b7b409388b1207fc32ba8aa" kindref="member">LEFT_PIN4</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">AccelStepper<sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>(AccelStepper::FULL4WIRE,<sp/><ref refid="main_8cpp_1a7af122d3c1164898fbad94c8070a87dd" kindref="member">RIGHT_PIN1</ref>,<sp/><ref refid="main_8cpp_1a5c2c82635f4608c607c0c8a81e0475d5" kindref="member">RIGHT_PIN2</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ae86fdf03d0449f27859852dfb772a354" kindref="member">RIGHT_PIN3</ref>,<sp/><ref refid="main_8cpp_1a06070a9e4d6cb0d5a1603e2c5ede6f27" kindref="member">RIGHT_PIN4</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">MultiStepper<sp/><ref refid="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" kindref="member">stepperMgr</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kindref="member">rx_line</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;IDLE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" kindref="member">BridgeMotion</ref><sp/><ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>=<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a3095693569d3f21ef35eb29aa5ad089b" kindref="member">append_rx_char</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ch)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ch<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\r&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kindref="member">rx_line</ref><sp/>+=<sp/>ch;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a770f4b13bf2542f92efb7637cf1d9ff4" kindref="member">uart_receive</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(Serial.available()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a3095693569d3f21ef35eb29aa5ad089b" kindref="member">append_rx_char</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(Serial.read()));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4fb5f4dbd25268da5b6a660aff6e8dd9" kindref="member">i2c_receive</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bytes_available)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>(void)bytes_available;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(Wire.available()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a3095693569d3f21ef35eb29aa5ad089b" kindref="member">append_rx_char</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(Wire.read()));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a5edda47233df7db7e00394ae70fd71a0" kindref="member">i2c_request</ref>()<sp/>{<sp/>Wire.print(<ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a04166c24b24fb9fb53c97203cb734963" kindref="member">init_i2c_slave</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>pinMode(<ref refid="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" kindref="member">I2C_SDA_PIN</ref>,<sp/>INPUT_PULLUP);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>pinMode(<ref refid="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" kindref="member">I2C_SCL_PIN</ref>,<sp/>INPUT_PULLUP);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>delay(2);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>i2c_ready<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>attempt<sp/>=<sp/>1;<sp/>attempt<sp/>&lt;=<sp/>5<sp/>&amp;&amp;<sp/>!i2c_ready;<sp/>++attempt)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_ready<sp/>=<sp/>Wire.begin(<ref refid="main_8cpp_1a9aa35e6d170245de325d9a2b6aca91f6" kindref="member">I2C_SLAVE_ADDRESS</ref>,<sp/><ref refid="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" kindref="member">I2C_SDA_PIN</ref>,<sp/><ref refid="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" kindref="member">I2C_SCL_PIN</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ac2afb6d51de9bb375e69e5093b75e339" kindref="member">I2C_FREQUENCY_HZ</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!i2c_ready)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;I2C<sp/>slave<sp/>init<sp/>attempt<sp/>%u<sp/>failed<sp/>(line<sp/>state<sp/>sda=%d<sp/>scl=%d)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attempt,<sp/>digitalRead(<ref refid="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" kindref="member">I2C_SDA_PIN</ref>),<sp/>digitalRead(<ref refid="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" kindref="member">I2C_SCL_PIN</ref>));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>delay(50);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!i2c_ready)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;I2C<sp/>slave<sp/>init<sp/>failed:<sp/>check<sp/>wiring<sp/>and<sp/>pull-ups&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>Wire.onReceive(<ref refid="main_8cpp_1a4fb5f4dbd25268da5b6a660aff6e8dd9" kindref="member">i2c_receive</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>Wire.onRequest(<ref refid="main_8cpp_1a5edda47233df7db7e00394ae70fd71a0" kindref="member">i2c_request</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;I2C<sp/>slave<sp/>ready<sp/>at<sp/>0x%02X<sp/>(SDA=%d,<sp/>SCL=%d)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a9aa35e6d170245de325d9a2b6aca91f6" kindref="member">I2C_SLAVE_ADDRESS</ref>,<sp/><ref refid="main_8cpp_1acd6c79fe3f9a86f66d5823d6fc66e2d9" kindref="member">I2C_SDA_PIN</ref>,<sp/><ref refid="main_8cpp_1a0ae9f984a706e10ea9db814c1b8efa67" kindref="member">I2C_SCL_PIN</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kindref="member">start_bridge_motion</ref>(<ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8d" kindref="member">BridgeMotion</ref><sp/>motion)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(motion<sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" kindref="member">BridgeMotion::LOWERING_TO_WALK_IN</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[0]<sp/>=<sp/><ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[1]<sp/>=<sp/><ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BUSY:LOWER_WALK_IN&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Bridge<sp/>lowering<sp/>to<sp/>walk-in<sp/>started&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(motion<sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daf9d315e58cbb1b67d6cf3d7962734151" kindref="member">BridgeMotion::LOWERING_TO_CHARGE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[0]<sp/>=<sp/><ref refid="main_8cpp_1a0062b4a1420cb8711c3f5b920b1105c8" kindref="member">BRIDGE_LOWERED_CHARGE_STEPS</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[1]<sp/>=<sp/><ref refid="main_8cpp_1a0062b4a1420cb8711c3f5b920b1105c8" kindref="member">BRIDGE_LOWERED_CHARGE_STEPS</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BUSY:LOWER_CHARGE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Bridge<sp/>lowering<sp/>to<sp/>charge<sp/>started&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[0]<sp/>=<sp/><ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[1]<sp/>=<sp/><ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BUSY:RAISE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Bridge<sp/>raising<sp/>started&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>=<sp/>motion;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" kindref="member">stepperMgr</ref>.moveTo(<ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a9bcb0f187e38ad38ebf2c2aaf9eb6329" kindref="member">process_command</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;command_in)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>String<sp/>command<sp/>=<sp/>command_in;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>command.trim();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(command.length()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(command.equalsIgnoreCase(</highlight><highlight class="stringliteral">&quot;LOWER_WALK_IN&quot;</highlight><highlight class="normal">)<sp/>||</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>command.equalsIgnoreCase(</highlight><highlight class="stringliteral">&quot;LOWER&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kindref="member">start_bridge_motion</ref>(<ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" kindref="member">BridgeMotion::LOWERING_TO_WALK_IN</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(command.equalsIgnoreCase(</highlight><highlight class="stringliteral">&quot;LOWER_CHARGE&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kindref="member">start_bridge_motion</ref>(<ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daf9d315e58cbb1b67d6cf3d7962734151" kindref="member">BridgeMotion::LOWERING_TO_CHARGE</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(command.equalsIgnoreCase(</highlight><highlight class="stringliteral">&quot;RAISE&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kindref="member">start_bridge_motion</ref>(<ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daef93cc2e2a5c4faeb7f04b396009b84c" kindref="member">BridgeMotion::RAISING</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maybe_rpm<sp/>=<sp/>command.toFloat();</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(maybe_rpm<sp/>!=<sp/>0.0f<sp/>||<sp/>command<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal"><sp/>||<sp/>command<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;0.0&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref><sp/>=<sp/>maybe_rpm;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Change<sp/>MAX<sp/>RPM<sp/>to<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>.setMaxSpeed(<ref refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kindref="member">max_speed_steps_per_sec</ref>(<ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref>));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>.setMaxSpeed(<ref refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kindref="member">max_speed_steps_per_sec</ref>(<ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref>));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a5ac21a983a7df338c4b8180643ed7af9" kindref="member">update_bridge_motion</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" kindref="member">stepperMgr</ref>.run())<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" kindref="member">BridgeMotion::LOWERING_TO_WALK_IN</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;DONE:LOWER_WALK_IN&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Bridge<sp/>lowering<sp/>to<sp/>walk-in<sp/>finished&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>==<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daf9d315e58cbb1b67d6cf3d7962734151" kindref="member">BridgeMotion::LOWERING_TO_CHARGE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;DONE:LOWER_CHARGE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Bridge<sp/>lowering<sp/>to<sp/>charge<sp/>finished&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;DONE:RAISE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Bridge<sp/>raising<sp/>finished&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>=<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a793087c111599b222a576d70747cc0c6" kindref="member">home_bridge_to_walk_in_on_boot</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Startup<sp/>homing:<sp/>moving<sp/>bridge<sp/>to<sp/>walk-in<sp/>position&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>.setCurrentPosition(0);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>.setCurrentPosition(0);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kindref="member">start_bridge_motion</ref>(<ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daef93cc2e2a5c4faeb7f04b396009b84c" kindref="member">BridgeMotion::RAISING</ref>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>!=<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5ac21a983a7df338c4b8180643ed7af9" kindref="member">update_bridge_motion</ref>();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(1);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>.setCurrentPosition(<ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>.setCurrentPosition(<ref refid="main_8cpp_1add4adb8a3babbf6d06194c382d7e26fb" kindref="member">BRIDGE_RAISED_STEPS</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1af2cc2b8129b8f28537997048ee1308f1" kindref="member">start_bridge_motion</ref>(<ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8da1664e2606313837bcbd2c814dd200c16" kindref="member">BridgeMotion::LOWERING_TO_WALK_IN</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="main_8cpp_1a92506712268fd14ffb6efb8ebab07415" kindref="member">bridge_motion</ref><sp/>!=<sp/><ref refid="main_8cpp_1ae249aec1562cd5ec57616597ea578a8daa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">BridgeMotion::IDLE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a5ac21a983a7df338c4b8180643ed7af9" kindref="member">update_bridge_motion</ref>();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(1);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>.setCurrentPosition(<ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>.setCurrentPosition(<ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[0]<sp/>=<sp/><ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[1]<sp/>=<sp/><ref refid="main_8cpp_1ac83458e7ac886b01a34c107ee9bbed61" kindref="member">BRIDGE_LOWERED_WALK_IN_STEPS</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a5856e0654376aeba118422c6af589c60" kindref="member">bridge_status</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;IDLE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Startup<sp/>homing<sp/>complete:<sp/>bridge<sp/>at<sp/>walk-in<sp/>position&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;+------------------+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;|<sp/>Motor<sp/>Controller<sp/>|&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;+------------------+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>.setMaxSpeed(<ref refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kindref="member">max_speed_steps_per_sec</ref>(<ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref>));</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>.setMaxSpeed(<ref refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kindref="member">max_speed_steps_per_sec</ref>(<ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref>));</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Set<sp/>Max<sp/>Speed<sp/>=<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cpp_1a5642dc9a3a484c94d074eef436904c54" kindref="member">max_speed_steps_per_sec</ref>(<ref refid="main_8cpp_1aafbcc046c875c73e6507214f01729652" kindref="member">max_rpm</ref>));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>.setAcceleration(<ref refid="main_8cpp_1aca7e3849589a8d3f6bc5e433560ae6af" kindref="member">accel_steps_per_sec</ref>(<ref refid="main_8cpp_1a78ffd3514b2d632a7169ec49c9da3e59" kindref="member">rpm_per_sec</ref>));</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>.setAcceleration(<ref refid="main_8cpp_1aca7e3849589a8d3f6bc5e433560ae6af" kindref="member">accel_steps_per_sec</ref>(<ref refid="main_8cpp_1a78ffd3514b2d632a7169ec49c9da3e59" kindref="member">rpm_per_sec</ref>));</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Set<sp/>Acceleration<sp/>=<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cpp_1aca7e3849589a8d3f6bc5e433560ae6af" kindref="member">accel_steps_per_sec</ref>(<ref refid="main_8cpp_1a78ffd3514b2d632a7169ec49c9da3e59" kindref="member">rpm_per_sec</ref>));</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" kindref="member">stepperMgr</ref>.addStepper(<ref refid="main_8cpp_1a2db4a2fb6cd90b442699bf2add4d8177" kindref="member">stepperLeft</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1ac8008077fdb972d71e967b5a6a81d4ae" kindref="member">stepperMgr</ref>.addStepper(<ref refid="main_8cpp_1a41e27d832b8af6a5127c477842fee69c" kindref="member">stepperRight</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>Serial.setRxFIFOFull(3);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>Serial.onReceive(<ref refid="main_8cpp_1a770f4b13bf2542f92efb7637cf1d9ff4" kindref="member">uart_receive</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a793087c111599b222a576d70747cc0c6" kindref="member">home_bridge_to_walk_in_on_boot</ref>();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a04166c24b24fb9fb53c97203cb734963" kindref="member">init_i2c_slave</ref>();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;Setup<sp/>complete!<sp/>current=(%ld,%ld)\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[0],</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a317a3262325d395a1dfb029ee3dc4aec" kindref="member">position</ref>[1]);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newline_idx<sp/>=<sp/><ref refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kindref="member">rx_line</ref>.indexOf(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(newline_idx<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>command<sp/>=<sp/><ref refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kindref="member">rx_line</ref>.substring(0,<sp/>newline_idx);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kindref="member">rx_line</ref>.remove(0,<sp/>newline_idx<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="main_8cpp_1a9bcb0f187e38ad38ebf2c2aaf9eb6329" kindref="member">process_command</ref>(command);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>newline_idx<sp/>=<sp/><ref refid="main_8cpp_1ac0db528d16d59ae8559f83610a0c7c6d" kindref="member">rx_line</ref>.indexOf(</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><ref refid="main_8cpp_1a5ac21a983a7df338c4b8180643ed7af9" kindref="member">update_bridge_motion</ref>();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="motor/src/main.cpp"/>
+  </compounddef>
+</doxygen>

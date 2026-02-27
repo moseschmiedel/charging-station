@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_841e220dcc5c96d6f074b913e9171a54" kind="dir">
+    <compoundname>dezibot/src/infraredLight</compoundname>
+    <innerfile refid="_infrared_l_e_d_8cpp">InfraredLED.cpp</innerfile>
+    <innerfile refid="_infrared_light_8cpp">InfraredLight.cpp</innerfile>
+    <innerfile refid="_infrared_light_8h">InfraredLight.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/infraredLight/"/>
+  </compounddef>
+</doxygen>

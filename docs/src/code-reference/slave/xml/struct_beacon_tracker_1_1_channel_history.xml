@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="struct_beacon_tracker_1_1_channel_history" kind="struct" language="C++" prot="private">
+    <compoundname>BeaconTracker::ChannelHistory</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_beacon_tracker_1_1_channel_history_1af4ee05d242681a60cab41b925a371468" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t BeaconTracker::ChannelHistory::values[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>values</name>
+        <qualifiedname>BeaconTracker::ChannelHistory::values</qualifiedname>
+        <initializer>= {0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/beacon_tracker.h" line="57" column="14" bodyfile="slave/src/beacon_tracker.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_beacon_tracker_1_1_channel_history_1af3a933d1ea0abf03c58e7ba06d26df38" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t BeaconTracker::ChannelHistory::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>BeaconTracker::ChannelHistory::count</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/beacon_tracker.h" line="58" column="13" bodyfile="slave/src/beacon_tracker.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_beacon_tracker_1_1_channel_history_1a50d0aaca9df8516f86c0ed0998bc5c82" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t BeaconTracker::ChannelHistory::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>BeaconTracker::ChannelHistory::index</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="slave/src/beacon_tracker.h" line="59" column="13" bodyfile="slave/src/beacon_tracker.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="slave/src/beacon_tracker.h" line="56" column="3" bodyfile="slave/src/beacon_tracker.h" bodystart="56" bodyend="60"/>
+    <listofallmembers>
+      <member refid="struct_beacon_tracker_1_1_channel_history_1af3a933d1ea0abf03c58e7ba06d26df38" prot="public" virt="non-virtual"><scope>BeaconTracker::ChannelHistory</scope><name>count</name></member>
+      <member refid="struct_beacon_tracker_1_1_channel_history_1a50d0aaca9df8516f86c0ed0998bc5c82" prot="public" virt="non-virtual"><scope>BeaconTracker::ChannelHistory</scope><name>index</name></member>
+      <member refid="struct_beacon_tracker_1_1_channel_history_1af4ee05d242681a60cab41b925a371468" prot="public" virt="non-virtual"><scope>BeaconTracker::ChannelHistory</scope><name>values</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,269 @@
+---
+import { Code } from "astro/components";
+import type { ShikiTransformer } from "shiki";
+import type { CodeFunctionDoc } from "../lib/code-reference";
+import {
+    DECLARATION_LANGUAGE,
+    SYNTAX_DEFAULT_COLOR,
+    SYNTAX_THEMES,
+} from "../../syntax-highlighting.config.mjs";
+
+interface Props {
+    functionDoc: CodeFunctionDoc;
+    headingLevel?: 3 | 4 | 5;
+    sectionIdPrefix?: string;
+    nested?: boolean;
+}
+
+const {
+    functionDoc,
+    headingLevel = 3,
+    sectionIdPrefix = "fn",
+    nested = false,
+} = Astro.props;
+
+const HeadingTag = `h${headingLevel}` as keyof HTMLElementTagNameMap;
+const toAnchorId = (value: string) =>
+    value
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+const anchorId = toAnchorId(
+    `${sectionIdPrefix}-${functionDoc.name}-${functionDoc.signature}`,
+);
+
+const BUILTIN_TYPE_TOKENS = new Set([
+    "void",
+    "bool",
+    "char",
+    "short",
+    "int",
+    "long",
+    "float",
+    "double",
+    "signed",
+    "unsigned",
+    "const",
+    "volatile",
+    "struct",
+    "class",
+    "enum",
+    "typename",
+    "auto",
+    "size_t",
+    "uint8_t",
+    "uint16_t",
+    "uint32_t",
+    "uint64_t",
+    "int8_t",
+    "int16_t",
+    "int32_t",
+    "int64_t",
+    "std",
+]);
+
+const extractTypeCandidates = (typeText: string): string[] => {
+    const rawTokens = typeText.match(/[A-Za-z_]\w*(?:::[A-Za-z_]\w*)*/g) ?? [];
+    return Array.from(
+        new Set(rawTokens.filter((token) => !BUILTIN_TYPE_TOKENS.has(token))),
+    ).sort((left, right) => right.length - left.length);
+};
+
+const isIdentifierChar = (value: string | undefined): boolean =>
+    Boolean(value && /[A-Za-z0-9_]/.test(value));
+
+const buildLinkedSpanChildren = (
+    text: string,
+    tokenLinks: Array<{ token: string; href: string }>,
+): Array<Record<string, unknown>> | null => {
+    if (!text || tokenLinks.length === 0) {
+        return null;
+    }
+
+    const children: Array<Record<string, unknown>> = [];
+    let cursor = 0;
+    let linkedAny = false;
+
+    while (cursor < text.length) {
+        let match:
+            | { token: string; href: string; end: number }
+            | null = null;
+
+        for (const entry of tokenLinks) {
+            if (!text.startsWith(entry.token, cursor)) {
+                continue;
+            }
+            const end = cursor + entry.token.length;
+            const leftBoundary =
+                cursor === 0 || !isIdentifierChar(text[cursor - 1]);
+            const rightBoundary =
+                end === text.length || !isIdentifierChar(text[end]);
+            if (!leftBoundary || !rightBoundary) {
+                continue;
+            }
+            match = { token: entry.token, href: entry.href, end };
+            break;
+        }
+
+        if (!match) {
+            const next = cursor + 1;
+            children.push({ type: "text", value: text.slice(cursor, next) });
+            cursor = next;
+            continue;
+        }
+
+        linkedAny = true;
+        children.push({
+            type: "element",
+            tagName: "a",
+            properties: {
+                href: match.href,
+                className: ["code-type-link"],
+            },
+            children: [{ type: "text", value: match.token }],
+        });
+        cursor = match.end;
+    }
+
+    return linkedAny ? children : null;
+};
+
+const signatureTypeLinks = new Map<string, string>();
+for (const arg of functionDoc.args) {
+    if (!arg.typeHref || !arg.typeLinkToken) {
+        continue;
+    }
+    if (!signatureTypeLinks.has(arg.typeLinkToken)) {
+        signatureTypeLinks.set(arg.typeLinkToken, arg.typeHref);
+    }
+}
+
+const isLikelyTypeToken = (token: string): boolean =>
+    /[A-Z]/.test(token) || token.includes("::");
+
+const signatureTypeLinkEntries = Array.from(signatureTypeLinks.entries())
+    .map(([token, href]) => ({ token, href }))
+    .filter((entry) => isLikelyTypeToken(entry.token))
+    .sort((left, right) => right.token.length - left.token.length);
+
+const signatureLinkTransformer: ShikiTransformer | undefined =
+    signatureTypeLinkEntries.length > 0
+        ? {
+              name: "code-reference-signature-type-links",
+              span(hast) {
+                  const firstChild = hast.children?.[0];
+                  if (
+                      !firstChild ||
+                      firstChild.type !== "text" ||
+                      typeof firstChild.value !== "string"
+                  ) {
+                      return;
+                  }
+
+                  const linkedChildren = buildLinkedSpanChildren(
+                      firstChild.value,
+                      signatureTypeLinkEntries,
+                  );
+                  if (linkedChildren) {
+                      hast.children = linkedChildren;
+                  }
+              },
+          }
+        : undefined;
+
+const signatureTransformers = signatureLinkTransformer
+    ? [signatureLinkTransformer]
+    : [];
+---
+
+<article class:list={["symbol-doc", nested && "nested"]}>
+    <HeadingTag id={anchorId} class="symbol-heading">
+        <a href={`#${anchorId}`}>
+            <code>{functionDoc.name}</code>
+        </a>
+    </HeadingTag>
+
+    <div class="declaration">
+        <Code
+            code={functionDoc.signature}
+            lang={DECLARATION_LANGUAGE}
+            themes={SYNTAX_THEMES}
+            defaultColor={SYNTAX_DEFAULT_COLOR}
+            transformers={signatureTransformers}
+            data-code-reference
+        />
+    </div>
+
+    <div class="meta-row">
+        {
+            functionDoc.location && (
+                <span>
+                    <code>{functionDoc.location}</code>
+                </span>
+            )
+        }
+        {
+            functionDoc.qualifiers.map((qualifier) => (
+                <span>
+                    <code>{qualifier}</code>
+                </span>
+            ))
+        }
+    </div>
+
+    {
+        functionDoc.brief ? (
+            <p>{functionDoc.brief}</p>
+        ) : (
+            <p class="muted">No description.</p>
+        )
+    }
+</article>
+
+<style>
+    .symbol-doc {
+        border-top: 1px solid var(--sl-color-hairline);
+        padding-top: 0.9rem;
+        margin-top: 0.9rem;
+    }
+
+    .symbol-heading {
+        margin: 0;
+    }
+
+    .symbol-heading a {
+        color: var(--sl-color-white);
+        text-decoration: none;
+    }
+
+    .symbol-heading a:hover {
+        text-decoration: underline;
+    }
+
+    .declaration {
+        margin: 0.55rem 0 0.65rem;
+    }
+
+    .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .muted {
+        color: var(--sl-color-text-accent);
+        font-style: italic;
+    }
+
+    .nested {
+        margin-left: 0.45rem;
+    }
+
+    :global(pre.astro-code[data-code-reference] a.code-type-link) {
+        color: inherit !important;
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+        text-underline-offset: 0.12em;
+    }
+</style>

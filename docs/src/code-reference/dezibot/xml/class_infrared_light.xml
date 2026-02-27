@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_infrared_light" kind="class" language="C++" prot="public">
+    <compoundname>InfraredLight</compoundname>
+    <includes refid="_infrared_light_8h" local="no">InfraredLight.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_infrared_light_1a2f28dea6f3e7ba45e33c76497f6e3624" prot="public" static="no" mutable="no">
+        <type><ref refid="class_infrared_l_e_d" kindref="compound">InfraredLED</ref></type>
+        <definition>InfraredLED InfraredLight::bottom</definition>
+        <argsstring></argsstring>
+        <name>bottom</name>
+        <qualifiedname>InfraredLight::bottom</qualifiedname>
+        <initializer>= <ref refid="class_infrared_l_e_d" kindref="compound">InfraredLED</ref>(<ref refid="class_infrared_light_1ab6a46a7e1aa2f8ce2ef2d6162d8234e1" kindref="member">IRBottomPin</ref>, LEDC_TIMER_0, LEDC_CHANNEL_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="65" column="15" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_infrared_light_1add1e4f3e968d68565b4cc169bb720c8a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_infrared_l_e_d" kindref="compound">InfraredLED</ref></type>
+        <definition>InfraredLED InfraredLight::front</definition>
+        <argsstring></argsstring>
+        <name>front</name>
+        <qualifiedname>InfraredLight::front</qualifiedname>
+        <initializer>= <ref refid="class_infrared_l_e_d" kindref="compound">InfraredLED</ref>(<ref refid="class_infrared_light_1a7f22bff667229b8b10c2e90595eb0015" kindref="member">IRFrontPin</ref>, LEDC_TIMER_1, LEDC_CHANNEL_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="66" column="15" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_infrared_light_1a7f22bff667229b8b10c2e90595eb0015" prot="protected" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t InfraredLight::IRFrontPin</definition>
+        <argsstring></argsstring>
+        <name>IRFrontPin</name>
+        <qualifiedname>InfraredLight::IRFrontPin</qualifiedname>
+        <initializer>= 14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="70" column="24" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_infrared_light_1ab6a46a7e1aa2f8ce2ef2d6162d8234e1" prot="protected" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t InfraredLight::IRBottomPin</definition>
+        <argsstring></argsstring>
+        <name>IRBottomPin</name>
+        <qualifiedname>InfraredLight::IRBottomPin</qualifiedname>
+        <initializer>= 13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="71" column="24" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_infrared_light_1a77320b74af211ea70464a99a96203c68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InfraredLight::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>InfraredLight::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/infraredLight/InfraredLight.h" line="67" column="8" bodyfile="dezibot/src/infraredLight/InfraredLight.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>InfraredLED</label>
+        <link refid="class_infrared_l_e_d"/>
+      </node>
+      <node id="1">
+        <label>InfraredLight</label>
+        <link refid="class_infrared_light"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>bottom</edgelabel>
+          <edgelabel>front</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dezibot/src/infraredLight/InfraredLight.h" line="62" column="1" bodyfile="dezibot/src/infraredLight/InfraredLight.h" bodystart="62" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_infrared_light_1a77320b74af211ea70464a99a96203c68" prot="public" virt="non-virtual"><scope>InfraredLight</scope><name>begin</name></member>
+      <member refid="class_infrared_light_1a2f28dea6f3e7ba45e33c76497f6e3624" prot="public" virt="non-virtual"><scope>InfraredLight</scope><name>bottom</name></member>
+      <member refid="class_infrared_light_1add1e4f3e968d68565b4cc169bb720c8a" prot="public" virt="non-virtual"><scope>InfraredLight</scope><name>front</name></member>
+      <member refid="class_infrared_light_1ab6a46a7e1aa2f8ce2ef2d6162d8234e1" prot="protected" virt="non-virtual"><scope>InfraredLight</scope><name>IRBottomPin</name></member>
+      <member refid="class_infrared_light_1a7f22bff667229b8b10c2e90595eb0015" prot="protected" virt="non-virtual"><scope>InfraredLight</scope><name>IRFrontPin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

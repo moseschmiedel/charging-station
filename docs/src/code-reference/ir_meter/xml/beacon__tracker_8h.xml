@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="beacon__tracker_8h" kind="file" language="C++">
+    <compoundname>beacon_tracker.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includedby refid="beacon__tracker_8cpp" local="yes">ir_meter/src/beacon_tracker.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">ir_meter/src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ir_meter/src/beacon_tracker.h</label>
+        <link refid="beacon__tracker_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>ir_meter/src/beacon_tracker.cpp</label>
+        <link refid="beacon__tracker_8cpp"/>
+      </node>
+      <node id="1">
+        <label>ir_meter/src/beacon_tracker.h</label>
+        <link refid="beacon__tracker_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ir_meter/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_sensor_calibration" prot="public">SensorCalibration</innerclass>
+    <innerclass refid="struct_beacon_tracker_config" prot="public">BeaconTrackerConfig</innerclass>
+    <innerclass refid="struct_beacon_tracker_state" prot="public">BeaconTrackerState</innerclass>
+    <innerclass refid="class_beacon_tracker" prot="public">BeaconTracker</innerclass>
+    <innerclass refid="struct_beacon_tracker_1_1_channel_history" prot="private">BeaconTracker::ChannelHistory</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="struct_sensor_calibration" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_sensor_calibration" kindref="compound">SensorCalibration</ref><sp/>{</highlight></codeline>
+<codeline lineno="6" refid="struct_sensor_calibration_1af24ce7d8dd53818dfdae3021124ac49b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_sensor_calibration_1af24ce7d8dd53818dfdae3021124ac49b" kindref="member">gain</ref><sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="7" refid="struct_sensor_calibration_1a40d57916cab30a4040364fd34ffab1de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_sensor_calibration_1a40d57916cab30a4040364fd34ffab1de" kindref="member">offset</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="struct_beacon_tracker_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_beacon_tracker_config" kindref="compound">BeaconTrackerConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="struct_beacon_tracker_config_1ad44dcebe292bc67d3c0f600c29e04785" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_sensor_calibration" kindref="compound">SensorCalibration</ref><sp/><ref refid="struct_beacon_tracker_config_1ad44dcebe292bc67d3c0f600c29e04785" kindref="member">front</ref>;</highlight></codeline>
+<codeline lineno="12" refid="struct_beacon_tracker_config_1a27fda1fc9599c6258a08b2e6b63a6ef2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_sensor_calibration" kindref="compound">SensorCalibration</ref><sp/><ref refid="struct_beacon_tracker_config_1a27fda1fc9599c6258a08b2e6b63a6ef2" kindref="member">back</ref>;</highlight></codeline>
+<codeline lineno="13" refid="struct_beacon_tracker_config_1a7b304c02321d26fdb4d1f2e08b2cd436" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_sensor_calibration" kindref="compound">SensorCalibration</ref><sp/><ref refid="struct_beacon_tracker_config_1a7b304c02321d26fdb4d1f2e08b2cd436" kindref="member">left</ref>;</highlight></codeline>
+<codeline lineno="14" refid="struct_beacon_tracker_config_1ac8fdd2db100137d65d6af524e718524e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_sensor_calibration" kindref="compound">SensorCalibration</ref><sp/><ref refid="struct_beacon_tracker_config_1ac8fdd2db100137d65d6af524e718524e" kindref="member">right</ref>;</highlight></codeline>
+<codeline lineno="15" refid="struct_beacon_tracker_config_1a1935eb76273ef3cb6ef0cb3f13770c08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_config_1a1935eb76273ef3cb6ef0cb3f13770c08" kindref="member">signalMin</ref><sp/>=<sp/>800.0f;</highlight></codeline>
+<codeline lineno="16" refid="struct_beacon_tracker_config_1a4a031eb8f49bd60b2dd397fde7d7c417" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_config_1a4a031eb8f49bd60b2dd397fde7d7c417" kindref="member">angleAlpha</ref><sp/>=<sp/>0.18f;</highlight></codeline>
+<codeline lineno="17" refid="struct_beacon_tracker_config_1a07d9f4531d96bcbb402496f32bf61e90" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_config_1a07d9f4531d96bcbb402496f32bf61e90" kindref="member">maxAngleStepRad</ref><sp/>=<sp/>0.35f;</highlight></codeline>
+<codeline lineno="18" refid="struct_beacon_tracker_config_1a83d9b73d16a61b3f1dede56657735722" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_config_1a83d9b73d16a61b3f1dede56657735722" kindref="member">signalDropGuardRatio</ref><sp/>=<sp/>0.22f;</highlight></codeline>
+<codeline lineno="19" refid="struct_beacon_tracker_config_1a7c83ce4b9a4ae0880492eaf316064e75" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="struct_beacon_tracker_config_1a7c83ce4b9a4ae0880492eaf316064e75" kindref="member">saturationRawThreshold</ref><sp/>=<sp/>4080;</highlight></codeline>
+<codeline lineno="20" refid="struct_beacon_tracker_config_1aeef5bacb1c5d0cb1bb7b80ded17d83b4" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="struct_beacon_tracker_config_1aeef5bacb1c5d0cb1bb7b80ded17d83b4" kindref="member">guardHoldMs</ref><sp/>=<sp/>120;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_beacon_tracker_state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="struct_beacon_tracker_state_1a6b565e213e8dce00c50c6e6d5df6e163" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_beacon_tracker_state_1a6b565e213e8dce00c50c6e6d5df6e163" kindref="member">timestampMs</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25" refid="struct_beacon_tracker_state_1a139c86415c7dce4d10577929d5046e06" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_beacon_tracker_state_1a139c86415c7dce4d10577929d5046e06" kindref="member">rawFront</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26" refid="struct_beacon_tracker_state_1a4179728f38eb38a0af6ceeff8625c267" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_beacon_tracker_state_1a4179728f38eb38a0af6ceeff8625c267" kindref="member">rawBack</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27" refid="struct_beacon_tracker_state_1a9992b05324d156b0f35cf0e60c54a9c8" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_beacon_tracker_state_1a9992b05324d156b0f35cf0e60c54a9c8" kindref="member">rawLeft</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28" refid="struct_beacon_tracker_state_1a8a722259cd20fb37a664f3b951974d36" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="struct_beacon_tracker_state_1a8a722259cd20fb37a664f3b951974d36" kindref="member">rawRight</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1a3d2cabc510ebf547ce0adb2b90017818" kindref="member">front</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="31" refid="struct_beacon_tracker_state_1ac2654a2b0cdf2ba45f93c1961844b51f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1ac2654a2b0cdf2ba45f93c1961844b51f" kindref="member">back</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="32" refid="struct_beacon_tracker_state_1ae21621aef92669de86eb80071a755c91" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1ae21621aef92669de86eb80071a755c91" kindref="member">left</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="33" refid="struct_beacon_tracker_state_1a328db37e1d0b06fb53961415c03255de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1a328db37e1d0b06fb53961415c03255de" kindref="member">right</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_beacon_tracker_state_1aef186fb93c0544d80123761953c1325e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1aef186fb93c0544d80123761953c1325e" kindref="member">vx</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="36" refid="struct_beacon_tracker_state_1a2b10f05fc766531b06af1053cf4a4b51" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1a2b10f05fc766531b06af1053cf4a4b51" kindref="member">vy</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="37" refid="struct_beacon_tracker_state_1a3c86db35e1f653857bd3beb20ce137de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1a3c86db35e1f653857bd3beb20ce137de" kindref="member">theta</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="38" refid="struct_beacon_tracker_state_1acdbd3f46f3d0e06e542051211b330602" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1acdbd3f46f3d0e06e542051211b330602" kindref="member">filteredTheta</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="39" refid="struct_beacon_tracker_state_1ae5b0ba0ef79403c4565d1d38c8a37185" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1ae5b0ba0ef79403c4565d1d38c8a37185" kindref="member">totalSignal</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="40" refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1a1b4d6d1e11985ab1d164799dd71169bf" kindref="member">detected</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="struct_beacon_tracker_state_1adefaa8f94c723008c071eac962b5a607" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state_1adefaa8f94c723008c071eac962b5a607" kindref="member">initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_beacon_tracker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_beacon_tracker_1a6aa154b31c9f11f08560efcc66c9c623" kindref="member">BeaconTracker</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_beacon_tracker_1a6aa154b31c9f11f08560efcc66c9c623" kindref="member">BeaconTracker</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_config" kindref="compound">BeaconTrackerConfig</ref><sp/>&amp;config<sp/>=<sp/><ref refid="struct_beacon_tracker_config" kindref="compound">BeaconTrackerConfig</ref>());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;<ref refid="class_beacon_tracker_1a48748963878819d40b9000ded5bedda4" kindref="member">update</ref>(uint32_t<sp/>rawFront,<sp/>uint32_t<sp/>rawBack,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>rawLeft,<sp/>uint32_t<sp/>rawRight,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>timestampMs);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>&amp;<ref refid="class_beacon_tracker_1a9ec5d383bdf0782316730e1309efdc66" kindref="member">state</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_beacon_tracker_1af5c8bdc762366f061d8f799fa8299682" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ChannelHistory<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>values[3]<sp/>=<sp/>{0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>median3(uint32_t<sp/>a,<sp/>uint32_t<sp/>b,<sp/>uint32_t<sp/>c);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>clampf(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>low,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>high);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isBefore(uint32_t<sp/>now,<sp/>uint32_t<sp/>deadline);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint32_t<sp/>pushAndMedian(ChannelHistory<sp/>&amp;history,<sp/>uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>extendGuard(uint32_t<sp/>now,<sp/>uint16_t<sp/>holdMs);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>guardActive(uint32_t<sp/>now)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="struct_beacon_tracker_config" kindref="compound">BeaconTrackerConfig</ref><sp/>config_;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="struct_beacon_tracker_state" kindref="compound">BeaconTrackerState</ref><sp/>state_;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>ChannelHistory<sp/>historyFront_;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>ChannelHistory<sp/>historyBack_;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>ChannelHistory<sp/>historyLeft_;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>ChannelHistory<sp/>historyRight_;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>previousSignal_<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>uint32_t<sp/>guardUntilMs_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="ir_meter/src/beacon_tracker.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_motion" kind="class" language="C++" prot="public">
+    <compoundname>Motion</compoundname>
+    <includes refid="_motion_8h" local="no">Motion.h</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_motion_1a220a4afda6c4c1774aa85e2a5c5d63da" prot="protected" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Motion::RIGHT_MOTOR_DUTY</definition>
+        <argsstring></argsstring>
+        <name>RIGHT_MOTOR_DUTY</name>
+        <qualifiedname>Motion::RIGHT_MOTOR_DUTY</qualifiedname>
+        <initializer>= <ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="61" column="28" bodyfile="dezibot/src/motion/Motion.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1ace4b91ef17cada10db5ec4eaf89475ae" prot="protected" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Motion::LEFT_MOTOR_DUTY</definition>
+        <argsstring></argsstring>
+        <name>LEFT_MOTOR_DUTY</name>
+        <qualifiedname>Motion::LEFT_MOTOR_DUTY</qualifiedname>
+        <initializer>= <ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="62" column="28" bodyfile="dezibot/src/motion/Motion.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Motion::MOTOR_RIGHT_PIN</definition>
+        <argsstring></argsstring>
+        <name>MOTOR_RIGHT_PIN</name>
+        <qualifiedname>Motion::MOTOR_RIGHT_PIN</qualifiedname>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="63" column="22" bodyfile="dezibot/src/motion/Motion.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Motion::MOTOR_LEFT_PIN</definition>
+        <argsstring></argsstring>
+        <name>MOTOR_LEFT_PIN</name>
+        <qualifiedname>Motion::MOTOR_LEFT_PIN</qualifiedname>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="64" column="22" bodyfile="dezibot/src/motion/Motion.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1acc000439521d9e60f48f2bb8f17e8c0b" prot="protected" static="yes" mutable="no">
+        <type>TaskHandle_t</type>
+        <definition>TaskHandle_t Motion::xMoveTaskHandle</definition>
+        <argsstring></argsstring>
+        <name>xMoveTaskHandle</name>
+        <qualifiedname>Motion::xMoveTaskHandle</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="68" column="32" bodyfile="dezibot/src/motion/Motion.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1aea1d38206dd3cd3e9c6065826b35b6b3" prot="protected" static="yes" mutable="no">
+        <type>TaskHandle_t</type>
+        <definition>TaskHandle_t Motion::xClockwiseTaskHandle</definition>
+        <argsstring></argsstring>
+        <name>xClockwiseTaskHandle</name>
+        <qualifiedname>Motion::xClockwiseTaskHandle</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="69" column="32" bodyfile="dezibot/src/motion/Motion.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a9432d709c1cf4c5362cddbf6cb0846c3" prot="protected" static="yes" mutable="no">
+        <type>TaskHandle_t</type>
+        <definition>TaskHandle_t Motion::xAntiClockwiseTaskHandle</definition>
+        <argsstring></argsstring>
+        <name>xAntiClockwiseTaskHandle</name>
+        <qualifiedname>Motion::xAntiClockwiseTaskHandle</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="70" column="32" bodyfile="dezibot/src/motion/Motion.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a19c2685f7f8c5eaefcebe6ca593f93ca" prot="protected" static="yes" mutable="no">
+        <type>TickType_t</type>
+        <definition>TickType_t Motion::xLastWakeTime</definition>
+        <argsstring></argsstring>
+        <name>xLastWakeTime</name>
+        <qualifiedname>Motion::xLastWakeTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="71" column="30" bodyfile="dezibot/src/motion/Motion.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a8caeae26554a0231878de8c9d240b186" prot="protected" static="yes" mutable="no">
+        <type><ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref> *</type>
+        <definition>FIFO_Package* Motion::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <qualifiedname>Motion::buffer</qualifiedname>
+        <initializer>= new <ref refid="struct_f_i_f_o___package" kindref="compound">FIFO_Package</ref>[64]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="73" column="32" bodyfile="dezibot/src/motion/Motion.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a55b01588e3ae1fc4f6773f28036ec76c" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Motion::correctionThreshold</definition>
+        <argsstring></argsstring>
+        <name>correctionThreshold</name>
+        <qualifiedname>Motion::correctionThreshold</qualifiedname>
+        <initializer>= 150</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="74" column="23" bodyfile="dezibot/src/motion/Motion.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_motion_1a61000bc6a3f36b44c392b21e1b48eb90" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_motor" kindref="compound">Motor</ref></type>
+        <definition>Motor Motion::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <qualifiedname>Motion::left</qualifiedname>
+        <initializer>= <ref refid="class_motor" kindref="compound">Motor</ref>(<ref refid="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" kindref="member">MOTOR_LEFT_PIN</ref>,<ref refid="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" kindref="member">TIMER</ref>,<ref refid="_motion_8h_1ab758924897efcdba10da36f79a38a103" kindref="member">CHANNEL_LEFT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="78" column="25" bodyfile="dezibot/src/motion/Motion.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1af822d19ebc08f0982a9f3ef703d673ed" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_motor" kindref="compound">Motor</ref></type>
+        <definition>Motor Motion::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <qualifiedname>Motion::right</qualifiedname>
+        <initializer>= <ref refid="class_motor" kindref="compound">Motor</ref>(<ref refid="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" kindref="member">MOTOR_RIGHT_PIN</ref>,<ref refid="_motion_8h_1a599217205dc3092c26567a2bd868ef3a" kindref="member">TIMER</ref>,<ref refid="_motion_8h_1aee42717f6069b240ff12670aaee3ad42" kindref="member">CHANNEL_RIGHT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="79" column="25" bodyfile="dezibot/src/motion/Motion.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_motion_1a91f1eb93380a20a97c2868baf21e61b0" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_motion_detection" kindref="compound">MotionDetection</ref></type>
+        <definition>MotionDetection Motion::detection</definition>
+        <argsstring></argsstring>
+        <name>detection</name>
+        <qualifiedname>Motion::detection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="82" column="35" bodyfile="dezibot/src/motion/Motion.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_motion_1af664e0e90da90964f77190d4da19e6cf" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::moveTask</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>moveTask</name>
+        <qualifiedname>Motion::moveTask</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="65" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="31" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_1a66808437e25311fb03f69b8a8ad7565f" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::leftMotorTask</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>leftMotorTask</name>
+        <qualifiedname>Motion::leftMotorTask</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="66" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="110" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_1a722c99b5ead487d353c289be0fc9a085" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::rightMotorTask</definition>
+        <argsstring>(void *args)</argsstring>
+        <name>rightMotorTask</name>
+        <qualifiedname>Motion::rightMotorTask</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="67" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="150" bodyend="172"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_motion_1a43f6e43bb59734d35206e18a22bfe8a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Motion::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the movement component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="88" column="10" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="18" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_motion_1a929f07ef5f5821468f433b9772bce416" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::move</definition>
+        <argsstring>(uint32_t moveForMs=0, uint baseValue=DEFAULT_BASE_VALUE)</argsstring>
+        <name>move</name>
+        <qualifiedname>Motion::move</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>moveForMs</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>baseValue</declname>
+          <defval><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref></defval>
+        </param>
+        <briefdescription>
+<para>Move forward for a certain amount of time. Call with moveForMs 0 will start movement, that must be stopped explicit by call to <ref refid="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" kindref="member">stop()</ref>. The function applys a basic algorithm to improve the straigthness of the movement. Lifting the robot from the desk may corrupt the results and is not recommended. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>moveForMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Representing the duration of forward moving in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value that is used to start with the calibrated movement. Defaults to 3900. If the <ref refid="class_dezibot" kindref="compound">Dezibot</ref> is not moving forward at all increasing the value may help. If the robot is just jumping up and down but not forward, try a lower value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="100" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="89" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_1ae812e47ee6ddef344d838458b09cd5bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::rotateClockwise</definition>
+        <argsstring>(uint32_t rotateForMs=0, uint baseValue=DEFAULT_BASE_VALUE)</argsstring>
+        <name>rotateClockwise</name>
+        <qualifiedname>Motion::rotateClockwise</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>rotateForMs</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>baseValue</declname>
+          <defval><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref></defval>
+        </param>
+        <briefdescription>
+<para>Rotate clockwise for a certain amount of time. Call with moveForMs 0 will start movement, that must be stopped explicit by call to <ref refid="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" kindref="member">stop()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotateForMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Representing the duration of rotating clockwise in milliseconds, or 0 to rotate until another movecmd is issued. Default is 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value that is used to start with the calibrated movement (not released yet, currently just the used value) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="108" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="136" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_1a21f08f6d4bda91747ca4ae4505378108" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::rotateAntiClockwise</definition>
+        <argsstring>(uint32_t rotateForMs=0, uint baseValue=DEFAULT_BASE_VALUE)</argsstring>
+        <name>rotateAntiClockwise</name>
+        <qualifiedname>Motion::rotateAntiClockwise</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>rotateForMs</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>baseValue</declname>
+          <defval><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref></defval>
+        </param>
+        <briefdescription>
+<para>Rotate anticlockwise for a certain amount of time. Call with moveForMs 0 will start movement, that must be stopped explicit by call to <ref refid="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" kindref="member">stop()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotateForMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Representing the duration of rotating anticlockwise in milliseconds or 0 to let the robot turn until another movecommand is issued. Default is 0. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value that is used to start with the calibrated movement (not released yet, currently just the used value). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="116" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="175" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Motion::stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>stop</name>
+        <qualifiedname>Motion::stop</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>stops any current movement, no matter if timebased or endless </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="122" column="17" bodyfile="dezibot/src/motion/Motion.cpp" bodystart="189" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_motion_1ab3895e38d77fc82c4a4bec5df2ba4c47" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Motion::moveWithoutCorrection</definition>
+        <argsstring>(uint32_t moveForMs=0, uint baseValue=DEFAULT_BASE_VALUE)</argsstring>
+        <name>moveWithoutCorrection</name>
+        <qualifiedname>Motion::moveWithoutCorrection</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>moveForMs</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint</type>
+          <declname>baseValue</declname>
+          <defval><ref refid="_motion_8h_1a850d90141d22c806c346487d1b690082" kindref="member">DEFAULT_BASE_VALUE</ref></defval>
+        </param>
+        <briefdescription>
+<para>Does the same as the move function, but this function does not apply any kind of algorithm to improve the result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>moveForMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how many ms should the robot move, or 0 to let the robot move until another move command is mentioned, default is 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the duty value that is used for the movement, default is 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/motion/Motion.h" line="130" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>FIFO_Package</label>
+        <link refid="struct_f_i_f_o___package"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>accel</edgelabel>
+          <edgelabel>gyro</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IMUResult</label>
+        <link refid="struct_i_m_u_result"/>
+      </node>
+      <node id="1">
+        <label>Motion</label>
+        <link refid="class_motion"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>detection</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>MotionDetection</label>
+        <link refid="class_motion_detection"/>
+      </node>
+      <node id="4">
+        <label>Motor</label>
+        <link refid="class_motor"/>
+      </node>
+    </collaborationgraph>
+    <location file="dezibot/src/motion/Motion.h" line="59" column="1" bodyfile="dezibot/src/motion/Motion.h" bodystart="59" bodyend="132"/>
+    <listofallmembers>
+      <member refid="class_motion_1a43f6e43bb59734d35206e18a22bfe8a4" prot="public" virt="non-virtual"><scope>Motion</scope><name>begin</name></member>
+      <member refid="class_motion_1a8caeae26554a0231878de8c9d240b186" prot="protected" virt="non-virtual"><scope>Motion</scope><name>buffer</name></member>
+      <member refid="class_motion_1a55b01588e3ae1fc4f6773f28036ec76c" prot="protected" virt="non-virtual"><scope>Motion</scope><name>correctionThreshold</name></member>
+      <member refid="class_motion_1a91f1eb93380a20a97c2868baf21e61b0" prot="public" virt="non-virtual"><scope>Motion</scope><name>detection</name></member>
+      <member refid="class_motion_1a61000bc6a3f36b44c392b21e1b48eb90" prot="public" virt="non-virtual"><scope>Motion</scope><name>left</name></member>
+      <member refid="class_motion_1ace4b91ef17cada10db5ec4eaf89475ae" prot="protected" virt="non-virtual"><scope>Motion</scope><name>LEFT_MOTOR_DUTY</name></member>
+      <member refid="class_motion_1a66808437e25311fb03f69b8a8ad7565f" prot="protected" virt="non-virtual"><scope>Motion</scope><name>leftMotorTask</name></member>
+      <member refid="class_motion_1a34bd1cb8f726acaa8b106220b802bcc6" prot="protected" virt="non-virtual"><scope>Motion</scope><name>MOTOR_LEFT_PIN</name></member>
+      <member refid="class_motion_1a37b3958751780b1cf93afcd90bc3d7ba" prot="protected" virt="non-virtual"><scope>Motion</scope><name>MOTOR_RIGHT_PIN</name></member>
+      <member refid="class_motion_1a929f07ef5f5821468f433b9772bce416" prot="public" virt="non-virtual"><scope>Motion</scope><name>move</name></member>
+      <member refid="class_motion_1af664e0e90da90964f77190d4da19e6cf" prot="protected" virt="non-virtual"><scope>Motion</scope><name>moveTask</name></member>
+      <member refid="class_motion_1ab3895e38d77fc82c4a4bec5df2ba4c47" prot="public" virt="non-virtual"><scope>Motion</scope><name>moveWithoutCorrection</name></member>
+      <member refid="class_motion_1af822d19ebc08f0982a9f3ef703d673ed" prot="public" virt="non-virtual"><scope>Motion</scope><name>right</name></member>
+      <member refid="class_motion_1a220a4afda6c4c1774aa85e2a5c5d63da" prot="protected" virt="non-virtual"><scope>Motion</scope><name>RIGHT_MOTOR_DUTY</name></member>
+      <member refid="class_motion_1a722c99b5ead487d353c289be0fc9a085" prot="protected" virt="non-virtual"><scope>Motion</scope><name>rightMotorTask</name></member>
+      <member refid="class_motion_1a21f08f6d4bda91747ca4ae4505378108" prot="public" virt="non-virtual"><scope>Motion</scope><name>rotateAntiClockwise</name></member>
+      <member refid="class_motion_1ae812e47ee6ddef344d838458b09cd5bf" prot="public" virt="non-virtual"><scope>Motion</scope><name>rotateClockwise</name></member>
+      <member refid="class_motion_1a6bfcbf8b5e05b336ea3faa006ddc3cf0" prot="public" virt="non-virtual"><scope>Motion</scope><name>stop</name></member>
+      <member refid="class_motion_1a9432d709c1cf4c5362cddbf6cb0846c3" prot="protected" virt="non-virtual"><scope>Motion</scope><name>xAntiClockwiseTaskHandle</name></member>
+      <member refid="class_motion_1aea1d38206dd3cd3e9c6065826b35b6b3" prot="protected" virt="non-virtual"><scope>Motion</scope><name>xClockwiseTaskHandle</name></member>
+      <member refid="class_motion_1a19c2685f7f8c5eaefcebe6ca593f93ca" prot="protected" virt="non-virtual"><scope>Motion</scope><name>xLastWakeTime</name></member>
+      <member refid="class_motion_1acc000439521d9e60f48f2bb8f17e8c0b" prot="protected" virt="non-virtual"><scope>Motion</scope><name>xMoveTaskHandle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

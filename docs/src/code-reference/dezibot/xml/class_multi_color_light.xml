@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_multi_color_light" kind="class" language="C++" prot="public">
+    <compoundname>MultiColorLight</compoundname>
+    <includes refid="_multi_color_light_8h" local="no">MultiColorLight.h</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_multi_color_light_1a474c01e660bc642f416e0f75f16d727c" prot="protected" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t MultiColorLight::ledAmount</definition>
+        <argsstring></argsstring>
+        <name>ledAmount</name>
+        <qualifiedname>MultiColorLight::ledAmount</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="30" column="27" bodyfile="dezibot/src/multiColorLight/MultiColorLight.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_multi_color_light_1ab0b493779e9cb1925c9c330cddcfb11c" prot="protected" static="yes" mutable="no">
+        <type>const int16_t</type>
+        <definition>const int16_t MultiColorLight::ledPin</definition>
+        <argsstring></argsstring>
+        <name>ledPin</name>
+        <qualifiedname>MultiColorLight::ledPin</qualifiedname>
+        <initializer>= 48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="31" column="26" bodyfile="dezibot/src/multiColorLight/MultiColorLight.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" prot="protected" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MultiColorLight::maxBrightness</definition>
+        <argsstring></argsstring>
+        <name>maxBrightness</name>
+        <qualifiedname>MultiColorLight::maxBrightness</qualifiedname>
+        <initializer>= 150</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="32" column="26" bodyfile="dezibot/src/multiColorLight/MultiColorLight.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" prot="protected" static="no" mutable="no">
+        <type>Adafruit_NeoPixel</type>
+        <definition>Adafruit_NeoPixel MultiColorLight::rgbLeds</definition>
+        <argsstring></argsstring>
+        <name>rgbLeds</name>
+        <qualifiedname>MultiColorLight::rgbLeds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="33" column="23" bodyfile="dezibot/src/multiColorLight/MultiColorLight.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_multi_color_light_1ae9fba3a0f5834e4a73cbc43362e91ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultiColorLight::MultiColorLight</definition>
+        <argsstring>()</argsstring>
+        <name>MultiColorLight</name>
+        <qualifiedname>MultiColorLight::MultiColorLight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="36" column="5" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a796adb16296fb9d27f55e4f6f818fe98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>MultiColorLight::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>initialize the multicolor component </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="41" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::setLed</definition>
+        <argsstring>(uint8_t index, uint32_t color)</argsstring>
+        <name>setLed</name>
+        <qualifiedname>MultiColorLight::setLed</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Set the specified led to the passed color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ranging from 0-2, 0: Right, 1: Left, 2: Bottom </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. Each color can range between 0 to 100 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="50" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1ae30ab46416190a191466cd23c26b91ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::setLed</definition>
+        <argsstring>(leds leds, uint32_t color)</argsstring>
+        <name>setLed</name>
+        <qualifiedname>MultiColorLight::setLed</qualifiedname>
+        <param>
+          <type><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref></type>
+          <declname>leds</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Set the specified leds to the passed color value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which leds should be updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. Each color can range between 0 to 100 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="60" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="21" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a35cda9e562ded9568e0ccd0d05ccb406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::setLed</definition>
+        <argsstring>(leds leds, uint8_t red, uint8_t green, uint8_t blue)</argsstring>
+        <name>setLed</name>
+        <qualifiedname>MultiColorLight::setLed</qualifiedname>
+        <param>
+          <type><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref></type>
+          <declname>leds</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+<para>Set the specified leds to the passed color value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which leds should be updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>red</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness of red, is normalized in the function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>green</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness of green, is normalized in the function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness of blue, is normalized in the function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="70" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1ac2e7859a558b6840f2ade8c41520f18d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::setTopLeds</definition>
+        <argsstring>(uint32_t color)</argsstring>
+        <name>setTopLeds</name>
+        <qualifiedname>MultiColorLight::setTopLeds</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>sets the two leds on the top of the robot to the specified color </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. Each color can range between 0 to 100 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="79" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a81cb01bc7cb9f704e2c91746e6336f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::setTopLeds</definition>
+        <argsstring>(uint8_t red, uint8_t green, uint8_t blue)</argsstring>
+        <name>setTopLeds</name>
+        <qualifiedname>MultiColorLight::setTopLeds</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+<para>sets the two leds on the top of the robot to the specified color </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>red</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness of red, is normalized in the function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>green</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness of green, is normalized in the function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>brightness of blue, is normalized in the function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="88" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a44309c4b895182454fc9b32b685b0a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::blink</definition>
+        <argsstring>(uint16_t amount, uint32_t color=0x00006400, leds leds=TOP, uint32_t interval=1000)</argsstring>
+        <name>blink</name>
+        <qualifiedname>MultiColorLight::blink</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>color</declname>
+          <defval>0x00006400</defval>
+        </param>
+        <param>
+          <type><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref></type>
+          <declname>leds</declname>
+          <defval><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a0ad44897a70fba309c24a5b6007de3e3" kindref="member">TOP</ref></defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>interval</declname>
+          <defval>1000</defval>
+        </param>
+        <briefdescription>
+<para>Let LEDs blink, returns after all blinks were executed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how often should the leds blink </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. Each color can range between 0 to 100 Defaults to blue </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>leds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which LEDs should blink, default is TOP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how many miliseconds the led is on, defaults to 1s </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="102" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a02ae577d79bcaa83672937d0b123c668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultiColorLight::turnOffLed</definition>
+        <argsstring>(leds leds=ALL)</argsstring>
+        <name>turnOffLed</name>
+        <qualifiedname>MultiColorLight::turnOffLed</qualifiedname>
+        <param>
+          <type><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref></type>
+          <declname>leds</declname>
+          <defval><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66ab1d5eac4b1dca480c8056eaea7663b7a" kindref="member">ALL</ref></defval>
+        </param>
+        <briefdescription>
+<para>turn off the given leds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which leds should be turned off, defaults to ALL </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="109" column="10" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="66" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t MultiColorLight::color</definition>
+        <argsstring>(uint8_t r, uint8_t g, uint8_t b)</argsstring>
+        <name>color</name>
+        <qualifiedname>MultiColorLight::color</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>wrapper to calulate the used colorformat from a rgb-value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>red (0-100) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>green (0-100) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>blue (0-100) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="121" column="14" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_multi_color_light_1a987624773419b11f1dceca75bea17ff9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t MultiColorLight::normalizeColor</definition>
+        <argsstring>(uint32_t color, uint8_t maxBrigthness=maxBrightness)</argsstring>
+        <name>normalizeColor</name>
+        <qualifiedname>MultiColorLight::normalizeColor</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>maxBrigthness</declname>
+          <defval><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref></defval>
+        </param>
+        <briefdescription>
+<para>normalizes every component of color to not exeed the maxBrightness </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxBrigthness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximal level of brightness that is allowed for each color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint32_t A 32-bit unsigned integer representing the color in the format 0x00RRGGBB, where RR is the red component, GG is the green component, and BB is the blue component. Where each component can be between 0 - maxBrightness </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="136" column="14" bodyfile="dezibot/src/multiColorLight/MultiColorLight.cpp" bodystart="93" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/multiColorLight/MultiColorLight.h" line="28" column="1" bodyfile="dezibot/src/multiColorLight/MultiColorLight.h" bodystart="28" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_multi_color_light_1a796adb16296fb9d27f55e4f6f818fe98" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>begin</name></member>
+      <member refid="class_multi_color_light_1a44309c4b895182454fc9b32b685b0a79" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>blink</name></member>
+      <member refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>color</name></member>
+      <member refid="class_multi_color_light_1a474c01e660bc642f416e0f75f16d727c" prot="protected" virt="non-virtual"><scope>MultiColorLight</scope><name>ledAmount</name></member>
+      <member refid="class_multi_color_light_1ab0b493779e9cb1925c9c330cddcfb11c" prot="protected" virt="non-virtual"><scope>MultiColorLight</scope><name>ledPin</name></member>
+      <member refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" prot="protected" virt="non-virtual"><scope>MultiColorLight</scope><name>maxBrightness</name></member>
+      <member refid="class_multi_color_light_1ae9fba3a0f5834e4a73cbc43362e91ea7" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>MultiColorLight</name></member>
+      <member refid="class_multi_color_light_1a987624773419b11f1dceca75bea17ff9" prot="private" virt="non-virtual"><scope>MultiColorLight</scope><name>normalizeColor</name></member>
+      <member refid="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" prot="protected" virt="non-virtual"><scope>MultiColorLight</scope><name>rgbLeds</name></member>
+      <member refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>setLed</name></member>
+      <member refid="class_multi_color_light_1ae30ab46416190a191466cd23c26b91ef" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>setLed</name></member>
+      <member refid="class_multi_color_light_1a35cda9e562ded9568e0ccd0d05ccb406" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>setLed</name></member>
+      <member refid="class_multi_color_light_1ac2e7859a558b6840f2ade8c41520f18d" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>setTopLeds</name></member>
+      <member refid="class_multi_color_light_1a81cb01bc7cb9f704e2c91746e6336f14" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>setTopLeds</name></member>
+      <member refid="class_multi_color_light_1a02ae577d79bcaa83672937d0b123c668" prot="public" virt="non-virtual"><scope>MultiColorLight</scope><name>turnOffLed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_multi_color_light_8cpp" kind="file" language="C++">
+    <compoundname>MultiColorLight.cpp</compoundname>
+    <includes refid="_multi_color_light_8h" local="yes">MultiColorLight.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>ColorConstants.h</label>
+        <link refid="_color_constants_8h"/>
+      </node>
+      <node id="1">
+        <label>dezibot/src/multiColorLight/MultiColorLight.cpp</label>
+        <link refid="_multi_color_light_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MultiColorLight.h</label>
+        <link refid="_multi_color_light_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Adafruit_NeoPixel.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_multi_color_light_8h" kindref="compound">MultiColorLight.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_multi_color_light_1ae9fba3a0f5834e4a73cbc43362e91ea7" kindref="member">MultiColorLight::MultiColorLight</ref>():rgbLeds(ledAmount,ledPin){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a796adb16296fb9d27f55e4f6f818fe98" kindref="member">MultiColorLight::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" kindref="member">rgbLeds</ref>.begin();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_multi_color_light_1a02ae577d79bcaa83672937d0b123c668" kindref="member">turnOffLed</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(uint8_t<sp/>index<sp/>,<sp/>uint32_t<sp/><ref refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;<sp/><ref refid="class_multi_color_light_1a474c01e660bc642f416e0f75f16d727c" kindref="member">ledAmount</ref>-1){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>logging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" kindref="member">rgbLeds</ref>.setPixelColor(index,<sp/>normalizeColor(<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" kindref="member">rgbLeds</ref>.show();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>,<sp/>uint32_t<sp/><ref refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a6b4ed010af97f067c8ba669e400f3f93" kindref="member">TOP_LEFT</ref>:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(1,<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66aab97669fecf009df518a0d2016b86364" kindref="member">TOP_RIGHT</ref>:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(0,<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a8c371f4e766fb2c49c219bbc88989461" kindref="member">BOTTOM</ref>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(2,<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a0ad44897a70fba309c24a5b6007de3e3" kindref="member">TOP</ref>:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index&lt;2;<sp/>index++){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(index,<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66ab1d5eac4b1dca480c8056eaea7663b7a" kindref="member">ALL</ref>:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index&lt;<ref refid="class_multi_color_light_1a474c01e660bc642f416e0f75f16d727c" kindref="member">ledAmount</ref>;<sp/>index++){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(index,<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO<sp/>logging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>,<sp/>uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue){</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>,<sp/><ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">MultiColorLight::color</ref>(red,green,blue));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1ac2e7859a558b6840f2ade8c41520f18d" kindref="member">MultiColorLight::setTopLeds</ref>(uint32_t<sp/><ref refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kindref="member">color</ref>){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a0ad44897a70fba309c24a5b6007de3e3" kindref="member">TOP</ref>,<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1ac2e7859a558b6840f2ade8c41520f18d" kindref="member">MultiColorLight::setTopLeds</ref>(uint8_t<sp/>red,<sp/>uint8_t<sp/>green,<sp/>uint8_t<sp/>blue){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1ac2e7859a558b6840f2ade8c41520f18d" kindref="member">MultiColorLight::setTopLeds</ref>(<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">MultiColorLight::color</ref>(red,green,blue));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a44309c4b895182454fc9b32b685b0a79" kindref="member">MultiColorLight::blink</ref>(uint16_t<sp/>amount,uint32_t<sp/><ref refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kindref="member">color</ref>,<sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>,<sp/>uint32_t<sp/>interval){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint16_t<sp/>index<sp/>=<sp/>0;<sp/>index<sp/>&lt;<sp/>amount;index++){</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>,<sp/><ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(interval);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a02ae577d79bcaa83672937d0b123c668" kindref="member">MultiColorLight::turnOffLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vTaskDelay(interval);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a02ae577d79bcaa83672937d0b123c668" kindref="member">MultiColorLight::turnOffLed</ref>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66" kindref="member">leds</ref>){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a6b4ed010af97f067c8ba669e400f3f93" kindref="member">TOP_LEFT</ref>:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(1,0);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66aab97669fecf009df518a0d2016b86364" kindref="member">TOP_RIGHT</ref>:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(0,0);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a8c371f4e766fb2c49c219bbc88989461" kindref="member">BOTTOM</ref>:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(2,0);</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66a0ad44897a70fba309c24a5b6007de3e3" kindref="member">TOP</ref>:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index&lt;2;<sp/>index++){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(index,0);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_multi_color_light_8h_1a840c9267db46ce0db0f44d473c562e66ab1d5eac4b1dca480c8056eaea7663b7a" kindref="member">ALL</ref>:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>0;<sp/>index&lt;3;<sp/>index++){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_multi_color_light_1a7113cb27dba903c41dce3fa1f5036533" kindref="member">MultiColorLight::setLed</ref>(index,0);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO<sp/>logging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">uint32_t<sp/><ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">MultiColorLight::color</ref>(uint8_t<sp/>r,<sp/>uint8_t<sp/>g,<sp/>uint8_t<sp/>b){</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1aa74c2e83982feb9b96f7069b92b59891" kindref="member">rgbLeds</ref>.Color(r,g,b);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//PRIVATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">uint32_t<sp/>MultiColorLight::normalizeColor(uint32_t<sp/><ref refid="_color_detection_8h_1a37dbdc30935031c05304482e1be89d8f" kindref="member">color</ref>,uint8_t<sp/>maxBrightness){</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>red<sp/>=<sp/>(<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>&amp;0x00FF0000)&gt;&gt;16;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>green<sp/>=<sp/>(<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>&amp;0x0000FF00)&gt;&gt;8;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>blue<sp/>=<sp/>(<ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">color</ref>&amp;0x000000FF);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(red<sp/>&gt;<sp/><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref>){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>red<sp/>=<sp/><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(green<sp/>&gt;<sp/><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref>-70){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>green<sp/>=<sp/><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref>-70;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(blue<sp/>&gt;<sp/><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref>-50){</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blue<sp/>=<sp/><ref refid="class_multi_color_light_1a9077efef7ad900a09bae27f28b815978" kindref="member">maxBrightness</ref>-50;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_multi_color_light_1a8f7019e273d3fc303dc9ae56fb626fe8" kindref="member">MultiColorLight::color</ref>(red,green,blue);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="dezibot/src/multiColorLight/MultiColorLight.cpp"/>
+  </compounddef>
+</doxygen>

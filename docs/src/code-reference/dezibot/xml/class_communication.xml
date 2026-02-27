@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_communication" kind="class" language="C++" prot="public">
+    <compoundname>Communication</compoundname>
+    <includes refid="_communication_8h" local="no">Communication.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_communication_1a9386851e46e26e7cd4b7605051e1c3c3" prot="private" static="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Communication::userCallbackSingle)(uint32_t from, String &amp;msg)</definition>
+        <argsstring>)(uint32_t from, String &amp;msg)</argsstring>
+        <name>userCallbackSingle</name>
+        <qualifiedname>Communication::userCallbackSingle</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="34" column="12" bodyfile="dezibot/src/communication/Communication.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1ac2827dac521283262bbdca6fdce7657d" prot="private" static="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Communication::userCallbackGroup)(uint32_t from, String &amp;msg)</definition>
+        <argsstring>)(uint32_t from, String &amp;msg)</argsstring>
+        <name>userCallbackGroup</name>
+        <qualifiedname>Communication::userCallbackGroup</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="35" column="12" bodyfile="dezibot/src/communication/Communication.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1ac03c1aa58187e71700c5ebf49b805c7d" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Communication::groupNumber</definition>
+        <argsstring></argsstring>
+        <name>groupNumber</name>
+        <qualifiedname>Communication::groupNumber</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="37" column="21" bodyfile="dezibot/src/communication/Communication.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_communication_1af7eea76d811d38b02fb67ec5133e6eec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Communication::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>initialize the Mesh Compnent, must be called before the other methods are used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="19" column="17" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="89" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_communication_1afe643701ab2545e227e051a22be6485f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::setGroupNumber</definition>
+        <argsstring>(uint32_t number)</argsstring>
+        <name>setGroupNumber</name>
+        <qualifiedname>Communication::setGroupNumber</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="21" column="10" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1adc69c7bb0c0e5b22a32afa47a37bcaee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::broadcast</definition>
+        <argsstring>(String msg)</argsstring>
+        <name>broadcast</name>
+        <qualifiedname>Communication::broadcast</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="23" column="10" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1ac35e1b8d6d44a3dab4cb49cba0331cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::unicast</definition>
+        <argsstring>(uint32_t targetId, String msg)</argsstring>
+        <name>unicast</name>
+        <qualifiedname>Communication::unicast</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>targetId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="25" column="10" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1ad3592ea7ee006faddb0fcc18ea3c806e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::onReceiveGroup</definition>
+        <argsstring>(void(*callbackFunc)(uint32_t from, String &amp;msg))</argsstring>
+        <name>onReceiveGroup</name>
+        <qualifiedname>Communication::onReceiveGroup</qualifiedname>
+        <param>
+          <type>void(*)(uint32_t from, String &amp;msg)</type>
+          <declname>callbackFunc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="27" column="10" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1a7b87a1a8c765ad2eaabca50f88568337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::onReceiveSingle</definition>
+        <argsstring>(void(*callbackFunc)(uint32_t from, String &amp;msg))</argsstring>
+        <name>onReceiveSingle</name>
+        <qualifiedname>Communication::onReceiveSingle</qualifiedname>
+        <param>
+          <type>void(*)(uint32_t from, String &amp;msg)</type>
+          <declname>callbackFunc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="29" column="10" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1ae1b48a873b79a022a5a68ae3b2e21dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Communication::getNodeId</definition>
+        <argsstring>()</argsstring>
+        <name>getNodeId</name>
+        <qualifiedname>Communication::getNodeId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="31" column="14" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_communication_1ac63d7a0f8338105f37cb644c77288eb3" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::receivedCallback</definition>
+        <argsstring>(uint32_t from, String &amp;msg)</argsstring>
+        <name>receivedCallback</name>
+        <qualifiedname>Communication::receivedCallback</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>String &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dezibot/src/communication/Communication.h" line="36" column="17" bodyfile="dezibot/src/communication/Communication.cpp" bodystart="23" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="dezibot/src/communication/Communication.h" line="13" column="1" bodyfile="dezibot/src/communication/Communication.h" bodystart="13" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_communication_1af7eea76d811d38b02fb67ec5133e6eec" prot="public" virt="non-virtual"><scope>Communication</scope><name>begin</name></member>
+      <member refid="class_communication_1adc69c7bb0c0e5b22a32afa47a37bcaee" prot="public" virt="non-virtual"><scope>Communication</scope><name>broadcast</name></member>
+      <member refid="class_communication_1ae1b48a873b79a022a5a68ae3b2e21dc5" prot="public" virt="non-virtual"><scope>Communication</scope><name>getNodeId</name></member>
+      <member refid="class_communication_1ac03c1aa58187e71700c5ebf49b805c7d" prot="private" virt="non-virtual"><scope>Communication</scope><name>groupNumber</name></member>
+      <member refid="class_communication_1ad3592ea7ee006faddb0fcc18ea3c806e" prot="public" virt="non-virtual"><scope>Communication</scope><name>onReceiveGroup</name></member>
+      <member refid="class_communication_1a7b87a1a8c765ad2eaabca50f88568337" prot="public" virt="non-virtual"><scope>Communication</scope><name>onReceiveSingle</name></member>
+      <member refid="class_communication_1ac63d7a0f8338105f37cb644c77288eb3" prot="private" virt="non-virtual"><scope>Communication</scope><name>receivedCallback</name></member>
+      <member refid="class_communication_1afe643701ab2545e227e051a22be6485f" prot="public" virt="non-virtual"><scope>Communication</scope><name>setGroupNumber</name></member>
+      <member refid="class_communication_1ac35e1b8d6d44a3dab4cb49cba0331cbc" prot="public" virt="non-virtual"><scope>Communication</scope><name>unicast</name></member>
+      <member refid="class_communication_1ac2827dac521283262bbdca6fdce7657d" prot="private" virt="non-virtual"><scope>Communication</scope><name>userCallbackGroup</name></member>
+      <member refid="class_communication_1a9386851e46e26e7cd4b7605051e1c3c3" prot="private" virt="non-virtual"><scope>Communication</scope><name>userCallbackSingle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="namespace_0d250224204014340107166310206056345125206362007077" kind="namespace"><name>@250224204014340107166310206056345125206362007077</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a6d938cf5a3334a8f583ce50a734793b4" kind="variable"><name>chargingSlaves</name></member>
+    <member refid="main_8cpp_1ac56411911dcd03046c12a3ef02567dfd" kind="variable"><name>master</name></member>
+    <member refid="main_8cpp_1a146fc424c2ebbe77ff39a28d6bc25bf6" kind="function"><name>start_chg</name></member>
+    <member refid="main_8cpp_1a4cfc2235922e972bc260844f4d34daaf" kind="function"><name>end_chg</name></member>
+    <member refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="dir_c1346cf4828efdd0d2baf0d391d01b77" kind="dir"><name>master</name>
+  </compound>
+  <compound refid="dir_f8136827385f5b46d20e4fb1e88aea06" kind="dir"><name>master/src</name>
+  </compound>
+</doxygenindex>
