@@ -35,11 +35,61 @@ export function getStaticPaths(): StaticPath[] {
 }
 
 const { fileDoc } = Astro.props;
+const toAnchorId = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+const pageHeadings: Array<{ depth: number; slug: string; text: string }> = [];
+
+pageHeadings.push({
+  depth: 2,
+  slug: "functions",
+  text: "Functions",
+});
+for (const functionDoc of fileDoc.functions) {
+  pageHeadings.push({
+    depth: 3,
+    slug: toAnchorId(`fn-${functionDoc.name}-${functionDoc.signature}`),
+    text: functionDoc.name,
+  });
+}
+
+pageHeadings.push({
+  depth: 2,
+  slug: "types",
+  text: "Types",
+});
+for (const classDoc of fileDoc.classes) {
+  pageHeadings.push({
+    depth: 3,
+    slug: toAnchorId(`type-${classDoc.name}`),
+    text: classDoc.name,
+  });
+  for (const methodDoc of classDoc.methods) {
+    pageHeadings.push({
+      depth: 5,
+      slug: toAnchorId(
+        `method-${classDoc.name}-${methodDoc.name}-${methodDoc.signature}`,
+      ),
+      text: `${classDoc.name}::${methodDoc.name}`,
+    });
+  }
+}
+
 const pageTitle = `${fileDoc.fileName} (${fileDoc.projectTitle})`;
 const pageDescription = `API reference generated from Doxygen XML for ${fileDoc.sourcePath}.`;
 ---
 
-<StarlightPage frontmatter={{ title: pageTitle, description: pageDescription }}>
+<StarlightPage
+  frontmatter={{
+    title: pageTitle,
+    description: pageDescription,
+    tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 5 },
+  }}
+  headings={pageHeadings}
+>
   <div class="overview-grid">
     <p><strong>Project</strong><br /><code>{fileDoc.project}</code></p>
     <p><strong>Module</strong><br /><code>{fileDoc.module}</code></p>
