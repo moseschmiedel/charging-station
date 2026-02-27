@@ -6,20 +6,24 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypeKatex from "rehype-katex";
 import rehypeMermaid from "rehype-mermaid";
 import remarkMath from "remark-math";
+import starlightThemeNova from "starlight-theme-nova";
+import { getCodeReferenceSidebarItems } from "./src/lib/code-reference-sidebar.mjs";
 import { SYNTAX_THEMES } from "./syntax-highlighting.config.mjs";
 
 const [githubOwner, githubRepo] = (process.env.GITHUB_REPOSITORY ?? "").split(
 	"/",
 );
 const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+const codeProjectSidebarItems = getCodeReferenceSidebarItems();
 
 // https://astro.build/config
 export default defineConfig({
 	site: githubOwner ? `https://${githubOwner}.github.io` : undefined,
 	base: isGitHubActions && githubRepo ? `/${githubRepo}` : undefined,
 	markdown: {
-		shikiConfig: {
-			themes: SYNTAX_THEMES,
+		syntaxHighlight: {
+			type: "shiki",
+			excludeLangs: ["mermaid", "math"],
 		},
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [
@@ -30,6 +34,7 @@ export default defineConfig({
 	},
 	integrations: [
 		starlight({
+			plugins: [starlightThemeNova()],
 			title: "Charging Station Documentation",
 			customCss: [
 				"./src/styles/katex.css",
@@ -44,14 +49,14 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
+					label: "Home",
+					slug: "",
+				},
+				{
 					label: "Guides",
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: "Getting Started", slug: "guides/getting-started" },
-						{
-							label: "Beacon Tracking + Drive Control",
-							slug: "guides/beacon-tracking-drive-control",
-						},
 					],
 				},
 				{
@@ -59,14 +64,8 @@ export default defineConfig({
 					autogenerate: { directory: "reference" },
 				},
 				{
-					label: "Code Projects",
-					items: [
-						{ label: "Master", link: "/reference/code/master/" },
-						{ label: "Slave", link: "/reference/code/slave/" },
-						{ label: "IR Meter", link: "/reference/code/ir_meter/" },
-						{ label: "Motor", link: "/reference/code/motor/" },
-						{ label: "Dezibot", link: "/reference/code/dezibot/" },
-					],
+					label: "Code Reference",
+					items: codeProjectSidebarItems,
 				},
 			],
 		}),

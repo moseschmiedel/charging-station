@@ -4,77 +4,135 @@ import type { CodeProjectSummary } from "../../../../lib/code-reference";
 import { getProjectSummaries } from "../../../../lib/code-reference";
 
 interface StaticPath {
-  params: {
-    project: string;
-  };
-  props: {
-    projectSummary: CodeProjectSummary;
-  };
+    params: {
+        project: string;
+    };
+    props: {
+        projectSummary: CodeProjectSummary;
+    };
 }
 
 export function getStaticPaths(): StaticPath[] {
-  return getProjectSummaries().map((projectSummary) => ({
-    params: {
-      project: projectSummary.project,
-    },
-    props: {
-      projectSummary,
-    },
-  }));
+    return getProjectSummaries().map((projectSummary) => ({
+        params: {
+            project: projectSummary.project,
+        },
+        props: {
+            projectSummary,
+        },
+    }));
 }
 
 const { projectSummary } = Astro.props;
-const pageTitle = `${projectSummary.title} Code Reference`;
-const description = `Module-level code reference index for project ${projectSummary.project}.`;
+const pageTitle = `${projectSummary.title} Index`;
+const description = `Module and file-level code reference index for project ${projectSummary.project}.`;
 ---
 
 <StarlightPage frontmatter={{ title: pageTitle, description }}>
-  <p>
-    Browse modules for <code>{projectSummary.project}</code>.
-  </p>
+    <p>
+        Browse files grouped by module for <code>{projectSummary.project}</code
+        >.
+    </p>
 
-  {
-    projectSummary.modules.length > 0 ? (
-      <ul class="symbol-list">
-        {projectSummary.modules.map((moduleSummary) => (
-          <li>
-            <a
-              href={`/reference/code/${encodeURIComponent(projectSummary.project)}/${encodeURIComponent(moduleSummary.module)}/`}
-            >
-              <code>{moduleSummary.module}</code>
-            </a>
-            <span class="count">{moduleSummary.files.length} files</span>
-          </li>
-        ))}
-      </ul>
-    ) : (
-      <p class="placeholder">No documented modules were found for this project.</p>
-    )
-  }
+    {
+        projectSummary.modules.length > 0 ? (
+            <div class="module-list">
+                {projectSummary.modules.map((moduleSummary) => (
+                    <section class="module-section">
+                        <header class="module-header">
+                            <h2>
+                                <code>{moduleSummary.module}</code>
+                            </h2>
+                            <span class="count">
+                                {moduleSummary.files.length} files
+                            </span>
+                        </header>
+
+                        {moduleSummary.files.length > 0 ? (
+                            <ul class="file-list">
+                                {moduleSummary.files.map((fileDoc) => (
+                                    <li>
+                                        <a
+                                            href={`/reference/code/${encodeURIComponent(fileDoc.project)}/${encodeURIComponent(fileDoc.module)}/${encodeURIComponent(fileDoc.fileSlug)}/`}
+                                        >
+                                            <code>{fileDoc.fileRemainder}</code>
+                                        </a>
+                                        <span class="file-meta">
+                                            {fileDoc.functions.length} fn /{" "}
+                                            {fileDoc.classes.length} types
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p class="placeholder">
+                                No documented files were found for this module.
+                            </p>
+                        )}
+                    </section>
+                ))}
+            </div>
+        ) : (
+            <p class="placeholder">
+                No documented modules were found for this project.
+            </p>
+        )
+    }
 </StarlightPage>
 
 <style>
-  .symbol-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
+    .module-list {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
 
-  .symbol-list li {
-    border-top: 1px solid var(--sl-color-hairline);
-    padding: 0.7rem 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-  }
+    .module-section {
+        border-top: 1px solid var(--sl-color-hairline);
+        padding-top: 0.9rem;
+    }
 
-  .count {
-    color: var(--sl-color-text-accent);
-    font-family: var(--__sl-font-mono);
-    font-size: 0.9rem;
-  }
+    .module-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 0.6rem;
+    }
 
-  .placeholder {
-    font-style: italic;
-  }
+    h2 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .file-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .file-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.35rem 0;
+    }
+
+    .count {
+        color: var(--sl-color-text-accent);
+        font-family: var(--__sl-font-mono);
+        font-size: 0.9rem;
+    }
+
+    .placeholder {
+        font-style: italic;
+    }
+
+    .file-meta {
+        color: var(--sl-color-text-accent);
+        font-family: var(--__sl-font-mono);
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
 </style>

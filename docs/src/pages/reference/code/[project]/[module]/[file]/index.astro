@@ -35,7 +35,6 @@ export function getStaticPaths(): StaticPath[] {
 }
 
 const { fileDoc } = Astro.props;
-const moduleHref = `/reference/code/${encodeURIComponent(fileDoc.project)}/${encodeURIComponent(fileDoc.module)}/`;
 const pageTitle = `${fileDoc.fileName} (${fileDoc.projectTitle})`;
 const pageDescription = `API reference generated from Doxygen XML for ${fileDoc.sourcePath}.`;
 ---
@@ -43,7 +42,7 @@ const pageDescription = `API reference generated from Doxygen XML for ${fileDoc.
 <StarlightPage frontmatter={{ title: pageTitle, description: pageDescription }}>
   <div class="overview-grid">
     <p><strong>Project</strong><br /><code>{fileDoc.project}</code></p>
-    <p><strong>Module</strong><br /><a href={moduleHref}><code>{fileDoc.module}</code></a></p>
+    <p><strong>Module</strong><br /><code>{fileDoc.module}</code></p>
     <p><strong>Functions</strong><br /><code>{fileDoc.functions.length}</code></p>
     <p><strong>Types</strong><br /><code>{fileDoc.classes.length}</code></p>
   </div>

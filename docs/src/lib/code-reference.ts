@@ -499,6 +499,41 @@ function mergeHeaderAndSourcePairs(files: CodeFileDoc[]): CodeFileDoc[] {
   return mergedFiles;
 }
 
+function hasNestedSrcFolders(project: string, files: CodeFileDoc[]): boolean {
+  const projectPrefix = `${project}/`;
+  return files.some((fileDoc) =>
+    fileDoc.sourcePaths.some((sourcePath) => {
+      const normalized = sourcePath.replace(/\\/g, "/").replace(/^\.?\//, "");
+      const relative = normalized.startsWith(projectPrefix)
+        ? normalized.slice(projectPrefix.length)
+        : normalized;
+      if (!relative.startsWith("src/")) {
+        return false;
+      }
+      return relative.slice(4).includes("/");
+    }),
+  );
+}
+
+function splitFlatSrcIntoPerFileModules(
+  project: string,
+  files: CodeFileDoc[],
+): CodeFileDoc[] {
+  if (hasNestedSrcFolders(project, files)) {
+    return files;
+  }
+
+  return files.map((fileDoc) => {
+    if (fileDoc.module !== "src") {
+      return fileDoc;
+    }
+    return {
+      ...fileDoc,
+      module: fileDoc.fileRemainder.replace(/\//g, "__"),
+    };
+  });
+}
+
 function toAnchorId(value: string): string {
   return value
     .toLowerCase()
@@ -693,7 +728,10 @@ function loadProject(project: string): CodeProjectSummary {
     parsedFiles.push(parsed);
   }
 
-  const files = mergeHeaderAndSourcePairs(parsedFiles);
+  const files = splitFlatSrcIntoPerFileModules(
+    project,
+    mergeHeaderAndSourcePairs(parsedFiles),
+  );
 
   const modules = new Map<string, CodeFileDoc[]>();
   for (const parsed of files) {
